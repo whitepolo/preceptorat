@@ -1,0 +1,21 @@
+name: Précepteur
+
+on:
+  issues:
+    types: [opened]
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prévenir le précepteur
+        env:
+          WEBHOOK_URL: ${{ secrets.PRECEPTEUR_WEBHOOK_URL }}
+          WEBHOOK_AUTH: ${{ secrets.PRECEPTEUR_WEBHOOK_AUTH }}
+        run: python3 .github/workflows/notify.py

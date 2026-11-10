@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "activities": [
+    { "date": "2026-11-04", "kind": "leçon", "summary": "Latin L1 et Latin L2." },
+    { "date": "2026-11-05", "kind": "leçon", "summary": "Réponses à Latin L2. Histoire L1." },
+    { "date": "2026-11-06", "kind": "réponses", "summary": "Réponses à Histoire L1." },
+    { "date": "2026-11-09", "kind": "leçon", "summary": "Latin L3. Aucune leçon du 6 au 8 novembre." },
+    { "date": "2026-11-10", "kind": "leçon", "summary": "Histoire L2." },
+    { "date": "2026-11-11", "kind": "réponses", "summary": "Réponses à Latin L3 et rappel partiel d'Histoire L2. Clôture du parcours Histoire." }
+  ],
+  "entries": [
+    { "date": "2026-11-04", "text": "Latin L1 : prononciation restituée ; Roma in Italia est (Ørberg cap. I) ; est en fin de phrase, pas d'article, quoque ; exercices : Aegyptus in Africa est / Hispania quoque in Europa est / prononcer Caesar, Graecia ; mot : insula." },
+    { "date": "2026-11-04", "text": "Latin L2 : Ørberg cap. I suite ; est/sunt, et, non... sed, question en -ne, ubi ; exercices : Italia et Graecia in Europa sunt / Syria non in Europa sed in Asia est / Estne Mauritius in Africa? / Ubi est Roma? / Sicilia insula est + petit texte Ubi sunt fluvii? ; ticket : Gallia et Hispania in Europa sunt, Estne Nilus in Africa? ; mot : ubiquité." },
+    { "date": "2026-11-05", "text": "Réponses L2 latin : erreurs à revoir : oubli de sunt (6.1), isla au lieu de insula (6.5), rôle de -ne (7), consigne 8b mal lue. Bon : -que spontané, non, sed, ubi, pluriel." },
+    { "date": "2026-11-05", "text": "Histoire L1 : se repérer dans le temps (pas d'an 0, siècles, durées, sources primaires et secondaires) et premières écritures (Uruk, Égypte, Indus, Chine Shang, Mésoamérique) ; frise avec Maurice (1598, 1715, 1810, 1968) ; mot : histoire (historia, enquête, Hérodote)." },
+    { "date": "2026-11-06", "text": "Réponses Histoire L1 : presque tout juste. Erreurs : v latin prononcé v au lieu de w ; an 2000 placé au XXIe ; ticket imprécis (« vers 3000 », Uruk non cité). Bon : insula, est/sunt, -ne corrigés depuis L2 ; durée à travers l'an 1 juste (3721)." },
+    { "date": "2026-11-09", "text": "Latin L3 : singulier et pluriel, trois genres (fluvius/fluvii, insula/insulae, oppidum/oppida), accord de magnus/parvus/multi, piège du neutre pluriel en -a, in + lieu = « il y a ». Aucune leçon consignée du 6 au 8 novembre. Mot : Provence (Provincia)." },
+    { "date": "2026-11-10", "text": "Histoire L2 : Mésopotamie, des cités-États sumériennes à Hammurabi ; cunéiforme ; stèle de Hammurabi (Louvre, Suse 1901-1902) ; exemple modèle des lois 196 à 199, à finir 229 et 230. Mot : code (codex, caudex)." },
+    { "date": "2026-11-11", "text": "Réponses Latin L3 : rappel 8/8 juste (winoum acquis ; paene insula orthographié peninsula). Erreur : pluriel par ajout au lieu de remplacement (parvii, oppidia, parvia). Pré-question : « fonction » au lieu de genre et nombre. Bon : accord, question « pourquoi », ordre libre." },
+    { "date": "2026-11-11", "text": "Réponses Histoire L2, partielles. Rappel : insula juste ; pas d'an 0 et 19 ans justes ; ubi partiel (ubiquité au lieu de où) ; 1638 au lieu de 1598 ; Syrinia au lieu de Syria ; quatre foyers incomplets ; non et sed justes ; Kaiser et tsar justes. Lois 229-230 : le fils innocent du maçon n'est pas mentionné. Exercices 6.1 à 6.5, réflexion et ticket non faits." },
+    { "date": "2026-11-11", "text": "Clôture du parcours Histoire, à la demande de Sébastien. Les cartes HIS-001 à HIS-012 restent valides. Nouveau parcours Classiques des civilisations : première leçon le mardi 17 novembre 2026." }
+  ]
+}

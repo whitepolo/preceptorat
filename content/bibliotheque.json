@@ -1,0 +1,407 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-11-11",
+  "intro": "Notices vérifiées au 11 novembre 2026. On n'inscrit un titre que si l'auteur, le libellé et la date ont pu être établis. Les ouvrages contestés restent, avec une réserve : on les lit, on ne les prend pas pour argent comptant. Le secondaire éclaire l'extrait primaire, il ne le remplace pas.",
+  "shelves": [
+    {
+      "id": "transversal",
+      "title": "Étagère transversale",
+      "civilisation": "Transversal",
+      "works": [
+        {
+          "role": "secondaire",
+          "title": "Paideia. Die Formung des griechischen Menschen",
+          "authors": "Werner Jaeger",
+          "year": "1934-1947",
+          "cite": "3 vol., Berlin et Leipzig, Walter de Gruyter, t. I 1934, t. II 1944, t. III 1947. Trad. André et Simonne Devyver, Paideia. La formation de l'homme grec, Paris, Gallimard, 1964.",
+          "note": "L'idéal grec de formation par les lettres, d'Homère à l'âge de Platon. Lecture d'appui du module II. La date retenue pour le tome I est 1934, non 1933."
+        },
+        {
+          "role": "secondaire",
+          "title": "Histoire de l'éducation dans l'Antiquité",
+          "authors": "Henri-Irénée Marrou",
+          "year": "1948",
+          "cite": "Paris, Éditions du Seuil, 1948.",
+          "note": "Comment Grecs et Romains ont enseigné. Lecture d'appui du module VI, et livre de chevet du préceptorat."
+        },
+        {
+          "role": "secondaire",
+          "title": "Exercices spirituels et philosophie antique",
+          "authors": "Pierre Hadot",
+          "year": "1981",
+          "cite": "Paris, Études augustiniennes, 1981 (nouv. éd. Paris, Albin Michel, 2002).",
+          "note": "Lecture d'appui principale du jeudi, avec Qu'est-ce que la philosophie antique ?, Paris, Gallimard, 1995."
+        },
+        {
+          "role": "secondaire",
+          "title": "Qu'est-ce que la philosophie antique ?",
+          "authors": "Pierre Hadot",
+          "year": "1995",
+          "cite": "Paris, Gallimard, 1995.",
+          "note": "La philosophie antique comme choix de vie et comme exercice, non comme seul système."
+        },
+        {
+          "role": "secondaire",
+          "title": "How to Read a Book",
+          "authors": "Mortimer J. Adler",
+          "year": "1940",
+          "cite": "New York, Simon and Schuster, 1940 (éd. revue avec Charles Van Doren, 1972).",
+          "note": "On en retient l'exigence d'une lecture suivie. On n'en reprend pas le canon, presque uniquement occidental."
+        },
+        {
+          "role": "secondaire",
+          "title": "Great Books of the Western World",
+          "authors": "Robert Maynard Hutchins (éd.), Mortimer J. Adler (éditeur associé)",
+          "year": "1952",
+          "cite": "Chicago, Encyclopaedia Britannica, 1952, 54 vol., dont le Syntopicon d'Adler.",
+          "note": "Attribué à Hutchins comme éditeur, à Adler comme éditeur associé, et non à Adler seul."
+        }
+      ]
+    },
+    {
+      "id": "mesopotamie",
+      "title": "Mésopotamie",
+      "civilisation": "Mésopotamie",
+      "works": [
+        {
+          "role": "primaire",
+          "title": "The Babylonian Gilgamesh Epic",
+          "authors": "A. R. George",
+          "year": "2003",
+          "cite": "Introduction, Critical Edition and Cuneiform Texts, 2 vol., Oxford, Oxford University Press, 2003.",
+          "note": "Édition de référence du texte akkadien. Lecture d'appui du module I, avec Bottéro."
+        },
+        {
+          "role": "secondaire",
+          "title": "L'Épopée de Gilgameš. Le grand homme qui ne voulait pas mourir",
+          "authors": "Jean Bottéro",
+          "year": "1992",
+          "cite": "Paris, Gallimard, 1992.",
+          "note": "Traduction française savante. On ne la reproduit pas dans les leçons. Lecture d'appui du module I : l'épopée comme sagesse sur la mortalité."
+        },
+        {
+          "role": "primaire",
+          "title": "The Chaldean Account of the Deluge",
+          "authors": "George Smith",
+          "year": "1873",
+          "cite": "Transactions of the Society of Biblical Archaeology, t. 2, 1873, p. 213-234. Communication lue le 3 décembre 1872.",
+          "note": "Identification de la tablette XI du Déluge."
+        }
+      ]
+    },
+    {
+      "id": "egypte",
+      "title": "Égypte, Koush, Aksum",
+      "civilisation": "Égypte et Afrique du Nord-Est",
+      "works": [
+        {
+          "role": "primaire",
+          "title": "Sinouhé, Ptahhotep, stèle de Piye, inscriptions d'Ezana",
+          "authors": "sources primaires",
+          "year": "",
+          "cite": "Les leçons s'appuient d'abord sur ces textes. Les notices détaillées viendront avec chaque leçon.",
+          "note": "Cheikh Anta Diop est classé avec l'Afrique de l'Ouest, parce que son propos déborde l'Égypte."
+        }
+      ]
+    },
+    {
+      "id": "grece",
+      "title": "Grèce",
+      "civilisation": "Grèce",
+      "works": [
+        {
+          "role": "secondaire",
+          "title": "Mimesis. Dargestellte Wirklichkeit in der abendländischen Literatur",
+          "authors": "Erich Auerbach",
+          "year": "1946",
+          "cite": "Berne, A. Francke, 1946. Trad. Cornélius Heim, Mimésis. La représentation de la réalité dans la littérature occidentale, Paris, Gallimard, 1968.",
+          "note": "Le chapitre sur la cicatrice d'Ulysse éclaire l'Odyssée et, le dimanche, l'art de lire un passage."
+        },
+        {
+          "role": "secondaire",
+          "title": "Histoire et raison chez Thucydide",
+          "authors": "Jacqueline de Romilly",
+          "year": "1956",
+          "cite": "Paris, Les Belles Lettres, 1956.",
+          "note": "Lecture d'appui principale du module IV. Pourquoi la Grèce ?, Paris, Éditions de Fallois, 1992, est un complément, pas la lecture d'appui."
+        },
+        {
+          "role": "secondaire",
+          "title": "Les Origines de la pensée grecque",
+          "authors": "Jean-Pierre Vernant",
+          "year": "1962",
+          "cite": "Paris, PUF, 1962.",
+          "note": "Avec Mythe et pensée chez les Grecs, Paris, Maspero, 1965."
+        },
+        {
+          "role": "secondaire",
+          "title": "Mythe et pensée chez les Grecs",
+          "authors": "Jean-Pierre Vernant",
+          "year": "1965",
+          "cite": "Paris, Maspero, 1965.",
+          "note": "La cité, le mythe, la tragédie."
+        },
+        {
+          "role": "secondaire",
+          "title": "The World of Odysseus",
+          "authors": "Moses I. Finley",
+          "year": "1954",
+          "cite": "New York, Viking Press, 1954. Trad. Claude Vernant-Blanc, Le Monde d'Ulysse, Paris, François Maspero, 1969.",
+          "reserve": "L'usage des poèmes comme source directe d'une société historique a été ensuite discuté et nuancé."
+        },
+        {
+          "role": "secondaire",
+          "title": "The Development of Greek Biography",
+          "authors": "Arnaldo Momigliano",
+          "year": "1971",
+          "cite": "Cambridge (Mass.), Harvard University Press, 1971.",
+          "note": "Avec The Classical Foundations of Modern Historiography, Berkeley, University of California Press, 1990."
+        },
+        {
+          "role": "secondaire",
+          "title": "The Classical Foundations of Modern Historiography",
+          "authors": "Arnaldo Momigliano",
+          "year": "1990",
+          "cite": "Berkeley, University of California Press, 1990.",
+          "note": "L'enquête historique grecque et ce qu'en a fait l'historiographie moderne."
+        }
+      ]
+    },
+    {
+      "id": "rome",
+      "title": "Rome et Antiquité tardive",
+      "civilisation": "Rome",
+      "works": [
+        {
+          "role": "secondaire",
+          "title": "The Roman Revolution",
+          "authors": "Ronald Syme",
+          "year": "1939",
+          "cite": "Oxford, Clarendon Press, 1939.",
+          "note": "De la République au principat. Lecture d'appui du module VI.",
+          "reserve": "Le vocabulaire de « parti » et de « révolution » est celui des années 1930 et a été discuté. Le livre n'en reste pas moins un classique."
+        },
+        {
+          "role": "secondaire",
+          "title": "Augustine of Hippo: A Biography",
+          "authors": "Peter Brown",
+          "year": "1967",
+          "cite": "Londres, Faber and Faber, 1967.",
+          "note": "Avec The World of Late Antiquity, Londres, Thames and Hudson, 1971. Module VII."
+        },
+        {
+          "role": "secondaire",
+          "title": "The World of Late Antiquity",
+          "authors": "Peter Brown",
+          "year": "1971",
+          "cite": "Londres, Thames and Hudson, 1971.",
+          "note": "Le cadre de l'Antiquité tardive."
+        }
+      ]
+    },
+    {
+      "id": "chine",
+      "title": "Chine",
+      "civilisation": "Chine",
+      "works": [
+        {
+          "role": "secondaire",
+          "title": "Fêtes et chansons anciennes de la Chine",
+          "authors": "Marcel Granet",
+          "year": "1919",
+          "cite": "Paris, E. Leroux, 1919.",
+          "note": "Le Shijing. À relire avec des travaux plus récents. Voir aussi La civilisation chinoise, 1929, et La pensée chinoise, 1934."
+        },
+        {
+          "role": "secondaire",
+          "title": "La pensée chinoise",
+          "authors": "Marcel Granet",
+          "year": "1934",
+          "cite": "Paris, 1934.",
+          "note": "Complément du module III."
+        },
+        {
+          "role": "secondaire",
+          "title": "Histoire de la pensée chinoise",
+          "authors": "Anne Cheng",
+          "year": "1997",
+          "cite": "Paris, Éditions du Seuil, 1997.",
+          "note": "Lecture d'appui du module III et du jeudi chinois."
+        },
+        {
+          "role": "secondaire",
+          "title": "Science and Civilisation in China, t. I",
+          "authors": "Joseph Needham, avec Wang Ling",
+          "year": "1954",
+          "cite": "Introductory Orientations, Cambridge, Cambridge University Press, 1954.",
+          "note": "Surtout le vendredi des sciences et le Qin/Han technique, non la lecture d'un poème du Shijing."
+        },
+        {
+          "role": "commentaire",
+          "title": "Sishu zhangju jizhu",
+          "authors": "Zhu Xi",
+          "year": "vers 1190",
+          "cite": "Commentaires des Quatre Livres, réunis vers 1190.",
+          "note": "Commentateur traditionnel, à introduire avec les Entretiens."
+        }
+      ]
+    },
+    {
+      "id": "inde",
+      "title": "Inde",
+      "civilisation": "Inde",
+      "works": [
+        {
+          "role": "secondaire",
+          "title": "L'Inde classique. Manuel des études indiennes",
+          "authors": "Louis Renou et Jean Filliozat",
+          "year": "1947-1953",
+          "cite": "t. I, 1947, t. II, 1953.",
+          "note": "Manuel pour le véda, les épopées, les systèmes. Module II, le Rigveda."
+        },
+        {
+          "role": "secondaire",
+          "title": "The Wonder That Was India",
+          "authors": "A. L. Basham",
+          "year": "1954",
+          "cite": "Londres, Sidgwick and Jackson, 1954.",
+          "reserve": "Daté sur plus d'un point. À compléter par Thapar et Pollock."
+        },
+        {
+          "role": "secondaire",
+          "title": "Aśoka and the Decline of the Mauryas",
+          "authors": "Romila Thapar",
+          "year": "1961",
+          "cite": "Oxford, Oxford University Press, 1961.",
+          "note": "Les édits d'Aśoka et l'empire maurya. Early India, 2002, pourra être consulté plus tard."
+        },
+        {
+          "role": "secondaire",
+          "title": "The Language of the Gods in the World of Men",
+          "authors": "Sheldon Pollock",
+          "year": "2006",
+          "cite": "Berkeley, University of California Press, 2006.",
+          "note": "Le sanskrit, les épopées, la langue et le pouvoir."
+        },
+        {
+          "role": "commentaire",
+          "title": "Brahmasūtrabhāṣya",
+          "authors": "Śaṅkara",
+          "year": "date débattue",
+          "cite": "Commentaire des Brahmasūtra.",
+          "reserve": "La date exacte est débattue, souvent le VIIIe siècle. La tradition donne aussi 788 à 820. À introduire le jeudi, avec les Upaniṣad."
+        }
+      ]
+    },
+    {
+      "id": "islam",
+      "title": "Islam, arabité, historiographie",
+      "civilisation": "Islam et monde arabe",
+      "works": [
+        {
+          "role": "secondaire",
+          "title": "Introduction au Coran",
+          "authors": "Régis Blachère",
+          "year": "1947",
+          "cite": "Paris, G.-P. Maisonneuve, 1947.",
+          "note": "Avec Le Coran, traduction, 1949-1950, rééd. 1957. Lecture d'appui du module VII."
+        },
+        {
+          "role": "commentaire",
+          "title": "Jāmiʿ al-bayān ʿan taʾwīl āy al-Qurʾān",
+          "authors": "al-Ṭabarī",
+          "year": "mort en 923",
+          "cite": "Grand tafsīr, composé au IXe siècle et au début du Xe.",
+          "note": "Commentateur traditionnel de la leçon sur le Coran."
+        },
+        {
+          "role": "primaire",
+          "title": "Muqaddima",
+          "authors": "Ibn Khaldūn",
+          "year": "1377",
+          "cite": "Rédaction principale à partir de 1377.",
+          "note": "À la fois source primaire (leçon 50) et classique de l'historiographie. Le samedi économique y revient sans refaire la lecture du mardi."
+        },
+        {
+          "role": "secondaire",
+          "title": "The Venture of Islam",
+          "authors": "Marshall G. S. Hodgson",
+          "year": "1974",
+          "cite": "3 vol., Chicago, University of Chicago Press, 1974 (publication posthume ; Hodgson meurt en 1968).",
+          "note": "Lecture d'appui du module VIII."
+        },
+        {
+          "role": "secondaire",
+          "title": "A History of the Arab Peoples",
+          "authors": "Albert Hourani",
+          "year": "1991",
+          "cite": "Londres, Faber and Faber, 1991.",
+          "note": "Accompagne Hodgson sans le remplacer. Voir aussi Arabic Thought in the Liberal Age, 1798-1939, Londres, Oxford University Press, 1962."
+        },
+        {
+          "role": "commentaire",
+          "title": "Tahāfut al-Tahāfut",
+          "authors": "Ibn Rushd (Averroès)",
+          "year": "vers 1180",
+          "cite": "L'Incohérence de l'Incohérence, vers 1180, et les commentaires d'Aristote.",
+          "note": "Surtout le jeudi, quand la falsafa est au programme."
+        }
+      ]
+    },
+    {
+      "id": "afrique",
+      "title": "Afrique de l'Ouest, tradition orale, débats",
+      "civilisation": "Afrique",
+      "works": [
+        {
+          "role": "secondaire",
+          "title": "De la tradition orale. Essai de méthode historique",
+          "authors": "Jan Vansina",
+          "year": "1961",
+          "cite": "Tervuren, Musée royal de l'Afrique centrale, 1961. Refondu : Oral Tradition as History, Madison, University of Wisconsin Press, 1985.",
+          "note": "Lecture d'appui du module VIII pour Soundjata et les chroniques."
+        },
+        {
+          "role": "secondaire",
+          "title": "Soundjata ou l'épopée mandingue",
+          "authors": "Djibril Tamsir Niane",
+          "year": "1960",
+          "cite": "Paris, Présence Africaine, 1960.",
+          "reserve": "Réécriture littéraire d'une tradition orale, non la transcription d'un manuscrit médiéval. On le lit avec Vansina, non à sa place."
+        },
+        {
+          "role": "secondaire",
+          "title": "Tierno Bokar, le sage de Bandiagara",
+          "authors": "Amadou Hampâté Bâ et Marcel Cardaire",
+          "year": "1957",
+          "cite": "Paris, Présence Africaine, 1957. Puis Amadou Hampâté Bâ, Vie et enseignement de Tierno Bokar, Paris, Éditions du Seuil, 1980.",
+          "note": "Transmission d'un savoir ouest-africain musulman. L'Étrange Destin de Wangrin, 1973, est un récit, pas une chronique."
+        },
+        {
+          "role": "secondaire",
+          "title": "Nations nègres et culture",
+          "authors": "Cheikh Anta Diop",
+          "year": "1954",
+          "cite": "Paris, Présence Africaine, 1954.",
+          "reserve": "Les thèses sur l'égyptien, les parentés linguistiques et un « plagiat » grec ont été contestées, notamment au colloque de l'Unesco au Caire en 1974 (actes : The Peopling of Ancient Egypt and the Deciphering of the Meroitic Script, Paris, Unesco, 1978). On le lit comme un classique du débat, non comme un substitut des sources."
+        }
+      ]
+    },
+    {
+      "id": "axial",
+      "title": "L'âge axial, comme hypothèse",
+      "civilisation": "Transversal",
+      "works": [
+        {
+          "role": "secondaire",
+          "title": "Vom Ursprung und Ziel der Geschichte",
+          "authors": "Karl Jaspers",
+          "year": "1949",
+          "cite": "Zurich, Artemis-Verlag, 1949. Trad. Hélène Naef, avec Wolfgang Achterberg, Origine et sens de l'histoire, Paris, Plon, 1954.",
+          "note": "Lecture d'appui du module III, leçon 14.",
+          "reserve": "Hypothèse de philosophie de l'histoire, non une démonstration historique."
+        }
+      ]
+    }
+  ]
+}
