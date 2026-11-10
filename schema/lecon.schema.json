@@ -1,0 +1,229 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://whitepolo.github.io/preceptorat/schema/lecon.schema.json",
+  "title": "Leçon du préceptorat",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "title",
+    "date",
+    "subject",
+    "subject_label",
+    "lesson_number",
+    "duration_min",
+    "lang",
+    "objectives",
+    "student_note",
+    "sections",
+    "retenir",
+    "mot_du_jour"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "id": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}-[a-z]+-L[0-9]+$"
+    },
+    "title": { "type": "string", "minLength": 1 },
+    "date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+    "weekday": { "type": "string", "minLength": 1 },
+    "subject": {
+      "type": "string",
+      "enum": [
+        "latin",
+        "classiques",
+        "philosophie",
+        "mathematiques",
+        "sciences",
+        "economie",
+        "econometrie",
+        "quiz",
+        "art",
+        "histoire"
+      ]
+    },
+    "subject_label": { "type": "string", "minLength": 1 },
+    "lesson_number": { "type": "integer", "minimum": 1 },
+    "module": { "$ref": "#/$defs/module" },
+    "duration_min": { "$ref": "#/$defs/duration" },
+    "lang": { "const": "fr" },
+    "objectives": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 4,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "prerequisites": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "student_note": { "type": "string", "minLength": 1 },
+    "sources": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/source" }
+    },
+    "sections": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/section" }
+    },
+    "retenir": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 6,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "mot_du_jour": { "$ref": "#/$defs/mot" }
+  },
+  "$defs": {
+    "duration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["min", "max"],
+      "properties": {
+        "min": { "type": "integer", "minimum": 1 },
+        "max": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "module": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "cite"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["primary", "secondary", "method"]
+        },
+        "cite": { "type": "string", "minLength": 1 }
+      }
+    },
+    "mot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "terme", "texte"],
+      "properties": {
+        "code": { "const": "M" },
+        "terme": { "type": "string", "minLength": 1 },
+        "texte": { "type": "string", "minLength": 1 }
+      }
+    },
+    "excerpt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["work", "locus", "edition", "text"],
+      "properties": {
+        "work": { "type": "string", "minLength": 1 },
+        "locus": { "type": "string", "minLength": 1 },
+        "edition": { "type": "string", "minLength": 1 },
+        "translator": { "type": "string", "minLength": 1 },
+        "lang": { "type": "string", "minLength": 1 },
+        "text": { "type": "string", "minLength": 1 },
+        "close_reading": { "type": "string", "minLength": 1 }
+      }
+    },
+    "figure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "caption", "columns", "rows"],
+      "properties": {
+        "type": { "const": "table" },
+        "caption": { "type": "string", "minLength": 1 },
+        "columns": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+        "rows": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "secondary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["work", "idea", "question", "solution"],
+      "properties": {
+        "work": { "type": "string", "minLength": 1 },
+        "idea": { "type": "string", "minLength": 1 },
+        "question": { "type": "string", "minLength": 1 },
+        "solution": { "type": "string", "minLength": 1 }
+      }
+    },
+    "question": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "kind", "prompt", "solution"],
+      "properties": {
+        "code": { "type": "string", "pattern": "^[A-Z][A-Za-z0-9]*$" },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "recall",
+            "feedback",
+            "prequestion",
+            "notion",
+            "worked",
+            "complete",
+            "secondary",
+            "exercise",
+            "reflection",
+            "ticket"
+          ]
+        },
+        "prompt": { "type": "string", "minLength": 1 },
+        "solution": { "type": "string", "minLength": 1 },
+        "card_id": { "type": "string", "pattern": "^[A-Z]+-[0-9]{3}$" }
+      }
+    },
+    "section": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "enum": [
+            "rappel",
+            "correction",
+            "prequestions",
+            "cours",
+            "exemples",
+            "regard",
+            "exercices",
+            "reflexion",
+            "ticket"
+          ]
+        },
+        "title": { "type": "string", "minLength": 1 },
+        "duration_min": { "$ref": "#/$defs/duration" },
+        "body": { "type": "string", "minLength": 1 },
+        "questions": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/question" }
+        },
+        "excerpt": { "$ref": "#/$defs/excerpt" },
+        "figures": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/figure" }
+        },
+        "secondary": { "$ref": "#/$defs/secondary" }
+      }
+    }
+  }
+}

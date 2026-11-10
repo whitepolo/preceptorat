@@ -1,0 +1,266 @@
+{
+  "schema_version": "1.0",
+  "id": "2026-11-17-classiques-L1",
+  "title": "2026-11-17 · Classiques · Leçon 1 : Qu'est-ce qu'un classique ? Gilgamesh, le prologue et les murs d'Uruk",
+  "date": "2026-11-17",
+  "weekday": "mardi",
+  "subject": "classiques",
+  "subject_label": "Classiques des civilisations",
+  "lesson_number": 1,
+  "module": { "id": "I", "title": "Naissances : épopée, sagesse, royauté écrite" },
+  "duration_min": { "min": 35, "max": 45 },
+  "lang": "fr",
+  "objectives": [
+    "Dire ce qu'est un classique, sans le réduire à « un vieux livre célèbre ».",
+    "Situer l'Épopée de Gilgamesh : Uruk, les versions successives, la version standard akkadienne en douze tablettes.",
+    "Lire de près le cadre de l'œuvre (prologue et murs d'Uruk) et expliquer ce que le poème oppose à l'immortalité manquée.",
+    "Distinguer ce que fait ce créneau du mardi et ce que fera la philosophie le jeudi."
+  ],
+  "student_note": "Réponds dans le fil de discussion, en faisant précéder chaque réponse du code de la question (R1, P1, E1, Xf, S, Q, T1...). Ne lis une solution qu'après avoir répondu.",
+  "sources": [
+    {
+      "type": "primary",
+      "cite": "A. R. George, The Babylonian Gilgamesh Epic. Introduction, Critical Edition and Cuneiform Texts, 2 vol., Oxford, Oxford University Press, 2003 (texte, lignage, attribution à Sîn-lēqi-unninni, reprise des murs à la tablette XI)."
+    },
+    {
+      "type": "secondary",
+      "cite": "Jean Bottéro, L'Épopée de Gilgameš. Le grand homme qui ne voulait pas mourir, Paris, Gallimard, 1992. Lecture française recommandée, non reproduite dans la leçon."
+    },
+    {
+      "type": "primary",
+      "cite": "George Smith, « The Chaldean Account of the Deluge », Transactions of the Society of Biblical Archaeology, t. 2, 1873, p. 213-234 (communication lue le 3 décembre 1872)."
+    },
+    {
+      "type": "secondary",
+      "cite": "Sur un Gilgamesh historique possible, rester prudent : la Liste royale sumérienne n'est pas, dans ses premières sections, une chronique sûre ; voir aussi les mises au point de Marchesi et al. dans Sallaberger et Schrakamp (dir.), ARCANE 3, Turnhout, Brepols, 2015."
+    }
+  ],
+  "sections": [
+    {
+      "id": "rappel",
+      "title": "Rappel",
+      "duration_min": { "min": 8, "max": 10 },
+      "body": "Réponds de mémoire. Ces questions portent sur des points encore fragiles au 11 novembre 2026. Le jour de la leçon, si d'autres cartes sont dues, on les substitue en gardant le plafond de 8 et le mélange des matières.",
+      "questions": [
+        {
+          "code": "R1",
+          "kind": "recall",
+          "card_id": "LAT-025",
+          "prompt": "Mets au pluriel : *fluvius parvus* et *oppidum parvum*. Comment forme-t-on ce pluriel ?",
+          "solution": "*fluvii parvi*, *oppida parva*. On remplace la terminaison du singulier (*-us* par *-i*, *-um* par *-a*) : on n'ajoute rien après."
+        },
+        {
+          "code": "R2",
+          "kind": "recall",
+          "card_id": "HIS-006",
+          "prompt": "Donne quatre dates de l'histoire de Maurice : arrivée des Hollandais, arrivée des Français, arrivée des Britanniques, indépendance. Attention à la première.",
+          "solution": "1598 (les Hollandais donnent à l'île le nom de Maurice de Nassau), 1715 (l'île devient française, sous le nom d'Isle de France ; le peuplement s'organise surtout à partir de 1721), 1810 (conquête britannique), 12 mars 1968 (indépendance). 1638 est la fondation du premier établissement hollandais, pas l'arrivée ni le nom."
+        },
+        {
+          "code": "R3",
+          "kind": "recall",
+          "card_id": "LAT-019",
+          "prompt": "Traduis en latin : « La Syrie n'est pas en Europe, mais en Asie. »",
+          "solution": "*Syria non in Europa, sed in Asia est.* (On peut aussi écrire *Syria non in Europa est, sed in Asia.*)"
+        },
+        {
+          "code": "R4",
+          "kind": "recall",
+          "card_id": "HIS-002",
+          "prompt": "À quel siècle appartiennent les années 2000 et 1601 ? Rappelle la règle.",
+          "solution": "2000 appartient au XXe siècle, 1601 au XVIIe. Règle : on retire 1 à l'année, on retient le nombre de centaines, on ajoute 1. Ainsi 2000 − 1 = 1999, soit 19 centaines, plus 1 : XXe. Le XXIe siècle commence le 1er janvier 2001."
+        },
+        {
+          "code": "R5",
+          "kind": "recall",
+          "card_id": "LAT-017",
+          "prompt": "Que signifie *ubi*, et quel mot français en descend directement ?",
+          "solution": "*Ubi* signifie « où ». Le français *où* en vient. *Ubiquité* vient d'un mot voisin, *ubique*, « partout », et non de *ubi* lui-même."
+        },
+        {
+          "code": "R6",
+          "kind": "recall",
+          "card_id": "HIS-004",
+          "prompt": "Cite les quatre foyers anciens d'écriture vus en Histoire L1, avec une date approximative pour chacun.",
+          "solution": "La Mésopotamie, à Uruk, vers 3300 à 3200 av. J.-C. ; l'Égypte, vers 3200 av. J.-C. ; l'Indus, vers 2600 à 1900 av. J.-C., avec une écriture non déchiffrée ; la Chine des Shang, vers 1250 av. J.-C., inscriptions sur os. (La Mésoamérique, au Ier millénaire av. J.-C., avait aussi été signalée en L1, en plus de ces quatre foyers.)"
+        },
+        {
+          "code": "R7",
+          "kind": "recall",
+          "card_id": "LAT-010",
+          "prompt": "D'où vient le mot « péninsule » ? Donne les deux mots latins.",
+          "solution": "De *paene insula*, « presque une île ». *Paene* veut dire « presque » ; *insula*, « île »."
+        },
+        {
+          "code": "R8",
+          "kind": "recall",
+          "card_id": "LAT-021",
+          "prompt": "*Oppida* : singulier ou pluriel ? Pourquoi est-ce un piège ?",
+          "solution": "Pluriel neutre : « des villes ». Le piège est que le neutre pluriel finit en *-a*, comme le féminin singulier. Le verbe est *sunt*, jamais *est*."
+        }
+      ]
+    },
+    {
+      "id": "correction",
+      "title": "Correction",
+      "duration_min": { "min": 3, "max": 3 },
+      "body": "L'ancien parcours d'histoire (repères de temps, premières écritures, Mésopotamie jusqu'à Hammurabi) s'arrête ici. Tes cartes HIS-001 à HIS-012 restent en révision : ce n'est pas à jeter, c'est le socle. Les exercices d'Histoire L2 que tu n'as pas terminés ne sont pas à rattraper en bloc.\n\nTrois points, d'après tes réponses du 11 novembre :\n\n- Les Hollandais ont nommé l'île en **1598**, en l'honneur de Maurice de Nassau. L'année 1638 est celle de leur premier établissement, pas de l'arrivée ni du nom.\n- On écrit **Syria**, pas *Syrinia* : *Syria non in Europa, sed in Asia est.*\n- Aux lois 229 et 230 de Hammurabi, tu as bien vu la forme « si... alors... » et l'équivalence entre hommes libres. Il manquait l'essentiel du §230 : c'est le fils du maçon, qui n'a rien fait, qui est mis à mort. La responsabilité passe par la famille, et la peine calque le dommage (un fils pour un fils)."
+    },
+    {
+      "id": "prequestions",
+      "title": "Pré-questions",
+      "duration_min": { "min": 1, "max": 1 },
+      "body": "Réponds même au hasard, c'est voulu.",
+      "questions": [
+        {
+          "code": "P1",
+          "kind": "prequestion",
+          "prompt": "Pourquoi commencer une culture générale des classiques par un poème de Mésopotamie, plutôt que par Homère ?",
+          "solution": "Parce que c'est le plus ancien grand récit littéraire que nous puissions encore lire de près, et qu'il pose déjà la mort, l'amitié, la cité et l'écriture. Homère viendra au module II : il n'est pas le commencement de l'épopée, seulement celui de l'épopée grecque."
+        },
+        {
+          "code": "P2",
+          "kind": "prequestion",
+          "prompt": "Si un héros échoue à devenir immortel, que peut encore laisser un poème à ceux qui le lisent ?",
+          "solution": "Une ville, des murs, un récit fixé par écrit, une mesure du monde. Autrement dit une mémoire transmissible, alors que le corps du héros meurt."
+        }
+      ]
+    },
+    {
+      "id": "cours",
+      "title": "Notion du jour",
+      "duration_min": { "min": 10, "max": 12 },
+      "body": "### Qu'est-ce qu'un classique, et comment on travaille ici\n\nUn classique n'est pas seulement une œuvre ancienne, ni seulement une œuvre fameuse. C'est une œuvre qu'une tradition continue de lire, de citer et de commenter, et qui sert de référence à d'autres œuvres. On la relit parce qu'elle pose encore une question, pas parce qu'on « doit l'avoir lue ».\n\nCe mardi, et les mardis qui suivent, portent sur les grands textes, les grandes figures et les grands événements de six traditions : grecque, latine, chinoise, indienne, arabe et africaine. Le fil est chronologique. Les civilisations se croisent quand elles sont contemporaines, pour que des comparaisons apparaissent (plus tard : l'âge axial, Alexandre et Aśoka). Chaque leçon s'organise autour d'une œuvre ou d'une figure, avec un court extrait de source primaire, cité.\n\nLe jeudi (philosophie) analysera des arguments et des concepts. Le lundi et le mercredi, le latin reste une langue, avec sa grammaire. Aujourd'hui, on lit en français, d'après une édition critique.\n\n### Gilgamesh et Uruk\n\nUruk (aujourd'hui Warka, dans le sud de l'Irak) est la ville de Gilgamesh. Tu la connais déjà par les plus anciennes tablettes écrites, vers 3300 à 3200 av. J.-C., trouvées surtout dans le quartier des temples, l'Eanna. L'épopée se souvient de cette ville : l'Eanna y est le siège d'Ishtar, et le poème ne cesse de ramener le lecteur à ses murs.\n\nUn roi d'Uruk nommé Gilgamesh (en sumérien, Bilgames) a pu exister au début de l'époque des dynasties archaïques, souvent placé, avec prudence, vers 2700 à 2500 av. J.-C. La Liste royale sumérienne le compte parmi les rois d'Uruk, mais ses premières sections mêlent légende et mémoire (des règnes de plus de cent ans). D'autres indices existent : un nom de personne du type « Pabilgames est l'élu d'Utu » sur une tablette archaïque d'Ur ; une tradition plus tardive, dans l'inscription de Tummal, qui lui attribue les murs d'Uruk. Rien de tout cela n'a la netteté d'un règne comme celui de Hammurabi. On dira donc : un roi historique est possible ; le Gilgamesh que nous lisons est le héros d'un poème.\n\nCe poème a une histoire, elle aussi à étages.\n\n| Période (av. J.-C.) | Forme de l'œuvre |\n| --- | --- |\n| Vers 2100 (IIIe dynastie d'Ur) | Poèmes sumériens sur Bilgames, probablement mis en forme à la cour de Shulgi |\n| Début du IIe millénaire | Première épopée en akkadien (version paléo-babylonienne), encore fragmentaire |\n| Vers 1200 à 1000 | Version standard akkadienne, en douze tablettes, attribuée par la tradition à Sîn-lēqi-unninni, exorciste et savant d'Uruk. Le titre antique est l'incipit : Ša naqba īmuru, « Celui qui a vu le Fond » |\n| VIIe siècle | Copies de la bibliothèque d'Assurbanipal à Ninive, nos principaux témoins |\n\nSîn-lēqi-unninni signifie, en substance, « Sîn (le dieu-lune) a accueilli ma prière ». On ne sait presque rien de lui, sinon que des familles de scribes d'Uruk s'en réclamaient plus tard. La version standard réorganise des récits plus anciens. Son arc complet tient dans les tablettes I à XI. La tablette XII est un supplément : la traduction akkadienne d'un poème sumérien où Enkidu descend au monde des morts.\n\nLes tablettes de Ninive (site de Kuyunjik) sont entrées au British Museum au milieu du XIXe siècle, avec les fouilles de Layard et de Rassam. Le 3 décembre 1872, George Smith en identifia, devant la Society of Biblical Archaeology, le récit du Déluge, qui occupe la tablette XI. Nous le lirons de près à la leçon 2.\n\n### L'histoire que raconte le poème\n\nGilgamesh, roi deux tiers dieu et un tiers homme, est un souverain excessif. Les dieux créent Enkidu, d'abord homme sauvage, pour lui faire face. Les deux héros deviennent amis, tuent Humbaba, gardien de la forêt des Cèdres, puis le Taureau céleste envoyé par Ishtar, que Gilgamesh a rejetée. Enkidu meurt. Gilgamesh, terrifié par la mort, part au bout du monde chercher Uta-napišti, le survivant du Déluge, devenu immortel. Il échoue à rester éveillé, puis perd, au retour, la plante qui rajeunit : un serpent la lui prend et change de peau. Il rentre à Uruk et montre la ville au passeur Ur-shanabi.\n\n### Le cadre de l'œuvre\n\nTexte : version standard, tablette I, lignes 1-10 et 18-28, d'après le texte établi par A. R. George, *The Babylonian Gilgamesh Epic*, Oxford University Press, 2003. Traduction de travail, pour cette leçon, d'après cette édition, et non reproduction d'une traduction française protégée. Pour une lecture suivie en français, on se reportera à Jean Bottéro, *L'Épopée de Gilgameš*, Paris, Gallimard, 1992.\n\nLe mot akkadien *naqbu* (ligne 1) désigne à la fois le Fond, les eaux profondes, et la totalité de ce qui peut être connu. Les deux sens comptent : Gilgamesh a vu les eaux du bout du monde, chez Uta-napišti, et il a vu « tout ».",
+      "excerpt": {
+        "work": "Épopée de Gilgamesh, version standard akkadienne",
+        "locus": "tablette I, lignes 1-10 et 18-28",
+        "edition": "Texte établi par A. R. George, The Babylonian Gilgamesh Epic. Introduction, Critical Edition and Cuneiform Texts, Oxford University Press, 2003.",
+        "translator": "traduction de travail, pour cette leçon, d'après l'édition citée",
+        "lang": "fr",
+        "text": "Celui qui a vu le Fond, le socle du pays,\nqui connaissait les voies, était sage en toute chose.\nGilgamesh, qui a vu le Fond, le socle du pays,\nqui connaissait les voies, était sage en toute chose.\nIl a parcouru tous les sièges du pouvoir,\nil détenait toute la sagesse sur toute chose.\nIl a vu ce qui était secret, il a découvert ce qui était caché,\nil a rapporté un récit d'avant le Déluge.\nIl a fait un long chemin, il s'est épuisé, il a trouvé le repos,\net il a fixé toutes ses peines sur une stèle de pierre.\n\n(I, 1-10)\n\nMonte sur le rempart d'Uruk et marche,\nexamine les fondations, inspecte l'appareil de briques :\nses briques ne sont-elles pas cuites au four,\net les Sept Sages n'en ont-ils pas posé les fondations ?\nUn šār de ville, un šār de palmeraie, un šār de terrains bas,\nl'aire du temple d'Ishtar : trois šār et demi, voilà la mesure d'Uruk.\nOuvre le coffret de cèdre,\nfais sauter ses fermoirs de bronze,\nouvre le couvercle : prends la tablette de lapis-lazuli et lis\ntout ce que Gilgamesh a traversé, toutes ses épreuves.\n\n(I, 18-28)",
+        "close_reading": "Le *šār* est une grande mesure de superficie. Le poème donne un plan chiffré (ville, palmeraie, terrains bas, temple), pas une invitation vague à « admirer ». Les mêmes vers sur le rempart reviennent à la fin de la tablette XI (vers les lignes 323 à 328), quand Gilgamesh, de retour, s'adresse à Ur-shanabi. L'œuvre s'ouvre et se referme sur les murs.\n\nLe prologue ne commence pas par la naissance du héros, mais par ce qu'il a fini par voir et par laisser. La sagesse est un résultat, payée par la fatigue du voyage. Avant même le récit, le Déluge est annoncé : nous saurons, à la tablette XI, ce que Gilgamesh a « rapporté ».\n\nPuis le poème nous donne un ordre : monter, marcher, inspecter, lire. Le lecteur est mis à la place de celui qui fait le tour de la ville. Ce qui reste, une fois l'immortalité manquée, ce n'est pas un corps qui ne meurt pas, c'est une ville mesurable, des briques cuites, et un texte (la stèle, puis la tablette de lapis dans son coffret). L'épopée se désigne elle-même : ouvrir le coffret, c'est commencer à la lire. Voilà déjà, concrètement, ce qu'est un classique : une œuvre qu'on est invité à reprendre en main.\n\nC'est le plus ancien grand récit littéraire que nous puissions encore lire de près, avec cette ampleur. Il pose, bien avant Homère, l'amitié, la peur de mourir, la limite faite à l'homme, et ce qu'une cité et une écriture peuvent transmettre. Le récit du Déluge, à la leçon suivante, montrera ce que Gilgamesh a « rapporté » ; il ne faut pas, d'emblée, le réduire à une « version » d'un récit biblique : ce sont des traditions apparentées, chacune dans son monde, et le poème de Gilgamesh s'en sert pour une question qui est la sienne, celle de la mort d'un homme."
+      }
+    },
+    {
+      "id": "exemples",
+      "title": "Exemples résolus",
+      "duration_min": { "min": 5, "max": 5 },
+      "body": "On lit un extrait en trois temps : ce que le texte dit ; comment il est fait ; ce qu'il engage.",
+      "questions": [
+        {
+          "code": "X1",
+          "kind": "worked",
+          "prompt": "Prenons I, 1-8. **Ce que le texte dit :** un homme a vu le Fond, il a connu les voies, il a rapporté un récit d'avant le Déluge ; cet homme est nommé au troisième vers, Gilgamesh. **Comment il est fait :** les deux premiers vers sont répétés en y insérant le nom ; la sagesse est dite plusieurs fois, par accumulation ; le Déluge entre dans le prologue avant d'être raconté. **Ce qu'il engage :** le héros vaut par ce qu'il a vu et rapporté, non par une victoire sur la mort, qui n'est pas mentionnée ici. Le mot *naqbu* tient ensemble la profondeur (les eaux) et la totalité (le savoir).",
+          "solution": "Le héros est nommé au troisième vers, par reprise des deux premiers. Il vaut par ce qu'il a vu et rapporté, non par une victoire sur la mort. *Naqbu* joint la profondeur et la totalité."
+        },
+        {
+          "code": "Xf",
+          "kind": "complete",
+          "prompt": "À toi de finir, sur I, 24-28 (le coffret de cèdre et la tablette de lapis-lazuli). Les trois mêmes temps : que dit le passage, comment est-il fait (à qui s'adresse-t-il, par quels verbes), que signifie le geste d'ouvrir et de lire pour l'œuvre que tu as dans les mains ?",
+          "solution": "**Ce que le texte dit :** il faut ouvrir un coffret de cèdre, en ôter les fermoirs de bronze, prendre une tablette de lapis-lazuli et lire tout ce que Gilgamesh a traversé. **Comment il est fait :** une série d'impératifs (ouvre, fais sauter, prends, lis) s'adresse à un « tu », le même que celui qu'on a fait monter sur le rempart ; l'objet (cèdre, bronze, lapis) est précieux. **Ce qu'il engage :** l'épopée se montre elle-même comme un objet à ouvrir et à lire ; le lecteur accomplit le geste que le prologue décrit. C'est la définition concrète d'un classique."
+        }
+      ]
+    },
+    {
+      "id": "regard",
+      "title": "Le regard des maîtres",
+      "duration_min": { "min": 2, "max": 2 },
+      "secondary": {
+        "work": "Jean Bottéro, L'Épopée de Gilgameš. Le grand homme qui ne voulait pas mourir, Paris, Gallimard, 1992",
+        "idea": "Jean Bottéro a donné à son édition française le sous-titre *Le grand homme qui ne voulait pas mourir*. L'idée n'est pas un ornement : pour cet assyriologue, le poème n'est pas d'abord un recueil de prouesses, mais le récit d'un homme qui refuse la mort et qui doit en tirer une sagesse. A. R. George, dans l'édition de référence du texte akkadien (Oxford, 2003), montre de son côté que les vers sur le rempart d'Uruk (tablette I, puis tablette XI, vers 323 et suivantes) referment l'œuvre sur elle-même, en composition en anneau : le lecteur, comme Ur-shanabi, est renvoyé à la ville et au texte.",
+        "question": "En quoi le sous-titre de Bottéro éclaire-t-il le retour aux murs d'Uruk, là où le héros, précisément, n'a pas obtenu l'immortalité ?",
+        "solution": "Les murs et la tablette sont ce qui reste à la place de l'immortalité manquée. Bottéro lit l'épopée comme l'éducation d'un homme qui ne voulait pas mourir : le retour à Uruk n'est pas seulement un échec, c'est le moment où le héros, et le lecteur, reçoivent une sagesse à la mesure d'une vie mortelle, une ville et un récit, non un corps qui échapperait à la mort. George, en soulignant la composition en anneau, montre que le poème avait prévu cette leçon dès le prologue."
+      },
+      "questions": [
+        {
+          "code": "S",
+          "kind": "secondary",
+          "prompt": "En quoi le sous-titre de Bottéro éclaire-t-il le retour aux murs d'Uruk, là où le héros, précisément, n'a pas obtenu l'immortalité ?",
+          "solution": "Les murs et la tablette sont ce qui reste à la place de l'immortalité manquée. Bottéro lit l'épopée comme l'éducation d'un homme qui ne voulait pas mourir : le retour à Uruk n'est pas seulement un échec, c'est le moment où le héros, et le lecteur, reçoivent une sagesse à la mesure d'une vie mortelle, une ville et un récit, non un corps qui échapperait à la mort. George, en soulignant la composition en anneau, montre que le poème avait prévu cette leçon dès le prologue."
+        }
+      ]
+    },
+    {
+      "id": "exercices",
+      "title": "Exercices",
+      "duration_min": { "min": 8, "max": 10 },
+      "questions": [
+        {
+          "code": "E1",
+          "kind": "exercise",
+          "prompt": "Situe la version standard de l'épopée : ville du héros, langue, nombre de tablettes, personne à qui la tradition l'attribue, et siècle approximatif de cette mise en forme.",
+          "solution": "Ville : Uruk. Langue : l'akkadien. Douze tablettes. Attribution traditionnelle : Sîn-lēqi-unninni, exorciste et savant d'Uruk. Mise en forme : vers 1200 à 1000 av. J.-C. (période médio-babylonienne)."
+        },
+        {
+          "code": "E2",
+          "kind": "exercise",
+          "prompt": "Pourquoi le poème commence-t-il et s'achève-t-il par les murs d'Uruk ? Qu'est-ce qui demeure, une fois manquée l'immortalité ? Réponds en quelques phrases, en t'appuyant sur l'extrait.",
+          "solution": "Les murs apparaissent dès le prologue et reviennent à la fin de la tablette XI, quand Gilgamesh rentre avec Ur-shanabi. Le poème encadre le voyage par ce qui, à Uruk, se voit et se mesure : briques cuites, fondations attribuées aux Sept Sages, plan en *šār*. L'immortalité du corps a échoué (le serpent emporte la plante). Il reste la cité et le texte."
+        },
+        {
+          "code": "E3",
+          "kind": "exercise",
+          "prompt": "Quel ordre le passage I, 18-28 donne-t-il au lecteur, et en quoi cela éclaire-t-il la définition d'un classique donnée au début du cours ?",
+          "solution": "L'ordre est de monter, de marcher, d'inspecter les fondations et les briques, puis d'ouvrir le coffret et de lire la tablette. Un classique n'est pas seulement un objet admiré de loin : c'est un texte qu'une tradition reprend, inspecte et relit. Le prologue met déjà le lecteur dans ce geste."
+        },
+        {
+          "code": "E4",
+          "kind": "exercise",
+          "prompt": "Pour réviser le latin : traduis « Uruk est une grande ville. Elle n'est pas en Europe, mais en Asie. »",
+          "solution": "*Uruk oppidum magnum est. Uruk non in Europa, sed in Asia est.* On peut alléger : *Uruk oppidum magnum est, non in Europa, sed in Asia.*"
+        },
+        {
+          "code": "E5",
+          "kind": "exercise",
+          "prompt": "Pourquoi la historicité de Gilgamesh est-elle plus fragile que celle de Hammurabi ? Quelle sorte de sources aurait-on besoin de trouver pour la renforcer ?",
+          "solution": "De Hammurabi, on a un règne daté (1792-1750 av. J.-C., chronologie moyenne), une capitale, et des documents de son temps, dont la stèle. De Gilgamesh, on a surtout des traditions plus tardives (Liste royale, poèmes, inscription de Tummal) et un indice onomastique archaïque. Pour renforcer la historicité, il faudrait une inscription ou une archive à peu près contemporaine du roi, le nommant clairement comme souverain d'Uruk, ce qui manque encore."
+        }
+      ]
+    },
+    {
+      "id": "reflexion",
+      "title": "Question de réflexion",
+      "duration_min": { "min": 2, "max": 2 },
+      "questions": [
+        {
+          "code": "Q",
+          "kind": "reflection",
+          "prompt": "Une œuvre est-elle classique parce qu'elle raconte des faits historiquement sûrs, ou parce qu'une tradition ne cesse de la relire ? Qu'est-ce qui s'ensuit pour le roi possible et pour le héros du poème ? Une ou deux phrases.",
+          "solution": "Une œuvre devient classique parce qu'on continue de la lire et de s'y rapporter, non parce que chaque fait raconté est historiquement garanti. On peut donc tenir ensemble un roi d'Uruk possible, mal attesté, et un héros de poème dont la force ne dépend pas de cette attestation."
+        }
+      ]
+    },
+    {
+      "id": "ticket",
+      "title": "Ticket de sortie",
+      "duration_min": { "min": 2, "max": 2 },
+      "questions": [
+        {
+          "code": "T1",
+          "kind": "ticket",
+          "prompt": "Quel est le titre antique de la version standard, et que peut signifier le mot *naqbu* ?",
+          "solution": "*Ša naqba īmuru*, « Celui qui a vu le Fond ». *Naqbu* peut désigner le Fond, les eaux profondes, et la totalité de ce qui peut être connu."
+        },
+        {
+          "code": "T2",
+          "kind": "ticket",
+          "prompt": "Où et à quelle époque ont été copiés nos principaux témoins de cette version ? Qui a identifié la tablette du Déluge, et en quelle année l'a-t-il présentée ?",
+          "solution": "À Ninive, dans la bibliothèque d'Assurbanipal, au VIIe siècle av. J.-C. George Smith a présenté la tablette du Déluge le 3 décembre 1872, devant la Society of Biblical Archaeology."
+        }
+      ]
+    }
+  ],
+  "retenir": [
+    "Un classique est une œuvre qu'une tradition relit et commente, et qui sert de référence, non seulement un texte ancien ou fameux.",
+    "L'Épopée de Gilgamesh a pour cadre Uruk. La version standard, en akkadien, tient en douze tablettes ; la tradition l'attribue à Sîn-lēqi-unninni, vers 1200 à 1000 av. J.-C. L'arc du récit est celui des tablettes I à XI.",
+    "Nos principaux manuscrits viennent de la bibliothèque d'Assurbanipal, à Ninive, au VIIe siècle av. J.-C. George Smith a présenté la tablette du Déluge le 3 décembre 1872.",
+    "Le poème s'ouvre et se referme sur les murs d'Uruk. Ce qui reste, ce n'est pas l'immortalité du corps, c'est la ville, les briques, et un texte à lire : pour Bottéro, la sagesse d'un homme qui ne voulait pas mourir.",
+    "Un roi historique est possible, au début des dynasties archaïques ; le personnage que nous lisons est d'abord le héros d'un poème.",
+    "Le mardi situe l'œuvre et en lit un extrait. Le jeudi, plus tard, analysera des arguments, sans refaire ce travail."
+  ],
+  "mot_du_jour": {
+    "code": "M",
+    "terme": "classique",
+    "texte": "L'adjectif français vient du latin *classicus*, d'abord « qui appartient à une classe », et plus précisément, chez les auteurs latins, à la première classe des citoyens. Aulu-Gelle, au IIe siècle apr. J.-C., oppose l'écrivain *classicus*, « de première classe », à l'écrivain *proletarius*. Le mot a ensuite désigné les auteurs pris pour normes, puis, plus largement, les œuvres qu'une culture tient pour premières. C'est ce dernier sens que nous prenons ici, et il n'est pas réservé à l'Europe."
+  }
+}
