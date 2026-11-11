@@ -17,14 +17,17 @@ Sur un ordinateur, la même adresse suffit. Le téléphone et l'ordinateur se re
 
 ## Le jeton, une fois par appareil
 
-Réglages explique les étapes. En bref :
+La page de GitHub est en anglais. Les mots entre guillemets sont les libellés exacts.
 
-1. Va sur <https://github.com/settings/personal-access-tokens/new>
-2. Jeton fin, nommé Préceptorat.
-3. Propriétaire : le compte qui peut écrire dans `whitepolo/preceptorat`.
-4. Un seul dépôt : preceptorat.
-5. Droits : Issues, lecture et écriture. Contents, lecture et écriture.
-6. Colle le jeton dans Réglages, puis « Essayer la connexion ».
+1. Ouvre <https://github.com/settings/personal-access-tokens/new>.
+2. « Token name » : Préceptorat.
+3. « Expiration » : choisis une durée.
+4. « Repository access » : « Only select repositories », puis sélectionne « preceptorat ».
+5. « Permissions » : « Add permissions », puis « Repository permissions ».
+6. Pour « Issues », choisis « Read and write ». Le menu affiche d'abord « No access » ou « Read-only ».
+7. Pour « Contents », choisis aussi « Read and write ».
+8. « Metadata » passe tout seul à « Read-only ». C'est normal.
+9. « Generate token ». Copie le jeton, colle-le dans Réglages, puis « Tester ».
 
 Sans jeton, tu peux lire. Tu ne peux pas envoyer une réponse ni synchroniser les cartes.
 
