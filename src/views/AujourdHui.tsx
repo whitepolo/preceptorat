@@ -235,7 +235,7 @@ export function AujourdHui() {
         <LessonHero lesson={lesson} />
       ) : (
         <section className="empty-hero">
-          <p>Schopen la dépose vers 19 h, heure de Maurice. En attendant, les révisions tiennent les matières déjà vues.</p>
+          <p>Schopen la dépose vers 19 h. En attendant, les révisions tiennent les matières déjà vues.</p>
           {recent ? (
             <p>
               <a href={`#/lecon/${encodeURIComponent(recent.id)}/lire`}>Reprendre la dernière leçon : {recent.title}</a>

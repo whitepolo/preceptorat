@@ -43,6 +43,15 @@ export function Revisions() {
     );
   }
 
+  if (catalog.cards.length === 0) {
+    return (
+      <article className="sheet">
+        <h1>Révisions</h1>
+        <p className="lede">Aucune carte pour l'instant. Les cartes arriveront avec les nouvelles leçons.</p>
+      </article>
+    );
+  }
+
   if (!card || !stored) {
     return (
       <article className="sheet">
@@ -50,7 +59,7 @@ export function Revisions() {
         <p className="lede">Rien n'est dû pour la suite de cette séance.</p>
         <p>
           {plan.dueTotal === 0
-            ? "Aucune carte n'arrive à échéance aujourd'hui, heure de Maurice."
+            ? "Aucune carte n'arrive à échéance aujourd'hui."
             : `${plan.deferred} carte${plan.deferred > 1 ? "s" : ""} reste${plan.deferred > 1 ? "nt" : ""} pour un autre soir. Le plafond est de 8.`}
         </p>
         <p className="hint" role="status">

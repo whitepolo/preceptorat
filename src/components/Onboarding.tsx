@@ -18,7 +18,7 @@ const SCREENS = [
   {
     kicker: "Chaque soir",
     title: "Une leçon, trente à quarante-cinq minutes.",
-    text: "Bonsoir Sébastien. Vers 19 h, heure de Maurice, Schopen dépose la leçon du jour. Tu la fais quand tu peux, au calme.",
+    text: "Bonsoir Sébastien. Vers 19 h, Schopen dépose la leçon du jour. Tu la fais quand tu peux, au calme.",
   },
   {
     kicker: "Avant la solution",
