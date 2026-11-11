@@ -4,6 +4,7 @@ import { State } from "ts-fsrs";
 import { catalog, lessons, seedState } from "../content";
 import { canReveal, formatAnswerComment } from "./answers";
 import { stateFromCatalog } from "./legacy";
+import { mauritiusDate } from "./dates";
 import { lessonForToday, selectTonightLesson } from "./lessons";
 import { isTutorMessage, renderMarkdown, stripTutorMarker } from "./markdown";
 import { mergeStates, pickCard, pruneUnknownCards } from "./merge";
@@ -11,7 +12,7 @@ import { applyGrade } from "./scheduler";
 import { selectSession } from "./session";
 import type { ReviewStateFile, StoredCard } from "./types";
 
-describe("leçon du soir", () => {
+describe("leçon du jour", () => {
   it("n'ouvre que la leçon datée du jour, et garde la plus récente pour le lien", () => {
     expect(lessonForToday(lessons, "2026-11-11")).toBeNull();
     expect(lessonForToday(lessons, "2026-11-16")).toBeNull();
@@ -19,6 +20,16 @@ describe("leçon du soir", () => {
     expect(selectTonightLesson(lessons, "2026-11-11")).toBeNull();
     expect(selectTonightLesson(lessons, "2026-11-18")?.id).toBe("2026-11-17-classiques-L1");
     expect(lessons.map((lesson) => lesson.id)).toEqual(["2026-11-17-classiques-L1"]);
+  });
+
+  it("affiche la leçon du jour dès sa date, matin ou après-midi", () => {
+    const early = new Date("2026-11-17T02:30:00.000Z");
+    const morning = new Date("2026-11-17T03:30:00.000Z");
+    const afternoon = new Date("2026-11-17T12:00:00.000Z");
+    for (const instant of [early, morning, afternoon]) {
+      expect(mauritiusDate(instant)).toBe("2026-11-17");
+      expect(lessonForToday(lessons, mauritiusDate(instant))?.id).toBe("2026-11-17-classiques-L1");
+    }
   });
 });
 
@@ -110,7 +121,7 @@ describe("FSRS", () => {
   });
 });
 
-describe("séance du soir", () => {
+describe("séance du jour", () => {
   it("mélange les matières et groupe le vocabulaire jamais revu", () => {
     const due = "2026-11-11T15:00:00.000Z";
     const cards = [

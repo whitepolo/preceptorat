@@ -38,7 +38,7 @@ Required:
 
 ### Sections
 
-Ids, in this order. A section may be omitted. It may not move earlier than a section that belongs before it. Classiques lessons must include `regard`. `rappel` and `correction` are optional: leave them out when there is nothing to recall or nothing to correct. The tutor adds the recall the evening he publishes, from the cards actually due.
+Ids, in this order. A section may be omitted. It may not move earlier than a section that belongs before it. Classiques lessons must include `regard`. `rappel` and `correction` are optional: leave them out when there is nothing to recall or nothing to correct. The tutor adds the recall the day he publishes, from the cards actually due.
 
 | id | Title | Codes | kind |
 | --- | --- | --- | --- |
@@ -147,7 +147,7 @@ The app shows the lesson one step at a time. Each question has an answer field. 
 }
 ```
 
-Times are UTC. 15:00Z is 19:00 on the evening clock (UTC+4). `state`: 0 new, 1 learning, 2 review, 3 relearning. `cards` may be an empty object. Do not keep scheduling data for a card id that is no longer in `content/cartes.json`: the app drops those ids and will not write them back.
+Times are UTC. A stored due instant of 15:00Z is 19:00 at UTC+4; that is only the nominal instant written on a card, not the hour when the lesson appears. A lesson file dated today is shown for the whole calendar day, as soon as it is published. `state`: 0 new, 1 learning, 2 review, 3 relearning. `cards` may be an empty object. Do not keep scheduling data for a card id that is no longer in `content/cartes.json`: the app drops those ids and will not write them back.
 
 ## Programme, library, progress
 

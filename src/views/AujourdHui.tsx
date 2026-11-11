@@ -229,13 +229,13 @@ export function AujourdHui() {
 
   return (
     <article className="sheet home">
-      <p className="kicker">Ce soir</p>
-      <h1>{lesson ? "La leçon du jour" : "La leçon de ce soir arrive vers 19\u00a0h"}</h1>
+      <p className="kicker">Aujourd'hui</p>
+      <h1>{lesson ? "La leçon du jour" : "La leçon du jour arrive à partir de 7\u00a0h"}</h1>
       {lesson ? (
         <LessonHero lesson={lesson} />
       ) : (
         <section className="empty-hero">
-          <p>Schopen la dépose vers 19 h. En attendant, les révisions tiennent les matières déjà vues.</p>
+          <p>Schopen la dépose à partir de 7 h. En attendant, les révisions tiennent les matières déjà vues.</p>
           {recent ? (
             <p>
               <a href={`#/lecon/${encodeURIComponent(recent.id)}/lire`}>Reprendre la dernière leçon : {recent.title}</a>
@@ -407,7 +407,7 @@ function LessonFlow({ lesson, today, onClose }: { lesson: Lesson; today: string;
 
       {current.kind === "plus" ? (
         <section>
-          <p className="lede">Lectures pour prolonger, sans remplacer l'extrait lu ce soir.</p>
+          <p className="lede">Lectures pour prolonger, sans remplacer l'extrait lu aujourd'hui.</p>
           <ReadingList entries={lesson.pour_aller_plus_loin ?? []} />
         </section>
       ) : null}

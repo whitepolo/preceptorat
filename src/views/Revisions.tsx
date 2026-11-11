@@ -60,7 +60,7 @@ export function Revisions() {
         <p>
           {plan.dueTotal === 0
             ? "Aucune carte n'arrive à échéance aujourd'hui."
-            : `${plan.deferred} carte${plan.deferred > 1 ? "s" : ""} reste${plan.deferred > 1 ? "nt" : ""} pour un autre soir. Le plafond est de 8.`}
+            : `${plan.deferred} carte${plan.deferred > 1 ? "s" : ""} reste${plan.deferred > 1 ? "nt" : ""} pour un autre jour. Le plafond est de 8.`}
         </p>
         <p className="hint" role="status">
           {status}
