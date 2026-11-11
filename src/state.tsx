@@ -4,6 +4,10 @@ import { mauritiusDate, mauritiusEvening } from "./lib/dates";
 import { applyGrade, emptyStored } from "./lib/scheduler";
 import { isSameEvening, selectSession, type SessionPlan } from "./lib/session";
 import { loadReviewState, pushReviewState, writeLocalState } from "./lib/sync";
+
+function allowedCardIds(): Set<string> {
+  return new Set(catalog.cards.map((card) => card.id));
+}
 import { readToken, subscribePrefs } from "./lib/prefs";
 import type { GradeName, ReviewStateFile } from "./lib/types";
 
@@ -65,13 +69,15 @@ export function ReviewProvider({ children }: { children: ReactNode }) {
   const reload = useCallback(async () => {
     const day = mauritiusDate();
     setToday(day);
-    const result = await loadReviewState(seedState, token || undefined);
+    const allowed = allowedCardIds();
+    const result = await loadReviewState(seedState, allowed, token || undefined);
     setState(result.state);
     setSha(result.sha);
     setStatus(result.message);
     setReady(true);
     const stored = readQueue(day);
-    if (stored) setQueue(stored);
+    const storedIsCurrent = stored !== null && stored.every((id) => allowed.has(id));
+    if (storedIsCurrent && stored) setQueue(stored);
     else {
       const cards = catalog.cards.map((card) => {
         const saved = result.state.cards[card.id];
@@ -115,7 +121,7 @@ export function ReviewProvider({ children }: { children: ReactNode }) {
         setStatus("Enregistré sur cet appareil. Le jeton synchronisera téléphone et ordinateur.");
         return;
       }
-      const result = await pushReviewState(nextState, token, sha);
+      const result = await pushReviewState(nextState, token, sha, allowedCardIds());
       setState(result.state);
       setSha(result.sha);
       setStatus(result.message);

@@ -24,7 +24,7 @@ export function Parcours() {
       <h1>Parcours</h1>
       <p className="lede">{plan.objective}</p>
       <p>
-        Séance vers {plan.session.hour}, heure de Maurice, {plan.session.duration_min.min} à {plan.session.duration_min.max} minutes. {plan.session.trigger}
+        Séance vers {plan.session.hour}, {plan.session.duration_min.min} à {plan.session.duration_min.max} minutes. {plan.session.trigger}
       </p>
 
       <section className="block">
@@ -61,25 +61,27 @@ export function Parcours() {
         </ul>
       </section>
 
-      <section className="block">
-        <h2>Points fragiles</h2>
-        <p className="hint">Ce sont les cartes qui ont déjà échoué. La réponse n'est pas affichée : elle se retrouve en révision.</p>
-        <ul className="fragile">
-          {plan.points_fragiles.map((point) => {
-            const card = catalog.cards.find((item) => item.id === point.card_id);
-            return (
-              <li key={point.card_id}>
-                <span className="code">{point.card_id}</span>
-                <p>{card?.prompt}</p>
-                <p className="hint">{point.note}</p>
-              </li>
-            );
-          })}
-        </ul>
-        {fragile.length > plan.points_fragiles.length ? (
-          <p className="meta">{fragile.length} cartes portent au moins un échec dans l'état FSRS.</p>
-        ) : null}
-      </section>
+      {plan.points_fragiles.length > 0 ? (
+        <section className="block">
+          <h2>Points fragiles</h2>
+          <p className="hint">Ce sont les cartes qui ont déjà échoué. La réponse n'est pas affichée : elle se retrouve en révision.</p>
+          <ul className="fragile">
+            {plan.points_fragiles.map((point) => {
+              const card = catalog.cards.find((item) => item.id === point.card_id);
+              return (
+                <li key={point.card_id}>
+                  <span className="code">{point.card_id}</span>
+                  <p>{card?.prompt}</p>
+                  <p className="hint">{point.note}</p>
+                </li>
+              );
+            })}
+          </ul>
+          {fragile.length > plan.points_fragiles.length ? (
+            <p className="meta">{fragile.length} cartes portent au moins un échec dans l'état FSRS.</p>
+          ) : null}
+        </section>
+      ) : null}
 
       {plan.subjects.map((subject) => (
         <section className="block" key={subject.id} id={`matiere-${subject.id}`}>
@@ -119,14 +121,16 @@ export function Parcours() {
         </section>
       ))}
 
-      {plan.closed.map((item) => (
-        <section className="block" key={item.id}>
-          <h2>{item.label}, parcours clos</h2>
-          <p>
-            Le {formatLongDate(item.closed_on)}. {item.note}
-          </p>
-        </section>
-      ))}
+      {plan.closed.length > 0
+        ? plan.closed.map((item) => (
+            <section className="block" key={item.id}>
+              <h2>{item.label}</h2>
+              <p>
+                Le {formatLongDate(item.closed_on)}. {item.note}
+              </p>
+            </section>
+          ))
+        : null}
 
       <section className="block">
         <h2>Principes</h2>

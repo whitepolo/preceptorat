@@ -1,5 +1,4 @@
 import { useState, type FormEvent } from "react";
-import { REPO } from "../lib/github";
 import { testConnection, GithubError } from "../lib/github";
 import { readTheme, readToken, writeTheme, writeToken, type ThemeChoice } from "../lib/prefs";
 
@@ -73,12 +72,38 @@ export function Reglages() {
 
       <section className="block">
         <h2>Jeton GitHub</h2>
+        <p className="hint">La page de GitHub est en anglais. Les mots entre guillemets sont ceux des boutons et des menus, à recopier tels quels.</p>
         <ol className="steps">
-          <li>Ouvre les jetons fins : github.com/settings/personal-access-tokens/new</li>
-          <li>Nomme-le Préceptorat. Choisis comme propriétaire le compte qui peut écrire dans {REPO}.</li>
-          <li>Accès au dépôt : seulement preceptorat, pas tous les dépôts.</li>
-          <li>Droits du dépôt : Issues, lecture et écriture. Contents, lecture et écriture. Rien d'autre.</li>
-          <li>Génère le jeton, copie-le, colle-le ci-dessous. Une seule fois par appareil.</li>
+          <li>
+            Ouvre la page de création du jeton.
+            <a className="button" href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener noreferrer">
+              github.com/settings/personal-access-tokens/new
+            </a>
+          </li>
+          <li>
+            Dans « Token name », écris Préceptorat.
+          </li>
+          <li>
+            Dans « Expiration », choisis une durée. Une date lointaine évite de recommencer souvent.
+          </li>
+          <li>
+            Dans « Repository access », coche « Only select repositories », puis sélectionne « preceptorat ». Pas tous les dépôts.
+          </li>
+          <li>
+            Dans « Permissions », ouvre « Add permissions », puis « Repository permissions ».
+          </li>
+          <li>
+            Pour « Issues », choisis « Read and write ». Le menu affiche d'abord « No access » ou « Read-only ».
+          </li>
+          <li>
+            Pour « Contents », choisis aussi « Read and write ». Même menu, même réglage de départ.
+          </li>
+          <li>
+            « Metadata » passe tout seul à « Read-only ». C'est normal, ne le change pas.
+          </li>
+          <li>
+            En bas, « Generate token ». Copie le jeton tout de suite, puis colle-le ici. Une seule fois par appareil.
+          </li>
         </ol>
         <p className="hint">
           La lecture des leçons et des fils publics fonctionne sans jeton. Le jeton sert à envoyer tes réponses, à écrire à Schopen, et à synchroniser les révisions entre le téléphone et l'ordinateur. Sans lui, les notes restent dans cet appareil.

@@ -3,10 +3,10 @@ import { describe, expect, it } from "vitest";
 import { State } from "ts-fsrs";
 import { catalog, lessons, seedState } from "../content";
 import { canReveal, formatAnswerComment } from "./answers";
-import { legacyToStored, stateFromCatalog } from "./legacy";
+import { stateFromCatalog } from "./legacy";
 import { lessonForToday, selectTonightLesson } from "./lessons";
 import { isTutorMessage, renderMarkdown, stripTutorMarker } from "./markdown";
-import { mergeStates, pickCard } from "./merge";
+import { mergeStates, pickCard, pruneUnknownCards } from "./merge";
 import { applyGrade } from "./scheduler";
 import { selectSession } from "./session";
 import type { ReviewStateFile, StoredCard } from "./types";
@@ -35,6 +35,20 @@ describe("fusion des révisions", () => {
     state: State.Review,
     updated_at: "2026-11-10T15:00:00.000Z",
     ...patch,
+  });
+
+  it("oublie une carte qui n'est plus au catalogue, même si le cache la contient", () => {
+    const orphan = base({ reps: 4, updated_at: "2026-11-12T15:00:00.000Z" });
+    const kept = base({ reps: 1, updated_at: "2026-11-10T15:00:00.000Z" });
+    const merged = pruneUnknownCards(
+      mergeStates(
+        { schema_version: "1.0", scheduler: "fsrs-6", updated_at: "2026-11-12T15:00:00.000Z", cards: { "HIS-001": orphan, "LAT-001": kept } },
+        { schema_version: "1.0", scheduler: "fsrs-6", updated_at: "2026-11-01T15:00:00.000Z", cards: {} },
+      ),
+      new Set(["LAT-001"]),
+    );
+    expect(merged.cards["HIS-001"]).toBeUndefined();
+    expect(merged.cards["LAT-001"].reps).toBe(1);
   });
 
   it("garde la carte la plus récente et réunit les identifiants", () => {
@@ -89,28 +103,29 @@ describe("FSRS", () => {
     expect(good.updated_at).toBe(now.toISOString());
   });
 
-  it("reproduit l'état semé à partir des cartes", () => {
-    const rebuilt = stateFromCatalog(catalog.cards, "2026-11-11T15:00:00.000Z");
-    expect(rebuilt.cards["LAT-014"].due).toBe(seedState.cards["LAT-014"].due);
-    expect(rebuilt.cards["LAT-020"].state).toBe(State.New);
-    expect(legacyToStored(catalog.cards.find((item) => item.id === "LAT-019")!).state).toBe(State.Relearning);
+  it("part d'un catalogue vide", () => {
+    expect(catalog.cards).toEqual([]);
+    expect(seedState.cards).toEqual({});
+    expect(stateFromCatalog([], "2026-11-11T00:00:00.000Z").cards).toEqual({});
   });
 });
 
 describe("séance du soir", () => {
   it("mélange les matières et groupe le vocabulaire jamais revu", () => {
-    const cards = catalog.cards.map((card) => ({
-      id: card.id,
-      subject: card.subject,
-      kind: card.kind,
-      due: seedState.cards[card.id].due,
-      created: card.created,
-      reps: seedState.cards[card.id].reps,
-    }));
+    const due = "2026-11-11T15:00:00.000Z";
+    const cards = [
+      { id: "HIS-1", subject: "histoire", kind: "notion" as const, due, created: "2026-11-05", reps: 1 },
+      { id: "LAT-A", subject: "latin", kind: "notion" as const, due, created: "2026-11-04", reps: 2 },
+      { id: "LAT-B", subject: "latin", kind: "notion" as const, due, created: "2026-11-04", reps: 2 },
+      { id: "LAT-V", subject: "latin", kind: "vocabulaire" as const, due, created: "2026-11-09", reps: 0 },
+    ];
     const plan = selectSession(cards, "2026-11-11");
-    expect(plan.dueTotal).toBe(8);
-    expect(plan.deferred).toBe(0);
-    expect(plan.ids).toEqual(["HIS-005", "LAT-014", "LAT-015", "LAT-020", "LAT-021", "LAT-022", "LAT-023", "LAT-024"]);
+    expect(plan.dueTotal).toBe(4);
+    expect(plan.ids).toEqual(["HIS-1", "LAT-A", "LAT-B", "LAT-V"]);
+  });
+
+  it("ne propose rien quand il n'y a aucune carte", () => {
+    expect(selectSession([], "2026-11-11")).toEqual({ ids: [], dueTotal: 0, deferred: 0 });
   });
 });
 
@@ -124,11 +139,11 @@ describe("réponses et markdown", () => {
 
   it("forme un commentaire structuré, distinct d'une réponse de Schopen", () => {
     const lesson = lessons.find((item) => item.id === "2026-11-17-classiques-L1")!;
-    const body = formatAnswerComment(lesson, { R1: { text: "insula", skipped: false, revealed: false } }, 32);
+    const body = formatAnswerComment(lesson, { P1: { text: "insula", skipped: false, revealed: false } }, 32);
     expect(body.startsWith("<!-- sebastien -->")).toBe(true);
     expect(isTutorMessage(body)).toBe(false);
-    expect(body).toContain("**R1.** insula");
-    expect(body).toContain("**R2.** (sans réponse)");
+    expect(body).toContain("**P1.** insula");
+    expect(body).toContain("**P2.** (sans réponse)");
     expect(isTutorMessage("<!-- schopen -->\n\nBien.")).toBe(true);
     expect(stripTutorMarker("<!-- schopen -->\n\nBien.")).toBe("Bien.");
   });

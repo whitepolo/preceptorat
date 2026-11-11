@@ -42,6 +42,15 @@ export function mergeStates(a: ReviewStateFile, b: ReviewStateFile): ReviewState
   };
 }
 
+export function pruneUnknownCards(state: ReviewStateFile, allowed: ReadonlySet<string>): ReviewStateFile {
+  const cards: Record<string, StoredCard> = {};
+  for (const [id, card] of Object.entries(state.cards)) {
+    if (allowed.has(id)) cards[id] = card;
+  }
+  if (Object.keys(cards).length === Object.keys(state.cards).length) return state;
+  return { ...state, cards };
+}
+
 export function statesEqual(a: ReviewStateFile, b: ReviewStateFile): boolean {
   const ids = new Set([...Object.keys(a.cards), ...Object.keys(b.cards)]);
   for (const id of ids) {

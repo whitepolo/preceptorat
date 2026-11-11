@@ -1,5 +1,5 @@
 import { getRepoFile, GithubError, putRepoFile, REVIEW_PATH } from "./github";
-import { mergeStates, statesEqual } from "./merge";
+import { mergeStates, pruneUnknownCards, statesEqual } from "./merge";
 import { SCHEDULER_ID } from "./scheduler";
 import type { ReviewStateFile } from "./types";
 
@@ -44,7 +44,7 @@ export interface SyncResult {
   message: string;
 }
 
-export async function loadReviewState(fallback: ReviewStateFile, token?: string): Promise<SyncResult> {
+export async function loadReviewState(fallback: ReviewStateFile, allowed: ReadonlySet<string>, token?: string): Promise<SyncResult> {
   const local = readLocalState();
   let remote: ReviewStateFile | null = null;
   let sha = local.sha;
@@ -55,15 +55,15 @@ export async function loadReviewState(fallback: ReviewStateFile, token?: string)
       sha = file.sha;
     }
   } catch (error) {
-    const base = local.state ?? fallback;
+    const base = pruneUnknownCards(local.state ?? fallback, allowed);
     writeLocalState(base, local.sha);
     const message = error instanceof GithubError ? error.message : "Lecture distante impossible. Les révisions de cet appareil restent disponibles.";
     return { state: base, sha: local.sha, synced: false, message };
   }
-  const merged = mergeStates(mergeStates(fallback, remote ?? fallback), local.state ?? fallback);
+  const merged = pruneUnknownCards(mergeStates(mergeStates(fallback, remote ?? fallback), local.state ?? fallback), allowed);
   writeLocalState(merged, sha);
-  if (token && remote && !statesEqual(merged, remote)) {
-    return pushReviewState(merged, token, sha);
+  if (token && remote && !statesEqual(merged, pruneUnknownCards(remote, allowed))) {
+    return pushReviewState(merged, token, sha, allowed);
   }
   return {
     state: merged,
@@ -73,9 +73,9 @@ export async function loadReviewState(fallback: ReviewStateFile, token?: string)
   };
 }
 
-export async function pushReviewState(state: ReviewStateFile, token: string, sha: string | null): Promise<SyncResult> {
+export async function pushReviewState(state: ReviewStateFile, token: string, sha: string | null, allowed: ReadonlySet<string>): Promise<SyncResult> {
   let currentSha = sha;
-  let current = state;
+  let current = pruneUnknownCards(state, allowed);
   for (let attempt = 0; attempt < 3; attempt += 1) {
     try {
       const nextSha = await putRepoFile(
@@ -99,7 +99,7 @@ export async function pushReviewState(state: ReviewStateFile, token: string, sha
         continue;
       }
       const remote = JSON.parse(remoteFile.text) as ReviewStateFile;
-      current = mergeStates(current, remote);
+      current = pruneUnknownCards(mergeStates(current, remote), allowed);
       currentSha = remoteFile.sha;
       writeLocalState(current, currentSha);
     }

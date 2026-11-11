@@ -3,7 +3,6 @@
   "updated": "2026-11-11",
   "learner": "Sébastien",
   "tutor": "Schopen",
-  "timezone": "Indian/Mauritius",
   "objective": "Culture d'honnête homme : classiques grecs, latins, chinois, indiens, arabes et africains, langues anciennes, mathématiques, sciences de base, art, philosophie, économie et économétrie en partant de zéro.",
   "session": {
     "hour": "19:00",
@@ -30,28 +29,15 @@
     { "weekday": "samedi", "subject": "economie", "note": "Économie la première année, économétrie la deuxième." },
     { "weekday": "dimanche", "subject": "quiz", "note": "Quiz cumulatif (15 min) puis art et littérature (20 à 25 min)." }
   ],
-  "points_fragiles": [
-    { "card_id": "HIS-006", "note": "1598, et non 1638, pour le nom donné par les Hollandais." },
-    { "card_id": "LAT-019", "note": "On écrit Syria, pas Syrinia." },
-    { "card_id": "HIS-004", "note": "Quatre foyers d'écriture : Mésopotamie, Égypte, Indus, Chine des Shang." },
-    { "card_id": "LAT-017", "note": "Le français où vient de ubi. Ubiquité vient de ubique." },
-    { "card_id": "LAT-025", "note": "Au pluriel, on remplace la terminaison. On ne l'ajoute pas." }
-  ],
-  "closed": [
-    {
-      "id": "histoire",
-      "label": "Histoire",
-      "closed_on": "2026-11-11",
-      "note": "Parcours clos à la demande de Sébastien, après les leçons L1 et L2 (repères de temps, premières écritures, Mésopotamie jusqu'à Hammurabi). Les cartes HIS-001 à HIS-012 restent en révision."
-    }
-  ],
+  "points_fragiles": [],
+  "closed": [],
   "subjects": [
     {
       "id": "latin",
       "label": "Latin",
       "weekday": "lundi et mercredi",
-      "status": "en cours",
-      "position": "Chapitre I d'Ørberg, après la leçon 3 du 9 novembre 2026. La leçon 4 n'est pas encore publiée.",
+      "status": "à venir",
+      "position": "Pas encore commencé. La première leçon paraîtra un lundi ou un mercredi.",
       "summary": "Lingua Latina per se illustrata (Ørberg), un demi-chapitre à un chapitre par semaine selon la maîtrise. Grammaire explicite après le texte. Vocabulaire en cartes, latin vers français puis français vers latin. Pas d'entrelacement à la première rencontre d'un mot.",
       "modules": [
         {
@@ -59,9 +45,7 @@
           "title": "Ørberg, chapitre I",
           "current": true,
           "lessons": [
-            { "title": "Leçon 1 : prononciation restituée, Roma in Italia est", "date": "2026-11-04", "status": "faite" },
-            { "title": "Leçon 2 : est et sunt, non... sed, question en -ne, ubi", "date": "2026-11-04", "status": "faite" },
-            { "title": "Leçon 3 : singulier, pluriel, trois genres", "date": "2026-11-09", "status": "faite" }
+            { "title": "Chapitre I, à partir de la première leçon publiée", "status": "à venir" }
           ]
         }
       ]
@@ -233,11 +217,11 @@
       "weekday": "samedi",
       "status": "à venir",
       "position": "Année 1, pas encore commencé. L'économétrie est l'année 2.",
-      "summary": "Environ 50 samedis. Chaque unité dure 3 à 5 leçons et se termine par un contrôle de maîtrise. Cas souvent mauriciens. L'année 2 : statistiques puis économétrie causale, sur données réelles.",
+      "summary": "Environ 50 samedis. Chaque unité dure 3 à 5 leçons et se termine par un contrôle de maîtrise. Chaque notion part d'un cas concret. L'année 2 : statistiques puis économétrie causale, sur données réelles.",
       "modules": [
         { "id": "eco-1", "title": "Intuition économique", "span": "environ 8 leçons", "lessons": [{ "title": "Rareté, coût d'opportunité, incitations, marge, échange, avantage comparatif, prix", "status": "à venir" }] },
         { "id": "eco-2", "title": "Microéconomie", "span": "environ 16 leçons", "lessons": [{ "title": "Offre et demande jusqu'à l'information asymétrique", "status": "à venir" }] },
-        { "id": "eco-3", "title": "Macroéconomie", "span": "environ 16 leçons", "lessons": [{ "title": "PIB, monnaie, Banque de Maurice, Solow, crises", "status": "à venir" }] },
+        { "id": "eco-3", "title": "Macroéconomie", "span": "environ 16 leçons", "lessons": [{ "title": "PIB, monnaie, banque centrale, Solow, crises", "status": "à venir" }] },
         { "id": "eco-4", "title": "Histoire de la pensée, en fil rouge", "lessons": [{ "title": "Ibn Khaldun, Smith, Ricardo, Marx, Walras, Keynes, Hayek, Sen", "status": "à venir" }] }
       ]
     },
@@ -265,23 +249,6 @@
       "summary": "Quiz cumulatif de 15 minutes, toutes matières, dont au moins un tiers sur des notions de plus d'un mois. Puis 20 à 25 minutes d'art et de littérature. Le premier dimanche du mois, le grand quiz remplace l'art.",
       "modules": [
         { "id": "dimanche", "title": "Quiz cumulatif et art", "support": "Erich Auerbach, Mimesis (1946), sert souvent de lecture d'appui pour l'art de lire un passage.", "lessons": [{ "title": "Pas encore de dimanche publié", "status": "à venir" }] }
-      ]
-    },
-    {
-      "id": "histoire",
-      "label": "Histoire",
-      "weekday": "parcours clos",
-      "status": "clos",
-      "position": "Clos le 11 novembre 2026. Les cartes restent.",
-      "summary": "Repères de temps, premières écritures, Mésopotamie jusqu'à Hammurabi. Deux leçons, puis clôture.",
-      "modules": [
-        {
-          "id": "histoire-clos",
-          "title": "Repères, écritures, Mésopotamie",
-          "lessons": [
-            { "title": "Parcours clos. Les cartes HIS-001 à HIS-012 restent en révision.", "status": "faite" }
-          ]
-        }
       ]
     }
   ]
