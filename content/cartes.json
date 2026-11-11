@@ -1,4 +1,141 @@
 {
   "schema_version": "1.0",
-  "cards": []
+  "cards": [
+    {
+      "id": "LAT-001",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Mets au pluriel : *fluvius parvus* ; *oppidum parvum*. Quelle est la règle de formation ?",
+      "answer": "*fluvii parvi* ; *oppida parva*. On remplace la terminaison du singulier, on ne l'ajoute pas au mot entier (*parvi*, non *parvii* ; *oppida*, non *oppidia*).",
+      "created": "2026-11-11",
+      "kind": "notion",
+      "legacy": {
+        "level": 0,
+        "last_review": null,
+        "next_review": "2026-11-12",
+        "reps": 0,
+        "lapses": 0,
+        "history": ""
+      }
+    },
+    {
+      "id": "LAT-002",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "À quelle question répond le génitif latin, et à quoi sert-il dans la phrase ?",
+      "answer": "Il répond à « de qui ? », « de quoi ? ». Il marque le complément du nom (appartenance, origine, ou le tout dont on prend une partie).",
+      "created": "2026-11-11",
+      "kind": "notion",
+      "legacy": {
+        "level": 0,
+        "last_review": null,
+        "next_review": "2026-11-12",
+        "reps": 0,
+        "lapses": 0,
+        "history": ""
+      }
+    },
+    {
+      "id": "LAT-003",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Donne le génitif singulier de *insula*, *fluvius* et *oppidum*.",
+      "answer": "*insulae*, *fluvii*, *oppidi*.",
+      "created": "2026-11-11",
+      "kind": "notion",
+      "legacy": {
+        "level": 0,
+        "last_review": null,
+        "next_review": "2026-11-12",
+        "reps": 0,
+        "lapses": 0,
+        "history": ""
+      }
+    },
+    {
+      "id": "LAT-004",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Donne le génitif pluriel de *insula*, *fluvius* et *oppidum*.",
+      "answer": "*insularum*, *fluviorum*, *oppidorum*.",
+      "created": "2026-11-11",
+      "kind": "notion",
+      "legacy": {
+        "level": 0,
+        "last_review": null,
+        "next_review": "2026-11-12",
+        "reps": 0,
+        "lapses": 0,
+        "history": ""
+      }
+    },
+    {
+      "id": "LAT-005",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "La forme *insulae* peut correspondre à deux cas. Lesquels, et comment les distinguer ?",
+      "answer": "Nominatif pluriel (« les îles ») ou génitif singulier (« de l'île »). On distingue grâce au verbe (*sunt* ou *est*), à l'accord d'un adjectif, et à la fonction dans la phrase.",
+      "created": "2026-11-11",
+      "kind": "notion",
+      "legacy": {
+        "level": 0,
+        "last_review": null,
+        "next_review": "2026-11-12",
+        "reps": 0,
+        "lapses": 0,
+        "history": ""
+      }
+    },
+    {
+      "id": "LAT-006",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Que signifie *filius, filii* (masculin) ?",
+      "answer": "Le fils.",
+      "created": "2026-11-11",
+      "kind": "vocabulaire",
+      "legacy": {
+        "level": 0,
+        "last_review": null,
+        "next_review": "2026-11-12",
+        "reps": 0,
+        "lapses": 0,
+        "history": ""
+      }
+    },
+    {
+      "id": "LAT-007",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Que signifie *filia, filiae* (féminin) ?",
+      "answer": "La fille.",
+      "created": "2026-11-11",
+      "kind": "vocabulaire",
+      "legacy": {
+        "level": 0,
+        "last_review": null,
+        "next_review": "2026-11-12",
+        "reps": 0,
+        "lapses": 0,
+        "history": ""
+      }
+    },
+    {
+      "id": "LAT-008",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Dans César, *De Bello Gallico*, I, 1, *Horum omnium fortissimi sunt Belgae*, que signifie *horum omnium*, et à quel cas est ce groupe ?",
+      "answer": "« De tous ceux-ci » (ou « de tous ces peuples »). Génitif pluriel, ici partitif : les plus braves de l'ensemble.",
+      "created": "2026-11-11",
+      "kind": "notion",
+      "legacy": {
+        "level": 0,
+        "last_review": null,
+        "next_review": "2026-11-12",
+        "reps": 0,
+        "lapses": 0,
+        "history": ""
+      }
+    }
+  ]
 }

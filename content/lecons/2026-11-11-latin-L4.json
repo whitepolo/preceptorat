@@ -1,0 +1,285 @@
+{
+  "schema_version": "1.0",
+  "id": "2026-11-11-latin-L4",
+  "title": "2026-11-11 · Latin · Leçon 4 : le génitif, ou « de qui ? »",
+  "date": "2026-11-11",
+  "weekday": "mercredi",
+  "subject": "latin",
+  "subject_label": "Latin",
+  "lesson_number": 4,
+  "module": {
+    "id": "orberg-II",
+    "title": "Ørberg, chapitre II : le génitif"
+  },
+  "duration_min": {
+    "min": 35,
+    "max": 45
+  },
+  "lang": "fr",
+  "objectives": [
+    "Former le génitif singulier et le génitif pluriel des noms déjà connus en -a, -us et -um, en remplaçant la terminaison au lieu de l'ajouter.",
+    "Distinguer le nominatif (sujet ou attribut) du génitif (complément du nom : « de qui ? », « de quoi ? »).",
+    "Traduire et produire de courtes phrases avec un génitif, et reconnaître le groupe horum omnium dans une phrase de César."
+  ],
+  "prerequisites": [
+    "Leçons de latin 1 à 3 : est et sunt, non... sed, questions en -ne, accord de magnus, parvus et multi, nominatif singulier et pluriel des trois genres."
+  ],
+  "student_note": "Réponds dans le fil de discussion, en faisant précéder chaque réponse du code de la question (C1, P1, E1, Xf, Q, T1...). Ne lis une solution qu'après avoir répondu.",
+  "sources": [
+    {
+      "type": "primary",
+      "cite": "César, Commentarii de Bello Gallico, I, 1. Texte établi par T. Rice Holmes, C. Iuli Commentarii Rerum in Gallia Gestarum, Oxford, Clarendon Press, 1914."
+    },
+    {
+      "type": "method",
+      "cite": "Hans H. Ørberg, Lingua Latina per se illustrata. Pars I : Familia Romana, Grenaa, Domus Latina, 2003 (édition revue ; le cours a été refondu en 1990 à 1991 sous ce titre, à partir de Lingua Latina secundum naturae rationem explicata, 1955 à 1956). Chapitre II, pour le génitif."
+    },
+    {
+      "type": "secondary",
+      "cite": "Joseph Henry Allen et James Bradstreet Greenough, New Latin Grammar for Schools and Colleges, Boston, Ginn and Company, 1903, § 341 à 346 (emploi du génitif, notamment le génitif d'appartenance et le génitif partitif)."
+    }
+  ],
+  "sections": [
+    {
+      "id": "correction",
+      "title": "Correction",
+      "duration_min": {
+        "min": 3,
+        "max": 3
+      },
+      "body": "La leçon 3 était très bonne dans l'ensemble. L'accord (*insulae magnae*, *multae insulae*, *multa oppida*), la question « pourquoi » et le ticket (*oppida*, *fluvii*, et *Sicilia magna insula est*) étaient justes : tu as bien vu que l'ordre des mots peut varier, parce que la terminaison fait le travail.\n\nUn point reste à fixer, et il servira aujourd'hui. À l'exercice des pluriels, tu as écrit *parvii*, *oppidia*, *parvia* : tu as ajouté une terminaison au mot du singulier, au lieu de **remplacer** celle qu'il avait déjà. Avant de lire la solution de C1, refais les trois formes.",
+      "questions": [
+        {
+          "code": "C1",
+          "kind": "feedback",
+          "prompt": "Sans regarder la solution : mets au pluriel *fluvius parvus*, *insula magna* et *oppidum parvum*, en te demandant quelle partie du mot change, et quelle partie reste.",
+          "solution": "Les formes justes sont *fluvii parvi*, *insulae magnae*, *oppida parva*.\n\nLe latin ne colle pas une terminaison à la fin du mot tout entier. On garde le **thème** (ce qui reste quand on ôte la terminaison du singulier), puis on y met la terminaison du pluriel : *parv-us* donne *parv-i* (et non *parvii*), *oppid-um* donne *oppid-a* (et non *oppidia*). *Parvia* mélangeait en outre le neutre et le féminin.\n\nTu avais pourtant écrit *oppida* juste au ticket : le bon réflexe est là, il faut juste l'appliquer aussi quand tu fabriques la forme à partir du singulier.\n\nUne précision, plus légère, sur le rappel de la leçon 3. Le mot « péninsule » vient de *paene insula*, « presque une île » (deux mots latins). *Peninsula*, en un seul mot, est la forme contractée qu'on trouve en anglais, et parfois en latin plus tardif. L'étymon à retenir est bien *paene insula*."
+        }
+      ]
+    },
+    {
+      "id": "prequestions",
+      "title": "Pré-questions",
+      "duration_min": {
+        "min": 1,
+        "max": 1
+      },
+      "body": "Réponds même au hasard, c'est voulu.",
+      "questions": [
+        {
+          "code": "P1",
+          "kind": "prequestion",
+          "prompt": "En français, on dit « le fleuve de l'Afrique », avec la préposition « de ». Comment le latin pourrait-il dire « de l'Afrique » sans préposition ?",
+          "solution": "En changeant la terminaison du nom : *Africa* devient *Africae*, « de l'Afrique ». C'est le rôle du génitif, que la leçon présente juste après."
+        },
+        {
+          "code": "P2",
+          "kind": "prequestion",
+          "prompt": "Tu connais déjà *insulae* au sens de « îles ». Cette même forme pourrait-elle vouloir dire autre chose ?",
+          "solution": "Oui : *insulae* est aussi le génitif singulier, « de l'île ». Le verbe et la fonction dans la phrase permettent de distinguer les deux valeurs. C'est un des pièges du jour."
+        }
+      ]
+    },
+    {
+      "id": "cours",
+      "title": "Notion du jour",
+      "duration_min": {
+        "min": 10,
+        "max": 12
+      },
+      "body": "### Du nominatif au génitif\n\nJusqu'ici, tous tes noms et adjectifs étaient au **nominatif** : le cas du sujet et de l'attribut. *Sicilia insula est* : la Sicile (sujet) est une île (attribut). Le latin a plusieurs **cas**. Un cas est une forme du nom (ou de l'adjectif) qui marque sa fonction dans la phrase. L'ensemble des cas d'un nom s'appelle une **déclinaison**.\n\nLes noms que tu connais se répartissent déjà en deux déclinaisons : la **première**, dont le nominatif singulier est en *-a* (*insula*, *Graecia*, *Italia*) ; la **deuxième**, dont le nominatif singulier est en *-us* au masculin (*fluvius*) et en *-um* au neutre (*oppidum*). Aujourd'hui s'ajoute un deuxième cas, le **génitif**.\n\n### À quoi sert le génitif ?\n\nLe génitif répond aux questions « de qui ? », « de quoi ? ». Il sert surtout de **complément du nom** : il relie un nom à un autre, pour dire l'appartenance, l'origine, ou le tout dont on prend une partie. Le français fait souvent ce travail avec « de ». Le latin, lui, le fait par la terminaison, sans préposition.\n\nRegarde le tableau, puis lis-le à voix haute, case par case.\n\n### La règle du thème\n\nOn forme le génitif comme on forme le pluriel : on **remplace** la terminaison, on ne l'ajoute pas. Le thème de *insula* est *insul-*, celui de *fluvius* est *fluvi-*, celui de *oppidum* est *oppid-*.\n\n- Première déclinaison : génitif singulier *-ae*, génitif pluriel *-arum*.\n- Deuxième déclinaison (masculin et neutre) : génitif singulier *-i*, génitif pluriel *-orum*.\n\nD'où : *insulae*, « de l'île » ; *fluvii*, « du fleuve » ; *oppidi*, « de la ville » ; et au pluriel *insularum*, *fluviorum*, *oppidorum*.\n\n### Le piège des formes communes\n\nTu vois dans le tableau que *insulae* est à la fois le nominatif pluriel (« les îles ») et le génitif singulier (« de l'île »). De même, *fluvii* est à la fois le nominatif pluriel (« les fleuves ») et le génitif singulier (« du fleuve »). Ce n'est pas un défaut du latin : le contexte tranche. Si le verbe est *sunt* et qu'un adjectif au pluriel accompagne le nom (*insulae magnae sunt*), c'est un nominatif pluriel. Si le nom complète un autre nom (*insula Italiae*, « une île de l'Italie »), c'est un génitif.\n\n### Un vocabulaire nouveau, pour le même cas\n\nDeux noms de la famille, que le chapitre II d'Ørberg emploie beaucoup :\n\n- *filius, filii* (masculin) : le fils\n- *filia, filiae* (féminin) : la fille\n\nTu reconnais les mêmes terminaisons : *filius* se décline comme *fluvius*, *filia* comme *insula*. On pourra donc dire *filius Iulii*, « le fils de Iulius », et *filia Aemiliae*, « la fille d'Aemilia ». (Les noms propres suivent la même déclinaison : *Iulius, Iulii* ; *Aemilia, Aemiliae*.)\n\n### Pourquoi cela compte\n\nSans le génitif, on reste à des phrases isolées (*Roma in Italia est*). Avec lui, on commence à lier les mots entre eux, et l'on peut déjà lire une phrase réelle d'un auteur latin. César ouvre la *Guerre des Gaules* par la géographie que tu connais (*Gallia*), et il y place tout de suite des génitifs.",
+      "figures": [
+        {
+          "type": "table",
+          "caption": "Nominatif et génitif des première et deuxième déclinaisons",
+          "columns": [
+            "Cas",
+            "Féminin (1re, insula)",
+            "Masculin (2e, fluvius)",
+            "Neutre (2e, oppidum)"
+          ],
+          "rows": [
+            [
+              "Nominatif singulier",
+              "*insula*",
+              "*fluvius*",
+              "*oppidum*"
+            ],
+            [
+              "Génitif singulier",
+              "*insulae*",
+              "*fluvii*",
+              "*oppidi*"
+            ],
+            [
+              "Nominatif pluriel",
+              "*insulae*",
+              "*fluvii*",
+              "*oppida*"
+            ],
+            [
+              "Génitif pluriel",
+              "*insularum*",
+              "*fluviorum*",
+              "*oppidorum*"
+            ]
+          ]
+        }
+      ],
+      "excerpt": {
+        "work": "César, Commentarii de Bello Gallico",
+        "locus": "livre I, chapitre 1",
+        "edition": "Texte établi par T. Rice Holmes, C. Iuli Commentarii Rerum in Gallia Gestarum, Oxford, Clarendon Press, 1914.",
+        "translator": "traduction de travail, pour cette leçon, d'après l'édition citée",
+        "lang": "la",
+        "text": "Gallia est omnis divisa in partes tres, quarum unam incolunt Belgae, aliam Aquitani, tertiam qui ipsorum lingua Celtae, nostra Galli appellantur.\n\nHorum omnium fortissimi sunt Belgae.",
+        "close_reading": "Traduction de travail : « La Gaule, dans son ensemble, est divisée en trois parties, dont l'une est habitée par les Belges, une autre par les Aquitains, la troisième par ceux qui, dans leur propre langue, sont appelés Celtes, et dans la nôtre, Gaulois. De tous ceux-ci, les plus braves sont les Belges. »\n\nMots à gloser, que tu n'as pas encore à produire : *omnis* « tout entière » ; *divisa* « divisée » ; *partes tres* « trois parties » ; *incolunt* « habitent » ; *Belgae* « les Belges » ; *Aquitani* « les Aquitains » ; *ipsorum lingua* « dans leur propre langue » ; *Celtae* « Celtes » ; *nostra* « dans la nôtre » (sous-entendu : la langue des Romains) ; *Galli* « Gaulois » ; *appellantur* « sont appelés » ; *fortissimi* « les plus braves ».\n\nTu y reconnais déjà *Gallia*, *est*, *sunt*. Le premier génitif est *quarum*, « desquelles », « dont » : c'est le génitif pluriel du relatif, que nous étudierons plus tard ; retiens seulement qu'il reprend *partes* et signifie « de ces parties ».\n\nLe second, plus important aujourd'hui, est *horum omnium*, « de tous ceux-ci » (de tous ces peuples). *Horum* et *omnium* sont au **génitif pluriel**. *Fortissimi*, « les plus braves », désigne une partie de cet ensemble : c'est un **génitif partitif**, le génitif du tout dont on prend une partie. Même cas que dans *insula Italiae*, autre nuance : ici, on ne dit pas « le fleuve de l'Afrique », on dit « les plus braves de tous ».\n\nCésar n'a pas besoin du mot « de ». La terminaison suffit, dès la première phrase d'une œuvre qui a formé des siècles de lecteurs."
+      }
+    },
+    {
+      "id": "exemples",
+      "title": "Exemples résolus",
+      "duration_min": {
+        "min": 5,
+        "max": 5
+      },
+      "body": "Lis d'abord les deux exemples complets, puis termine le troisième.",
+      "questions": [
+        {
+          "code": "X1",
+          "kind": "worked",
+          "prompt": "**Exemple 1.** *Nilus fluvius Africae est.*\n\n*Nilus* est le sujet, au nominatif. *fluvius* est l'attribut, au nominatif aussi. *Africae* est le génitif singulier de *Africa* : « de l'Afrique ». Le verbe *est* va avec un sujet singulier. Traduction : « Le Nil est un fleuve de l'Afrique. »",
+          "solution": "*Nilus* sujet, *fluvius* attribut, *Africae* génitif singulier. « Le Nil est un fleuve de l'Afrique. »"
+        },
+        {
+          "code": "X2",
+          "kind": "worked",
+          "prompt": "**Exemple 2.** *Insulae Graeciae multae sunt.*\n\n*Insulae* est ici un **nominatif pluriel** (sujet), pas un génitif : le verbe est *sunt*, et *multae* s'accorde au féminin pluriel. *Graeciae* est le génitif singulier de *Graecia* : « de la Grèce ». Traduction : « Les îles de la Grèce sont nombreuses. » Le piège était *insulae* : on tranche par le verbe et par l'accord, non par la seule forme.",
+          "solution": "*Insulae* nominatif pluriel (sujet, avec *sunt* et *multae*). *Graeciae* génitif singulier. « Les îles de la Grèce sont nombreuses. »"
+        },
+        {
+          "code": "Xf",
+          "kind": "complete",
+          "prompt": "À toi de finir. Complète les terminaisons : *Rhenus fluvi__ Europa__ est.*",
+          "solution": "*Rhenus fluvius Europae est.* *fluvius* est l'attribut, au nominatif ; *Europae* est le génitif singulier de *Europa*, « de l'Europe ». Traduction : « Le Rhin est un fleuve de l'Europe. »"
+        }
+      ]
+    },
+    {
+      "id": "exercices",
+      "title": "Exercices",
+      "duration_min": {
+        "min": 8,
+        "max": 10
+      },
+      "questions": [
+        {
+          "code": "E1",
+          "kind": "exercise",
+          "prompt": "Donne le génitif singulier et le génitif pluriel de *fluvius*, de *insula* et de *oppidum*.",
+          "solution": "*fluvii*, *fluviorum* ; *insulae*, *insularum* ; *oppidi*, *oppidorum*."
+        },
+        {
+          "code": "E2",
+          "kind": "exercise",
+          "prompt": "Traduis en français : *Sicilia insula Italiae est.* *Oppida Galliae magna sunt.*",
+          "solution": "« La Sicile est une île de l'Italie. » « Les villes de la Gaule sont grandes. » Dans la seconde phrase, *oppida* est un nominatif pluriel (sujet, avec *sunt* et *magna*) ; *Galliae* est un génitif singulier."
+        },
+        {
+          "code": "E3",
+          "kind": "exercise",
+          "prompt": "Traduis en latin : « Le Rhin est un fleuve de l'Europe. » « Les îles de la Grèce sont nombreuses. »",
+          "solution": "*Rhenus fluvius Europae est.* *Insulae Graeciae multae sunt.* (La seconde phrase reprend le modèle de X2.)"
+        },
+        {
+          "code": "E4",
+          "kind": "exercise",
+          "prompt": "Lis à voix haute le petit texte ci-dessous, écrit pour toi avec le vocabulaire déjà vu et le génitif du jour. Ce n'est pas une citation d'Ørberg ni de César. Puis réponds en latin aux deux questions.\n\n> *Europa magna est. In Europa multae insulae sunt. Sicilia insula Europae est, et Sicilia insula magna est. Italia quoque in Europa est. In Italia multa oppida sunt. Roma oppidum magnum Italiae est. Nilus in Europa non est : Nilus fluvius Africae est.*\n\n1. *Quid est Roma?*\n2. *Estne Nilus fluvius Europae?*",
+          "solution": "1. *Roma oppidum (magnum Italiae) est.* 2. *Non, Nilus fluvius Europae non est.* (ou : *Non est. Nilus fluvius Africae est.*)"
+        },
+        {
+          "code": "E5",
+          "kind": "exercise",
+          "prompt": "Dans la phrase de César *Horum omnium fortissimi sunt Belgae*, à quel cas est le groupe *horum omnium*, et que signifie-t-il dans la phrase ?",
+          "solution": "Génitif pluriel. Le groupe signifie « de tous ceux-ci » (de tous ces peuples). C'est un génitif partitif : les plus braves *parmi* (ou *de*) l'ensemble nommé juste avant (Belges, Aquitains et Gaulois)."
+        }
+      ]
+    },
+    {
+      "id": "reflexion",
+      "title": "Question de réflexion",
+      "duration_min": {
+        "min": 2,
+        "max": 2
+      },
+      "questions": [
+        {
+          "code": "Q",
+          "kind": "reflection",
+          "prompt": "Pourquoi le latin peut-il dire aussi bien *Sicilia magna insula est* que *Sicilia insula magna est*, et pourquoi faut-il malgré tout regarder le verbe et les accords pour savoir si *insulae* est un nominatif pluriel ou un génitif singulier ? Réponds en une ou deux phrases.",
+          "solution": "La terminaison d'accord indique à quel nom l'adjectif se rattache, même si l'ordre des mots change : *magna* va avec *insula*, qu'elle soit avant ou après. En revanche, la forme *insulae* sert à deux cas différents. Seuls le verbe (*est* ou *sunt*), l'accord d'un adjectif, et la fonction dans la phrase (sujet ou complément du nom) permettent de trancher."
+        }
+      ]
+    },
+    {
+      "id": "ticket",
+      "title": "Ticket de sortie",
+      "duration_min": {
+        "min": 2,
+        "max": 2
+      },
+      "questions": [
+        {
+          "code": "T1",
+          "kind": "ticket",
+          "prompt": "Donne le génitif singulier et le génitif pluriel de *oppidum* et de *insula*.",
+          "solution": "*oppidi*, *oppidorum* ; *insulae*, *insularum*."
+        },
+        {
+          "code": "T2",
+          "kind": "ticket",
+          "prompt": "Traduis en latin : « La Sicile est une île de l'Europe. »",
+          "solution": "*Sicilia insula Europae est.*"
+        }
+      ]
+    }
+  ],
+  "retenir": [
+    "Le nominatif est le cas du sujet et de l'attribut. Le génitif est le cas du complément du nom : il répond à « de qui ? », « de quoi ? », sans préposition.",
+    "On forme le génitif, comme le pluriel, en remplaçant la terminaison, non en l'ajoutant au mot entier : thème + terminaison (*parv-i*, non *parvii* ; *oppid-a*, non *oppidia*).",
+    "Première déclinaison (*insula*) : génitif singulier *insulae*, génitif pluriel *insularum*. Deuxième déclinaison : *fluvii* / *fluviorum*, *oppidi* / *oppidorum*.",
+    "La forme *insulae* (et *fluvii*) peut être un nominatif pluriel ou un génitif singulier. Le verbe, l'accord et la fonction dans la phrase permettent de distinguer les deux.",
+    "Chez César, *Horum omnium fortissimi sunt Belgae* (*De Bello Gallico*, I, 1) : *horum omnium* est un génitif pluriel partitif, « de tous ceux-ci »."
+  ],
+  "mot_du_jour": {
+    "code": "M",
+    "terme": "génitif",
+    "texte": "Le mot français **génitif** vient du latin *casus genitivus* (on trouve aussi l'orthographe *genetivus*), le « cas génitif ». Ce nom appartient à la famille de *genus*, « lignée, espèce, classe », et de *gignere*, « engendrer ». Les grammairiens anciens calquaient là le grec γενικὴ πτῶσις, de γένος, « classe, lignée » : le génitif indique souvent la classe, l'origine ou l'appartenance. D'où les questions qui le guident aujourd'hui : « de qui ? », « de quoi ? »."
+  },
+  "pour_aller_plus_loin": [
+    {
+      "type": "primaire",
+      "reference": "César, Commentarii de Bello Gallico, I, 1. Texte établi par T. Rice Holmes, C. Iuli Commentarii Rerum in Gallia Gestarum, Oxford, Clarendon Press, 1914.",
+      "note": "Le prologue géographique de la Guerre des Gaules, déjà lisible en partie avec est, sunt et le génitif du jour ; la suite du chapitre enrichira le vocabulaire des fleuves et des peuples.",
+      "lien": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0002:book=1:chapter=1"
+    },
+    {
+      "type": "secondaire",
+      "reference": "Joseph Henry Allen et James Bradstreet Greenough, New Latin Grammar for Schools and Colleges, Boston, Ginn and Company, 1903, § 341 à 346.",
+      "note": "Grammaire classique, de lecture claire, sur ce que fait le génitif : relation d'un nom à un autre, appartenance, et génitif du tout (partitif), celui de horum omnium chez César.",
+      "citation": "The Genitive is regularly used to express the relation of one noun to another.",
+      "citation_source": "§ 341",
+      "lien": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0001:part=2:section=9:subsection=3:smythp=341"
+    },
+    {
+      "type": "secondaire",
+      "reference": "Alfred Ernout et François Thomas, Syntaxe latine, 2e édition revue et augmentée, Paris, Librairie C. Klincksieck, 1953.",
+      "note": "Manuel français de référence pour aller plus loin dans les emplois du génitif, quand la morphologie du jour sera bien en place."
+    },
+    {
+      "type": "secondaire",
+      "reference": "Hans H. Ørberg, Lingua Latina per se illustrata. Pars I : Familia Romana, Grenaa, Domus Latina, 2003 (édition revue ; refonte de 1990 à 1991, à partir du cours de 1955 à 1956).",
+      "note": "Le chapitre II reprend le génitif dans un récit suivi (la familia), avec les mêmes déclinaisons, puis élargit le vocabulaire de la maison et de la filiation."
+    }
+  ]
+}

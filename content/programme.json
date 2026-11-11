@@ -29,23 +29,37 @@
     { "weekday": "samedi", "subject": "economie", "note": "Économie la première année, économétrie la deuxième." },
     { "weekday": "dimanche", "subject": "quiz", "note": "Quiz cumulatif (15 min) puis art et littérature (20 à 25 min)." }
   ],
-  "points_fragiles": [],
+  "points_fragiles": [
+    {
+      "card_id": "LAT-001",
+      "note": "À la leçon 3, pluriels *parvii*, *oppidia*, *parvia* : remplacer la terminaison, ne pas l'ajouter au mot entier."
+    }
+  ],
   "closed": [],
   "subjects": [
     {
       "id": "latin",
       "label": "Latin",
       "weekday": "lundi et mercredi",
-      "status": "à venir",
-      "position": "Pas encore commencé. La première leçon paraîtra un lundi ou un mercredi.",
+      "status": "leçon du jour",
+      "position": "Leçon 4, mercredi 11 novembre 2026 : le génitif des première et deuxième déclinaisons, au début du chapitre II d'Ørberg. Les leçons 1 à 3 (chapitre I) ont été faites avant l'application, dans le fil de discussion.",
       "summary": "Lingua Latina per se illustrata (Ørberg), un demi-chapitre à un chapitre par semaine selon la maîtrise. Grammaire explicite après le texte. Vocabulaire en cartes, latin vers français puis français vers latin. Pas d'entrelacement à la première rencontre d'un mot.",
       "modules": [
         {
           "id": "orberg-I",
           "title": "Ørberg, chapitre I",
+          "current": false,
+          "lessons": [
+            { "title": "L1 à L3. Prononciation, est et sunt, genres et pluriel. Faites avant l'application.", "status": "faite" }
+          ]
+        },
+        {
+          "id": "orberg-II",
+          "title": "Ørberg, chapitre II : le génitif",
           "current": true,
           "lessons": [
-            { "title": "Chapitre I, à partir de la première leçon publiée", "status": "à venir" }
+            { "title": "L4. Le génitif, ou « de qui ? »", "date": "2026-11-11", "status": "prévue", "lesson_id": "2026-11-11-latin-L4" },
+            { "title": "Suite du chapitre II : familia, interrogatifs, nombres", "status": "à venir" }
           ]
         }
       ]

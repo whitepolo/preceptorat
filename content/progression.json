@@ -1,5 +1,13 @@
 {
   "schema_version": "1.0",
-  "activities": [],
-  "entries": []
+  "activities": [
+    {
+      "date": "2026-11-11",
+      "kind": "leçon",
+      "summary": "Latin L4 : le génitif des première et deuxième déclinaisons, avec un extrait de César, De Bello Gallico, I, 1."
+    }
+  ],
+  "entries": [
+    "2026-11-11 (mer) Latin L4 : le génitif (« de qui ? », « de quoi ? ») des noms en -a, -us et -um ; règle du thème (remplacer la terminaison, correction de parvii / oppidia) ; filius, filia ; extrait César BG I, 1 (Horum omnium fortissimi sunt Belgae) ; exercices de production et ticket Sicilia insula Europae est ; mot : génitif. Huit cartes nouvelles (LAT-001 à LAT-008), dues le 12 novembre. Révisions toujours à zéro pour le reste."
+  ]
 }
