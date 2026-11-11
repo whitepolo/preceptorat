@@ -16,21 +16,21 @@ His fine-grained token (stored only in his browser) needs Issues read/write and 
 1. Add `content/lecons/AAAA-MM-JJ-matiere-LN.json`. The id, the date, and the filename match. French. No em dash (U+2014) and no en dash (U+2013) anywhere in the text.
 2. Follow `docs/FORMAT.md` and `schema/lecon.schema.json`. A Classiques lesson needs `module` and the section `regard` (code S).
 3. Check locally: `npm run validate` and `npm test`.
-4. Push to `main`. The site rebuilds. The lesson appears on that calendar date in the app's evening clock (UTC+4), and not before. Until then it stays out of Aujourd'hui and the library.
+4. Push to `main`. The site rebuilds. The lesson appears for that calendar date (UTC+4) as soon as the deploy is live, at any time of day, and not before that date. Until then it stays out of Aujourd'hui and the library. The learner is told the lesson arrives from 7:00.
 
 Section order: rappel, correction, pré-questions, notion, exemples, regard (when used), exercices, réflexion, ticket. Solutions live on each question and stay hidden in the app until he has typed or skipped.
 
 End every new lesson with `pour_aller_plus_loin`: at least two notices, `{ "type": "primaire" or "secondaire", "reference", "note" }`. `reference` is the full citation (author, title, translator or editor, publisher, year, pages). `note` is one line on why it is worth reading. Add `citation` only when you have the exact words, and then `citation_source` (page or locus) is required. `lien` is an optional open-access or catalogue URL. Never invent a reference or a quotation. Lessons dated before 2026-11-17 may omit the array. The app shows this list as the last reading step, after À retenir, and gathers every entry in Bibliothèque.
 
-The home screen shows a lesson only when its date is today on the evening clock (UTC+4). Older lesson files stay available from Bibliothèque and from the link on an empty evening.
+The home screen shows a lesson only when its date is today (UTC+4). It is visible for the whole calendar day, from the moment it is published. Older lesson files stay available from Bibliothèque and from the link when today's lesson is not published yet.
 
-`rappel` and `correction` may be omitted. Add `rappel` only from cards that are actually due that evening (ceiling 8, subjects mixed). Do not interleave a vocabulary card on its first presentation (`kind: "vocabulaire"` and zero reviews). If `content/cartes.json` is empty, leave the recall out. Do not copy forward old cards: a card id absent from `cartes.json` is dropped from `content/etat/revisions.json` on the next sync and is not restored from a phone cache.
+`rappel` and `correction` may be omitted. Add `rappel` only from cards that are actually due that day (ceiling 8, subjects mixed). Do not interleave a vocabulary card on its first presentation (`kind: "vocabulaire"` and zero reviews). If `content/cartes.json` is empty, leave the recall out. Do not copy forward old cards: a card id absent from `cartes.json` is dropped from `content/etat/revisions.json` on the next sync and is not restored from a phone cache.
 
 ## Add cards
 
 Append objects to `content/cartes.json`. Required fields: `id` (`LAT-026`), `subject`, `subject_label`, `prompt`, `answer`, `created` (`AAAA-MM-JJ`), `kind` (`notion` or `vocabulaire`).
 
-Do not hand-edit scheduling for a card that already exists in `content/etat/revisions.json`. The app creates a new FSRS card the first time it sees an id that has no state. New cards are due the evening after `created`. The scheduler is ts-fsrs (FSRS-6 as shipped by the library), requested retention 0.9, fuzz off, short-term steps on, maximum interval 365 days. Grades: Again, Hard, Good, Easy, shown as À revoir, Difficile, Correct, Facile.
+Do not hand-edit scheduling for a card that already exists in `content/etat/revisions.json`. The app creates a new FSRS card the first time it sees an id that has no state. New cards are due the day after `created`. The scheduler is ts-fsrs (FSRS-6 as shipped by the library), requested retention 0.9, fuzz off, short-term steps on, maximum interval 365 days. Grades: Again, Hard, Good, Easy, shown as À revoir, Difficile, Correct, Facile.
 
 ## Reply
 

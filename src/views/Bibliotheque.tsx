@@ -200,7 +200,7 @@ function FurtherPane({
           </select>
         </label>
       </div>
-      {entries.length === 0 ? <p>Aucune notice pour l'instant. Elles arrivent avec la leçon du soir.</p> : null}
+      {entries.length === 0 ? <p>Aucune notice pour l'instant. Elles arrivent avec la leçon du jour.</p> : null}
       <ul className="catalog">
         {entries.map(({ entry, lesson }) => (
           <li key={`${lesson.id}-${entry.reference}`}>

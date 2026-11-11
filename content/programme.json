@@ -5,7 +5,7 @@
   "tutor": "Schopen",
   "objective": "Culture d'honnête homme : classiques grecs, latins, chinois, indiens, arabes et africains, langues anciennes, mathématiques, sciences de base, art, philosophie, économie et économétrie en partant de zéro.",
   "session": {
-    "hour": "19:00",
+    "hour": "7 h",
     "duration_min": { "min": 30, "max": 45 },
     "trigger": "Après mon café du matin, je fais la leçon. À confirmer."
   },

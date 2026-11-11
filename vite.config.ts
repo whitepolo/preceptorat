@@ -13,7 +13,7 @@ export default defineConfig({
       manifest: {
         name: "Préceptorat",
         short_name: "Préceptorat",
-        description: "Leçons du soir, révisions espacées et dialogue avec le précepteur.",
+        description: "Leçon du jour, révisions espacées et dialogue avec le précepteur.",
         lang: "fr",
         dir: "ltr",
         start_url: "/preceptorat/",

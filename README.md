@@ -1,6 +1,6 @@
 # Préceptorat
 
-Leçon du soir, révisions espacées, dialogue avec Schopen. Une application pour Sébastien, 30 à 45 minutes.
+Leçon du jour, révisions espacées, dialogue avec Schopen. Une application pour Sébastien, 30 à 45 minutes.
 
 Adresse, une fois le site publié : <https://whitepolo.github.io/preceptorat/>
 
@@ -11,7 +11,7 @@ Le dépôt est public. Les leçons sont dans le code. Tes réponses et tes notes
 1. Ouvre l'adresse ci-dessus dans Safari (iPhone) ou Chrome (Android).
 2. iPhone : bouton Partager, puis « Sur l'écran d'accueil ».
 3. Android : menu du navigateur, puis « Installer l'application » ou « Ajouter à l'écran d'accueil ».
-4. Ouvre ensuite Préceptorat depuis l'icône. La leçon du soir reste lisible sans réseau après la première visite. L'envoi des réponses et la synchronisation demandent le réseau.
+4. Ouvre ensuite Préceptorat depuis l'icône. La leçon du jour reste lisible sans réseau après la première visite. L'envoi des réponses et la synchronisation demandent le réseau.
 
 Sur un ordinateur, la même adresse suffit. Le téléphone et l'ordinateur se rejoignent par le fichier de révisions du dépôt, dès que le jeton est en place des deux côtés.
 
@@ -33,7 +33,7 @@ Sans jeton, tu peux lire. Tu ne peux pas envoyer une réponse ni synchroniser le
 
 ## Les six écrans
 
-- **Accueil.** La leçon du jour seulement. S'il n'y en a pas encore, l'écran dit qu'elle arrive vers 19 h, indique les révisions dues, et propose la dernière leçon s'il y en a une. La leçon se lit étape par étape. La solution reste cachée tant que tu n'as pas écrit, ou choisi « Passer ». « Envoyer mes réponses au précepteur » poste un seul commentaire. Après À retenir : Pour aller plus loin.
+- **Accueil.** La leçon du jour seulement. Elle est visible dès qu'elle est publiée, à n'importe quelle heure. S'il n'y en a pas encore, l'écran dit qu'elle arrive à partir de 7 h, indique les révisions dues, et propose la dernière leçon s'il y en a une. La leçon se lit étape par étape. La solution reste cachée tant que tu n'as pas écrit, ou choisi « Passer ». « Envoyer mes réponses au précepteur » poste un seul commentaire. Après À retenir : Pour aller plus loin.
 - **Révisions.** Cartes dues, huit au plus, matières mélangées. Tu écris avant de voir la réponse, puis À revoir, Difficile, Correct ou Facile. L'échéancier est FSRS.
 - **Précepteur.** Le dialogue libre, et un fil par leçon. Schopen répond dans le même compte, avec une marque invisible en tête de message.
 - **Parcours.** La semaine, les modules, les points fragiles, l'assiduité.

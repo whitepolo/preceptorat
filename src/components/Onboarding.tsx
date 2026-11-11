@@ -16,14 +16,14 @@ export function markOnboardingSeen(): void {
 
 const SCREENS = [
   {
-    kicker: "Chaque soir",
+    kicker: "Chaque jour",
     title: "Une leçon, trente à quarante-cinq minutes.",
-    text: "Bonsoir Sébastien. Vers 19 h, Schopen dépose la leçon du jour. Tu la fais quand tu peux, au calme.",
+    text: "Bonjour Sébastien. À partir de 7 h, Schopen dépose la leçon du jour. Tu la fais quand tu peux, au calme.",
   },
   {
     kicker: "Avant la solution",
     title: "Écris d'abord. La réponse vient ensuite.",
-    text: "Chaque question attend ta tentative, ou un passage explicite. Les révisions du soir mélangent les matières, huit cartes au plus.",
+    text: "Chaque question attend ta tentative, ou un passage explicite. Les révisions du jour mélangent les matières, huit cartes au plus.",
   },
   {
     kicker: "Pour écrire à Schopen",
