@@ -92,6 +92,24 @@ export function validateLesson(lesson, filename) {
   if (lesson.subject === "classiques" && !ids.includes("regard")) {
     errors.push("une leçon de classiques doit avoir la section regard");
   }
+  const lectures = lesson.pour_aller_plus_loin;
+  const biblioRequired = !lesson.date || lesson.date >= "2026-11-17";
+  if (!Array.isArray(lectures)) {
+    if (biblioRequired) {
+      errors.push("pour_aller_plus_loin est obligatoire pour une leçon au format actuel (au moins 2 notices)");
+    }
+  } else if (lectures.length < 2) {
+    errors.push("pour_aller_plus_loin doit contenir au moins 2 notices");
+  } else {
+    lectures.forEach((entry, index) => {
+      if (typeof entry.note === "string" && /[\r\n]/.test(entry.note)) {
+        errors.push(`pour_aller_plus_loin[${index}] : la note tient sur une seule ligne`);
+      }
+      if (entry.citation && !entry.citation_source) {
+        errors.push(`pour_aller_plus_loin[${index}] : citation_source est obligatoire quand il y a une citation`);
+      }
+    });
+  }
   const codes = new Set();
   for (const section of lesson.sections ?? []) {
     const questions = section.questions ?? [];

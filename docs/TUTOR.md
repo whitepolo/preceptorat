@@ -20,6 +20,10 @@ His fine-grained token (stored only in his browser) needs Issues read/write and 
 
 Section order: rappel, correction, pré-questions, notion, exemples, regard (when used), exercices, réflexion, ticket. Solutions live on each question and stay hidden in the app until he has typed or skipped.
 
+End every new lesson with `pour_aller_plus_loin`: at least two notices, `{ "type": "primaire" or "secondaire", "reference", "note" }`. `reference` is the full citation (author, title, translator or editor, publisher, year, pages). `note` is one line on why it is worth reading. Add `citation` only when you have the exact words, and then `citation_source` (page or locus) is required. `lien` is an optional open-access or catalogue URL. Never invent a reference or a quotation. Lessons dated before 2026-11-17 may omit the array. The app shows this list as the last reading step, after À retenir, and gathers every entry in Bibliothèque.
+
+The home screen shows a lesson only when its date is today in Mauritius. Older lesson files stay available from Bibliothèque and from the link on an empty evening. The two pre-format lessons (Latin L3, Histoire L2) are not in `content/lecons`. Their cards and the attendance log remain.
+
 Put recall prompts on cards that are actually due that evening. The seeded lesson for 17 November carries the fragile points known on 11 November. Replace them the day you send the lesson if `content/etat/revisions.json` shows other due cards. Ceiling: 8, subjects mixed. Do not interleave a vocabulary card on its first presentation (`kind: "vocabulaire"` and zero reviews).
 
 ## Add cards
@@ -45,7 +49,7 @@ His answer comment looks like this:
 ```markdown
 <!-- sebastien -->
 
-Réponses de Sébastien, leçon 2026-11-10-histoire-L2.
+Réponses de Sébastien, leçon 2026-11-17-classiques-L1.
 Temps passé : 32 min.
 
 **R1.** ...

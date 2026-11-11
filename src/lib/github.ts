@@ -138,6 +138,36 @@ export async function listIssues(token?: string): Promise<IssueSummary[]> {
   return issues;
 }
 
+export interface RecentComment {
+  id: number;
+  body: string;
+  created_at: string;
+  html_url: string;
+  issue_number: number;
+}
+
+export async function listRecentComments(token?: string): Promise<RecentComment[]> {
+  const response = await request(`/repos/${REPO}/issues/comments?sort=created&direction=desc&per_page=30`, token);
+  if (!response.ok) throw new GithubError(response.status, await readError(response));
+  const data = (await response.json()) as Array<{
+    id: number;
+    body: string | null;
+    created_at: string;
+    html_url: string;
+    issue_url?: string;
+  }>;
+  return data.map((item) => {
+    const match = /\/issues\/(\d+)$/.exec(item.issue_url ?? "");
+    return {
+      id: item.id,
+      body: item.body ?? "",
+      created_at: item.created_at,
+      html_url: item.html_url,
+      issue_number: match ? Number(match[1]) : 0,
+    };
+  });
+}
+
 export async function listComments(issueNumber: number, token?: string): Promise<IssueComment[]> {
   const comments: IssueComment[] = [];
   for (let page = 1; page <= 10; page += 1) {

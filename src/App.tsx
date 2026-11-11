@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Onboarding, onboardingSeen } from "./components/Onboarding";
 import { Shell, type PageName } from "./components/Shell";
 import { applyTheme, watchSystemTheme } from "./lib/prefs";
 import { ReviewProvider, useReviews } from "./state";
@@ -21,6 +22,7 @@ function parse(hash: string): { page: PageName; thread?: string } {
 
 function Router() {
   const [route, setRoute] = useState(() => parse(window.location.hash));
+  const [intro, setIntro] = useState(() => !onboardingSeen());
   const { queue, today } = useReviews();
 
   useEffect(() => {
@@ -37,6 +39,14 @@ function Router() {
 
   return (
     <Shell page={route.page} today={today} due={queue.length}>
+      {intro ? (
+        <Onboarding
+          onDone={() => setIntro(false)}
+          onSettings={() => {
+            window.location.hash = "#/reglages";
+          }}
+        />
+      ) : null}
       {route.page === "aujourd-hui" ? <AujourdHui /> : null}
       {route.page === "revisions" ? <Revisions /> : null}
       {route.page === "precepteur" ? <Precepteur threadId={route.thread} /> : null}

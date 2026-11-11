@@ -30,6 +30,7 @@ Required:
 | sections | See the order below |
 | retenir | 4 to 6 sentences, no question |
 | mot_du_jour | `{ "code": "M", "terme", "texte" }` |
+| pour_aller_plus_loin | Required for a lesson dated 2026-11-17 or later. Optional before that (legacy). At least 2 entries when present. |
 
 `module` (`{ "id", "title" }`) is required for `classiques` and recommended elsewhere. `prerequisites` and `sources` (`type`: `primary`, `secondary`, or `method`, plus `cite`) are recommended. `weekday` is optional.
 
@@ -77,7 +78,24 @@ Cite a scholarly or primary source. If a French translation is still in copyrigh
 
 The prompts of X1 and X2 already contain the worked model. Xf, and every other question he must do, keeps the solution only in `solution`.
 
-The app shows objectives, a table of contents, then the sections. Each question has an answer field. The solution stays hidden until he types or skips. À retenir and the word of the day have no solution button.
+The app shows the lesson one step at a time. Each question has an answer field. The solution stays hidden until he types or skips. À retenir and the word of the day have no solution button. The last reading step after À retenir is Pour aller plus loin.
+
+### Pour aller plus loin
+
+```json
+"pour_aller_plus_loin": [
+  {
+    "type": "primaire",
+    "reference": "Author, Title, translator or editor, publisher, year, pages.",
+    "note": "One line: why read it, and what it adds.",
+    "citation": "Optional short quotation, copied exactly.",
+    "citation_source": "Page or locus. Required when citation is present.",
+    "lien": "https://example.edu/record"
+  }
+]
+```
+
+`type` is `primaire` or `secondaire`. `reference` is a full academic citation. `note` is a single line. `lien` is optional and must be an http(s) URL to an open-access text or a library record. Do not invent a reference, a page, or a quotation. If the exact wording and its locus are not in front of you, omit `citation`. A lesson dated before 2026-11-17 may omit the array. From that date on, the validator requires at least two entries.
 
 ## Cards
 

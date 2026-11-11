@@ -7,27 +7,33 @@ export function Reglages() {
   const [token, setToken] = useState(readToken);
   const [theme, setTheme] = useState<ThemeChoice>(readTheme);
   const [status, setStatus] = useState("");
+  const [tone, setTone] = useState<"idle" | "ok" | "err">("idle");
   const [busy, setBusy] = useState(false);
   const saved = readToken();
 
   function save(event: FormEvent) {
     event.preventDefault();
     writeToken(token);
+    setTone("ok");
     setStatus(token.trim() ? "Jeton enregistré sur cet appareil seulement." : "Jeton effacé de cet appareil.");
   }
 
   async function check() {
     const current = readToken();
     if (!current) {
-      setStatus("Colle et enregistre un jeton avant l'essai.");
+      setTone("err");
+      setStatus("Enregistre d'abord le jeton, puis appuie sur Tester.");
       return;
     }
     setBusy(true);
+    setTone("idle");
     setStatus("Essai de connexion.");
     try {
       const result = await testConnection(current);
+      setTone("ok");
       setStatus(`Connexion établie. Compte ${result.login}, dépôt ${result.repo}.`);
     } catch (error) {
+      setTone("err");
       setStatus(error instanceof GithubError ? error.message : "La connexion n'a pas abouti.");
     } finally {
       setBusy(false);
@@ -98,19 +104,20 @@ export function Reglages() {
               onClick={() => {
                 setToken("");
                 writeToken("");
+                setTone("ok");
                 setStatus("Jeton effacé de cet appareil.");
               }}
             >
               Effacer
             </button>
             <button type="button" className="button" disabled={busy} onClick={() => void check()}>
-              {busy ? "Essai…" : "Essayer la connexion"}
+              {busy ? "Essai…" : "Tester"}
             </button>
           </div>
         </form>
         <p className="hint">{saved ? `Un jeton est enregistré (fin : ${saved.slice(-4)}).` : "Aucun jeton enregistré."}</p>
         {status ? (
-          <p role="status" className="status">
+          <p role="status" className={tone === "err" ? "status status-err" : tone === "ok" ? "status status-ok" : "status"}>
             {status}
           </p>
         ) : null}

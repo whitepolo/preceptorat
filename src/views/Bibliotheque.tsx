@@ -3,9 +3,10 @@ import { catalog, lessons, library } from "../content";
 import { MarkdownView } from "../components/MarkdownView";
 import { formatLongDate } from "../lib/dates";
 import { pastLessons } from "../lib/lessons";
+import type { Lesson } from "../lib/types";
 import { useReviews } from "../state";
 
-type Pane = "lecons" | "vocabulaire" | "lectures";
+type Pane = "lecons" | "vocabulaire" | "lectures" | "plus";
 
 export function Bibliotheque() {
   const { today } = useReviews();
@@ -13,6 +14,7 @@ export function Bibliotheque() {
   const [query, setQuery] = useState("");
   const [subject, setSubject] = useState("toutes");
   const [role, setRole] = useState("tous");
+  const [biblioType, setBiblioType] = useState("tous");
   const past = useMemo(() => pastLessons(lessons, today), [today]);
   const needle = query.trim().toLowerCase();
 
@@ -46,6 +48,7 @@ export function Bibliotheque() {
             ["lecons", "Leçons"],
             ["vocabulaire", "Vocabulaire"],
             ["lectures", "Lectures"],
+            ["plus", "Pour aller plus loin"],
           ] as const
         ).map(([id, label]) => (
           <button key={id} type="button" role="tab" aria-selected={pane === id} className={pane === id ? "on" : ""} onClick={() => setPane(id)}>
@@ -98,6 +101,10 @@ export function Bibliotheque() {
         </ul>
       ) : null}
 
+      {pane === "plus" ? (
+        <FurtherPane lessons={past} needle={needle} subject={subject} setSubject={setSubject} biblioType={biblioType} setBiblioType={setBiblioType} />
+      ) : null}
+
       {pane === "lectures" ? (
         <section>
           <p>{library.intro}</p>
@@ -140,5 +147,81 @@ export function Bibliotheque() {
         </section>
       ) : null}
     </article>
+  );
+}
+
+function FurtherPane({
+  lessons: items,
+  needle,
+  subject,
+  setSubject,
+  biblioType,
+  setBiblioType,
+}: {
+  lessons: Lesson[];
+  needle: string;
+  subject: string;
+  setSubject: (value: string) => void;
+  biblioType: string;
+  setBiblioType: (value: string) => void;
+}) {
+  const subjects = [...new Set(items.map((lesson) => lesson.subject))];
+  const entries = items.flatMap((lesson) =>
+    (lesson.pour_aller_plus_loin ?? [])
+      .filter((entry) => biblioType === "tous" || entry.type === biblioType)
+      .filter(() => subject === "toutes" || lesson.subject === subject)
+      .filter((entry) => {
+        if (!needle) return true;
+        return `${entry.reference} ${entry.note} ${entry.citation ?? ""} ${lesson.subject_label}`.toLowerCase().includes(needle);
+      })
+      .map((entry) => ({ entry, lesson })),
+  );
+  return (
+    <section>
+      <p>Notices réunies depuis les leçons déjà dues. Une citation n'apparaît que si elle a été vérifiée, avec son lieu.</p>
+      <div className="filters">
+        <label className="field inline">
+          <span>Matière</span>
+          <select value={subject} onChange={(event) => setSubject(event.target.value)}>
+            <option value="toutes">Toutes</option>
+            {subjects.map((id) => (
+              <option key={id} value={id}>
+                {items.find((lesson) => lesson.subject === id)?.subject_label}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label className="field inline">
+          <span>Type</span>
+          <select value={biblioType} onChange={(event) => setBiblioType(event.target.value)}>
+            <option value="tous">Tous</option>
+            <option value="primaire">Primaire</option>
+            <option value="secondaire">Secondaire</option>
+          </select>
+        </label>
+      </div>
+      {entries.length === 0 ? <p>Aucune notice pour l'instant. Elles arrivent avec la leçon du soir.</p> : null}
+      <ul className="catalog">
+        {entries.map(({ entry, lesson }) => (
+          <li key={`${lesson.id}-${entry.reference}`}>
+            <p className="kicker">{lesson.subject_label}</p>
+            <p className="pill">{entry.type}</p>
+            <h2>{entry.reference}</h2>
+            <p>{entry.note}</p>
+            {entry.citation ? (
+              <blockquote className="pull">
+                <p>{entry.citation}</p>
+                {entry.citation_source ? <cite>{entry.citation_source}</cite> : null}
+              </blockquote>
+            ) : null}
+            {entry.lien ? (
+              <a href={entry.lien} rel="noopener noreferrer">
+                Notice ou texte en accès ouvert
+              </a>
+            ) : null}
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }

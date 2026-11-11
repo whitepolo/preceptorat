@@ -262,5 +262,27 @@
     "code": "M",
     "terme": "classique",
     "texte": "L'adjectif français vient du latin *classicus*, d'abord « qui appartient à une classe », et plus précisément, chez les auteurs latins, à la première classe des citoyens. Aulu-Gelle, au IIe siècle apr. J.-C., oppose l'écrivain *classicus*, « de première classe », à l'écrivain *proletarius*. Le mot a ensuite désigné les auteurs pris pour normes, puis, plus largement, les œuvres qu'une culture tient pour premières. C'est ce dernier sens que nous prenons ici, et il n'est pas réservé à l'Europe."
-  }
+  },
+  "pour_aller_plus_loin": [
+    {
+      "type": "primaire",
+      "reference": "A. R. George, The Babylonian Gilgamesh Epic. Introduction, Critical Edition and Cuneiform Texts, 2 vol., Oxford, Oxford University Press, 2003.",
+      "note": "Édition de référence du texte akkadien : lignage, composition, attribution à Sîn-lēqi-unninni, reprise des murs à la tablette XI."
+    },
+    {
+      "type": "secondaire",
+      "reference": "Jean Bottéro, L'Épopée de Gilgameš. Le grand homme qui ne voulait pas mourir, Paris, Gallimard, 1992.",
+      "note": "Lecture d'appui du module I : l'épopée comme sagesse sur la mortalité. Traduction française savante, non reproduite dans la leçon."
+    },
+    {
+      "type": "primaire",
+      "reference": "George Smith, « The Chaldean Account of the Deluge », Transactions of the Society of Biblical Archaeology, t. 2, 1873, p. 213-234.",
+      "note": "Communication lue le 3 décembre 1872 : identification du récit du Déluge, tablette XI."
+    },
+    {
+      "type": "secondaire",
+      "reference": "Marchesi et al., dans Sallaberger et Schrakamp (dir.), ARCANE 3, Turnhout, Brepols, 2015.",
+      "note": "Mise au point sur un Gilgamesh historique possible : la Liste royale sumérienne n'est pas, dans ses premières sections, une chronique sûre."
+    }
+  ]
 }

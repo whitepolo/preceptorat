@@ -75,7 +75,12 @@
       "maxItems": 6,
       "items": { "type": "string", "minLength": 1 }
     },
-    "mot_du_jour": { "$ref": "#/$defs/mot" }
+    "mot_du_jour": { "$ref": "#/$defs/mot" },
+    "pour_aller_plus_loin": {
+      "type": "array",
+      "minItems": 2,
+      "items": { "$ref": "#/$defs/lecture" }
+    }
   },
   "$defs": {
     "duration": {
@@ -117,6 +122,28 @@
         "terme": { "type": "string", "minLength": 1 },
         "texte": { "type": "string", "minLength": 1 }
       }
+    },
+    "lecture": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "reference", "note"],
+      "properties": {
+        "type": { "type": "string", "enum": ["primaire", "secondaire"] },
+        "reference": { "type": "string", "minLength": 1 },
+        "note": { "type": "string", "minLength": 1 },
+        "citation": { "type": "string", "minLength": 1 },
+        "citation_source": { "type": "string", "minLength": 1 },
+        "lien": { "type": "string", "pattern": "^https?://[^\\s]+$" }
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": ["citation"],
+            "properties": { "citation": { "minLength": 1 } }
+          },
+          "then": { "required": ["citation_source"] }
+        }
+      ]
     },
     "excerpt": {
       "type": "object",

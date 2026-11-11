@@ -77,6 +77,15 @@ export interface LessonSection {
   secondary?: SecondaryView;
 }
 
+export interface FurtherReading {
+  type: "primaire" | "secondaire";
+  reference: string;
+  note: string;
+  citation?: string;
+  citation_source?: string;
+  lien?: string;
+}
+
 export interface Lesson {
   schema_version: "1.0";
   id: string;
@@ -96,6 +105,7 @@ export interface Lesson {
   sections: LessonSection[];
   retenir: string[];
   mot_du_jour: { code: "M"; terme: string; texte: string };
+  pour_aller_plus_loin?: FurtherReading[];
 }
 
 export interface CardLegacy {

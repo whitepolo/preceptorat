@@ -61,7 +61,7 @@
           "lessons": [
             { "title": "Leçon 1 : prononciation restituée, Roma in Italia est", "date": "2026-11-04", "status": "faite" },
             { "title": "Leçon 2 : est et sunt, non... sed, question en -ne, ubi", "date": "2026-11-04", "status": "faite" },
-            { "title": "Leçon 3 : singulier, pluriel, trois genres", "date": "2026-11-09", "status": "faite", "lesson_id": "2026-11-09-latin-L3" }
+            { "title": "Leçon 3 : singulier, pluriel, trois genres", "date": "2026-11-09", "status": "faite" }
           ]
         }
       ]
@@ -279,8 +279,7 @@
           "id": "histoire-clos",
           "title": "Repères, écritures, Mésopotamie",
           "lessons": [
-            { "title": "L1. Le temps et les premières écritures", "date": "2026-11-05", "status": "faite" },
-            { "title": "L2. Mésopotamie jusqu'à Hammurabi", "date": "2026-11-10", "status": "faite", "lesson_id": "2026-11-10-histoire-L2" }
+            { "title": "Parcours clos. Les cartes HIS-001 à HIS-012 restent en révision.", "status": "faite" }
           ]
         }
       ]

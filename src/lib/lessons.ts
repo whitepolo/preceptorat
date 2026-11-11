@@ -6,6 +6,12 @@ export function selectTonightLesson(lessons: Lesson[], today: string): Lesson | 
   return eligible[0] ?? null;
 }
 
+export function lessonForToday(lessons: Lesson[], today: string): Lesson | null {
+  const sameDay = lessons.filter((lesson) => lesson.date === today);
+  sameDay.sort((a, b) => b.lesson_number - a.lesson_number || b.id.localeCompare(a.id));
+  return sameDay[0] ?? null;
+}
+
 export function pastLessons(lessons: Lesson[], today: string): Lesson[] {
   return lessons
     .filter((lesson) => lesson.date <= today)
