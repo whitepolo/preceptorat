@@ -1,15 +1,16 @@
 import type { ReactNode } from "react";
 import { formatLongDate } from "../lib/dates";
+import { Icon } from "./Icons";
 
 export type PageName = "aujourd-hui" | "revisions" | "precepteur" | "parcours" | "bibliotheque" | "reglages";
 
-const ITEMS: { id: PageName; label: string; hash: string }[] = [
-  { id: "aujourd-hui", label: "Aujourd'hui", hash: "#/aujourd-hui" },
-  { id: "revisions", label: "Révisions", hash: "#/revisions" },
-  { id: "precepteur", label: "Précepteur", hash: "#/precepteur" },
-  { id: "parcours", label: "Parcours", hash: "#/parcours" },
-  { id: "bibliotheque", label: "Bibliothèque", hash: "#/bibliotheque" },
-  { id: "reglages", label: "Réglages", hash: "#/reglages" },
+const ITEMS: { id: PageName; label: string; short: string; hash: string; icon: "home" | "cards" | "chat" | "path" | "books" | "settings" }[] = [
+  { id: "aujourd-hui", label: "Accueil", short: "Accueil", hash: "#/aujourd-hui", icon: "home" },
+  { id: "revisions", label: "Révisions", short: "Révisions", hash: "#/revisions", icon: "cards" },
+  { id: "precepteur", label: "Précepteur", short: "Messages", hash: "#/precepteur", icon: "chat" },
+  { id: "parcours", label: "Parcours", short: "Parcours", hash: "#/parcours", icon: "path" },
+  { id: "bibliotheque", label: "Bibliothèque", short: "Livres", hash: "#/bibliotheque", icon: "books" },
+  { id: "reglages", label: "Réglages", short: "Réglages", hash: "#/reglages", icon: "settings" },
 ];
 
 export function Shell({
@@ -23,6 +24,7 @@ export function Shell({
   due: number;
   children: ReactNode;
 }) {
+  const mobile = ITEMS.filter((item) => item.id !== "reglages");
   return (
     <div className="app">
       <a
@@ -40,14 +42,15 @@ export function Shell({
           <p className="brand">Préceptorat</p>
           <p className="date">{formatLongDate(today)}</p>
         </div>
-        <a className="text-link" href="#/reglages">
-          Réglages
+        <a className="icon-button" href="#/reglages" aria-label="Réglages" aria-current={page === "reglages" ? "page" : undefined}>
+          <Icon name="settings" />
         </a>
       </header>
       <div className="frame">
         <nav className="side" aria-label="Sections">
           {ITEMS.map((item) => (
             <a key={item.id} href={item.hash} aria-current={page === item.id ? "page" : undefined}>
+              <Icon name={item.icon} />
               <span>{item.label}</span>
               {item.id === "revisions" && due > 0 ? <span className="badge">{due}</span> : null}
             </a>
@@ -58,10 +61,13 @@ export function Shell({
         </main>
       </div>
       <nav className="tabbar" aria-label="Sections">
-        {ITEMS.filter((item) => item.id !== "reglages").map((item) => (
+        {mobile.map((item) => (
           <a key={item.id} href={item.hash} aria-current={page === item.id ? "page" : undefined}>
-            <span>{item.label === "Aujourd'hui" ? "Ce soir" : item.label}</span>
-            {item.id === "revisions" && due > 0 ? <span className="badge">{due}</span> : null}
+            <span className="tab-icon">
+              <Icon name={item.icon} />
+              {item.id === "revisions" && due > 0 ? <span className="badge">{due}</span> : null}
+            </span>
+            <span>{item.short}</span>
           </a>
         ))}
       </nav>

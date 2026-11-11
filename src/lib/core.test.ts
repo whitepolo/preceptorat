@@ -4,7 +4,7 @@ import { State } from "ts-fsrs";
 import { catalog, lessons, seedState } from "../content";
 import { canReveal, formatAnswerComment } from "./answers";
 import { legacyToStored, stateFromCatalog } from "./legacy";
-import { selectTonightLesson } from "./lessons";
+import { lessonForToday, selectTonightLesson } from "./lessons";
 import { isTutorMessage, renderMarkdown, stripTutorMarker } from "./markdown";
 import { mergeStates, pickCard } from "./merge";
 import { applyGrade } from "./scheduler";
@@ -12,11 +12,13 @@ import { selectSession } from "./session";
 import type { ReviewStateFile, StoredCard } from "./types";
 
 describe("leçon du soir", () => {
-  it("choisit la dernière leçon dont la date n'est pas après aujourd'hui, à Maurice", () => {
-    expect(selectTonightLesson(lessons, "2026-11-08")?.id).toBeUndefined();
-    expect(selectTonightLesson(lessons, "2026-11-09")?.id).toBe("2026-11-09-latin-L3");
-    expect(selectTonightLesson(lessons, "2026-11-11")?.id).toBe("2026-11-10-histoire-L2");
-    expect(selectTonightLesson(lessons, "2026-11-17")?.id).toBe("2026-11-17-classiques-L1");
+  it("n'ouvre que la leçon datée du jour, et garde la plus récente pour le lien", () => {
+    expect(lessonForToday(lessons, "2026-11-11")).toBeNull();
+    expect(lessonForToday(lessons, "2026-11-16")).toBeNull();
+    expect(lessonForToday(lessons, "2026-11-17")?.id).toBe("2026-11-17-classiques-L1");
+    expect(selectTonightLesson(lessons, "2026-11-11")).toBeNull();
+    expect(selectTonightLesson(lessons, "2026-11-18")?.id).toBe("2026-11-17-classiques-L1");
+    expect(lessons.map((lesson) => lesson.id)).toEqual(["2026-11-17-classiques-L1"]);
   });
 });
 
@@ -121,7 +123,7 @@ describe("réponses et markdown", () => {
   });
 
   it("forme un commentaire structuré, distinct d'une réponse de Schopen", () => {
-    const lesson = lessons.find((item) => item.id === "2026-11-10-histoire-L2")!;
+    const lesson = lessons.find((item) => item.id === "2026-11-17-classiques-L1")!;
     const body = formatAnswerComment(lesson, { R1: { text: "insula", skipped: false, revealed: false } }, 32);
     expect(body.startsWith("<!-- sebastien -->")).toBe(true);
     expect(isTutorMessage(body)).toBe(false);
@@ -141,6 +143,15 @@ describe("réponses et markdown", () => {
 });
 
 describe("schéma", () => {
+  it("exige une bibliographie sans citation inventée", () => {
+    const lesson = lessons.find((item) => item.id === "2026-11-17-classiques-L1");
+    expect(lesson?.pour_aller_plus_loin && lesson.pour_aller_plus_loin.length >= 2).toBe(true);
+    for (const entry of lesson?.pour_aller_plus_loin ?? []) {
+      expect(entry.citation ?? "").toBe("");
+      expect(entry.reference.length).toBeGreaterThan(10);
+    }
+  });
+
   it("accepte le dépôt", () => {
     const out = execFileSync("node", ["scripts/validate-content.mjs"], { encoding: "utf8" });
     expect(out).toContain("Contenu valide");
@@ -149,10 +160,10 @@ describe("schéma", () => {
   it("refuse un tiret cadratin", () => {
     const script = `
       import { validateLesson } from "./scripts/validate-content.mjs";
-      import lesson from "./content/lecons/2026-11-09-latin-L3.json" with { type: "json" };
+      import lesson from "./content/lecons/2026-11-17-classiques-L1.json" with { type: "json" };
       const copy = structuredClone(lesson);
       copy.objectives[0] = "objectif " + String.fromCharCode(0x2014);
-      const errors = validateLesson(copy, "2026-11-09-latin-L3.json");
+      const errors = validateLesson(copy, "2026-11-17-classiques-L1.json");
       if (!errors.some((error) => error.includes("tiret"))) process.exit(1);
     `;
     execFileSync("node", ["--input-type=module", "-e", script], { encoding: "utf8" });

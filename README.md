@@ -30,7 +30,7 @@ Sans jeton, tu peux lire. Tu ne peux pas envoyer une réponse ni synchroniser le
 
 ## Les six écrans
 
-- **Aujourd'hui.** La leçon du soir (la plus récente dont la date n'est pas après aujourd'hui, heure de Maurice). Objectifs, sommaire, questions. La solution reste cachée tant que tu n'as pas écrit, ou choisi « Passer ». Le brouillon reste sur l'appareil. « Envoyer mes réponses au précepteur » poste un seul commentaire, codes R1, P1, E1, et les autres.
+- **Accueil.** La leçon du jour seulement, heure de Maurice. S'il n'y en a pas encore, l'écran dit qu'elle arrive vers 19 h, indique les révisions dues, et propose la dernière leçon s'il y en a une. La leçon se lit étape par étape. La solution reste cachée tant que tu n'as pas écrit, ou choisi « Passer ». « Envoyer mes réponses au précepteur » poste un seul commentaire. Après À retenir : Pour aller plus loin.
 - **Révisions.** Cartes dues, huit au plus, matières mélangées. Tu écris avant de voir la réponse, puis À revoir, Difficile, Correct ou Facile. L'échéancier est FSRS.
 - **Précepteur.** Le dialogue libre, et un fil par leçon. Schopen répond dans le même compte, avec une marque invisible en tête de message.
 - **Parcours.** La semaine, les modules, les points fragiles, l'assiduité.
