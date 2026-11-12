@@ -1,0 +1,321 @@
+{
+  "schema_version": "1.0",
+  "id": "2026-11-12-philosophie-L1",
+  "title": "2026-11-12 · Philosophie · Leçon 1 : Fragments et témoignages, Milet et la question du principe",
+  "date": "2026-11-12",
+  "weekday": "jeudi",
+  "subject": "philosophie",
+  "subject_label": "Philosophie",
+  "lesson_number": 1,
+  "module": {
+    "id": "philo-1",
+    "title": "Présocratiques"
+  },
+  "duration_min": {
+    "min": 35,
+    "max": 45
+  },
+  "lang": "fr",
+  "objectives": [
+    "Distinguer un fragment d'un témoignage, et lire la notation Diels-Kranz (A, B).",
+    "Énoncer la question du principe (*archḗ*) et la réponse de Thalès, d'Anaximandre et d'Anaximène.",
+    "Lire de près l'unique fragment d'Anaximandre et expliquer son image juridique du changement.",
+    "Reconstruire en étapes un argument présocratique (la terre en équilibre) et dire ce qu'il corrige."
+  ],
+  "prerequisites": [
+    "Aucun."
+  ],
+  "student_note": "Réponds dans le fil de discussion, en faisant précéder chaque réponse du code de la question (R1, P1, Xf, S, E1, Q, T1...). Ne lis une solution qu'après avoir répondu.",
+  "sources": [
+    {
+      "type": "primary",
+      "cite": "H. Diels et W. Kranz, Die Fragmente der Vorsokratiker, 6e éd., 3 vol., Berlin, Weidmann, 1951-1952 : chap. 11 (Thalès), 12 (Anaximandre), 13 (Anaximène)."
+    },
+    {
+      "type": "primary",
+      "cite": "Aristote, Métaphysique A 3, 983b6-27, texte établi par W. Jaeger, Aristotelis Metaphysica, Oxford, Clarendon Press, 1957 ; Du ciel II 13, 294a28-34 et 295b10-16 ; Physique III 5, 204b22-29."
+    },
+    {
+      "type": "primary",
+      "cite": "Simplicius, In Aristotelis Physicorum libros quattuor priores commentaria, éd. H. Diels, Commentaria in Aristotelem Graeca IX, Berlin, G. Reimer, 1882, p. 24, l. 13-21 et 26 et suiv."
+    },
+    {
+      "type": "secondary",
+      "cite": "G. S. Kirk, J. E. Raven et M. Schofield, The Presocratic Philosophers, 2e éd., Cambridge, Cambridge University Press, 1983, chapitres sur Thalès, Anaximandre et Anaximène."
+    },
+    {
+      "type": "secondary",
+      "cite": "Pierre Hadot, Qu'est-ce que la philosophie antique ?, Paris, Gallimard, 1995."
+    }
+  ],
+  "sections": [
+    {
+      "id": "rappel",
+      "title": "Rappel",
+      "duration_min": {
+        "min": 8,
+        "max": 10
+      },
+      "body": "Six cartes de latin sont dues aujourd'hui, issues de la leçon de mercredi. Réponds de mémoire, sans regarder, puis note-toi dans l'application. Les deux cartes de vocabulaire (*filius*, *filia*) attendront leur première révision seule.",
+      "questions": [
+        {
+          "code": "R1",
+          "kind": "recall",
+          "prompt": "Mets au pluriel : *fluvius parvus* ; *oppidum parvum*. Quelle est la règle de formation ?",
+          "solution": "*fluvii parvi* ; *oppida parva*. On remplace la terminaison du singulier, on ne l'ajoute pas au mot entier (*parvi*, non *parvii* ; *oppida*, non *oppidia*).",
+          "card_id": "LAT-001"
+        },
+        {
+          "code": "R2",
+          "kind": "recall",
+          "prompt": "À quelle question répond le génitif latin, et à quoi sert-il dans la phrase ?",
+          "solution": "Il répond à « de qui ? », « de quoi ? ». Il marque le complément du nom (appartenance, origine, ou le tout dont on prend une partie).",
+          "card_id": "LAT-002"
+        },
+        {
+          "code": "R3",
+          "kind": "recall",
+          "prompt": "Donne le génitif singulier de *insula*, *fluvius* et *oppidum*.",
+          "solution": "*insulae*, *fluvii*, *oppidi*.",
+          "card_id": "LAT-003"
+        },
+        {
+          "code": "R4",
+          "kind": "recall",
+          "prompt": "Donne le génitif pluriel de *insula*, *fluvius* et *oppidum*.",
+          "solution": "*insularum*, *fluviorum*, *oppidorum*.",
+          "card_id": "LAT-004"
+        },
+        {
+          "code": "R5",
+          "kind": "recall",
+          "prompt": "La forme *insulae* peut correspondre à deux cas. Lesquels, et comment les distinguer ?",
+          "solution": "Nominatif pluriel (« les îles ») ou génitif singulier (« de l'île »). On distingue grâce au verbe (*sunt* ou *est*), à l'accord d'un adjectif, et à la fonction dans la phrase.",
+          "card_id": "LAT-005"
+        },
+        {
+          "code": "R6",
+          "kind": "recall",
+          "prompt": "Dans César, *De Bello Gallico*, I, 1, *Horum omnium fortissimi sunt Belgae*, que signifie *horum omnium*, et à quel cas est ce groupe ?",
+          "solution": "« De tous ceux-ci » (ou « de tous ces peuples »). Génitif pluriel, ici partitif : les plus braves de l'ensemble.",
+          "card_id": "LAT-008"
+        }
+      ]
+    },
+    {
+      "id": "prequestions",
+      "title": "Pré-questions",
+      "duration_min": {
+        "min": 1,
+        "max": 2
+      },
+      "body": "Réponds même au hasard, c'est voulu.",
+      "questions": [
+        {
+          "code": "P1",
+          "kind": "prequestion",
+          "prompt": "Aucun livre de Thalès ni d'Anaximandre ne nous est parvenu. Comment pouvons-nous pourtant prétendre savoir ce qu'ils pensaient ?",
+          "solution": "Par des auteurs postérieurs qui les citent (fragments) ou qui rapportent leurs opinions (témoignages) : Aristote, son élève Théophraste, puis des commentateurs comme Simplicius, au VIe siècle apr. J.-C. C'est l'objet de N1."
+        },
+        {
+          "code": "P2",
+          "kind": "prequestion",
+          "prompt": "Pourquoi la terre ne tombe-t-elle pas ? Donne la réponse qu'aurait pu faire un Grec du VIe siècle av. J.-C., sans la physique moderne.",
+          "solution": "Thalès : elle flotte sur l'eau, comme du bois. Anaximandre : elle ne tombe pas parce qu'elle est au centre, à égale distance de tout, et qu'elle n'a aucune raison d'aller d'un côté plutôt que d'un autre. C'est l'objet de X2."
+        }
+      ]
+    },
+    {
+      "id": "cours",
+      "title": "Notion du jour",
+      "duration_min": {
+        "min": 10,
+        "max": 12
+      },
+      "body": "### N1. Ce qui nous reste : fragments et témoignages\n\nLes penseurs qu'on appelle « présocratiques », de Thalès (début du VIe siècle av. J.-C.) aux contemporains de Socrate, n'ont laissé aucun livre complet. Tout ce que nous lisons d'eux passe par d'autres auteurs, souvent très postérieurs. Le nom même n'est pas le leur : il a été fixé par les historiens modernes, et c'est l'édition de Hermann Diels (1903), refondue par Walther Kranz, qui l'a imposé.\n\nOn distingue deux sortes de matériaux, et toute la prudence du jeudi part de là.\n\n| Type | Ce que c'est | Notation Diels-Kranz (DK) | Exemple |\n| --- | --- | --- | --- |\n| Fragment | Les mots mêmes du penseur, cités par un auteur postérieur | B | DK 12 B 1 : la seule phrase conservée d'Anaximandre |\n| Témoignage | Ce qu'un autre auteur rapporte, résume ou interprète | A | Aristote, *Métaphysique* A 3, sur Thalès (DK 11 A 12) |\n\nLe premier chiffre désigne le penseur dans l'édition (11 Thalès, 12 Anaximandre, 13 Anaximène). Retiens la chaîne de transmission la plus fréquente pour les Milésiens :\n\n| Étape | Auteur | Date | Rôle |\n| --- | --- | --- | --- |\n| 1 | Aristote | IVe s. av. J.-C. | Lit ses prédécesseurs avec ses propres catégories (matière, cause) |\n| 2 | Théophraste, son élève | IVe s. av. J.-C. | Recueil des *Opinions des physiciens*, aujourd'hui perdu : c'est le début de la « doxographie » |\n| 3 | Simplicius | VIe s. apr. J.-C. | Commentateur d'Aristote, il cite Théophraste, et parfois les mots mêmes des anciens |\n\nUn témoignage n'est donc pas une photographie : il porte la question de celui qui témoigne. Une phrase d'Aristote sur Thalès nous apprend d'abord ce qu'Aristote cherchait chez Thalès.\n\n### N2. Milet et la question du principe\n\nÀ Milet, cité grecque d'Ionie, trois penseurs se succèdent au VIe siècle et posent la même question : de quoi tout vient-il, et qu'est-ce qui demeure dans le changement ? Aristote nomme cela le principe, *archḗ*. Il n'est pas sûr qu'ils aient employé ce mot eux-mêmes, et Simplicius, qui l'attribue à Anaximandre, a été diversement compris.\n\n| Penseur | Principe | Comment le reste en vient | Témoin principal |\n| --- | --- | --- | --- |\n| Thalès | L'eau | Non transmis ; Aristote ne fait que conjecturer ses raisons | Aristote, *Métaphysique* A 3, 983b20-27 |\n| Anaximandre | L'*ápeiron*, l'illimité, l'indéterminé | Les contraires (chaud et froid, sec et humide) s'en séparent | Simplicius, *Commentaire sur la Physique*, 24, 13-21 (d'après Théophraste) |\n| Anaximène | L'air | Condensation et raréfaction : l'air raréfié devient feu, condensé il devient vent, nuage, eau, terre, pierre | Simplicius, *Commentaire sur la Physique*, 24, 26 et suiv. (DK 13 A 5) |\n\nCe qui est nouveau n'est pas d'abord la réponse (l'eau, l'air), c'est la forme de la réponse. On explique le monde par un principe unique et par un processus, non par une généalogie de dieux. Et chacun corrige le précédent par une raison : c'est le commencement d'une discussion.\n\nVoici le témoignage d'Aristote sur Thalès, en traduction de travail d'après le texte grec établi par W. Jaeger (*Aristotelis Metaphysica*, Oxford, Clarendon Press, 1957), *Métaphysique* A 3, 983b20-27 :\n\n> Thalès, l'initiateur de cette sorte de philosophie, dit que c'est l'eau (c'est pourquoi il déclarait aussi que la terre repose sur l'eau). Il a peut-être tiré cette idée de ce qu'il voyait que la nourriture de toutes choses est humide, que le chaud lui-même en naît et en vit [...], et de ce que les semences de toutes choses ont une nature humide ; or l'eau est le principe de la nature des choses humides.\n\nRegarde le mot « peut-être » (en grec *ísōs*). Aristote sait ce que Thalès a dit, ou croit le savoir. Il ne sait pas pourquoi. Les raisons qu'il donne sont les siennes.\n\n### N3. Anaximandre : la première phrase de la philosophie grecque\n\nSimplicius, citant Théophraste, rapporte qu'Anaximandre ne prit pour principe aucun des éléments, mais « une autre nature illimitée », d'où naissent les cieux et les mondes. Puis il cite une phrase, en précisant qu'Anaximandre parle « en des termes plutôt poétiques ». C'est notre seul fragment.",
+      "excerpt": {
+        "work": "Anaximandre, fragment unique (DK 12 B 1)",
+        "locus": "Simplicius, Commentaire sur la Physique d'Aristote, 24, 17-21 (éd. Diels) ; DK 12 B 1",
+        "edition": "Hermann Diels (éd.), Simplicii in Aristotelis Physicorum libros quattuor priores commentaria, Commentaria in Aristotelem Graeca IX, Berlin, G. Reimer, 1882 ; H. Diels et W. Kranz, Die Fragmente der Vorsokratiker, 6e éd., Berlin, Weidmann, 1951-1952, 12 B 1.",
+        "translator": "traduction de travail, pour cette leçon, d'après le texte grec de l'édition citée",
+        "lang": "fr",
+        "text": "« Ce à partir de quoi les êtres naissent, c'est aussi vers cela qu'ils retournent en se corrompant, selon la nécessité ; car ils se rendent les uns aux autres justice et réparation de leur injustice, selon l'ordre du temps. »\n\nTexte grec : ἐξ ὧν δὲ ἡ γένεσίς ἐστι τοῖς οὖσι, καὶ τὴν φθορὰν εἰς ταῦτα γίνεσθαι κατὰ τὸ χρεών· διδόναι γὰρ αὐτὰ δίκην καὶ τίσιν ἀλλήλοις τῆς ἀδικίας κατὰ τὴν τοῦ χρόνου τάξιν.",
+        "close_reading": "**Ce que le texte dit.** Les choses naissent d'un fonds et y retournent. Ce retour n'est pas un accident : il se fait « selon la nécessité ». La raison est donnée par *gar*, « car » : les choses commettent une injustice et la paient.\n\n**Comment il est fait.** Deux vocabulaires se croisent. L'un est celui de la naissance et de la corruption (*génesis*, *phthorá*), qui sera celui de la physique. L'autre est celui du tribunal : *díkē* (la justice, le jugement), *tísis* (la réparation, l'amende), *adikía* (l'injustice), *táxis* (l'ordre, l'arrêt fixé). Le temps y joue le rôle d'un juge qui fixe l'échéance.\n\n**Ce qu'il engage.** L'injustice est sans doute celle des contraires qui empiètent l'un sur l'autre : l'été chaud et sec gagne sur le froid et l'humide, puis l'hiver le lui rend. Le monde est pensé comme un ordre où rien ne domine pour toujours. Le mot qui le dit en grec, *kósmos*, signifie d'abord l'ordre et la bonne disposition.\n\n**Prudence.** Où commencent les mots d'Anaximandre ? Beaucoup d'éditeurs (par exemple Kirk, Raven et Schofield) ne tiennent pour sûrement authentique que la seconde moitié, à partir de « car ils se rendent ». La première pourrait être une paraphrase de Théophraste, dans le vocabulaire d'Aristote. C'est la leçon de N1 appliquée à une seule phrase."
+      }
+    },
+    {
+      "id": "exemples",
+      "title": "Exemples résolus",
+      "duration_min": {
+        "min": 5,
+        "max": 7
+      },
+      "body": "Trois temps, comme toujours : ce que le texte dit, comment il est fait, ce qu'il engage.",
+      "questions": [
+        {
+          "code": "X1",
+          "kind": "worked",
+          "prompt": "**Exemple résolu 1. Lire un témoignage : Aristote sur Thalès (Métaphysique A 3, 983b20-27, en N2).**\n\n*Ce que le texte dit.* Pour Thalès, l'eau est le principe ; et la terre repose sur l'eau.\n\n*Comment il est fait.* Deux étages se superposent. L'énoncé de la thèse (« il dit que ») est présenté comme un fait. Les raisons (nourriture humide, semences humides) sont introduites par « peut-être » : elles sont une reconstruction d'Aristote. Et le passage est rangé dans un cadre plus vaste : Aristote vient d'expliquer que les premiers philosophes n'ont vu que la cause matérielle. Thalès entre dans une histoire écrite pour aboutir à la doctrine des quatre causes d'Aristote.\n\n*Ce qu'il engage.* Nous savons, avec une bonne probabilité, que Thalès a mis l'eau au principe. Nous ne savons pas s'il pensait l'eau comme une matière, au sens d'Aristote, ni pour quelles raisons. Règle pratique : dans un témoignage, sépare toujours la thèse rapportée et l'interprétation du témoin.",
+          "solution": "Thèse rapportée (l'eau principe, la terre sur l'eau) d'un côté ; raisons conjecturées par Aristote (« peut-être ») de l'autre, dans le cadre de sa théorie des causes."
+        },
+        {
+          "code": "X2",
+          "kind": "worked",
+          "prompt": "**Exemple résolu 2. Reconstruire un argument : pourquoi la terre ne tombe pas (Anaximandre, d'après Aristote, Du ciel II 13, 295b10-16, DK 12 A 26).**\n\nAristote rapporte que, pour certains anciens, dont Anaximandre, la terre reste en place à cause de l'équilibre (*homoiótēs*, la similitude de position) : placée au centre, elle est à égale distance des extrémités, et il ne lui convient pas plus d'aller vers le haut que vers le bas ou sur les côtés.\n\n*Ce que le texte dit.* La terre n'a besoin d'aucun appui.\n\n*Comment il est fait.* Mets-le en forme :\n1. La terre est au centre, à égale distance de tout ce qui l'entoure.\n2. Si elle se déplaçait, ce serait dans une direction plutôt qu'une autre.\n3. Or rien ne favorise une direction plutôt qu'une autre.\n4. Donc elle ne se déplace dans aucune : elle reste en place.\n\nL'argument ne repose pas sur une observation, mais sur l'absence de raison pour qu'une chose arrive d'une façon plutôt que d'une autre.\n\n*Ce qu'il engage.* Il répond à une difficulté de la thèse de Thalès : si la terre repose sur l'eau, sur quoi repose l'eau ? Anaximandre ne cherche pas un appui de plus, il supprime le besoin d'appui. L'argument est faux pour nous, mais il est bon dans sa forme : une thèse est corrigée par une raison, non par une autorité.",
+          "solution": "Position au centre, aucune direction privilégiée, donc repos. Il corrige Thalès en supprimant le besoin d'un appui."
+        },
+        {
+          "code": "Xf",
+          "kind": "complete",
+          "prompt": "**À toi de finir. L'origine des hommes (pseudo-Plutarque, Stromates, 2 ; DK 12 A 10).**\n\nSelon ce témoignage, Anaximandre soutenait qu'au commencement l'homme est né d'animaux d'une autre espèce. Sa raison : les autres animaux trouvent vite leur nourriture par eux-mêmes, alors que l'homme seul a besoin d'être nourri longtemps ; né tel qu'il est aujourd'hui, il n'aurait donc pas survécu au début.\n\n*Ce que le texte dit* : l'homme ne peut pas être apparu d'emblée sous sa forme actuelle.\n\n*Comment il est fait* : mets l'argument en trois ou quatre étapes, comme en X2, et dis quel type de raisonnement il emploie.\n\n*Ce qu'il engage* : à toi. Et ajoute la prudence propre à ce document (de quel type de source s'agit-il ?).",
+          "solution": "*Comment il est fait.* 1. Un nouveau-né humain ne peut pas se nourrir seul pendant longtemps. 2. Au commencement, aucun être humain plus âgé n'existait pour le nourrir. 3. Donc un premier homme né sous la forme humaine actuelle serait mort. 4. Donc les premiers hommes sont nés d'autres animaux, capables de les nourrir ou de les protéger. C'est un raisonnement par l'absurde : on suppose le contraire (l'homme apparu tel quel) et on montre qu'il mène à une impossibilité.\n\n*Ce qu'il engage.* L'origine de l'homme devient une question qu'on traite par des raisons tirées de la nature (le besoin de nourriture, la survie), non par un récit de création divine. On aurait tort d'y voir la théorie de l'évolution : il n'y a ni sélection ni descendance graduelle, seulement une condition de survie au premier moment.\n\n*Prudence.* C'est un témoignage (A), non un fragment (B), dans un recueil doxographique tardif transmis sous le nom de Plutarque. Nous avons le contenu de l'argument, pas les mots d'Anaximandre."
+        }
+      ]
+    },
+    {
+      "id": "regard",
+      "title": "Le regard des maîtres",
+      "duration_min": {
+        "min": 2,
+        "max": 3
+      },
+      "secondary": {
+        "work": "Pierre Hadot, Qu'est-ce que la philosophie antique ?, Paris, Gallimard, 1995, première partie",
+        "idea": "Pierre Hadot rappelle que les penseurs de Milet ne se disaient pas « philosophes » : le mot et sa définition ne prennent forme qu'au Ve et au IVe siècle, autour de Socrate et de Platon. Leur objet était la *phúsis*, la nature entendue comme naissance et croissance des choses. Mais Hadot insiste sur un autre point : dès l'origine, cette pensée se transmet dans une relation de maître à disciple, comme une manière de vivre et de chercher ensemble, et pas seulement comme une suite de doctrines. Toute sa lecture de la philosophie antique part de là : un discours philosophique est inséparable d'une forme de vie et d'un exercice (paraphrase de l'ouvrage cité).",
+        "question": "Thalès, Anaximandre et Anaximène sont présentés par la tradition comme une suite de maîtres et d'élèves, chacun corrigeant l'autre. En quoi ce fait éclaire-t-il ce que tu as vu en X2, et que gagne-t-on à lire les Milésiens comme une discussion plutôt que comme trois doctrines ?",
+        "solution": "En X2, Anaximandre répond à une difficulté de la thèse de Thalès ; Anaximène, ensuite, remplace l'illimité, difficile à se représenter, par l'air, qui permet d'expliquer le changement par un processus (condenser, raréfier). Lire les Milésiens comme une discussion, c'est voir que chacun hérite d'une question et d'une exigence (donner une raison), non d'une réponse. Hadot y ajoute que cette transmission est déjà une façon de vivre ensemble dans la recherche, ce qui annonce l'école philosophique. Prudence : la succession maître et élève est elle-même un schéma de la doxographie, utile mais simplificateur."
+      },
+      "questions": [
+        {
+          "code": "S",
+          "kind": "secondary",
+          "prompt": "Thalès, Anaximandre et Anaximène sont présentés par la tradition comme une suite de maîtres et d'élèves, chacun corrigeant l'autre. En quoi ce fait éclaire-t-il ce que tu as vu en X2, et que gagne-t-on à lire les Milésiens comme une discussion plutôt que comme trois doctrines ?",
+          "solution": "En X2, Anaximandre répond à une difficulté de la thèse de Thalès ; Anaximène, ensuite, remplace l'illimité, difficile à se représenter, par l'air, qui permet d'expliquer le changement par un processus (condenser, raréfier). Lire les Milésiens comme une discussion, c'est voir que chacun hérite d'une question et d'une exigence (donner une raison), non d'une réponse. Hadot y ajoute que cette transmission est déjà une façon de vivre ensemble dans la recherche, ce qui annonce l'école philosophique. Prudence : la succession maître et élève est elle-même un schéma de la doxographie, utile mais simplificateur."
+        }
+      ]
+    },
+    {
+      "id": "exercices",
+      "title": "Exercices",
+      "duration_min": {
+        "min": 8,
+        "max": 10
+      },
+      "questions": [
+        {
+          "code": "E1",
+          "kind": "exercise",
+          "prompt": "Classe chacun de ces documents comme fragment (B) ou témoignage (A), et justifie en une phrase : (a) la phrase d'Anaximandre citée par Simplicius sur la justice et la réparation ; (b) « Thalès dit que c'est l'eau », chez Aristote ; (c) l'argument sur l'origine des hommes chez le pseudo-Plutarque.",
+          "solution": "(a) Fragment (DK 12 B 1) : Simplicius prétend citer les mots mêmes, et le signale (« en des termes plutôt poétiques »), même si le début est peut-être une paraphrase. (b) Témoignage (DK 11 A 12) : Aristote rapporte et interprète, dans son vocabulaire. (c) Témoignage (DK 12 A 10) : résumé doxographique tardif, sans les mots d'Anaximandre."
+        },
+        {
+          "code": "E2",
+          "kind": "exercise",
+          "prompt": "Pourquoi Anaximandre aurait-il refusé de prendre l'eau, ou un autre élément, pour principe ? Reconstitue l'argument qu'Aristote rapporte sans nommer son auteur (Physique III 5, 204b22-29), et que les commentateurs rattachent souvent à Anaximandre : les éléments sont opposés les uns aux autres.",
+          "solution": "Les éléments sont des contraires : l'eau est froide et humide, le feu chaud et sec. Si l'un d'eux était illimité, il l'emporterait sur les autres et les détruirait : il n'y aurait plus de feu dans un monde d'eau infinie. Le principe doit donc être autre chose que les contraires, un fonds indéterminé d'où ils se séparent tous, et où aucun ne domine. C'est l'*ápeiron*. On voit le lien avec le fragment : aucun contraire ne doit l'emporter pour toujours."
+        },
+        {
+          "code": "E3",
+          "kind": "exercise",
+          "prompt": "Dans le fragment (N3), relève les mots qui viennent du vocabulaire du droit, et dis en deux ou trois phrases ce que cette image apprend sur la manière dont Anaximandre pense le changement.",
+          "solution": "*díkē* (justice, peine), *tísis* (réparation), *adikía* (injustice), et *táxis* (ordre fixé, comme une échéance décidée par un juge). Le changement n'est pas un désordre : c'est une compensation réglée. Chaque contraire empiète sur l'autre puis paie, à son terme, de sorte que l'ensemble reste équilibré. Le monde est pensé comme un ordre soumis à une loi, ce que dit plus tard le mot *kósmos*."
+        },
+        {
+          "code": "E4",
+          "kind": "exercise",
+          "prompt": "Anaximène remplace l'illimité par l'air, et explique tout par la condensation et la raréfaction. Quel avantage a cette solution sur celle d'Anaximandre ? Quel prix paie-t-elle ?",
+          "solution": "Avantage : un processus unique, et qu'on peut se représenter, explique toutes les différences. Les qualités (feu, eau, pierre) deviennent des degrés d'un même phénomène, plus ou moins dense : une différence de qualité est ramenée à une différence de quantité. L'illimité d'Anaximandre restait difficile à décrire. Prix : on revient à un principe qui est l'un des éléments, et l'objection d'E2 revient (pourquoi l'air, et non un autre, et comment l'air ne l'emporte-t-il pas sur le reste ?)."
+        },
+        {
+          "code": "E5",
+          "kind": "exercise",
+          "prompt": "Aristote objecte à Thalès (Du ciel II 13, 294a28-34) que, si la terre repose sur l'eau, il faut encore dire sur quoi repose l'eau. Formule l'objection en une phrase, puis explique en une phrase pourquoi la solution d'Anaximandre (X2) n'y est pas exposée.",
+          "solution": "Objection : expliquer qu'une chose tient parce qu'elle repose sur une autre oblige à demander sur quoi repose cette autre, et ainsi à l'infini, ou bien à s'arrêter arbitrairement. Anaximandre n'y est pas exposé, parce que sa terre ne repose sur rien : elle tient par sa position d'équilibre au centre, sans aucun appui."
+        }
+      ]
+    },
+    {
+      "id": "reflexion",
+      "title": "Question de réflexion",
+      "duration_min": {
+        "min": 2,
+        "max": 2
+      },
+      "questions": [
+        {
+          "code": "Q",
+          "kind": "reflection",
+          "prompt": "Quelle preuve avons-nous que Thalès a soutenu que « tout vient de l'eau » ? Dis ce que nous savons, comment nous le savons, et ce qui reste incertain, en deux à quatre phrases.",
+          "solution": "Nous n'avons aucun écrit de Thalès. La preuve est le témoignage d'Aristote, deux siècles et demi plus tard, repris par la doxographie : il rapporte la thèse comme un fait, et c'est probablement sûr dans son contenu. Les raisons, en revanche, sont données avec « peut-être » : c'est une conjecture d'Aristote. Le sens même de la thèse (l'eau comme matière, au sens aristotélicien) est lu à travers sa propre théorie des causes. Nous savons donc ce que Thalès a dit, à travers un témoin intéressé, mais non pourquoi."
+        }
+      ]
+    },
+    {
+      "id": "ticket",
+      "title": "Ticket de sortie",
+      "duration_min": {
+        "min": 2,
+        "max": 2
+      },
+      "questions": [
+        {
+          "code": "T1",
+          "kind": "ticket",
+          "prompt": "Quelle différence y a-t-il entre un fragment et un témoignage ? Donne un exemple de chaque, tiré de la leçon.",
+          "solution": "Un fragment donne les mots mêmes d'un penseur, cités par un auteur postérieur (B dans Diels-Kranz) : la phrase d'Anaximandre chez Simplicius. Un témoignage rapporte ou interprète sa pensée (A) : Aristote sur l'eau de Thalès."
+        },
+        {
+          "code": "T2",
+          "kind": "ticket",
+          "prompt": "Qu'est-ce que l'*ápeiron* d'Anaximandre, et pourquoi le préfère-t-il à l'eau ?",
+          "solution": "L'illimité, ou l'indéterminé : un principe qui n'est aucun des éléments, d'où se séparent les contraires. Il le préfère parce qu'un élément pris pour principe, étant le contraire d'autres éléments, l'emporterait sur eux ; l'indéterminé n'en favorise aucun."
+        }
+      ]
+    }
+  ],
+  "retenir": [
+    "Des présocratiques, nous n'avons que des fragments (leurs mots, notés B dans Diels-Kranz) et des témoignages (ce qu'on rapporte d'eux, notés A), transmis par Aristote, Théophraste et des commentateurs tardifs comme Simplicius.",
+    "Un témoignage porte la question de son témoin : chez Aristote, Thalès entre dans une histoire de la cause matérielle, et les raisons de sa thèse sont une conjecture (« peut-être »).",
+    "À Milet, au VIe siècle av. J.-C., Thalès, Anaximandre et Anaximène cherchent le principe unique d'où tout vient : l'eau, l'illimité, l'air.",
+    "Le seul fragment d'Anaximandre décrit le changement comme une justice : les contraires empiètent les uns sur les autres et se rendent réparation selon l'ordre du temps.",
+    "La terre d'Anaximandre tient au centre par équilibre, faute de raison d'aller d'un côté plutôt que d'un autre : une thèse est corrigée par un argument, non par une autorité.",
+    "Pour Hadot, cette recherche se transmet déjà de maître à disciple, comme une manière de chercher ensemble, avant même que le mot « philosophe » ne soit défini."
+  ],
+  "mot_du_jour": {
+    "code": "M",
+    "terme": "principe",
+    "texte": "Le français *principe* vient du latin *principium*, « commencement », de *princeps*, « celui qui prend la première place » (*primus* et *capere*, prendre), d'où aussi *prince*. Le latin traduit ainsi le grec *archḗ*, qui veut dire à la fois le commencement et le commandement. On retrouve les deux sens dans nos mots savants : *archaïque*, *archéologie* (le discours sur les commencements), et *monarchie*, *anarchie* (le commandement d'un seul, l'absence de commandement). Chercher le principe, pour les Milésiens, c'est chercher à la fois ce qui vient en premier et ce qui gouverne le reste."
+  },
+  "pour_aller_plus_loin": [
+    {
+      "type": "primaire",
+      "reference": "Hermann Diels et Walther Kranz, Die Fragmente der Vorsokratiker, 6e éd., 3 vol., Berlin, Weidmann, 1951-1952.",
+      "note": "L'édition de référence, dont viennent les numéros A et B utilisés dans toute la littérature savante."
+    },
+    {
+      "type": "primaire",
+      "reference": "André Laks et Glenn W. Most (éd. et trad.), Les Débuts de la philosophie. Des premiers penseurs grecs à Socrate, Paris, Fayard, 2016.",
+      "note": "Nouvelle édition bilingue des textes, qui renouvelle Diels-Kranz et classe autrement fragments et témoignages."
+    },
+    {
+      "type": "primaire",
+      "reference": "Jean-Paul Dumont (dir.), avec Daniel Delattre et Jean-Louis Poirier, Les Présocratiques, Paris, Gallimard, Bibliothèque de la Pléiade, 1988.",
+      "note": "La traduction française complète de référence de Diels-Kranz, pour lire tout Thalès et tout Anaximandre."
+    },
+    {
+      "type": "secondaire",
+      "reference": "G. S. Kirk, J. E. Raven et M. Schofield, The Presocratic Philosophers. A Critical History with a Selection of Texts, 2e éd., Cambridge, Cambridge University Press, 1983.",
+      "note": "Le manuel critique classique : textes grecs choisis, traduits et discutés, notamment l'étendue du fragment d'Anaximandre."
+    },
+    {
+      "type": "secondaire",
+      "reference": "André Laks, Introduction à la « philosophie présocratique », Paris, Presses universitaires de France, 2006.",
+      "note": "Court essai sur l'histoire de la catégorie de « présocratique », de Platon et Aristote aux modernes."
+    },
+    {
+      "type": "secondaire",
+      "reference": "Pierre Hadot, Qu'est-ce que la philosophie antique ?, Paris, Gallimard, 1995.",
+      "note": "Lecture d'appui du jeudi : la philosophie antique comme forme de vie, dès ses débuts."
+    }
+  ]
+}

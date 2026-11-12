@@ -19,7 +19,10 @@ describe("leçon du jour", () => {
     expect(lessonForToday(lessons, "2026-11-17")?.id).toBe("2026-11-17-classiques-L1");
     expect(selectTonightLesson(lessons, "2026-11-11")?.id).toBe("2026-11-11-latin-L4");
     expect(selectTonightLesson(lessons, "2026-11-18")?.id).toBe("2026-11-17-classiques-L1");
-    expect(lessons.map((lesson) => lesson.id)).toEqual(["2026-11-11-latin-L4", "2026-11-17-classiques-L1"]);
+    expect(lessonForToday(lessons, "2026-11-12")?.id).toBe("2026-11-12-philosophie-L1");
+    expect(lessons.map((lesson) => lesson.id)).toEqual([
+      "2026-11-11-latin-L4", "2026-11-12-philosophie-L1", "2026-11-17-classiques-L1",
+    ]);
   });
 
   it("affiche la leçon du jour dès sa date, matin ou après-midi", () => {
@@ -117,8 +120,9 @@ describe("FSRS", () => {
   it("ajoute les cartes de la leçon du jour sans état de révision", () => {
     expect(catalog.cards.map((card) => card.id)).toEqual([
       "LAT-001", "LAT-002", "LAT-003", "LAT-004", "LAT-005", "LAT-006", "LAT-007", "LAT-008",
+      "PHI-001", "PHI-002", "PHI-003", "PHI-004", "PHI-005", "PHI-006", "PHI-007",
     ]);
-    expect(catalog.cards.every((card) => card.created === "2026-11-11")).toBe(true);
+    expect(catalog.cards.every((card) => card.created === "2026-11-11" || card.created === "2026-11-12")).toBe(true);
     expect(seedState.cards).toEqual({});
     expect(stateFromCatalog([], "2026-11-11T00:00:00.000Z").cards).toEqual({});
   });

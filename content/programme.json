@@ -1,12 +1,15 @@
 {
   "schema_version": "1.0",
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "learner": "Sébastien",
   "tutor": "Schopen",
   "objective": "Culture d'honnête homme : classiques grecs, latins, chinois, indiens, arabes et africains, langues anciennes, mathématiques, sciences de base, art, philosophie, économie et économétrie en partant de zéro.",
   "session": {
     "hour": "7 h",
-    "duration_min": { "min": 30, "max": 45 },
+    "duration_min": {
+      "min": 30,
+      "max": 45
+    },
     "trigger": "Après mon café du matin, je fais la leçon. À confirmer."
   },
   "principles": [
@@ -21,13 +24,41 @@
   ],
   "mastery_threshold": 0.8,
   "rotation": [
-    { "weekday": "lundi", "subject": "latin", "note": "Ørberg, Lingua Latina per se illustrata, avec grammaire explicite." },
-    { "weekday": "mardi", "subject": "classiques", "note": "Œuvres, figures et événements. Six traditions, fil chronologique." },
-    { "weekday": "mercredi", "subject": "latin", "note": "Latin, puis grec à partir du 3e mois si les chapitres I à VI d'Ørberg sont maîtrisés à 80 %." },
-    { "weekday": "jeudi", "subject": "philosophie", "note": "Arguments et concepts, pas le monument déjà vu le mardi." },
-    { "weekday": "vendredi", "subject": "mathematiques", "note": "Mathématiques trois vendredis sur quatre, sciences de base un vendredi sur quatre." },
-    { "weekday": "samedi", "subject": "economie", "note": "Économie la première année, économétrie la deuxième." },
-    { "weekday": "dimanche", "subject": "quiz", "note": "Quiz cumulatif (15 min) puis art et littérature (20 à 25 min)." }
+    {
+      "weekday": "lundi",
+      "subject": "latin",
+      "note": "Ørberg, Lingua Latina per se illustrata, avec grammaire explicite."
+    },
+    {
+      "weekday": "mardi",
+      "subject": "classiques",
+      "note": "Œuvres, figures et événements. Six traditions, fil chronologique."
+    },
+    {
+      "weekday": "mercredi",
+      "subject": "latin",
+      "note": "Latin, puis grec à partir du 3e mois si les chapitres I à VI d'Ørberg sont maîtrisés à 80 %."
+    },
+    {
+      "weekday": "jeudi",
+      "subject": "philosophie",
+      "note": "Arguments et concepts, pas le monument déjà vu le mardi."
+    },
+    {
+      "weekday": "vendredi",
+      "subject": "mathematiques",
+      "note": "Mathématiques trois vendredis sur quatre, sciences de base un vendredi sur quatre."
+    },
+    {
+      "weekday": "samedi",
+      "subject": "economie",
+      "note": "Économie la première année, économétrie la deuxième."
+    },
+    {
+      "weekday": "dimanche",
+      "subject": "quiz",
+      "note": "Quiz cumulatif (15 min) puis art et littérature (20 à 25 min)."
+    }
   ],
   "points_fragiles": [
     {
@@ -50,7 +81,10 @@
           "title": "Ørberg, chapitre I",
           "current": false,
           "lessons": [
-            { "title": "L1 à L3. Prononciation, est et sunt, genres et pluriel. Faites avant l'application.", "status": "faite" }
+            {
+              "title": "L1 à L3. Prononciation, est et sunt, genres et pluriel. Faites avant l'application.",
+              "status": "faite"
+            }
           ]
         },
         {
@@ -58,8 +92,16 @@
           "title": "Ørberg, chapitre II : le génitif",
           "current": true,
           "lessons": [
-            { "title": "L4. Le génitif, ou « de qui ? »", "date": "2026-11-11", "status": "prévue", "lesson_id": "2026-11-11-latin-L4" },
-            { "title": "Suite du chapitre II : familia, interrogatifs, nombres", "status": "à venir" }
+            {
+              "title": "L4. Le génitif, ou « de qui ? »",
+              "date": "2026-11-11",
+              "status": "faite",
+              "lesson_id": "2026-11-11-latin-L4"
+            },
+            {
+              "title": "Suite du chapitre II : familia, interrogatifs, nombres",
+              "status": "à venir"
+            }
           ]
         }
       ]
@@ -79,12 +121,33 @@
           "current": true,
           "support": "Jean Bottéro, L'Épopée de Gilgameš, Paris, Gallimard, 1992 ; A. R. George, The Babylonian Gilgamesh Epic, Oxford, 2003.",
           "lessons": [
-            { "title": "L1. Qu'est-ce qu'un classique ? Gilgamesh, le prologue et les murs d'Uruk", "date": "2026-11-17", "status": "prévue", "lesson_id": "2026-11-17-classiques-L1" },
-            { "title": "L2. Gilgamesh, tablette XI : Uta-napišti et le Déluge", "status": "à venir" },
-            { "title": "L3. Égypte, Moyen Empire : L'Histoire de Sinouhé", "status": "à venir" },
-            { "title": "L4. L'Enseignement de Ptahhotep et la maât", "status": "à venir" },
-            { "title": "L5. La stèle de victoire de Piye (Koush, VIIIe siècle av. J.-C.)", "status": "à venir" },
-            { "title": "L6. Contrôle de maîtrise I", "status": "à venir", "mastery": true }
+            {
+              "title": "L1. Qu'est-ce qu'un classique ? Gilgamesh, le prologue et les murs d'Uruk",
+              "date": "2026-11-17",
+              "status": "prévue",
+              "lesson_id": "2026-11-17-classiques-L1"
+            },
+            {
+              "title": "L2. Gilgamesh, tablette XI : Uta-napišti et le Déluge",
+              "status": "à venir"
+            },
+            {
+              "title": "L3. Égypte, Moyen Empire : L'Histoire de Sinouhé",
+              "status": "à venir"
+            },
+            {
+              "title": "L4. L'Enseignement de Ptahhotep et la maât",
+              "status": "à venir"
+            },
+            {
+              "title": "L5. La stèle de victoire de Piye (Koush, VIIIe siècle av. J.-C.)",
+              "status": "à venir"
+            },
+            {
+              "title": "L6. Contrôle de maîtrise I",
+              "status": "à venir",
+              "mastery": true
+            }
           ]
         },
         {
@@ -93,13 +156,34 @@
           "span": "L7 à L13",
           "support": "Werner Jaeger, Paideia, t. I, 1934 ; Erich Auerbach, Mimesis, 1946. Puis Louis Renou et Jean Filliozat ; Marcel Granet, Fêtes et chansons anciennes de la Chine, 1919.",
           "lessons": [
-            { "title": "L7. Homère, Iliade, chant I", "status": "à venir" },
-            { "title": "L8. Iliade, chant XXIV", "status": "à venir" },
-            { "title": "L9. Odyssée : Ulysse chez Alkinoos, ou la Nékyia", "status": "à venir" },
-            { "title": "L10. Hésiode, Théogonie", "status": "à venir" },
-            { "title": "L11. Hésiode, Les Travaux et les Jours", "status": "à venir" },
-            { "title": "L12. Rigveda, hymne de la Création (X.129)", "status": "à venir" },
-            { "title": "L13. Shijing : deux poèmes de l'époque Zhou", "status": "à venir" }
+            {
+              "title": "L7. Homère, Iliade, chant I",
+              "status": "à venir"
+            },
+            {
+              "title": "L8. Iliade, chant XXIV",
+              "status": "à venir"
+            },
+            {
+              "title": "L9. Odyssée : Ulysse chez Alkinoos, ou la Nékyia",
+              "status": "à venir"
+            },
+            {
+              "title": "L10. Hésiode, Théogonie",
+              "status": "à venir"
+            },
+            {
+              "title": "L11. Hésiode, Les Travaux et les Jours",
+              "status": "à venir"
+            },
+            {
+              "title": "L12. Rigveda, hymne de la Création (X.129)",
+              "status": "à venir"
+            },
+            {
+              "title": "L13. Shijing : deux poèmes de l'époque Zhou",
+              "status": "à venir"
+            }
           ]
         },
         {
@@ -108,13 +192,35 @@
           "span": "L14 à L20",
           "support": "Karl Jaspers, Vom Ursprung und Ziel der Geschichte, 1949 ; Anne Cheng, Histoire de la pensée chinoise, 1997.",
           "lessons": [
-            { "title": "L14. L'hypothèse de l'âge axial", "status": "à venir" },
-            { "title": "L15. Le Bouddha et le discours de Sārnāth", "status": "à venir" },
-            { "title": "L16. Chāndogya Upaniṣad 6", "status": "à venir" },
-            { "title": "L17. Confucius, Entretiens", "status": "à venir" },
-            { "title": "L18. Le Daodejing et la figure de Laozi", "status": "à venir" },
-            { "title": "L19. Le Shujing et le mandat du Ciel", "status": "à venir" },
-            { "title": "L20. Contrôle de maîtrise III", "status": "à venir", "mastery": true }
+            {
+              "title": "L14. L'hypothèse de l'âge axial",
+              "status": "à venir"
+            },
+            {
+              "title": "L15. Le Bouddha et le discours de Sārnāth",
+              "status": "à venir"
+            },
+            {
+              "title": "L16. Chāndogya Upaniṣad 6",
+              "status": "à venir"
+            },
+            {
+              "title": "L17. Confucius, Entretiens",
+              "status": "à venir"
+            },
+            {
+              "title": "L18. Le Daodejing et la figure de Laozi",
+              "status": "à venir"
+            },
+            {
+              "title": "L19. Le Shujing et le mandat du Ciel",
+              "status": "à venir"
+            },
+            {
+              "title": "L20. Contrôle de maîtrise III",
+              "status": "à venir",
+              "mastery": true
+            }
           ]
         },
         {
@@ -123,13 +229,35 @@
           "span": "L21 à L27",
           "support": "Jacqueline de Romilly, Histoire et raison chez Thucydide, 1956 ; Jean-Pierre Vernant, 1962 et 1965 ; Arnaldo Momigliano.",
           "lessons": [
-            { "title": "L21. Les guerres médiques ; Hérodote, prologue", "status": "à venir" },
-            { "title": "L22. Hérodote : Crésus, ou les Thermopyles", "status": "à venir" },
-            { "title": "L23. Thucydide : les Méliens, ou Périclès", "status": "à venir" },
-            { "title": "L24. Eschyle, Les Perses", "status": "à venir" },
-            { "title": "L25. Sophocle, Antigone", "status": "à venir" },
-            { "title": "L26. Athènes, 399 : l'Apologie comme document", "status": "à venir" },
-            { "title": "L27. Aristophane ; contrôle IV", "status": "à venir", "mastery": true }
+            {
+              "title": "L21. Les guerres médiques ; Hérodote, prologue",
+              "status": "à venir"
+            },
+            {
+              "title": "L22. Hérodote : Crésus, ou les Thermopyles",
+              "status": "à venir"
+            },
+            {
+              "title": "L23. Thucydide : les Méliens, ou Périclès",
+              "status": "à venir"
+            },
+            {
+              "title": "L24. Eschyle, Les Perses",
+              "status": "à venir"
+            },
+            {
+              "title": "L25. Sophocle, Antigone",
+              "status": "à venir"
+            },
+            {
+              "title": "L26. Athènes, 399 : l'Apologie comme document",
+              "status": "à venir"
+            },
+            {
+              "title": "L27. Aristophane ; contrôle IV",
+              "status": "à venir",
+              "mastery": true
+            }
           ]
         },
         {
@@ -138,13 +266,34 @@
           "span": "L28 à L34",
           "support": "Romila Thapar, Aśoka and the Decline of the Mauryas, 1961 ; Sheldon Pollock, The Language of the Gods in the World of Men, 2006.",
           "lessons": [
-            { "title": "L28. Alexandre, d'après Arrien ou Plutarque", "status": "à venir" },
-            { "title": "L29. Le Mahābhārata", "status": "à venir" },
-            { "title": "L30. La Bhagavad-Gītā dans l'épopée", "status": "à venir" },
-            { "title": "L31. Le Rāmāyaṇa", "status": "à venir" },
-            { "title": "L32. Les édits d'Aśoka, édit XIII", "status": "à venir" },
-            { "title": "L33. Qin Shi Huang, 221 av. J.-C.", "status": "à venir" },
-            { "title": "L34. Sima Qian, Shiji", "status": "à venir" }
+            {
+              "title": "L28. Alexandre, d'après Arrien ou Plutarque",
+              "status": "à venir"
+            },
+            {
+              "title": "L29. Le Mahābhārata",
+              "status": "à venir"
+            },
+            {
+              "title": "L30. La Bhagavad-Gītā dans l'épopée",
+              "status": "à venir"
+            },
+            {
+              "title": "L31. Le Rāmāyaṇa",
+              "status": "à venir"
+            },
+            {
+              "title": "L32. Les édits d'Aśoka, édit XIII",
+              "status": "à venir"
+            },
+            {
+              "title": "L33. Qin Shi Huang, 221 av. J.-C.",
+              "status": "à venir"
+            },
+            {
+              "title": "L34. Sima Qian, Shiji",
+              "status": "à venir"
+            }
           ]
         },
         {
@@ -153,13 +302,35 @@
           "span": "L35 à L41",
           "support": "Ronald Syme, The Roman Revolution, 1939 ; Henri-Irénée Marrou, Histoire de l'éducation dans l'Antiquité, 1948.",
           "lessons": [
-            { "title": "L35. Polybe, livre VI", "status": "à venir" },
-            { "title": "L36. Cicéron", "status": "à venir" },
-            { "title": "L37. César, Guerre des Gaules", "status": "à venir" },
-            { "title": "L38. Virgile, Énéide I", "status": "à venir" },
-            { "title": "L39. Virgile, Énéide VI", "status": "à venir" },
-            { "title": "L40. Horace, Odes III.30, ou Ovide", "status": "à venir" },
-            { "title": "L41. Tacite ; contrôle VI", "status": "à venir", "mastery": true }
+            {
+              "title": "L35. Polybe, livre VI",
+              "status": "à venir"
+            },
+            {
+              "title": "L36. Cicéron",
+              "status": "à venir"
+            },
+            {
+              "title": "L37. César, Guerre des Gaules",
+              "status": "à venir"
+            },
+            {
+              "title": "L38. Virgile, Énéide I",
+              "status": "à venir"
+            },
+            {
+              "title": "L39. Virgile, Énéide VI",
+              "status": "à venir"
+            },
+            {
+              "title": "L40. Horace, Odes III.30, ou Ovide",
+              "status": "à venir"
+            },
+            {
+              "title": "L41. Tacite ; contrôle VI",
+              "status": "à venir",
+              "mastery": true
+            }
           ]
         },
         {
@@ -168,12 +339,31 @@
           "span": "L42 à L47",
           "support": "Peter Brown, Augustine of Hippo, 1967, et The World of Late Antiquity, 1971 ; Régis Blachère, Introduction au Coran, 1947.",
           "lessons": [
-            { "title": "L42. Augustin, Confessions", "status": "à venir" },
-            { "title": "L43. Aksum : les inscriptions d'Ezana", "status": "à venir" },
-            { "title": "L44. Les Mu'allaqāt : Imru' al-Qays", "status": "à venir" },
-            { "title": "L45. Le Coran : une sourate courte", "status": "à venir" },
-            { "title": "L46. Médine et les premiers califats", "status": "à venir" },
-            { "title": "L47. Contrôle de maîtrise VII", "status": "à venir", "mastery": true }
+            {
+              "title": "L42. Augustin, Confessions",
+              "status": "à venir"
+            },
+            {
+              "title": "L43. Aksum : les inscriptions d'Ezana",
+              "status": "à venir"
+            },
+            {
+              "title": "L44. Les Mu'allaqāt : Imru' al-Qays",
+              "status": "à venir"
+            },
+            {
+              "title": "L45. Le Coran : une sourate courte",
+              "status": "à venir"
+            },
+            {
+              "title": "L46. Médine et les premiers califats",
+              "status": "à venir"
+            },
+            {
+              "title": "L47. Contrôle de maîtrise VII",
+              "status": "à venir",
+              "mastery": true
+            }
           ]
         },
         {
@@ -182,11 +372,26 @@
           "span": "L48 à L52",
           "support": "Marshall G. S. Hodgson, The Venture of Islam, 1974 ; Jan Vansina, De la tradition orale, 1961.",
           "lessons": [
-            { "title": "L48. Bagdad, al-Jāḥiẓ", "status": "à venir" },
-            { "title": "L49. al-Mutanabbī", "status": "à venir" },
-            { "title": "L50. Ibn Khaldūn, Muqaddima", "status": "à venir" },
-            { "title": "L51. Soundjata et le Tarikh al-Sudan", "status": "à venir" },
-            { "title": "L52. Le Kebra Nagast ; bilan : qu'est-ce qu'un canon ?", "status": "à venir" }
+            {
+              "title": "L48. Bagdad, al-Jāḥiẓ",
+              "status": "à venir"
+            },
+            {
+              "title": "L49. al-Mutanabbī",
+              "status": "à venir"
+            },
+            {
+              "title": "L50. Ibn Khaldūn, Muqaddima",
+              "status": "à venir"
+            },
+            {
+              "title": "L51. Soundjata et le Tarikh al-Sudan",
+              "status": "à venir"
+            },
+            {
+              "title": "L52. Le Kebra Nagast ; bilan : qu'est-ce qu'un canon ?",
+              "status": "à venir"
+            }
           ]
         }
       ]
@@ -195,15 +400,68 @@
       "id": "philosophie",
       "label": "Philosophie",
       "weekday": "jeudi",
-      "status": "à venir",
-      "position": "Pas encore commencé. Le jeudi lit l'argument, après le cadre posé le mardi.",
+      "status": "leçon du jour",
+      "position": "Leçon 1, jeudi 12 novembre 2026 : fragments et témoignages, Milet et la question du principe (Thalès, Anaximandre, Anaximène).",
       "summary": "Présocratiques, Platon, Aristote, Confucius et Mencius, le Daodejing, le Bouddha et les Upaniṣad. Lectures d'appui : Pierre Hadot ; Anne Cheng pour la pensée chinoise.",
       "modules": [
-        { "id": "philo-1", "title": "Présocratiques", "lessons": [{ "title": "Fragments et témoignages", "status": "à venir" }] },
-        { "id": "philo-2", "title": "Platon", "lessons": [{ "title": "Apologie, un dialogue court, puis la République", "status": "à venir" }] },
-        { "id": "philo-3", "title": "Aristote", "lessons": [{ "title": "Substance, cause, vertu, cité", "status": "à venir" }] },
-        { "id": "philo-4", "title": "Confucius, Mencius, Daodejing", "lessons": [{ "title": "Après les mardis 17 à 19", "status": "à venir" }] },
-        { "id": "philo-5", "title": "Bouddha, Upaniṣad, Gītā", "lessons": [{ "title": "Après les mardis 15, 16 et 30", "status": "à venir" }] }
+        {
+          "id": "philo-1",
+          "title": "Présocratiques",
+          "lessons": [
+            {
+              "title": "L1. Fragments et témoignages ; Milet et la question du principe",
+              "date": "2026-11-12",
+              "status": "prévue",
+              "lesson_id": "2026-11-12-philosophie-L1"
+            },
+            {
+              "title": "Suite : Pythagore, Héraclite, Parménide",
+              "status": "à venir"
+            }
+          ],
+          "current": true,
+          "support": "Pierre Hadot, Qu'est-ce que la philosophie antique ?, 1995 ; Kirk, Raven et Schofield, The Presocratic Philosophers, 2e éd., 1983."
+        },
+        {
+          "id": "philo-2",
+          "title": "Platon",
+          "lessons": [
+            {
+              "title": "Apologie, un dialogue court, puis la République",
+              "status": "à venir"
+            }
+          ]
+        },
+        {
+          "id": "philo-3",
+          "title": "Aristote",
+          "lessons": [
+            {
+              "title": "Substance, cause, vertu, cité",
+              "status": "à venir"
+            }
+          ]
+        },
+        {
+          "id": "philo-4",
+          "title": "Confucius, Mencius, Daodejing",
+          "lessons": [
+            {
+              "title": "Après les mardis 17 à 19",
+              "status": "à venir"
+            }
+          ]
+        },
+        {
+          "id": "philo-5",
+          "title": "Bouddha, Upaniṣad, Gītā",
+          "lessons": [
+            {
+              "title": "Après les mardis 15, 16 et 30",
+              "status": "à venir"
+            }
+          ]
+        }
       ]
     },
     {
@@ -214,15 +472,96 @@
       "position": "Pas encore commencé. Chaque outil est vu au moins deux semaines avant son usage en économie.",
       "summary": "Arithmétique, algèbre, fonctions, exponentielle et logarithme, dérivée, sommes, probabilités, algèbre linéaire. Un vendredi sur quatre : sciences et histoire des sciences.",
       "modules": [
-        { "id": "math-1", "title": "Arithmétique, fractions, pourcentages, puissances", "lessons": [{ "title": "Révision et contrôle d'entrée", "status": "à venir" }] },
-        { "id": "math-2", "title": "Algèbre", "lessons": [{ "title": "Équations, inéquations, systèmes", "status": "à venir" }] },
-        { "id": "math-3", "title": "Fonctions et graphiques", "lessons": [{ "title": "Pente, linéaire, quadratique", "status": "à venir" }] },
-        { "id": "math-4", "title": "Exponentielle et logarithme", "lessons": [{ "title": "Croissance, intérêts, élasticités", "status": "à venir" }] },
-        { "id": "math-5", "title": "Dérivée et optimisation", "lessons": [{ "title": "Le marginal, dérivées partielles", "status": "à venir" }] },
-        { "id": "math-6", "title": "Sommes et suites", "lessons": [{ "title": "Notation sigma", "status": "à venir" }] },
-        { "id": "math-7", "title": "Probabilités", "lessons": [{ "title": "Combinatoire et conditionnel", "status": "à venir" }] },
-        { "id": "math-8", "title": "Algèbre linéaire", "lessons": [{ "title": "Vecteurs, matrices, inverse", "status": "à venir" }] },
-        { "id": "sciences", "title": "Sciences de base", "lessons": [{ "title": "Un vendredi sur quatre : Euclide, Archimède, al-Khwarizmi, Newton, Darwin", "status": "à venir" }] }
+        {
+          "id": "math-1",
+          "title": "Arithmétique, fractions, pourcentages, puissances",
+          "lessons": [
+            {
+              "title": "Révision et contrôle d'entrée",
+              "status": "à venir"
+            }
+          ]
+        },
+        {
+          "id": "math-2",
+          "title": "Algèbre",
+          "lessons": [
+            {
+              "title": "Équations, inéquations, systèmes",
+              "status": "à venir"
+            }
+          ]
+        },
+        {
+          "id": "math-3",
+          "title": "Fonctions et graphiques",
+          "lessons": [
+            {
+              "title": "Pente, linéaire, quadratique",
+              "status": "à venir"
+            }
+          ]
+        },
+        {
+          "id": "math-4",
+          "title": "Exponentielle et logarithme",
+          "lessons": [
+            {
+              "title": "Croissance, intérêts, élasticités",
+              "status": "à venir"
+            }
+          ]
+        },
+        {
+          "id": "math-5",
+          "title": "Dérivée et optimisation",
+          "lessons": [
+            {
+              "title": "Le marginal, dérivées partielles",
+              "status": "à venir"
+            }
+          ]
+        },
+        {
+          "id": "math-6",
+          "title": "Sommes et suites",
+          "lessons": [
+            {
+              "title": "Notation sigma",
+              "status": "à venir"
+            }
+          ]
+        },
+        {
+          "id": "math-7",
+          "title": "Probabilités",
+          "lessons": [
+            {
+              "title": "Combinatoire et conditionnel",
+              "status": "à venir"
+            }
+          ]
+        },
+        {
+          "id": "math-8",
+          "title": "Algèbre linéaire",
+          "lessons": [
+            {
+              "title": "Vecteurs, matrices, inverse",
+              "status": "à venir"
+            }
+          ]
+        },
+        {
+          "id": "sciences",
+          "title": "Sciences de base",
+          "lessons": [
+            {
+              "title": "Un vendredi sur quatre : Euclide, Archimède, al-Khwarizmi, Newton, Darwin",
+              "status": "à venir"
+            }
+          ]
+        }
       ]
     },
     {
@@ -233,10 +572,49 @@
       "position": "Année 1, pas encore commencé. L'économétrie est l'année 2.",
       "summary": "Environ 50 samedis. Chaque unité dure 3 à 5 leçons et se termine par un contrôle de maîtrise. Chaque notion part d'un cas concret. L'année 2 : statistiques puis économétrie causale, sur données réelles.",
       "modules": [
-        { "id": "eco-1", "title": "Intuition économique", "span": "environ 8 leçons", "lessons": [{ "title": "Rareté, coût d'opportunité, incitations, marge, échange, avantage comparatif, prix", "status": "à venir" }] },
-        { "id": "eco-2", "title": "Microéconomie", "span": "environ 16 leçons", "lessons": [{ "title": "Offre et demande jusqu'à l'information asymétrique", "status": "à venir" }] },
-        { "id": "eco-3", "title": "Macroéconomie", "span": "environ 16 leçons", "lessons": [{ "title": "PIB, monnaie, banque centrale, Solow, crises", "status": "à venir" }] },
-        { "id": "eco-4", "title": "Histoire de la pensée, en fil rouge", "lessons": [{ "title": "Ibn Khaldun, Smith, Ricardo, Marx, Walras, Keynes, Hayek, Sen", "status": "à venir" }] }
+        {
+          "id": "eco-1",
+          "title": "Intuition économique",
+          "span": "environ 8 leçons",
+          "lessons": [
+            {
+              "title": "Rareté, coût d'opportunité, incitations, marge, échange, avantage comparatif, prix",
+              "status": "à venir"
+            }
+          ]
+        },
+        {
+          "id": "eco-2",
+          "title": "Microéconomie",
+          "span": "environ 16 leçons",
+          "lessons": [
+            {
+              "title": "Offre et demande jusqu'à l'information asymétrique",
+              "status": "à venir"
+            }
+          ]
+        },
+        {
+          "id": "eco-3",
+          "title": "Macroéconomie",
+          "span": "environ 16 leçons",
+          "lessons": [
+            {
+              "title": "PIB, monnaie, banque centrale, Solow, crises",
+              "status": "à venir"
+            }
+          ]
+        },
+        {
+          "id": "eco-4",
+          "title": "Histoire de la pensée, en fil rouge",
+          "lessons": [
+            {
+              "title": "Ibn Khaldun, Smith, Ricardo, Marx, Walras, Keynes, Hayek, Sen",
+              "status": "à venir"
+            }
+          ]
+        }
       ]
     },
     {
@@ -247,11 +625,56 @@
       "position": "Après l'année d'économie et les outils mathématiques.",
       "summary": "Statistiques, probabilités, inférence, régression, puis économétrie causale dans l'esprit d'Angrist et Pischke, sur données réelles.",
       "modules": [
-        { "id": "stat-1", "title": "Statistiques descriptives", "lessons": [{ "title": "À venir", "status": "à venir" }] },
-        { "id": "stat-2", "title": "Probabilités et lois", "lessons": [{ "title": "À venir", "status": "à venir" }] },
-        { "id": "stat-3", "title": "Inférence", "lessons": [{ "title": "À venir", "status": "à venir" }] },
-        { "id": "stat-4", "title": "Régression", "lessons": [{ "title": "À venir", "status": "à venir" }] },
-        { "id": "stat-5", "title": "Économétrie causale", "lessons": [{ "title": "Expérience, contrôles, variables instrumentales, discontinuité, différences de différences", "status": "à venir" }] }
+        {
+          "id": "stat-1",
+          "title": "Statistiques descriptives",
+          "lessons": [
+            {
+              "title": "À venir",
+              "status": "à venir"
+            }
+          ]
+        },
+        {
+          "id": "stat-2",
+          "title": "Probabilités et lois",
+          "lessons": [
+            {
+              "title": "À venir",
+              "status": "à venir"
+            }
+          ]
+        },
+        {
+          "id": "stat-3",
+          "title": "Inférence",
+          "lessons": [
+            {
+              "title": "À venir",
+              "status": "à venir"
+            }
+          ]
+        },
+        {
+          "id": "stat-4",
+          "title": "Régression",
+          "lessons": [
+            {
+              "title": "À venir",
+              "status": "à venir"
+            }
+          ]
+        },
+        {
+          "id": "stat-5",
+          "title": "Économétrie causale",
+          "lessons": [
+            {
+              "title": "Expérience, contrôles, variables instrumentales, discontinuité, différences de différences",
+              "status": "à venir"
+            }
+          ]
+        }
       ]
     },
     {
@@ -262,7 +685,17 @@
       "position": "Le dimanche n'a pas encore eu de leçon publiée.",
       "summary": "Quiz cumulatif de 15 minutes, toutes matières, dont au moins un tiers sur des notions de plus d'un mois. Puis 20 à 25 minutes d'art et de littérature. Le premier dimanche du mois, le grand quiz remplace l'art.",
       "modules": [
-        { "id": "dimanche", "title": "Quiz cumulatif et art", "support": "Erich Auerbach, Mimesis (1946), sert souvent de lecture d'appui pour l'art de lire un passage.", "lessons": [{ "title": "Pas encore de dimanche publié", "status": "à venir" }] }
+        {
+          "id": "dimanche",
+          "title": "Quiz cumulatif et art",
+          "support": "Erich Auerbach, Mimesis (1946), sert souvent de lecture d'appui pour l'art de lire un passage.",
+          "lessons": [
+            {
+              "title": "Pas encore de dimanche publié",
+              "status": "à venir"
+            }
+          ]
+        }
       ]
     }
   ]

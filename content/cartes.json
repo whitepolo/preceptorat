@@ -136,6 +136,69 @@
         "lapses": 0,
         "history": ""
       }
+    },
+    {
+      "id": "PHI-001",
+      "subject": "philosophie",
+      "subject_label": "Philosophie",
+      "prompt": "Que désignent les lettres A et B dans la notation Diels-Kranz (par exemple DK 12 A 10, DK 12 B 1) ?",
+      "answer": "B : un fragment, les mots mêmes du penseur cités par un auteur postérieur. A : un témoignage, ce qu'un autre auteur rapporte ou interprète. Le premier nombre désigne le penseur (11 Thalès, 12 Anaximandre, 13 Anaximène).",
+      "created": "2026-11-12",
+      "kind": "notion"
+    },
+    {
+      "id": "PHI-002",
+      "subject": "philosophie",
+      "subject_label": "Philosophie",
+      "prompt": "Par quelle chaîne d'auteurs connaissons-nous surtout les Milésiens ?",
+      "answer": "Aristote (IVe s. av. J.-C.), puis son élève Théophraste (Opinions des physiciens, perdu, début de la doxographie), puis des commentateurs tardifs comme Simplicius (VIe s. apr. J.-C.), qui cite Théophraste.",
+      "created": "2026-11-12",
+      "kind": "notion"
+    },
+    {
+      "id": "PHI-003",
+      "subject": "philosophie",
+      "subject_label": "Philosophie",
+      "prompt": "Quel est le principe de Thalès selon Aristote, et que signifie le « peut-être » d'Aristote dans Métaphysique A 3 ?",
+      "answer": "L'eau (et la terre repose sur l'eau). Le « peut-être » montre que les raisons (nourriture et semences humides) sont une conjecture d'Aristote, non la parole de Thalès.",
+      "created": "2026-11-12",
+      "kind": "notion"
+    },
+    {
+      "id": "PHI-004",
+      "subject": "philosophie",
+      "subject_label": "Philosophie",
+      "prompt": "Qu'est-ce que l'ápeiron d'Anaximandre, et pourquoi n'est-ce aucun des éléments ?",
+      "answer": "L'illimité, l'indéterminé, d'où se séparent les contraires. Un élément pris pour principe, contraire des autres, l'emporterait sur eux et les détruirait ; l'indéterminé n'en favorise aucun.",
+      "created": "2026-11-12",
+      "kind": "notion"
+    },
+    {
+      "id": "PHI-005",
+      "subject": "philosophie",
+      "subject_label": "Philosophie",
+      "prompt": "Résume l'unique fragment d'Anaximandre (DK 12 B 1) et son image.",
+      "answer": "Les êtres retournent à ce dont ils naissent, selon la nécessité, car ils se rendent justice et réparation de leur injustice selon l'ordre du temps. Le changement est une compensation réglée entre contraires, décrite avec le vocabulaire du droit.",
+      "created": "2026-11-12",
+      "kind": "notion"
+    },
+    {
+      "id": "PHI-006",
+      "subject": "philosophie",
+      "subject_label": "Philosophie",
+      "prompt": "Pourquoi, selon Anaximandre (Aristote, Du ciel II 13), la terre ne tombe-t-elle pas ?",
+      "answer": "Elle est au centre, à égale distance de tout, et n'a aucune raison d'aller d'un côté plutôt que d'un autre : elle reste en place par équilibre, sans appui. Cela corrige la thèse de Thalès (sur quoi reposerait l'eau ?).",
+      "created": "2026-11-12",
+      "kind": "notion"
+    },
+    {
+      "id": "PHI-007",
+      "subject": "philosophie",
+      "subject_label": "Philosophie",
+      "prompt": "Comment Anaximène explique-t-il que tout vienne de l'air ?",
+      "answer": "Par condensation et raréfaction : raréfié, l'air devient feu ; condensé, vent, nuage, eau, terre, pierre. Les différences de qualité deviennent des différences de densité.",
+      "created": "2026-11-12",
+      "kind": "notion"
     }
   ]
 }
