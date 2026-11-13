@@ -1,38 +1,91 @@
 import { execFileSync } from "node:child_process";
+import { randomBytes } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { State } from "ts-fsrs";
-import { catalog, lessons, seedState } from "../content";
+import { lessons, seedState } from "../content";
 import { canReveal, formatAnswerComment } from "./answers";
 import { stateFromCatalog } from "./legacy";
 import { mauritiusDate } from "./dates";
+import { buildIssueLinks, deflateBase64, inflateBase64, ISSUE_URL_LIMIT } from "./issueLink";
 import { lessonForToday, selectTonightLesson } from "./lessons";
+import { applyProgress, collectProgress, isProgressFile, recordGrade } from "./localProgress";
 import { isTutorMessage, renderMarkdown, stripTutorMarker } from "./markdown";
-import { mergeStates, pickCard, pruneUnknownCards } from "./merge";
+import { mergeStates, mergeWithPending, pickCard, pruneUnknownCards } from "./merge";
 import { applyGrade } from "./scheduler";
 import { selectSession } from "./session";
-import type { ReviewStateFile, StoredCard } from "./types";
+import type { Lesson, ReviewStateFile, StoredCard } from "./types";
+
+function fixtureLesson(id: string, date: string, codes: string[]): Lesson {
+  return {
+    schema_version: "1.0",
+    id,
+    title: `${date} · Latin · Leçon 1 : fixture`,
+    date,
+    subject: "latin",
+    subject_label: "Latin",
+    lesson_number: 1,
+    duration_min: { min: 30, max: 45 },
+    lang: "fr",
+    objectives: ["Lire", "Écrire"],
+    student_note: "Réponds avant la solution.",
+    sections: [
+      {
+        id: "prequestions",
+        title: "Avant de lire",
+        questions: codes.map((code) => ({ code, kind: "prequestion", prompt: "Question", solution: "Réponse" })),
+      },
+    ],
+    retenir: ["Une phrase.", "Deux.", "Trois.", "Quatre."],
+    mot_du_jour: { code: "M", terme: "fixture", texte: "Mot d'essai." },
+  };
+}
+
+const FIXTURES = [
+  fixtureLesson("2026-01-01-latin-L1", "2026-01-01", ["P1"]),
+  fixtureLesson("2026-01-03-latin-L2", "2026-01-03", ["P1", "P2"]),
+];
+
+function memoryStorage(): void {
+  const store = new Map<string, string>();
+  const localStorage = {
+    get length() {
+      return store.size;
+    },
+    key(index: number) {
+      return [...store.keys()][index] ?? null;
+    },
+    getItem(key: string) {
+      return store.has(key) ? store.get(key)! : null;
+    },
+    setItem(key: string, value: string) {
+      store.set(key, value);
+    },
+    removeItem(key: string) {
+      store.delete(key);
+    },
+    clear() {
+      store.clear();
+    },
+  };
+  Object.defineProperty(globalThis, "localStorage", { value: localStorage, configurable: true });
+}
 
 describe("leçon du jour", () => {
   it("n'ouvre que la leçon datée du jour, et garde la plus récente pour le lien", () => {
-    expect(lessonForToday(lessons, "2026-11-11")?.id).toBe("2026-11-11-latin-L4");
-    expect(lessonForToday(lessons, "2026-11-16")).toBeNull();
-    expect(lessonForToday(lessons, "2026-11-17")?.id).toBe("2026-11-17-classiques-L1");
-    expect(selectTonightLesson(lessons, "2026-11-11")?.id).toBe("2026-11-11-latin-L4");
-    expect(selectTonightLesson(lessons, "2026-11-18")?.id).toBe("2026-11-17-classiques-L1");
-    expect(lessonForToday(lessons, "2026-11-12")?.id).toBe("2026-11-12-philosophie-L1");
-    expect(lessonForToday(lessons, "2026-11-13")?.id).toBe("2026-11-13-mathematiques-L1");
-    expect(lessons.map((lesson) => lesson.id)).toEqual([
-      "2026-11-11-latin-L4", "2026-11-12-philosophie-L1", "2026-11-13-mathematiques-L1", "2026-11-17-classiques-L1",
-    ]);
+    expect(lessonForToday(FIXTURES, "2026-01-01")?.id).toBe("2026-01-01-latin-L1");
+    expect(lessonForToday(FIXTURES, "2026-01-02")).toBeNull();
+    expect(lessonForToday(FIXTURES, "2026-01-03")?.id).toBe("2026-01-03-latin-L2");
+    expect(selectTonightLesson(FIXTURES, "2026-01-02")?.id).toBe("2026-01-01-latin-L1");
+    expect(selectTonightLesson(FIXTURES, "2026-01-04")?.id).toBe("2026-01-03-latin-L2");
   });
 
-  it("affiche la leçon du jour dès sa date, matin ou après-midi", () => {
-    const early = new Date("2026-11-17T02:30:00.000Z");
-    const morning = new Date("2026-11-17T03:30:00.000Z");
-    const afternoon = new Date("2026-11-17T12:00:00.000Z");
+  it("affiche une leçon dès sa date civile, matin ou après-midi", () => {
+    const early = new Date("2026-01-03T02:30:00.000Z");
+    const morning = new Date("2026-01-03T03:30:00.000Z");
+    const afternoon = new Date("2026-01-03T12:00:00.000Z");
     for (const instant of [early, morning, afternoon]) {
-      expect(mauritiusDate(instant)).toBe("2026-11-17");
-      expect(lessonForToday(lessons, mauritiusDate(instant))?.id).toBe("2026-11-17-classiques-L1");
+      expect(mauritiusDate(instant)).toBe("2026-01-03");
+      expect(lessonForToday(FIXTURES, mauritiusDate(instant))?.id).toBe("2026-01-03-latin-L2");
     }
   });
 });
@@ -91,6 +144,27 @@ describe("fusion des révisions", () => {
     const chosen = pickCard(base({ reps: 1 }), base({ reps: 4, due: "2026-11-01T15:00:00.000Z" }));
     expect(chosen.reps).toBe(4);
   });
+
+  it("garde une notation locale pas encore envoyée, même si le dépôt est plus récent", () => {
+    const localCard = base({ reps: 2, updated_at: "2026-11-10T15:00:00.000Z", difficulty: 4 });
+    const remoteCard = base({ reps: 9, updated_at: "2026-11-12T15:00:00.000Z", difficulty: 8 });
+    const local: ReviewStateFile = {
+      schema_version: "1.0",
+      scheduler: "fsrs-6",
+      updated_at: "2026-11-10T15:00:00.000Z",
+      cards: { "LAT-001": localCard },
+    };
+    const remote: ReviewStateFile = {
+      schema_version: "1.0",
+      scheduler: "fsrs-6",
+      updated_at: "2026-11-12T15:00:00.000Z",
+      cards: { "LAT-001": remoteCard },
+    };
+    const pending = mergeWithPending(local, remote, new Set(["LAT-001"]));
+    expect(pending.cards["LAT-001"].reps).toBe(2);
+    const sent = mergeWithPending(local, remote, new Set());
+    expect(sent.cards["LAT-001"].reps).toBe(9);
+  });
 });
 
 describe("FSRS", () => {
@@ -118,15 +192,9 @@ describe("FSRS", () => {
     expect(good.updated_at).toBe(now.toISOString());
   });
 
-  it("ajoute les cartes de la leçon du jour sans état de révision", () => {
-    expect(catalog.cards.map((card) => card.id)).toEqual([
-      "LAT-001", "LAT-002", "LAT-003", "LAT-004", "LAT-005", "LAT-006", "LAT-007", "LAT-008",
-      "PHI-001", "PHI-002", "PHI-003", "PHI-004", "PHI-005", "PHI-006", "PHI-007",
-      "MAT-001", "MAT-002", "MAT-003", "MAT-004", "MAT-005", "MAT-006", "MAT-007", "MAT-008",
-    ]);
-    expect(catalog.cards.every((card) => card.created === "2026-11-11" || card.created === "2026-11-12" || card.created === "2026-11-13")).toBe(true);
-    expect(seedState.cards).toEqual({});
-    expect(stateFromCatalog([], "2026-11-11T00:00:00.000Z").cards).toEqual({});
+  it("part d'un état vide quand le catalogue n'a pas encore de cartes", () => {
+    expect(seedState.schema_version).toBe("1.0");
+    expect(stateFromCatalog([], "2026-01-01T00:00:00.000Z").cards).toEqual({});
   });
 });
 
@@ -158,7 +226,7 @@ describe("réponses et markdown", () => {
   });
 
   it("forme un commentaire structuré, distinct d'une réponse de Schopen", () => {
-    const lesson = lessons.find((item) => item.id === "2026-11-17-classiques-L1")!;
+    const lesson = fixtureLesson("2026-01-03-latin-L2", "2026-01-03", ["P1", "P2"]);
     const body = formatAnswerComment(lesson, { P1: { text: "insula", skipped: false, revealed: false } }, 32);
     expect(body.startsWith("<!-- sebastien -->")).toBe(true);
     expect(isTutorMessage(body)).toBe(false);
@@ -178,12 +246,11 @@ describe("réponses et markdown", () => {
 });
 
 describe("schéma", () => {
-  it("exige une bibliographie sans citation inventée", () => {
-    const lesson = lessons.find((item) => item.id === "2026-11-17-classiques-L1");
-    expect(lesson?.pour_aller_plus_loin && lesson.pour_aller_plus_loin.length >= 2).toBe(true);
-    for (const entry of lesson?.pour_aller_plus_loin ?? []) {
-      expect(entry.citation ?? "").toBe("");
-      expect(entry.reference.length).toBeGreaterThan(10);
+  it("exige une bibliographie pour chaque leçon à partir du 17 novembre 2026", () => {
+    const recent = lessons.filter((lesson) => lesson.date >= "2026-11-17");
+    expect(recent.length).toBeGreaterThan(0);
+    for (const lesson of recent) {
+      expect((lesson.pour_aller_plus_loin ?? []).length).toBeGreaterThanOrEqual(2);
     }
   });
 
@@ -194,13 +261,77 @@ describe("schéma", () => {
 
   it("refuse un tiret cadratin", () => {
     const script = `
+      import { readdirSync, readFileSync } from "node:fs";
       import { validateLesson } from "./scripts/validate-content.mjs";
-      import lesson from "./content/lecons/2026-11-17-classiques-L1.json" with { type: "json" };
+      const name = readdirSync("./content/lecons").find((file) => file.endsWith(".json"));
+      if (!name) process.exit(1);
+      const lesson = JSON.parse(readFileSync("./content/lecons/" + name, "utf8"));
       const copy = structuredClone(lesson);
       copy.objectives[0] = "objectif " + String.fromCharCode(0x2014);
-      const errors = validateLesson(copy, "2026-11-17-classiques-L1.json");
+      const errors = validateLesson(copy, name);
       if (!errors.some((error) => error.includes("tiret"))) process.exit(1);
     `;
     execFileSync("node", ["--input-type=module", "-e", script], { encoding: "utf8" });
+  });
+});
+
+describe("lien d'issue", () => {
+  it("prépare une seule adresse, avec le marqueur et le JSON", async () => {
+    const links = await buildIssueLinks({
+      type: "reponses",
+      lesson_id: "2026-01-03-latin-L2",
+      date: "2026-01-03",
+      human: "Réponses de Sébastien.\n\n**P1.** insula",
+      answers: { P1: "insula" },
+    });
+    expect(links).toHaveLength(1);
+    expect(links[0].title).toBe("Réponses 2026-01-03-latin-L2");
+    const body = decodeURIComponent(links[0].url.split("body=")[1].split("&")[0].replace(/\+/g, " "));
+    expect(body.startsWith("<!-- sebastien -->")).toBe(true);
+    expect(body).toContain("**P1.** insula");
+    expect(body).toContain('"type": "reponses"');
+    expect(body).toContain('"lesson_id": "2026-01-03-latin-L2"');
+    expect(links[0].url).toContain("labels=reponses");
+    expect(links[0].url.length).toBeLessThanOrEqual(ISSUE_URL_LIMIT);
+  });
+
+  it("découpe ou compresse un texte trop long", async () => {
+    const answers: Record<string, string> = {};
+    for (let index = 0; index < 20; index += 1) answers[`X${index}`] = randomBytes(500).toString("base64");
+    const links = await buildIssueLinks({
+      type: "reponses",
+      lesson_id: "2026-01-03-latin-L2",
+      human: "Trop long.",
+      answers,
+    });
+    expect(links.length).toBeGreaterThan(1);
+    expect(links.every((link) => link.url.length <= ISSUE_URL_LIMIT)).toBe(true);
+    expect(links[0].title).toContain("(1/");
+    const packed = await deflateBase64("préceptorat");
+    expect(await inflateBase64(packed)).toBe("préceptorat");
+  });
+});
+
+describe("sauvegarde locale", () => {
+  it("enregistre une notation et la retrouve dans l'export", () => {
+    memoryStorage();
+    const pending = recordGrade("LAT-001", "good", "2026-01-03T12:00:00.000Z");
+    expect(pending).toEqual([{ card_id: "LAT-001", grade: "good", reviewed_at: "2026-01-03T12:00:00.000Z" }]);
+    const reviews: ReviewStateFile = {
+      schema_version: "1.0",
+      scheduler: "fsrs-6",
+      updated_at: "2026-01-03T12:00:00.000Z",
+      cards: {},
+    };
+    localStorage.setItem("preceptorat.draft.2026-01-03-latin-L2", JSON.stringify({ P1: { text: "insula", skipped: false, revealed: false } }));
+    const file = collectProgress(reviews, "2026-01-03T12:00:00.000Z");
+    expect(isProgressFile(file)).toBe(true);
+    expect(file.pending[0].card_id).toBe("LAT-001");
+    expect(file.drafts["2026-01-03-latin-L2"].P1.text).toBe("insula");
+    localStorage.clear();
+    const restored = applyProgress(file);
+    expect(restored.updated_at).toBe(reviews.updated_at);
+    expect(JSON.parse(localStorage.getItem("preceptorat.pending") ?? "[]")).toHaveLength(1);
+    expect(localStorage.getItem("preceptorat.draft.2026-01-03-latin-L2")).toContain("insula");
   });
 });

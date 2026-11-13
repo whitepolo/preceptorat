@@ -27,20 +27,19 @@ const SCREENS = [
   },
   {
     kicker: "Pour écrire à Schopen",
-    title: "Un jeton, une seule fois sur cet appareil.",
-    text: "Il reste dans ce navigateur. Il sert à envoyer tes réponses, à parler avec Schopen, et à garder les mêmes révisions sur le téléphone et l'ordinateur.",
+    title: "Tes réponses restent ici, puis partent vers GitHub.",
+    text: "Tout est enregistré sur l'appareil, même hors ligne. Pour envoyer, ouvre le lien préparé et appuie sur Submit. Téléphone et ordinateur se rejoignent ensuite.",
   },
 ];
 
-export function Onboarding({ onDone, onSettings }: { onDone: () => void; onSettings: () => void }) {
+export function Onboarding({ onDone }: { onDone: () => void }) {
   const [index, setIndex] = useState(0);
   const screen = SCREENS[index];
   const last = index === SCREENS.length - 1;
 
-  function finish(toSettings: boolean) {
+  function finish() {
     markOnboardingSeen();
     onDone();
-    if (toSettings) onSettings();
   }
 
   return (
@@ -57,11 +56,8 @@ export function Onboarding({ onDone, onSettings }: { onDone: () => void; onSetti
         <div className="actions">
           {last ? (
             <>
-              <button type="button" className="button primary" onClick={() => finish(true)}>
-                Ouvrir les réglages
-              </button>
-              <button type="button" className="button quiet" onClick={() => finish(false)}>
-                Plus tard
+              <button type="button" className="button primary" onClick={() => finish()}>
+                C'est compris
               </button>
             </>
           ) : (
@@ -69,7 +65,7 @@ export function Onboarding({ onDone, onSettings }: { onDone: () => void; onSetti
               <button type="button" className="button primary" onClick={() => setIndex((value) => value + 1)}>
                 Suivant
               </button>
-              <button type="button" className="button quiet" onClick={() => finish(false)}>
+              <button type="button" className="button quiet" onClick={() => finish()}>
                 Passer
               </button>
             </>

@@ -39,6 +39,14 @@ export function formatDuration(range: { min: number; max: number }): string {
   return `${range.min} à ${range.max} min`;
 }
 
+export function formatStamp(iso: string): string {
+  return new Intl.DateTimeFormat("fr-FR", {
+    dateStyle: "long",
+    timeStyle: "short",
+    timeZone: TIMEZONE,
+  }).format(new Date(iso));
+}
+
 export function formatClock(ms: number): string {
   const total = Math.max(0, Math.floor(ms / 1000));
   const h = Math.floor(total / 3600);

@@ -40,12 +40,7 @@ function Router() {
   return (
     <Shell page={route.page} today={today} due={queue.length}>
       {intro ? (
-        <Onboarding
-          onDone={() => setIntro(false)}
-          onSettings={() => {
-            window.location.hash = "#/reglages";
-          }}
-        />
+        <Onboarding onDone={() => setIntro(false)} />
       ) : null}
       {route.page === "aujourd-hui" ? <AujourdHui /> : null}
       {route.page === "revisions" ? <Revisions /> : null}

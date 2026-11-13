@@ -3,13 +3,14 @@ import { catalog, seedState } from "./content";
 import { mauritiusDate, mauritiusEvening } from "./lib/dates";
 import { applyGrade, emptyStored } from "./lib/scheduler";
 import { isSameEvening, selectSession, type SessionPlan } from "./lib/session";
-import { loadReviewState, pushReviewState, writeLocalState } from "./lib/sync";
+import { clearPending, readPending, recordGrade } from "./lib/localProgress";
+import type { GradeEvent } from "./lib/issueLink";
+import { loadReviewState, writeLocalState } from "./lib/sync";
+import type { GradeName, ReviewStateFile } from "./lib/types";
 
 function allowedCardIds(): Set<string> {
   return new Set(catalog.cards.map((card) => card.id));
 }
-import { readToken, subscribePrefs } from "./lib/prefs";
-import type { GradeName, ReviewStateFile } from "./lib/types";
 
 interface ReviewContextValue {
   state: ReviewStateFile;
@@ -18,7 +19,10 @@ interface ReviewContextValue {
   today: string;
   plan: SessionPlan;
   queue: string[];
+  pending: GradeEvent[];
   grade: (id: string, gradeName: GradeName) => Promise<void>;
+  markReviewsSent: () => void;
+  replaceState: (next: ReviewStateFile) => void;
   reload: () => Promise<void>;
 }
 
@@ -40,15 +44,12 @@ function readQueue(today: string): string[] | null {
 }
 
 export function ReviewProvider({ children }: { children: ReactNode }) {
-  const [token, setToken] = useState(readToken);
   const [state, setState] = useState<ReviewStateFile>(seedState);
-  const [sha, setSha] = useState<string | null>(null);
+  const [pending, setPending] = useState<GradeEvent[]>(() => readPending());
   const [status, setStatus] = useState("Chargement des révisions.");
   const [ready, setReady] = useState(false);
   const [today, setToday] = useState(() => mauritiusDate());
   const [queue, setQueue] = useState<string[]>([]);
-
-  useEffect(() => subscribePrefs(() => setToken(readToken())), []);
 
   const plan = useMemo(() => {
     const cards = catalog.cards.map((card) => {
@@ -70,9 +71,10 @@ export function ReviewProvider({ children }: { children: ReactNode }) {
     const day = mauritiusDate();
     setToday(day);
     const allowed = allowedCardIds();
-    const result = await loadReviewState(seedState, allowed, token || undefined);
+    const waiting = new Set(readPending().map((item) => item.card_id));
+    const result = await loadReviewState(seedState, allowed, waiting);
     setState(result.state);
-    setSha(result.sha);
+    setPending(readPending());
     setStatus(result.message);
     setReady(true);
     const stored = readQueue(day);
@@ -94,7 +96,7 @@ export function ReviewProvider({ children }: { children: ReactNode }) {
       localStorage.setItem(queueKey(day), JSON.stringify(next));
       setQueue(next);
     }
-  }, [token]);
+  }, []);
 
   useEffect(() => {
     void reload();
@@ -116,22 +118,31 @@ export function ReviewProvider({ children }: { children: ReactNode }) {
       setState(nextState);
       setQueue(remaining);
       localStorage.setItem(queueKey(day), JSON.stringify(remaining));
-      writeLocalState(nextState, sha);
-      if (!token) {
-        setStatus("Enregistré sur cet appareil. Le jeton synchronisera téléphone et ordinateur.");
-        return;
-      }
-      const result = await pushReviewState(nextState, token, sha, allowedCardIds());
-      setState(result.state);
-      setSha(result.sha);
-      setStatus(result.message);
+      writeLocalState(nextState);
+      const nextPending = recordGrade(id, gradeName, now.toISOString());
+      setPending(nextPending);
+      const count = nextPending.length;
+      setStatus(count === 1 ? "1 révision pas encore envoyée." : `${count} révisions pas encore envoyées.`);
     },
-    [queue, sha, state, token],
+    [queue, state],
   );
 
+  const markReviewsSent = useCallback(() => {
+    clearPending();
+    setPending([]);
+    setStatus("Révisions prêtes à être déposées sur GitHub.");
+  }, []);
+
+  const replaceState = useCallback((next: ReviewStateFile) => {
+    const pruned = { ...next, cards: Object.fromEntries(Object.entries(next.cards).filter(([id]) => allowedCardIds().has(id))) };
+    writeLocalState(pruned);
+    setState(pruned);
+    setPending(readPending());
+  }, []);
+
   const value = useMemo(
-    () => ({ state, ready, status, today, plan, queue, grade, reload }),
-    [state, ready, status, today, plan, queue, grade, reload],
+    () => ({ state, ready, status, today, plan, queue, pending, grade, markReviewsSent, replaceState, reload }),
+    [state, ready, status, today, plan, queue, pending, grade, markReviewsSent, replaceState, reload],
   );
 
   return <ReviewContext.Provider value={value}>{children}</ReviewContext.Provider>;

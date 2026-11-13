@@ -42,6 +42,15 @@ export function mergeStates(a: ReviewStateFile, b: ReviewStateFile): ReviewState
   };
 }
 
+export function mergeWithPending(local: ReviewStateFile, remote: ReviewStateFile, pendingIds: ReadonlySet<string>): ReviewStateFile {
+  const merged = mergeStates(local, remote);
+  for (const id of pendingIds) {
+    const card = local.cards[id];
+    if (card) merged.cards[id] = card;
+  }
+  return merged;
+}
+
 export function pruneUnknownCards(state: ReviewStateFile, allowed: ReadonlySet<string>): ReviewStateFile {
   const cards: Record<string, StoredCard> = {};
   for (const [id, card] of Object.entries(state.cards)) {

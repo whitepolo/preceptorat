@@ -159,9 +159,23 @@ Times are UTC. A stored due instant of 15:00Z is 19:00 at UTC+4; that is only th
 
 ## Issues
 
-Not files, but part of the format.
+Not files, but part of the format. He opens a new issue. The app does not post a comment and does not call the Contents API.
 
-- Lesson thread: title = lesson id, label `leçon`. His answers are one comment, each line `**CODE.** text`.
-- Dialogue: title `Dialogue`, label `dialogue`.
-- Your reply starts with `<!-- schopen -->`.
-- His messages start with `<!-- sebastien -->`.
+| Kind | Title | Label |
+| --- | --- | --- |
+| Lesson answers | `Réponses <lesson_id>` | `reponses` |
+| Free message | `Dialogue` | `dialogue` |
+| Review grades | `Révisions <AAAA-MM-JJ>` | `revisions` |
+
+A long body is split. Titles then end with ` (1/2)`, ` (2/2)`.
+
+Body, in this order:
+
+1. First line: `<!-- sebastien -->`
+2. Readable Markdown (codes as `**P1.** text`, or one line per grade).
+3. Optional line, only when the JSON is packed: `Machine : le JSON qui suit est compressé en deflate puis encodé en base64.`
+4. A fenced `json` block. Plain form is the machine object. Packed form is `{ "encoding": "deflate-base64", "payload": "<base64>" }`. Inflate with zlib deflate, then decode base64, to get the same object.
+
+Machine fields: `type` (`reponses`, `dialogue`, `revisions`), `lesson_id`, `date`, `part`, `parts`, and when relevant `answers`, `message`, `elapsed_min`, `grades` (`card_id`, `grade`, `reviewed_at`), `cards` (FSRS state).
+
+Your reply starts with `<!-- schopen -->`. Older lesson threads titled with the lesson id and label `leçon` may still exist. New sends do not append to them.
