@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated": "2026-11-12",
+  "updated": "2026-11-13",
   "learner": "Sébastien",
   "tutor": "Schopen",
   "objective": "Culture d'honnête homme : classiques grecs, latins, chinois, indiens, arabes et africains, langues anciennes, mathématiques, sciences de base, art, philosophie, économie et économétrie en partant de zéro.",
@@ -72,7 +72,7 @@
       "id": "latin",
       "label": "Latin",
       "weekday": "lundi et mercredi",
-      "status": "leçon du jour",
+      "status": "en cours",
       "position": "Leçon 4, mercredi 11 novembre 2026 : le génitif des première et deuxième déclinaisons, au début du chapitre II d'Ørberg. Les leçons 1 à 3 (chapitre I) ont été faites avant l'application, dans le fil de discussion.",
       "summary": "Lingua Latina per se illustrata (Ørberg), un demi-chapitre à un chapitre par semaine selon la maîtrise. Grammaire explicite après le texte. Vocabulaire en cartes, latin vers français puis français vers latin. Pas d'entrelacement à la première rencontre d'un mot.",
       "modules": [
@@ -400,7 +400,7 @@
       "id": "philosophie",
       "label": "Philosophie",
       "weekday": "jeudi",
-      "status": "leçon du jour",
+      "status": "en cours",
       "position": "Leçon 1, jeudi 12 novembre 2026 : fragments et témoignages, Milet et la question du principe (Thalès, Anaximandre, Anaximène).",
       "summary": "Présocratiques, Platon, Aristote, Confucius et Mencius, le Daodejing, le Bouddha et les Upaniṣad. Lectures d'appui : Pierre Hadot ; Anne Cheng pour la pensée chinoise.",
       "modules": [
@@ -468,8 +468,8 @@
       "id": "mathematiques",
       "label": "Mathématiques",
       "weekday": "vendredi",
-      "status": "à venir",
-      "position": "Pas encore commencé. Chaque outil est vu au moins deux semaines avant son usage en économie.",
+      "status": "leçon du jour",
+      "position": "Leçon 1, vendredi 13 novembre 2026 : fractions, pourcentages et puissances, avec le contrôle d'entrée (8 items justes sur 10 pour passer à l'algèbre).",
       "summary": "Arithmétique, algèbre, fonctions, exponentielle et logarithme, dérivée, sommes, probabilités, algèbre linéaire. Un vendredi sur quatre : sciences et histoire des sciences.",
       "modules": [
         {
@@ -477,10 +477,13 @@
           "title": "Arithmétique, fractions, pourcentages, puissances",
           "lessons": [
             {
-              "title": "Révision et contrôle d'entrée",
-              "status": "à venir"
+              "title": "L1. Fractions, pourcentages, puissances ; règle d'Archimède ; contrôle d'entrée",
+              "date": "2026-11-13",
+              "status": "prévue",
+              "lesson_id": "2026-11-13-mathematiques-L1"
             }
-          ]
+          ],
+          "current": true
         },
         {
           "id": "math-2",

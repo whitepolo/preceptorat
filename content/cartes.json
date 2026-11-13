@@ -199,6 +199,78 @@
       "answer": "Par condensation et raréfaction : raréfié, l'air devient feu ; condensé, vent, nuage, eau, terre, pierre. Les différences de qualité deviennent des différences de densité.",
       "created": "2026-11-12",
       "kind": "notion"
+    },
+    {
+      "id": "MAT-001",
+      "subject": "mathematiques",
+      "subject_label": "Mathématiques",
+      "prompt": "Comment divise-t-on par une fraction ? Calcule 3/4 ÷ 9/8.",
+      "answer": "On multiplie par son inverse : 3/4 × 8/9 = 24/36 = 2/3.",
+      "created": "2026-11-13",
+      "kind": "notion"
+    },
+    {
+      "id": "MAT-002",
+      "subject": "mathematiques",
+      "subject_label": "Mathématiques",
+      "prompt": "Comment additionne-t-on deux fractions de dénominateurs différents ? Calcule 3/8 + 5/12.",
+      "answer": "On les met au même dénominateur (de préférence le plus petit multiple commun), puis on ajoute les numérateurs : 9/24 + 10/24 = 19/24. On n'additionne jamais les dénominateurs.",
+      "created": "2026-11-13",
+      "kind": "notion"
+    },
+    {
+      "id": "MAT-003",
+      "subject": "mathematiques",
+      "subject_label": "Mathématiques",
+      "prompt": "Par quel coefficient multiplie-t-on une quantité pour une hausse de t %, et pour une baisse de t % ?",
+      "answer": "Hausse : 1 + t/100 (par exemple × 1,15 pour + 15 %). Baisse : 1 − t/100 (× 0,85 pour − 15 %).",
+      "created": "2026-11-13",
+      "kind": "notion"
+    },
+    {
+      "id": "MAT-004",
+      "subject": "mathematiques",
+      "subject_label": "Mathématiques",
+      "prompt": "Un prix augmente de 10 %, puis baisse de 10 %. Variation totale, et pourquoi ?",
+      "answer": "1,1 × 0,9 = 0,99, soit − 1 %. Les variations successives se multiplient : la baisse porte sur une base plus grande.",
+      "created": "2026-11-13",
+      "kind": "notion"
+    },
+    {
+      "id": "MAT-005",
+      "subject": "mathematiques",
+      "subject_label": "Mathématiques",
+      "prompt": "Un objet coûte 60 € TTC avec une TVA de 20 %. Prix hors taxe, et quelle erreur éviter ?",
+      "answer": "60 / 1,2 = 50 €. On divise par le coefficient ; retirer 20 % de 60 € (48 €) est faux, car les 20 % portent sur le prix hors taxe.",
+      "created": "2026-11-13",
+      "kind": "notion"
+    },
+    {
+      "id": "MAT-006",
+      "subject": "mathematiques",
+      "subject_label": "Mathématiques",
+      "prompt": "Complète : aᵐ × aⁿ = ? ; aᵐ / aⁿ = ? ; (aᵐ)ⁿ = ?",
+      "answer": "aᵐ⁺ⁿ ; aᵐ⁻ⁿ ; aᵐⁿ.",
+      "created": "2026-11-13",
+      "kind": "notion"
+    },
+    {
+      "id": "MAT-007",
+      "subject": "mathematiques",
+      "subject_label": "Mathématiques",
+      "prompt": "Que valent a⁰ et a⁻ⁿ (a non nul), et pourquoi ?",
+      "answer": "a⁰ = 1 et a⁻ⁿ = 1/aⁿ, pour que la règle aᵐ × aⁿ = aᵐ⁺ⁿ reste vraie (a⁰ × aⁿ = aⁿ ; a⁻ⁿ × aⁿ = a⁰ = 1).",
+      "created": "2026-11-13",
+      "kind": "notion"
+    },
+    {
+      "id": "MAT-008",
+      "subject": "mathematiques",
+      "subject_label": "Mathématiques",
+      "prompt": "Quelle règle Archimède énonce-t-il dans L'Arénaire, et dans quel but ?",
+      "answer": "Dans la suite 1, 10, 100..., le produit de deux termes est un terme de la suite dont le rang se déduit en ajoutant les rangs (moins un) : notre 10ᵐ × 10ⁿ = 10ᵐ⁺ⁿ. Il s'en sert pour nommer de très grands nombres et montrer que le sable qui remplirait l'univers compte moins de 10⁶³ grains.",
+      "created": "2026-11-13",
+      "kind": "notion"
     }
   ]
 }

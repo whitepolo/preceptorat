@@ -1,0 +1,341 @@
+{
+  "schema_version": "1.0",
+  "id": "2026-11-13-mathematiques-L1",
+  "title": "2026-11-13 · Mathématiques · Leçon 1 : Fractions, pourcentages et puissances, avec la règle d'Archimède",
+  "date": "2026-11-13",
+  "weekday": "vendredi",
+  "subject": "mathematiques",
+  "subject_label": "Mathématiques",
+  "lesson_number": 1,
+  "module": {
+    "id": "math-1",
+    "title": "Arithmétique, fractions, pourcentages, puissances"
+  },
+  "duration_min": {
+    "min": 35,
+    "max": 45
+  },
+  "lang": "fr",
+  "objectives": [
+    "Calculer avec des fractions sans calculatrice : simplifier, additionner, multiplier, diviser.",
+    "Appliquer et mesurer une variation en pourcentage, y compris des variations successives, grâce au coefficient multiplicateur.",
+    "Utiliser les règles des puissances, exposant nul et exposant négatif compris, et expliquer pourquoi a⁰ = 1.",
+    "Passer le contrôle d'entrée du parcours de mathématiques (8 items justes sur 10)."
+  ],
+  "prerequisites": [
+    "Les quatre opérations et les tables de multiplication."
+  ],
+  "student_note": "Réponds dans le fil de discussion, en faisant précéder chaque réponse du code de la question (R1, P1, Xf, E1, Q, T1...). Ne lis une solution qu'après avoir répondu. Pas de calculatrice aujourd'hui : papier et crayon.",
+  "sources": [
+    {
+      "type": "primary",
+      "cite": "Archimède, L'Arénaire, théorème sur les termes en proportion continue ; éd. J. L. Heiberg, Archimedis opera omnia, t. II, Leipzig, Teubner, 1913 ; trad. angl. T. L. Heath, The Works of Archimedes, Cambridge University Press, 1897."
+    },
+    {
+      "type": "secondary",
+      "cite": "R. S. Siegler, G. J. Duncan, P. E. Davis-Kean et al., « Early predictors of high school mathematics achievement », Psychological Science, 23 (7), 2012, p. 691-697."
+    },
+    {
+      "type": "method",
+      "cite": "C. A. Barbieri et al., « A meta-analysis of the worked examples effect on mathematics performance », Educational Psychology Review, 35, 2023, article 11 ; D. Rohrer, R. F. Dedrick et S. Stershic, « Interleaved practice improves mathematics learning », Journal of Educational Psychology, 107 (3), 2015, p. 900-908."
+    }
+  ],
+  "sections": [
+    {
+      "id": "rappel",
+      "title": "Rappel",
+      "duration_min": {
+        "min": 8,
+        "max": 10
+      },
+      "body": "Huit cartes dues aujourd'hui, philosophie et latin mélangés. Réponds de mémoire, sans regarder, puis note-toi dans l'application. Les cartes de vocabulaire *filius* et *filia* attendent encore leur première révision seule.",
+      "questions": [
+        {
+          "code": "R1",
+          "kind": "recall",
+          "prompt": "Que désignent les lettres A et B dans la notation Diels-Kranz (par exemple DK 12 A 10, DK 12 B 1) ?",
+          "solution": "B : un fragment, les mots mêmes du penseur cités par un auteur postérieur. A : un témoignage, ce qu'un autre auteur rapporte ou interprète. Le premier nombre désigne le penseur (11 Thalès, 12 Anaximandre, 13 Anaximène).",
+          "card_id": "PHI-001"
+        },
+        {
+          "code": "R2",
+          "kind": "recall",
+          "prompt": "Mets au pluriel : *fluvius parvus* ; *oppidum parvum*. Quelle est la règle de formation ?",
+          "solution": "*fluvii parvi* ; *oppida parva*. On remplace la terminaison du singulier, on ne l'ajoute pas au mot entier (*parvi*, non *parvii* ; *oppida*, non *oppidia*).",
+          "card_id": "LAT-001"
+        },
+        {
+          "code": "R3",
+          "kind": "recall",
+          "prompt": "Quel est le principe de Thalès selon Aristote, et que signifie le « peut-être » d'Aristote dans Métaphysique A 3 ?",
+          "solution": "L'eau (et la terre repose sur l'eau). Le « peut-être » montre que les raisons (nourriture et semences humides) sont une conjecture d'Aristote, non la parole de Thalès.",
+          "card_id": "PHI-003"
+        },
+        {
+          "code": "R4",
+          "kind": "recall",
+          "prompt": "Donne le génitif pluriel de *insula*, *fluvius* et *oppidum*.",
+          "solution": "*insularum*, *fluviorum*, *oppidorum*.",
+          "card_id": "LAT-004"
+        },
+        {
+          "code": "R5",
+          "kind": "recall",
+          "prompt": "Qu'est-ce que l'ápeiron d'Anaximandre, et pourquoi n'est-ce aucun des éléments ?",
+          "solution": "L'illimité, l'indéterminé, d'où se séparent les contraires. Un élément pris pour principe, contraire des autres, l'emporterait sur eux et les détruirait ; l'indéterminé n'en favorise aucun.",
+          "card_id": "PHI-004"
+        },
+        {
+          "code": "R6",
+          "kind": "recall",
+          "prompt": "Dans César, *De Bello Gallico*, I, 1, *Horum omnium fortissimi sunt Belgae*, que signifie *horum omnium*, et à quel cas est ce groupe ?",
+          "solution": "« De tous ceux-ci » (ou « de tous ces peuples »). Génitif pluriel, ici partitif : les plus braves de l'ensemble.",
+          "card_id": "LAT-008"
+        },
+        {
+          "code": "R7",
+          "kind": "recall",
+          "prompt": "Résume l'unique fragment d'Anaximandre (DK 12 B 1) et son image.",
+          "solution": "Les êtres retournent à ce dont ils naissent, selon la nécessité, car ils se rendent justice et réparation de leur injustice selon l'ordre du temps. Le changement est une compensation réglée entre contraires, décrite avec le vocabulaire du droit.",
+          "card_id": "PHI-005"
+        },
+        {
+          "code": "R8",
+          "kind": "recall",
+          "prompt": "Comment Anaximène explique-t-il que tout vienne de l'air ?",
+          "solution": "Par condensation et raréfaction : raréfié, l'air devient feu ; condensé, vent, nuage, eau, terre, pierre. Les différences de qualité deviennent des différences de densité.",
+          "card_id": "PHI-007"
+        }
+      ]
+    },
+    {
+      "id": "prequestions",
+      "title": "Pré-questions",
+      "duration_min": {
+        "min": 1,
+        "max": 2
+      },
+      "body": "Réponds d'instinct, même sans être sûr. La leçon te donnera la réponse.",
+      "questions": [
+        {
+          "code": "P1",
+          "kind": "prequestion",
+          "prompt": "Un prix augmente de 10 %, puis baisse de 10 %. Revient-il exactement à son niveau de départ ?",
+          "solution": "Non. Il finit 1 % plus bas : 1,10 × 0,90 = 0,99. La baisse de 10 % s'applique à un prix déjà augmenté, donc elle retire plus que la hausse n'avait ajouté."
+        },
+        {
+          "code": "P2",
+          "kind": "prequestion",
+          "prompt": "Que valent 2⁰ et 10⁻² ?",
+          "solution": "2⁰ = 1 et 10⁻² = 1/10² = 1/100 = 0,01. La raison est donnée en N3."
+        }
+      ]
+    },
+    {
+      "id": "cours",
+      "title": "Notion du jour",
+      "duration_min": {
+        "min": 10,
+        "max": 12
+      },
+      "body": "Les vendredis de mathématiques préparent l'économie et, l'an prochain, l'économétrie. On commence par les trois outils que l'économiste emploie à chaque ligne : les fractions, les pourcentages et les puissances. Ce n'est pas une formalité. Dans deux grandes cohortes, aux États-Unis et au Royaume-Uni, la maîtrise des fractions et de la division vers 10 ans prédisait les résultats en algèbre et en mathématiques à la fin du secondaire, même à niveau scolaire et familial égal (Siegler et al., *Psychological Science*, 2012). Cette leçon est aussi un **contrôle d'entrée** : les exercices E1 à E5 comptent dix items. Avec 8 justes ou plus, le prochain vendredi de mathématiques passe à l'algèbre ; en dessous, il reprend ces outils autrement.\n\n### N1. Les fractions\n\nUne fraction a/b est un quotient : a parts d'un tout coupé en b parts égales. Les scribes égyptiens écrivaient déjà presque toutes leurs fractions comme sommes de fractions de numérateur 1 (papyrus Rhind, copié par le scribe Ahmès vers 1550 av. J.-C., British Museum). Quatre règles suffisent.\n\n- **Simplifier** : diviser le haut et le bas par un même diviseur commun. 18/24 = 3/4 (on divise par 6).\n- **Additionner ou soustraire** : mettre au même dénominateur, de préférence le plus petit multiple commun, puis ajouter les numérateurs. 1/6 + 3/4 = 2/12 + 9/12 = 11/12.\n- **Multiplier** : haut par haut, bas par bas. 2/3 × 9/10 = 18/30 = 3/5.\n- **Diviser** : multiplier par l'inverse. 3/4 ÷ 9/8 = 3/4 × 8/9 = 24/36 = 2/3.\n\nPiège classique : on n'additionne jamais les dénominateurs. 1/2 + 1/3 ne vaut pas 2/5 mais 5/6.\n\n### N2. Les pourcentages\n\n« Pour cent » vient du latin *per centum* : t % signifie t/100. Trois gestes reviennent sans cesse.\n\n- **Prendre t % d'une quantité** : multiplier par t/100. 15 % de 80 = 0,15 × 80 = 12.\n- **Appliquer une variation** : une hausse de t % multiplie par le **coefficient** 1 + t/100 ; une baisse de t % multiplie par 1 − t/100. Hausse de 15 % : × 1,15. Baisse de 15 % : × 0,85.\n- **Mesurer une variation** : (valeur d'arrivée − valeur de départ) / valeur de départ × 100. De 80 à 92 : 12/80 = 0,15, soit + 15 %.\n\nConséquence décisive : des variations successives **se multiplient**, elles ne s'additionnent pas. Deux hausses de 10 % donnent 1,1 × 1,1 = 1,21, soit + 21 %, et non + 20 %. Et pour revenir en arrière, on **divise** par le coefficient : un prix de 120 € après une hausse de 20 % valait 120 / 1,2 = 100 €, et non 120 − 24 = 96 €. C'est l'origine de l'erreur fréquente sur les prix hors taxe.\n\n### N3. Les puissances\n\naⁿ (n entier positif) est le produit de n facteurs égaux à a : 2⁵ = 2 × 2 × 2 × 2 × 2 = 32. On en tire trois règles, qu'il suffit de comprendre en comptant les facteurs (voir le tableau).\n\nArchimède les connaissait sans notre notation. Dans *L'Arénaire*, adressé au roi Gélon de Syracuse au IIIe siècle av. J.-C., il veut montrer qu'on peut nommer un nombre plus grand que celui des grains de sable qui rempliraient l'univers. Le système grec de numération s'arrêtait pratiquement à la myriade (10 000). Archimède bâtit des « ordres » de nombres, de myriade de myriades (10⁸) en myriade de myriades, et énonce une règle sur la suite 1, 10, 100, 1000... C'est notre loi 10ᵐ × 10ⁿ = 10ᵐ⁺ⁿ. Il conclut que le nombre de grains est inférieur à 10⁶³ (en notation moderne).\n\nPourquoi a⁰ = 1 et a⁻ⁿ = 1/aⁿ (pour a non nul) ? Parce qu'on veut que la règle aᵐ × aⁿ = aᵐ⁺ⁿ reste vraie partout. Si a⁰ × a³ = a³, alors a⁰ doit valoir 1. Si a⁻³ × a³ = a⁰ = 1, alors a⁻³ doit valoir 1/a³. Ce ne sont pas des conventions arbitraires, mais le seul prolongement cohérent. La notation moderne des exposants ne s'impose qu'au XVIIe siècle, notamment avec Descartes (*La Géométrie*, 1637).",
+      "excerpt": {
+        "work": "Archimède, L'Arénaire (Psammitès)",
+        "locus": "théorème qui suit l'exposé des ordres de nombres et des octades",
+        "edition": "Texte grec : J. L. Heiberg, Archimedis opera omnia, t. II, Leipzig, Teubner, 1913. Traduction anglaise : T. L. Heath, The Works of Archimedes, Cambridge, Cambridge University Press, 1897.",
+        "translator": "traduction de travail, pour cette leçon, d'après la traduction anglaise de T. L. Heath (1897), dans le domaine public ; les crochets sont des éclaircissements de Heath",
+        "lang": "fr",
+        "text": "« Si l'on a un nombre quelconque de termes en proportion continue, soit A₁, A₂, A₃, ... Aₘ, ... Aₙ, ... Aₘ₊ₙ₋₁, ..., dont A₁ = 1 et A₂ = 10 [de sorte que la suite est la progression géométrique 1, 10¹, 10², ... 10ᵐ⁻¹, ... 10ⁿ⁻¹, ... 10ᵐ⁺ⁿ⁻², ...], et si l'on prend deux termes quelconques comme Aₘ et Aₙ et qu'on les multiplie, le produit Aₘ · Aₙ sera un terme de la même suite, et il sera éloigné de Aₙ d'autant de termes que Aₘ l'est de A₁ ; il sera aussi éloigné de A₁ d'un nombre de termes inférieur d'une unité à la somme des nombres de termes qui séparent respectivement Aₘ et Aₙ de A₁. »",
+        "close_reading": "Archimède ne parle pas d'exposants : il **compte des rangs** dans la suite 1, 10, 100... en comptant le premier et le dernier terme. Le terme de rang m vaut 10ᵐ⁻¹. Multiplier le terme de rang m par celui de rang n donne le terme de rang m + n − 1, c'est-à-dire 10ᵐ⁻¹ × 10ⁿ⁻¹ = 10ᵐ⁺ⁿ⁻². Le « moins une unité » vient seulement de ce qu'il compte 1 comme premier terme. Traduit en exposants (le rang moins un), la règle devient : on **ajoute les exposants** quand on multiplie des puissances de même base. Exemple : 100 (rang 3) × 1000 (rang 4) = 100 000 (rang 3 + 4 − 1 = 6), soit 10² × 10³ = 10⁵. Le texte montre aussi pourquoi la règle est puissante : elle remplace une multiplication de nombres énormes par une addition de petits nombres, l'idée qui mènera, bien plus tard, aux logarithmes."
+      },
+      "figures": [
+        {
+          "type": "table",
+          "caption": "Règles des puissances (a et b non nuls, m et n entiers)",
+          "columns": [
+            "Règle",
+            "Pourquoi",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "aᵐ × aⁿ = aᵐ⁺ⁿ",
+              "m facteurs puis n facteurs : m + n facteurs",
+              "2³ × 2⁴ = 2⁷ = 128"
+            ],
+            [
+              "aᵐ / aⁿ = aᵐ⁻ⁿ",
+              "on simplifie n facteurs en haut et en bas",
+              "10⁵ / 10² = 10³"
+            ],
+            [
+              "(aᵐ)ⁿ = aᵐⁿ",
+              "n paquets de m facteurs",
+              "(3²)³ = 3⁶ = 729"
+            ],
+            [
+              "(ab)ⁿ = aⁿbⁿ",
+              "on regroupe les facteurs",
+              "(2 × 5)³ = 2³ × 5³ = 1000"
+            ],
+            [
+              "a⁰ = 1",
+              "pour que a⁰ × aⁿ = aⁿ",
+              "7⁰ = 1"
+            ],
+            [
+              "a⁻ⁿ = 1/aⁿ",
+              "pour que a⁻ⁿ × aⁿ = a⁰ = 1",
+              "2⁻³ = 1/8"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exemples",
+      "title": "Exemples résolus",
+      "duration_min": {
+        "min": 5,
+        "max": 7
+      },
+      "body": "Lis X1 et X2 en suivant chaque étape, puis termine Xf seul.",
+      "questions": [
+        {
+          "code": "X1",
+          "kind": "worked",
+          "prompt": "Calculer (2/3 + 5/4) ÷ 23/6.\n\n1. Même dénominateur, 12 : 2/3 = 8/12 et 5/4 = 15/12, donc 2/3 + 5/4 = 23/12.\n2. Diviser, c'est multiplier par l'inverse : 23/12 × 6/23.\n3. On simplifie avant de multiplier : 23 se simplifie, et 6/12 = 1/2.\n\nRésultat : **1/2**.",
+          "solution": "(2/3 + 5/4) ÷ 23/6 = 23/12 × 6/23 = 6/12 = 1/2. Simplifier avant de multiplier évite les grands nombres."
+        },
+        {
+          "code": "X2",
+          "kind": "worked",
+          "prompt": "Un article coûte 50 €. Son prix augmente de 20 %, puis baisse de 25 %. Quel est le prix final, et quelle est la variation totale ?\n\n1. Coefficients : hausse de 20 %, × 1,20 ; baisse de 25 %, × 0,75.\n2. Coefficient global : 1,20 × 0,75 = 0,90.\n3. Prix final : 50 × 0,90 = 45 €.\n4. Variation totale : 0,90 − 1 = − 0,10, soit **une baisse de 10 %**, et non « − 5 % » comme le donnerait l'addition 20 − 25.",
+          "solution": "Prix final 45 € ; variation totale − 10 %. On multiplie les coefficients, on n'additionne pas les pourcentages."
+        },
+        {
+          "code": "Xf",
+          "kind": "complete",
+          "prompt": "À toi de finir. Simplifier A = (2³ × 2⁵) / 2⁴ et B = 10⁻³ × 10⁵.\n\n1. Au numérateur de A : 2³ × 2⁵ = 2³⁺⁵ = 2⁸.\n2. Ensuite : 2⁸ / 2⁴ = ... ; donc A = ... (donne la valeur numérique).\n3. Pour B : on ajoute les exposants, − 3 + 5 = ... ; donc B = ...",
+          "solution": "A = 2⁸ / 2⁴ = 2⁸⁻⁴ = 2⁴ = **16**. B = 10⁻³⁺⁵ = 10² = **100**."
+        }
+      ]
+    },
+    {
+      "id": "exercices",
+      "title": "Exercices (contrôle d'entrée)",
+      "duration_min": {
+        "min": 10,
+        "max": 12
+      },
+      "body": "Dix items, sans calculatrice. Montre ton calcul en une ligne. Compte-toi un point par item juste : 8 sur 10 ou plus valide l'entrée.",
+      "questions": [
+        {
+          "code": "E1",
+          "kind": "exercise",
+          "prompt": "a) Calcule 3/8 + 5/12 (résultat simplifié).\nb) Calcule 4/9 ÷ 2/3 (résultat simplifié).",
+          "solution": "a) Dénominateur commun 24 : 9/24 + 10/24 = **19/24**.\nb) 4/9 × 3/2 = 12/18 = **2/3**."
+        },
+        {
+          "code": "E2",
+          "kind": "exercise",
+          "prompt": "a) Simplifie au maximum 84/126.\nb) Écris 7/20 sous forme décimale, puis en pourcentage.",
+          "solution": "a) Le plus grand diviseur commun est 42 : 84/126 = **2/3**.\nb) 7/20 = 35/100 = **0,35 = 35 %**."
+        },
+        {
+          "code": "E3",
+          "kind": "exercise",
+          "prompt": "a) Un livre coûte 40 €. Son prix augmente de 15 %. Nouveau prix ?\nb) Un abonnement passe de 80 € à 68 €. Variation en pourcentage ?",
+          "solution": "a) 40 × 1,15 = **46 €**.\nb) (68 − 80)/80 = − 12/80 = − 0,15, soit **une baisse de 15 %**."
+        },
+        {
+          "code": "E4",
+          "kind": "exercise",
+          "prompt": "a) Un prix augmente de 25 %, puis baisse de 20 %. Variation totale ?\nb) Un objet coûte 60 € toutes taxes comprises, avec une TVA de 20 %. Quel est son prix hors taxe ?",
+          "solution": "a) 1,25 × 0,80 = 1,00 : **variation nulle**, on revient au prix de départ.\nb) Prix TTC = prix HT × 1,20, donc prix HT = 60 / 1,20 = **50 €**. Retirer 20 % de 60 € (soit 48 €) est faux, car les 20 % portent sur le prix hors taxe."
+        },
+        {
+          "code": "E5",
+          "kind": "exercise",
+          "prompt": "a) Simplifie (3⁴ × 3⁻²) / 3⁵ et donne le résultat sous forme de fraction.\nb) Calcule (2³)² × 2⁻⁴.",
+          "solution": "a) 3⁴⁻²⁻⁵ = 3⁻³ = **1/27**.\nb) 2⁶ × 2⁻⁴ = 2² = **4**."
+        }
+      ]
+    },
+    {
+      "id": "reflexion",
+      "title": "Question de réflexion",
+      "duration_min": {
+        "min": 2,
+        "max": 2
+      },
+      "questions": [
+        {
+          "code": "Q",
+          "kind": "reflection",
+          "prompt": "En une ou deux phrases : pourquoi une hausse de 10 % suivie d'une baisse de 10 % ne ramène-t-elle pas au prix de départ, et dans quel sens se fait l'écart ?",
+          "solution": "Parce que chaque pourcentage s'applique à la valeur du moment : la baisse porte sur une base plus grande (110 au lieu de 100), elle retire donc 11 et non 10. Les coefficients se multiplient, 1,1 × 0,9 = 0,99 : on finit 1 % en dessous. L'ordre n'y change rien, puisque 0,9 × 1,1 donne aussi 0,99."
+        }
+      ]
+    },
+    {
+      "id": "ticket",
+      "title": "Ticket de sortie",
+      "duration_min": {
+        "min": 2,
+        "max": 2
+      },
+      "questions": [
+        {
+          "code": "T1",
+          "kind": "ticket",
+          "prompt": "Calcule 2/5 + 1/3.",
+          "solution": "6/15 + 5/15 = **11/15**."
+        },
+        {
+          "code": "T2",
+          "kind": "ticket",
+          "prompt": "Un salaire augmente de 3 % deux années de suite. Quelle est la hausse totale, en pourcentage ?",
+          "solution": "1,03 × 1,03 = 1,0609, soit **+ 6,09 %**, un peu plus que 6 %."
+        }
+      ]
+    }
+  ],
+  "retenir": [
+    "Pour additionner des fractions, on les met au même dénominateur ; pour diviser par une fraction, on multiplie par son inverse.",
+    "Une hausse de t % multiplie par 1 + t/100, une baisse de t % par 1 − t/100.",
+    "Des variations successives se multiplient : deux hausses de 10 % font + 21 %, et une hausse de 10 % suivie d'une baisse de 10 % fait − 1 %.",
+    "Pour revenir à la valeur de départ, on divise par le coefficient, on ne retranche pas le pourcentage.",
+    "En multipliant des puissances de même base, on ajoute les exposants, règle qu'Archimède énonçait déjà dans L'Arénaire ; a⁰ = 1 et a⁻ⁿ = 1/aⁿ en sont le prolongement cohérent."
+  ],
+  "mot_du_jour": {
+    "code": "M",
+    "terme": "calcul",
+    "texte": "Du latin *calculus*, « petit caillou », diminutif de *calx*, la pierre, la chaux. Les Romains comptaient avec des cailloux sur l'abaque, d'où *calculare*, « compter ». Le même mot a donné le « calcul » rénal des médecins. Et Archimède, pour son grand nombre, comptait des grains de sable : en grec *psammos*, d'où le titre *Psammitès*, que le latin rend par *Arenarius*, de *arena*, « le sable »."
+  },
+  "pour_aller_plus_loin": [
+    {
+      "type": "primaire",
+      "reference": "Archimède, L'Arénaire, dans T. L. Heath (trad.), The Works of Archimedes, Cambridge, Cambridge University Press, 1897.",
+      "note": "Le texte complet, court et lisible : comment nommer un nombre plus grand que le sable de l'univers, et la règle d'addition des rangs.",
+      "citation": "the product Am · An will be a term in the same series and will be as many terms distant from An as Am is distant from A1",
+      "citation_source": "Archimède, L'Arénaire, théorème suivant la section « Octads », trad. T. L. Heath, 1897",
+      "lien": "https://sacred-texts.com/cla/archim/sand/sandreck.htm"
+    },
+    {
+      "type": "primaire",
+      "reference": "Archimède, Œuvres, t. II : Des spirales, De l'équilibre des figures planes, L'Arénaire, La Quadrature de la parabole, texte établi et traduit par Charles Mugler, Paris, Les Belles Lettres, Collection des universités de France, 1971.",
+      "note": "L'édition bilingue grec et français de référence, pour lire L'Arénaire en français avec le texte grec en regard."
+    },
+    {
+      "type": "secondaire",
+      "reference": "Knut Sydsæter, Peter Hammond, Arne Strøm et Andrés Carvajal, Essential Mathematics for Economic Analysis, 6e éd., Harlow, Pearson, 2021.",
+      "note": "Le manuel de mathématiques pour économistes que suivra ce parcours : les premiers chapitres reprennent puissances, fractions et pourcentages avec des exemples économiques."
+    },
+    {
+      "type": "secondaire",
+      "reference": "Robert S. Siegler, Lisa K. Fazio, Drew H. Bailey et Xinlin Zhou, « Fractions: the new frontier for theories of numerical development », Trends in Cognitive Sciences, 17 (1), 2013, p. 13-19.",
+      "note": "Synthèse de recherche sur la place centrale des fractions dans l'apprentissage des mathématiques, et sur les erreurs les plus tenaces."
+    }
+  ]
+}

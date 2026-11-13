@@ -10,6 +10,11 @@
       "date": "2026-11-12",
       "kind": "leçon",
       "summary": "Philosophie L1 : fragments et témoignages, Milet et la question du principe (Thalès, Anaximandre, Anaximène)."
+    },
+    {
+      "date": "2026-11-13",
+      "kind": "leçon",
+      "summary": "Mathématiques L1 : fractions, pourcentages et puissances, avec la règle d'Archimède dans L'Arénaire ; contrôle d'entrée."
     }
   ],
   "entries": [
@@ -20,6 +25,10 @@
     {
       "date": "2026-11-12",
       "text": "2026-11-12 (jeu) Philosophie L1 : fragments et témoignages (notation Diels-Kranz A et B, chaîne Aristote, Théophraste, Simplicius) ; Milet et l'archè (Thalès l'eau, Anaximandre l'ápeiron, Anaximène l'air) ; fragment DK 12 B 1 ; terre en équilibre (Du ciel II 13) ; S : Hadot ; rappel LAT-001 à 005 et 008 ; aucune réponse reçue à Latin L4 ; mot : principe. Sept cartes nouvelles (PHI-001 à PHI-007), dues le 13 novembre."
+    },
+    {
+      "date": "2026-11-13",
+      "text": "2026-11-13 (ven) Mathématiques L1 : fractions (quatre règles), pourcentages (coefficient multiplicateur, variations successives, retour au prix hors taxe), puissances (règles, a⁰ = 1, a⁻ⁿ = 1/aⁿ) ; extrait Archimède, L'Arénaire (trad. de travail d'après Heath) ; contrôle d'entrée E1 à E5 (10 items, seuil 8) ; rappel PHI-001, 003, 004, 005, 007 et LAT-001, 004, 008 ; aucune réponse reçue aux leçons précédentes ; mot : calcul. Huit cartes nouvelles (MAT-001 à MAT-008), dues le 14 novembre."
     }
   ]
 }
