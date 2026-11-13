@@ -3,11 +3,12 @@ import { lessons } from "../content";
 import { QuestionCard } from "../components/QuestionCard";
 import { MarkdownView, Poem } from "../components/MarkdownView";
 import { answerStats, canReveal, formatAnswerComment } from "../lib/answers";
-import { formatClock, formatDuration, formatLongDate } from "../lib/dates";
-import { GithubError, ensureLessonIssue, listRecentComments, postComment } from "../lib/github";
+import { formatClock, formatDuration, formatLongDate, formatStamp } from "../lib/dates";
+import { listRecentComments } from "../lib/github";
+import { buildIssueLinks, openFirstIssue, prepareIssueWindow, type IssueLink } from "../lib/issueLink";
+import { markSent, readSentMap } from "../lib/localProgress";
 import { lessonForToday, lessonQuestions, selectTonightLesson } from "../lib/lessons";
 import { isTutorMessage, stripTutorMarker } from "../lib/markdown";
-import { readToken } from "../lib/prefs";
 import type { DraftAnswer, Figure, FurtherReading, Lesson, LessonSection } from "../lib/types";
 import { useReviews } from "../state";
 
@@ -191,7 +192,7 @@ function buildSteps(lesson: Lesson): Step[] {
 }
 
 export function AujourdHui() {
-  const { today, queue } = useReviews();
+  const { today, queue, pending } = useReviews();
   const lesson = useMemo(() => lessonForToday(lessons, today), [today]);
   const recent = useMemo(() => {
     const latest = selectTonightLesson(lessons, today);
@@ -209,7 +210,7 @@ export function AujourdHui() {
 
   useEffect(() => {
     let cancelled = false;
-    listRecentComments(readToken() || undefined)
+    listRecentComments()
       .then((comments) => {
         const tutor = comments.find((comment) => isTutorMessage(comment.body));
         if (!cancelled && tutor) {
@@ -250,6 +251,9 @@ export function AujourdHui() {
           <p className="kicker">Révisions</p>
           <p className="hub-number">{queue.length}</p>
           <p>{queue.length === 0 ? "Rien n'est dû pour cette séance." : queue.length === 1 ? "carte à revoir maintenant" : "cartes à revoir maintenant"}</p>
+          {pending.length > 0 ? (
+            <p className="hint">{pending.length === 1 ? "1 révision pas encore envoyée." : `${pending.length} révisions pas encore envoyées.`}</p>
+          ) : null}
           <span className="button primary">Commencer les révisions</span>
         </a>
         <a className="hub-card" href="#/precepteur">
@@ -298,7 +302,8 @@ function LessonFlow({ lesson, today, onClose }: { lesson: Lesson; today: string;
   const [sending, setSending] = useState(false);
   const [confirming, setConfirming] = useState(false);
   const [message, setMessage] = useState("");
-  const [issueUrl, setIssueUrl] = useState("");
+  const [links, setLinks] = useState<IssueLink[]>([]);
+  const [sentAt, setSentAt] = useState<string | null>(() => readSentMap()[`reponses:${lesson.id}`] ?? null);
   const current = steps[step];
   const stats = answerStats(lesson, drafts);
   const over = elapsed > lesson.duration_min.max * 60_000;
@@ -322,26 +327,33 @@ function LessonFlow({ lesson, today, onClose }: { lesson: Lesson; today: string;
   }
 
   async function send() {
-    const token = readToken();
-    if (!token) {
-      setMessage("Pour envoyer, enregistre d'abord un jeton dans Réglages. Le brouillon reste sur cet appareil.");
-      setConfirming(false);
-      return;
-    }
+    const popup = prepareIssueWindow();
     setSending(true);
     setMessage("");
-    try {
-      const issue = await ensureLessonIssue(lesson.id, token);
-      const minutes = Math.max(1, Math.round(elapsed / 60000));
-      const comment = await postComment(issue.number, formatAnswerComment(lesson, drafts, minutes), token);
-      setIssueUrl(comment.html_url);
-      setMessage("Tes réponses sont dans le fil. Schopen pourra les lire.");
-      setConfirming(false);
-    } catch (error) {
-      setMessage(error instanceof GithubError ? error.message : "L'envoi n'a pas abouti.");
-    } finally {
-      setSending(false);
+    const minutes = Math.max(1, Math.round(elapsed / 60000));
+    const answers: Record<string, string> = {};
+    for (const question of lessonQuestions(lesson)) {
+      const draft = drafts[question.code];
+      const text = draft?.text.trim() ?? "";
+      answers[question.code] = text || (draft?.skipped ? "(passée)" : "(sans réponse)");
     }
+    const human = formatAnswerComment(lesson, drafts, minutes).replace(/^<!-- sebastien -->\s*/, "");
+    const next = await buildIssueLinks({
+      type: "reponses",
+      lesson_id: lesson.id,
+      date: today,
+      human,
+      answers,
+      elapsed_min: minutes,
+    });
+    const when = new Date().toISOString();
+    markSent(`reponses:${lesson.id}`, when);
+    setSentAt(when);
+    setLinks(next);
+    openFirstIssue(next, popup);
+    setMessage(`Envoyé le ${formatStamp(when)}. Sur GitHub, appuie sur Submit.`);
+    setConfirming(false);
+    setSending(false);
   }
 
   const section = current.kind === "section" ? lesson.sections[current.index] : undefined;
@@ -423,10 +435,10 @@ function LessonFlow({ lesson, today, onClose }: { lesson: Lesson; today: string;
             <p className="hint">Le brouillon est enregistré sur cet appareil.</p>
             {confirming ? (
               <div className="confirm">
-                <p>Un seul commentaire sera ajouté au fil, avec chaque code.</p>
+                <p>GitHub s'ouvre avec tes réponses déjà écrites. Tu n'as plus qu'à appuyer sur Submit.</p>
                 <div className="actions">
                   <button type="button" className="button primary" disabled={sending} onClick={() => void send()}>
-                    {sending ? "Envoi…" : "Confirmer l'envoi"}
+                    {sending ? "Ouverture…" : "Envoyer au précepteur"}
                   </button>
                   <button type="button" className="button quiet" onClick={() => setConfirming(false)}>
                     Revenir
@@ -435,7 +447,7 @@ function LessonFlow({ lesson, today, onClose }: { lesson: Lesson; today: string;
               </div>
             ) : (
               <button type="button" className="button primary" onClick={() => setConfirming(true)}>
-                Envoyer mes réponses au précepteur
+                Envoyer au précepteur
               </button>
             )}
             {message ? (
@@ -443,11 +455,14 @@ function LessonFlow({ lesson, today, onClose }: { lesson: Lesson; today: string;
                 {message}
               </p>
             ) : null}
-            {issueUrl ? (
-              <p>
-                <a href={`#/precepteur/${encodeURIComponent(lesson.id)}`}>Voir le fil ici</a>
+            {sentAt ? <p className="hint">Envoyé le {formatStamp(sentAt)}.</p> : null}
+            {links.map((link) => (
+              <p key={link.part}>
+                <a href={link.url} target="_blank" rel="noopener noreferrer">
+                  {link.parts > 1 ? `Ouvrir la partie ${link.part}/${link.parts}` : "Ouvrir sur GitHub"}
+                </a>
               </p>
-            ) : null}
+            ))}
           </footer>
         </section>
       ) : null}

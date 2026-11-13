@@ -1,10 +1,88 @@
 import { useEffect, useRef, useState } from "react";
 import { catalog } from "../content";
 import { MarkdownView } from "../components/MarkdownView";
-import { previewIntervals } from "../lib/scheduler";
-import { readToken } from "../lib/prefs";
-import type { GradeName } from "../lib/types";
+import { formatStamp } from "../lib/dates";
+import { buildIssueLinks, openFirstIssue, prepareIssueWindow, type GradeEvent, type IssueLink } from "../lib/issueLink";
+import { markSent, readSentMap } from "../lib/localProgress";
+import { emptyStored, previewIntervals } from "../lib/scheduler";
+import type { GradeName, ReviewStateFile } from "../lib/types";
 import { useReviews } from "../state";
+
+function SendReviews({
+  pending,
+  state,
+  today,
+  status,
+  links,
+  sentAt,
+  onSent,
+}: {
+  pending: GradeEvent[];
+  state: ReviewStateFile;
+  today: string;
+  status: string;
+  links: IssueLink[];
+  sentAt: string | null;
+  onSent: (links: IssueLink[], when: string) => void;
+}) {
+  return (
+    <>
+      <p className="hint" role="status">
+        {pending.length > 0
+          ? pending.length === 1
+            ? "1 révision pas encore envoyée."
+            : `${pending.length} révisions pas encore envoyées.`
+          : status}
+      </p>
+      {pending.length > 0 || links.length > 0 ? (
+        <div className="actions">
+          <button
+            type="button"
+            className="button primary"
+            disabled={pending.length === 0}
+            onClick={() => {
+              const popup = prepareIssueWindow();
+              void (async () => {
+                const cards: ReviewStateFile["cards"] = {};
+                for (const item of pending) {
+                  const stored = state.cards[item.card_id];
+                  if (stored) cards[item.card_id] = stored;
+                }
+                const next = await buildIssueLinks({
+                  type: "revisions",
+                  lesson_id: null,
+                  date: today,
+                  human: pending
+                    .map((item) => {
+                      const label = GRADES.find((gradeItem) => gradeItem.id === item.grade)?.label ?? item.grade;
+                      return `- ${item.card_id} : ${label}`;
+                    })
+                    .join("\n"),
+                  grades: pending,
+                  cards,
+                });
+                const when = new Date().toISOString();
+                markSent(`revisions:${today}`, when);
+                onSent(next, when);
+                openFirstIssue(next, popup);
+              })();
+            }}
+          >
+            Envoyer au précepteur
+          </button>
+        </div>
+      ) : null}
+      {sentAt ? <p className="hint">Envoyé le {formatStamp(sentAt)}.</p> : null}
+      {links.map((link) => (
+        <p key={link.part}>
+          <a href={link.url} target="_blank" rel="noopener noreferrer">
+            {link.parts > 1 ? `Ouvrir la partie ${link.part}/${link.parts}` : "Ouvrir sur GitHub"}
+          </a>
+        </p>
+      ))}
+    </>
+  );
+}
 
 const GRADES: { id: GradeName; label: string }[] = [
   { id: "again", label: "À revoir" },
@@ -14,15 +92,17 @@ const GRADES: { id: GradeName; label: string }[] = [
 ];
 
 export function Revisions() {
-  const { queue, plan, status, ready, state, grade } = useReviews();
+  const { queue, plan, status, ready, state, grade, today, pending, markReviewsSent } = useReviews();
   const [text, setText] = useState("");
+  const [links, setLinks] = useState<IssueLink[]>([]);
+  const [sentAt, setSentAt] = useState<string | null>(() => readSentMap()[`revisions:${today}`] ?? null);
   const [skipped, setSkipped] = useState(false);
   const [revealed, setRevealed] = useState(false);
   const [busy, setBusy] = useState(false);
   const gradesRef = useRef<HTMLDivElement>(null);
   const currentId = queue[0];
   const card = catalog.cards.find((item) => item.id === currentId);
-  const stored = currentId ? state.cards[currentId] : undefined;
+  const stored = currentId ? (state.cards[currentId] ?? emptyStored(new Date(), new Date().toISOString())) : undefined;
 
   useEffect(() => {
     setText("");
@@ -62,9 +142,19 @@ export function Revisions() {
             ? "Aucune carte n'arrive à échéance aujourd'hui."
             : `${plan.deferred} carte${plan.deferred > 1 ? "s" : ""} reste${plan.deferred > 1 ? "nt" : ""} pour un autre jour. Le plafond est de 8.`}
         </p>
-        <p className="hint" role="status">
-          {status}
-        </p>
+        <SendReviews
+          pending={pending}
+          state={state}
+          today={today}
+          status={status}
+          links={links}
+          sentAt={sentAt}
+          onSent={(next, when) => {
+            setLinks(next);
+            setSentAt(when);
+            markReviewsSent();
+          }}
+        />
       </article>
     );
   }
@@ -124,9 +214,19 @@ export function Revisions() {
           </div>
         ) : null}
       </section>
-      <p className="hint" role="status">
-        {readToken() ? status : "Sans jeton, la note reste sur cet appareil jusqu'à la synchronisation."}
-      </p>
+      <SendReviews
+        pending={pending}
+        state={state}
+        today={today}
+        status={status}
+        links={links}
+        sentAt={sentAt}
+        onSent={(next, when) => {
+          setLinks(next);
+          setSentAt(when);
+          markReviewsSent();
+        }}
+      />
       </article>
   );
 }

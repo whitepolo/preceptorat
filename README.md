@@ -4,41 +4,33 @@ Leçon du jour, révisions espacées, dialogue avec Schopen. Une application pou
 
 Adresse, une fois le site publié : <https://whitepolo.github.io/preceptorat/>
 
-Le dépôt est public. Les leçons sont dans le code. Tes réponses et tes notes de révision partent vers GitHub seulement si tu colles un jeton. Ce jeton reste dans le navigateur.
+Le dépôt est public. Les leçons sont dans le code. Tes réponses et tes notes restent sur l'appareil, puis partent vers GitHub quand tu ouvres un lien déjà rempli et que tu appuies sur Submit.
 
 ## Installer sur le téléphone
 
 1. Ouvre l'adresse ci-dessus dans Safari (iPhone) ou Chrome (Android).
 2. iPhone : bouton Partager, puis « Sur l'écran d'accueil ».
 3. Android : menu du navigateur, puis « Installer l'application » ou « Ajouter à l'écran d'accueil ».
-4. Ouvre ensuite Préceptorat depuis l'icône. La leçon du jour reste lisible sans réseau après la première visite. L'envoi des réponses et la synchronisation demandent le réseau.
+4. Ouvre ensuite Préceptorat depuis l'icône. La leçon du jour et tes brouillons restent lisibles sans réseau après la première visite.
 
-Sur un ordinateur, la même adresse suffit. Le téléphone et l'ordinateur se rejoignent par le fichier de révisions du dépôt, dès que le jeton est en place des deux côtés.
+Sur un ordinateur, la même adresse suffit. Le téléphone et l'ordinateur se rejoignent quand Schopen a déposé l'état des révisions dans le dépôt, ou par le fichier JSON des Réglages.
 
-## Le jeton, une fois par appareil
+## Envoyer au précepteur
 
-La page de GitHub est en anglais. Les mots entre guillemets sont les libellés exacts.
+1. Termine la leçon, un message du Dialogue, ou une séance de révisions.
+2. Appuie sur « Envoyer au précepteur ». GitHub s'ouvre, titre et texte déjà écrits.
+3. Tu es connecté à GitHub sur l'appareil : appuie seulement sur Submit.
 
-1. Ouvre <https://github.com/settings/personal-access-tokens/new>.
-2. « Token name » : Préceptorat.
-3. « Expiration » : choisis une durée.
-4. « Repository access » : « Only select repositories », puis sélectionne « preceptorat ».
-5. « Permissions » : « Add permissions », puis « Repository permissions ».
-6. Pour « Issues », choisis « Read and write ». Le menu affiche d'abord « No access » ou « Read-only ».
-7. Pour « Contents », choisis aussi « Read and write ».
-8. « Metadata » passe tout seul à « Read-only ». C'est normal.
-9. « Generate token ». Copie le jeton, colle-le dans Réglages, puis « Tester ».
-
-Sans jeton, tu peux lire. Tu ne peux pas envoyer une réponse ni synchroniser les cartes.
+S'il n'y a pas de compte GitHub sous la main, Réglages propose « Exporter ma progression » et « Importer ».
 
 ## Les six écrans
 
-- **Accueil.** La leçon du jour seulement. Elle est visible dès qu'elle est publiée, à n'importe quelle heure. S'il n'y en a pas encore, l'écran dit qu'elle arrive à partir de 7 h, indique les révisions dues, et propose la dernière leçon s'il y en a une. La leçon se lit étape par étape. La solution reste cachée tant que tu n'as pas écrit, ou choisi « Passer ». « Envoyer mes réponses au précepteur » poste un seul commentaire. Après À retenir : Pour aller plus loin.
-- **Révisions.** Cartes dues, huit au plus, matières mélangées. Tu écris avant de voir la réponse, puis À revoir, Difficile, Correct ou Facile. L'échéancier est FSRS.
-- **Précepteur.** Le dialogue libre, et un fil par leçon. Schopen répond dans le même compte, avec une marque invisible en tête de message.
+- **Accueil.** La leçon du jour seulement. Elle est visible dès qu'elle est publiée, à n'importe quelle heure. S'il n'y en a pas encore, l'écran dit qu'elle arrive à partir de 7 h, indique les révisions dues, et propose la dernière leçon s'il y en a une. La leçon se lit étape par étape. La solution reste cachée tant que tu n'as pas écrit, ou choisi « Passer ». « Envoyer au précepteur » ouvre GitHub, déjà rempli. Après À retenir : Pour aller plus loin.
+- **Révisions.** Cartes dues, huit au plus, matières mélangées. Tu écris avant de voir la réponse, puis À revoir, Difficile, Correct ou Facile. L'échéancier est FSRS. En fin de séance, le même bouton envoie les notations pas encore déposées.
+- **Précepteur.** Le dialogue libre, et les fils des leçons. Schopen répond dans le dépôt, avec une marque invisible en tête de message.
 - **Parcours.** La semaine, les modules, les points fragiles, l'assiduité.
 - **Bibliothèque.** Leçons passées, vocabulaire, lectures primaires et secondaires.
-- **Réglages.** Jeton, thème clair ou sombre, essai de connexion.
+- **Réglages.** Apparence, rappel de l'envoi, export et import de la progression.
 
 ## Pour publier le site
 

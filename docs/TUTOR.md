@@ -9,7 +9,7 @@ One-time setup, not done by the app:
 1. Repository Settings, Pages, source: GitHub Actions.
 2. Repository secrets `PRECEPTEUR_WEBHOOK_URL` and `PRECEPTEUR_WEBHOOK_AUTH`. The auth secret is sent verbatim as the `Authorization` header. If either secret is missing, the workflow skips and does not fail. The workflow never prints the secrets.
 
-His fine-grained token (stored only in his browser) needs Issues read/write and Contents read/write on this repository only. You do not commit that token.
+He does not use a token. The app only reads the public repository. To write, it opens a prefilled new-issue URL. He presses Submit while logged in to GitHub. Do not put a webhook URL or a secret in the repository.
 
 ## Publish a lesson
 
@@ -32,39 +32,55 @@ Append objects to `content/cartes.json`. Required fields: `id` (`LAT-026`), `sub
 
 Do not hand-edit scheduling for a card that already exists in `content/etat/revisions.json`. The app creates a new FSRS card the first time it sees an id that has no state. New cards are due the day after `created`. The scheduler is ts-fsrs (FSRS-6 as shipped by the library), requested retention 0.9, fuzz off, short-term steps on, maximum interval 365 days. Grades: Again, Hard, Good, Easy, shown as À revoir, Difficile, Correct, Facile.
 
-## Reply
+## Handle an issue he opened
 
-Same GitHub account as the messages he posts. The app tells your comments from his by a hidden marker on the first line, not by the author login.
+He always opens a new issue. There is no prefilled comment. Titles:
+
+- `Réponses <lesson_id>`, label `reponses` when GitHub kept it
+- `Dialogue`, label `dialogue`
+- `Révisions <date>`, label `revisions`
+
+If the text is long, the title ends with ` (1/2)`, ` (2/2)`, and so on. Create the three labels once (`reponses`, `dialogue`, `revisions`) so they stick. An unknown label is dropped by GitHub; the issue still opens.
+
+The body always starts with `<!-- sebastien -->`. Then a readable Markdown part. Then a fenced `json` block. For a plain issue the JSON is the machine object. If the first line under the marker says the JSON is deflate then base64, the object is `{ "encoding": "deflate-base64", "payload": "..." }`. Inflate the payload (zlib deflate, then base64) to recover the same object.
+
+Machine object:
+
+- `type`: `reponses`, `dialogue`, or `revisions`
+- `lesson_id`: the lesson id, or null
+- `date`: the study date, or null
+- `part`, `parts`
+- `answers`: code to text, for a lesson
+- `message`: free text, for Dialogue
+- `elapsed_min`: minutes on the lesson, when present
+- `grades`: `{ "card_id", "grade", "reviewed_at" }` with grade `again`, `hard`, `good`, or `easy`
+- `cards`: FSRS state of the cards he just graded
+
+Reply on that issue. The marker must be the first non-space characters. Without it, the app shows the comment as his, and the webhook fires again.
 
 ```bash
 gh issue comment NUMBER --body "$(printf '%s\n\n%s\n' '<!-- schopen -->' 'Ta réponse, en français, en markdown.')"
 ```
 
-The marker must be the first non-space characters. Without it, the app shows the comment as his, and the webhook fires again.
+For `Réponses`, correct him in the next lesson's `correction` section. Codes match the lesson. `(sans réponse)` and `(passée)` are explicit. Do not ask him to catch up a missed day in bulk.
 
-One issue per lesson: label `leçon`, title exactly the lesson id (`2026-11-17-classiques-L1`). One general issue: label `dialogue`, title `Dialogue`. The app creates either issue on his first message if it is missing. Keep them open.
+For `Révisions`, apply each grade into `content/etat/revisions.json`:
 
-His answer comment looks like this:
+1. Read the current file on `main`.
+2. For each graded card, take the `cards` object from the issue when its `updated_at` is later than the file. If the file is later, keep the file. Same `updated_at`: keep the higher `reps`, then the later `due`, then the higher `lapses`.
+3. Drop any id that is not in `content/cartes.json`.
+4. Commit the file on `main` and close the issue.
 
-```markdown
-<!-- sebastien -->
-
-Réponses de Sébastien, leçon 2026-11-17-classiques-L1.
-Temps passé : 32 min.
-
-**R1.** ...
-```
-
-Codes match the lesson: R1 to R8, C, P1, X1, Xf, S, E1, Q, T1, T2. `(sans réponse)` and `(passée)` are explicit. Correct him in the next lesson's `correction` section. Do not ask him to catch up a missed day in bulk.
+Phone and computer both read that file on the next launch and merge the same way. A grade he has not sent yet stays on the device and wins over the file until he opens the GitHub link.
 
 ## Read his state
 
-- Answers: the lesson issue comments.
-- Review state: `content/etat/revisions.json` on `main`. The app writes it through the Contents API when a token is present. Phone and computer merge by `updated_at` per card (later write wins; equal time keeps the higher `reps`). `localStorage` is the offline cache.
-- Card text stays in `content/cartes.json`. The state file only has FSRS fields: `due`, `stability`, `difficulty`, `scheduled_days`, `reps`, `lapses`, `state` (0 new, 1 learning, 2 review, 3 relearning), `last_review`, `updated_at`.
+- Answers and grades: the issue body, then your comment.
+- Review state: `content/etat/revisions.json` on `main`. The app never writes this file. You do, from a `Révisions` issue.
+- Card text stays in `content/cartes.json`. The state file only has FSRS fields: `due`, `stability`, `difficulty`, `elapsed_days`, `scheduled_days`, `learning_steps`, `reps`, `lapses`, `state` (0 new, 1 learning, 2 review, 3 relearning), `last_review`, `updated_at`.
 - Progress notes you still edit by hand live in `content/progression.json` (one activity per study day, for the heatmap) and `content/programme.json` (position, modules). `content/bibliotheque.json` is the reading list.
 
-`legacy` on a card is the old ladder from before FSRS. It is historical. After the first app sync, trust `content/etat/revisions.json`.
+`legacy` on a card is the old ladder from before FSRS. It is historical. Trust `content/etat/revisions.json` after you commit it.
 
 ## Wake webhook
 

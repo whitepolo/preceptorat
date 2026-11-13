@@ -6,7 +6,7 @@ import sys
 import urllib.error
 import urllib.request
 
-LESSON_ID = __import__("re").compile(r"^[0-9]{4}-[0-9]{2}-[0-9]{2}-[a-z]+-L[0-9]+$")
+LESSON_ID = __import__("re").compile(r"[0-9]{4}-[0-9]{2}-[0-9]{2}-[a-z]+-L[0-9]+")
 
 
 def is_tutor(body: str) -> bool:
@@ -18,11 +18,12 @@ def lesson_id(issue: dict) -> str | None:
     labels = []
     for label in issue.get("labels") or []:
         labels.append(label.get("name") if isinstance(label, dict) else str(label))
-    if "dialogue" in labels:
+    if "dialogue" in labels or title == "Dialogue" or title.startswith("Dialogue "):
         return None
-    if LESSON_ID.match(title):
-        return title
-    return None
+    if title.startswith("Révisions"):
+        return None
+    found = LESSON_ID.search(title)
+    return found.group(0) if found else None
 
 
 def main() -> int:

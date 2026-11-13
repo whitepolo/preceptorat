@@ -1,6 +1,5 @@
 export type ThemeChoice = "system" | "light" | "dark";
 
-const TOKEN_KEY = "preceptorat.token";
 const THEME_KEY = "preceptorat.theme";
 
 const listeners = new Set<() => void>();
@@ -12,21 +11,6 @@ function emit(): void {
 export function subscribePrefs(listener: () => void): () => void {
   listeners.add(listener);
   return () => listeners.delete(listener);
-}
-
-export function readToken(): string {
-  try {
-    return localStorage.getItem(TOKEN_KEY) ?? "";
-  } catch {
-    return "";
-  }
-}
-
-export function writeToken(token: string): void {
-  const trimmed = token.trim();
-  if (trimmed) localStorage.setItem(TOKEN_KEY, trimmed);
-  else localStorage.removeItem(TOKEN_KEY);
-  emit();
 }
 
 export function readTheme(): ThemeChoice {
