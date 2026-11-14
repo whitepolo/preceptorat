@@ -18,7 +18,9 @@ He does not use a token. The app only reads the public repository. To write, it 
 3. Check locally: `npm run validate` and `npm test`.
 4. Push to `main`. The site rebuilds. The lesson appears for that calendar date (UTC+4) as soon as the deploy is live, at any time of day, and not before that date. Until then it stays out of Aujourd'hui and the library. The learner is told the lesson arrives from 7:00.
 
-Section order: rappel, correction, pré-questions, notion, exemples, regard (when used), exercices, réflexion, ticket. Solutions live on each question and stay hidden in the app until he has typed or skipped.
+Section order: rappel, correction, pré-questions, notion, exemples, regard (when used), exercices, réflexion, ticket. He answers in the app, one control per question. Do not ask him to post in a thread or to prefix a code. Worked examples show their solution at once. Every other solution stays hidden until he has answered. Skipping does not reveal it.
+
+Give each question a `response` when the control is not the inferred one. See `docs/FORMAT.md`: `court`, `long`, `choix`, `nombre`, `vrai_faux`, `ordre`, `appariement`, `prediction`, plus optional `hints`, `expected`, `choices`, `items`, `pairs`, `consigne`. A prequestion is a prediction, often with `confidence`. A reflection is a "why", type `long`. Put the answer key only in `expected`, `items`, `pairs` or `solution`. Do not invent a source or a quotation.
 
 End every new lesson with `pour_aller_plus_loin`: at least two notices, `{ "type": "primaire" or "secondaire", "reference", "note" }`. `reference` is the full citation (author, title, translator or editor, publisher, year, pages). `note` is one line on why it is worth reading. Add `citation` only when you have the exact words, and then `citation_source` (page or locus) is required. `lien` is an optional open-access or catalogue URL. Never invent a reference or a quotation. Lessons dated before 2026-11-17 may omit the array. The app shows this list as the last reading step, after À retenir, and gathers every entry in Bibliothèque.
 
@@ -62,7 +64,7 @@ Reply on that issue. The marker must be the first non-space characters. Without 
 gh issue comment NUMBER --body "$(printf '%s\n\n%s\n' '<!-- schopen -->' 'Ta réponse, en français, en markdown.')"
 ```
 
-For `Réponses`, correct him in the next lesson's `correction` section. Codes match the lesson. `(sans réponse)` and `(passée)` are explicit. Do not ask him to catch up a missed day in bulk.
+For `Réponses`, read `answers` in the JSON. Each key is a question code. The Markdown above repeats the prompt so you can read without the file. Reply on the issue. Name the code (`P1`, `E2`, `Q`) when the remark belongs to one question: the app then shows your comment under that question. A comment that names no code appears at the end of the lesson. Correct him in the next lesson's `correction` section. `(sans réponse)` and `(passée)` are explicit. Do not ask him to catch up a missed day in bulk.
 
 For `Révisions`, apply each grade into `content/etat/revisions.json`:
 

@@ -44,6 +44,23 @@ const KIND_BY_SECTION = {
 };
 
 const DASH = /[\u2014\u2013]/;
+const THREAD_INSTRUCTION = /fil de discussion|réponds dans le fil|précéder chaque réponse|fais précéder|code de la question/i;
+
+function findInstructions(value, path = "$") {
+  const hits = [];
+  if (typeof value === "string") {
+    if (THREAD_INSTRUCTION.test(value)) hits.push(path);
+    return hits;
+  }
+  if (Array.isArray(value)) {
+    value.forEach((item, index) => hits.push(...findInstructions(item, `${path}[${index}]`)));
+    return hits;
+  }
+  if (value && typeof value === "object") {
+    for (const [key, item] of Object.entries(value)) hits.push(...findInstructions(item, `${path}.${key}`));
+  }
+  return hits;
+}
 
 export function findDashes(value, path = "$") {
   const hits = [];
@@ -121,6 +138,16 @@ export function validateLesson(lesson, filename) {
       if (questions.length !== 1) errors.push("la section regard a une seule question, de code S");
     }
     for (const question of questions) {
+      const response = question.response;
+      if (response?.type === "choix" && response.choices && typeof response.expected === "string" && !response.choices.includes(response.expected)) {
+        errors.push(`${question.code} : la réponse attendue n'est pas parmi les choix`);
+      }
+      if (response?.type === "vrai_faux" && typeof response.expected !== "boolean") {
+        errors.push(`${question.code} : vrai ou faux attend un booléen`);
+      }
+      if (response?.type === "nombre" && typeof response.expected !== "number") {
+        errors.push(`${question.code} : un nombre attendu doit être un nombre`);
+      }
       if (codes.has(question.code)) errors.push(`code en double : ${question.code}`);
       codes.add(question.code);
       const pattern = CODE_BY_SECTION[section.id];
@@ -144,6 +171,7 @@ export function validateLesson(lesson, filename) {
     }
   }
   errors.push(...findDashes(lesson).map((path) => `tiret cadratin ou demi-cadratin dans ${path}`));
+  errors.push(...findInstructions(lesson).map((path) => `consigne de fil ou de code dans ${path}`));
   return errors;
 }
 
@@ -205,6 +233,7 @@ function walkText(dir, problems) {
     if (!/\.(tsx?|css|html)$/.test(name)) continue;
     const text = readFileSync(path, "utf8");
     if (DASH.test(text)) problems.push(`${relative(root, path)} contient un tiret cadratin ou demi-cadratin`);
+    if (THREAD_INSTRUCTION.test(text)) problems.push(`${relative(root, path)} contient une consigne de fil ou de code`);
   }
 }
 

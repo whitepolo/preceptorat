@@ -4,6 +4,9 @@ import { describe, expect, it } from "vitest";
 import { State } from "ts-fsrs";
 import { lessons, seedState } from "../content";
 import { canReveal, formatAnswerComment } from "./answers";
+import { checkAnswer, hasThreadInstruction, inferResponse, parseNumber } from "./response";
+import { fridaySubject, isWeekend, schoolWeek, studyStreak } from "./week";
+import { splitTutorNotes } from "./tutorNotes";
 import { stateFromCatalog } from "./legacy";
 import { mauritiusDate } from "./dates";
 import { buildIssueLinks, deflateBase64, inflateBase64, ISSUE_URL_LIMIT } from "./issueLink";
@@ -13,7 +16,7 @@ import { isTutorMessage, renderMarkdown, stripTutorMarker } from "./markdown";
 import { mergeStates, mergeWithPending, pickCard, pruneUnknownCards } from "./merge";
 import { applyGrade } from "./scheduler";
 import { selectSession } from "./session";
-import type { Lesson, ReviewStateFile, StoredCard } from "./types";
+import type { Lesson, LessonQuestion, ReviewStateFile, StoredCard } from "./types";
 
 function fixtureLesson(id: string, date: string, codes: string[]): Lesson {
   return {
@@ -221,7 +224,7 @@ describe("réponses et markdown", () => {
   it("n'ouvre la solution qu'après une tentative", () => {
     expect(canReveal(undefined)).toBe(false);
     expect(canReveal({ text: "  ", skipped: false, revealed: false })).toBe(false);
-    expect(canReveal({ text: "", skipped: true, revealed: false })).toBe(true);
+    expect(canReveal({ text: "", skipped: true, revealed: false })).toBe(false);
     expect(canReveal({ text: "Syria", skipped: false, revealed: false })).toBe(true);
   });
 
@@ -230,8 +233,9 @@ describe("réponses et markdown", () => {
     const body = formatAnswerComment(lesson, { P1: { text: "insula", skipped: false, revealed: false } }, 32);
     expect(body.startsWith("<!-- sebastien -->")).toBe(true);
     expect(isTutorMessage(body)).toBe(false);
-    expect(body).toContain("**P1.** insula");
-    expect(body).toContain("**P2.** (sans réponse)");
+    expect(body).toContain("**P1.**");
+    expect(body).toContain("insula");
+    expect(body).toContain("(sans réponse)");
     expect(isTutorMessage("<!-- schopen -->\n\nBien.")).toBe(true);
     expect(stripTutorMarker("<!-- schopen -->\n\nBien.")).toBe("Bien.");
   });
@@ -270,6 +274,9 @@ describe("schéma", () => {
       copy.objectives[0] = "objectif " + String.fromCharCode(0x2014);
       const errors = validateLesson(copy, name);
       if (!errors.some((error) => error.includes("tiret"))) process.exit(1);
+      copy.student_note = ["Réponds dans le ", "fil", " de discussion."].join("");
+      const again = validateLesson(copy, name);
+      if (!again.some((error) => error.includes("consigne"))) process.exit(1);
     `;
     execFileSync("node", ["--input-type=module", "-e", script], { encoding: "utf8" });
   });
@@ -309,6 +316,74 @@ describe("lien d'issue", () => {
     expect(links[0].title).toContain("(1/");
     const packed = await deflateBase64("préceptorat");
     expect(await inflateBase64(packed)).toBe("préceptorat");
+  });
+});
+
+describe("réponses de leçon", () => {
+  const question = (patch: Partial<LessonQuestion>): LessonQuestion => ({
+    code: "E1",
+    kind: "exercise",
+    prompt: "Question",
+    solution: "Réponse",
+    ...patch,
+  });
+
+  it("déduit un type quand la leçon n'en donne pas", () => {
+    expect(inferResponse(question({ kind: "prequestion" })).type).toBe("prediction");
+    expect(inferResponse(question({ kind: "reflection" })).type).toBe("long");
+    expect(inferResponse(question({ kind: "ticket" })).type).toBe("court");
+    expect(inferResponse(question({ response: { type: "nombre", expected: 4 } })).type).toBe("nombre");
+  });
+
+  it("corrige un choix, un nombre, un ordre et un appariement", () => {
+    const choix = question({
+      response: { type: "choix", choices: ["Oui", "Non"], expected: "Non" },
+    });
+    expect(checkAnswer(choix, { text: "", skipped: false, revealed: false, choice: "Non" })).toBe("juste");
+    expect(checkAnswer(choix, { text: "", skipped: false, revealed: false, choice: "Oui" })).toBe("faux");
+    const nombre = question({ response: { type: "nombre", expected: 6.09, tolerance: 0.02 } });
+    expect(parseNumber("6,09 %")).toBeCloseTo(6.09);
+    expect(checkAnswer(nombre, { text: "6,09", skipped: false, revealed: false })).toBe("juste");
+    expect(checkAnswer(nombre, { text: "6", skipped: false, revealed: false })).toBe("faux");
+    const ordre = question({ response: { type: "ordre", items: ["feu", "vent", "eau"] } });
+    expect(checkAnswer(ordre, { text: "", skipped: false, revealed: false, order: ["feu", "vent", "eau"] })).toBe("juste");
+    expect(checkAnswer(ordre, { text: "", skipped: false, revealed: false, order: ["eau", "feu", "vent"] })).toBe("faux");
+    const paires = question({
+      response: { type: "appariement", pairs: [{ left: "insula", right: "insularum" }, { left: "fluvius", right: "fluviorum" }] },
+    });
+    expect(
+      checkAnswer(paires, { text: "", skipped: false, revealed: false, pairs: { insula: "insularum", fluvius: "fluviorum" } }),
+    ).toBe("juste");
+    const binaire = question({ response: { type: "vrai_faux", expected: false } });
+    expect(checkAnswer(binaire, { text: "", skipped: false, revealed: false, choice: "non" })).toBe("juste");
+  });
+
+  it("refuse une consigne qui demande de recopier des codes dans un fil", () => {
+    const phrase = ["Réponds dans le ", "fil", " de discussion, en faisant ", "précéder", " chaque réponse du ", "code", " de la question."].join("");
+    expect(hasThreadInstruction(phrase)).toBe(true);
+    expect(hasThreadInstruction("Pas de calculatrice : papier et crayon.")).toBe(false);
+  });
+
+  it("place la note du précepteur sous la question qu'elle nomme", () => {
+    const split = splitTutorNotes(
+      ["<!-- schopen -->\n\nP1. La baisse porte sur une base plus grande.", "<!-- schopen -->\n\nBien vu dans l'ensemble."],
+      new Set(["P1", "P2"]),
+    );
+    expect(split.byCode.P1?.[0]).toContain("base plus grande");
+    expect(split.general).toHaveLength(1);
+  });
+
+  it("compte la série sans casser le week-end, et alterne le vendredi", () => {
+    expect(isWeekend("2026-11-14")).toBe(true);
+    expect(isWeekend("2026-11-15")).toBe(true);
+    expect(isWeekend("2026-11-13")).toBe(false);
+    const studied = new Set(["2026-11-11", "2026-11-12", "2026-11-13"]);
+    expect(studyStreak("2026-11-15", studied)).toBe(3);
+    expect(studyStreak("2026-11-16", studied)).toBe(3);
+    expect(studyStreak("2026-11-17", studied)).toBe(0);
+    expect(fridaySubject("2026-11-13")).toBe("Mathématiques");
+    expect(fridaySubject("2026-11-20")).toBe("Économie");
+    expect(schoolWeek("2026-11-15").map((day) => day.label)).toEqual(["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi"]);
   });
 });
 

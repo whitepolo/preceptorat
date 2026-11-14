@@ -26,7 +26,7 @@ Required:
 | duration_min | `{ "min": 30, "max": 45 }`, min not above max |
 | lang | `"fr"` |
 | objectives | 2 to 4 strings |
-| student_note | Tell him to answer in the thread, with the codes, before reading a solution |
+| student_note | One practical line (material, pace). Never tell him to post in a thread or to prefix a code. The app attaches each answer to its question. |
 | sections | See the order below |
 | retenir | 4 to 6 sentences, no question |
 | mot_du_jour | `{ "code": "M", "terme", "texte" }` |
@@ -52,7 +52,24 @@ Ids, in this order. A section may be omitted. It may not move earlier than a sec
 | reflexion | Question de réflexion | Q | reflection |
 | ticket | Ticket de sortie | T1, T2 | ticket |
 
-A question always has `code`, `kind`, `prompt`, `solution`. Prompts and solutions are Markdown. The app escapes raw HTML.
+A question always has `code`, `kind`, `prompt`, `solution`. Prompts and solutions are Markdown. The app escapes raw HTML. The code is internal: he never types it. Do not write "réponds dans le fil" or "fais précéder du code" anywhere in the lesson. The validator rejects those phrases.
+
+Optional `response` chooses the answer control. If you omit it, the app infers one: `prediction` for a prequestion, `long` for reflection, feedback and secondary, `court` otherwise.
+
+| `response.type` | Control | Required extra fields |
+| --- | --- | --- |
+| `court` | Short text | |
+| `long` | Paragraph, including a "why" question | |
+| `choix` | One of several choices. Corrected at once. | `choices`, `expected` (one of the choices) |
+| `nombre` | A number. Corrected at once. Comma or dot. | `expected` (number), optional `tolerance` |
+| `vrai_faux` | Oui or Non. Corrected at once. | `expected` (`true` means Oui) |
+| `ordre` | Reorder. `items` is the correct order. The app shuffles. | `items` |
+| `appariement` | Match each left to a right. | `pairs`: `{ "left", "right" }` |
+| `prediction` | A guess before the reading, with a confidence mark | optional `confidence: true` |
+
+Also optional: `consigne` (one line above the control), `hints` (revealed one at a time), `explanation` (shown with the automatic correction; otherwise `solution` is used).
+
+Worked examples (`kind: worked`) show the solution immediately. Guided questions (`kind: complete`) may carry hints. Other questions hide the correction until he has answered. Skipping does not open it. After an open answer he marks Juste, Partiel or Faux. A rappel question with `card_id` sends that mark into FSRS.
 
 `card_id` (`LAT-025`) is allowed only on rappel questions, when the prompt comes from a card.
 
@@ -67,7 +84,8 @@ A question always has `code`, `kind`, `prompt`, `solution`. Prompts and solution
   "edition": "A. R. George, The Babylonian Gilgamesh Epic, Oxford University Press, 2003.",
   "translator": "traduction de travail, pour cette leçon, d'après l'édition citée",
   "lang": "fr",
-  "text": "Texte de l'extrait.",
+  "text": "Traduction française.",
+  "original": "Texte source, s'il est libre ou établi par toi.",
   "close_reading": "Lecture suivie, en Markdown."
 }
 ```
@@ -78,7 +96,7 @@ Cite a scholarly or primary source. If a French translation is still in copyrigh
 
 The prompts of X1 and X2 already contain the worked model. Xf, and every other question he must do, keeps the solution only in `solution`.
 
-The app shows the lesson one step at a time. Each question has an answer field. The solution stays hidden until he types or skips. À retenir and the word of the day have no solution button. The last reading step after À retenir is Pour aller plus loin.
+The app shows one section at a time, with a progress bar, and resumes on the saved step. There is also an overview. À retenir, Pour aller plus loin and the word of the day come before a final summary, where he sends the answers already tied to each question.
 
 ### Pour aller plus loin
 
@@ -172,10 +190,12 @@ A long body is split. Titles then end with ` (1/2)`, ` (2/2)`.
 Body, in this order:
 
 1. First line: `<!-- sebastien -->`
-2. Readable Markdown (codes as `**P1.** text`, or one line per grade).
+2. Readable Markdown. For a lesson, each answer is a heading `**CODE.**` plus the first line of the prompt, then his answer. He did not type the code: the app wrote it. Then, when present, confidence and the mark `juste`, `partiel` or `faux`.
 3. Optional line, only when the JSON is packed: `Machine : le JSON qui suit est compressé en deflate puis encodé en base64.`
 4. A fenced `json` block. Plain form is the machine object. Packed form is `{ "encoding": "deflate-base64", "payload": "<base64>" }`. Inflate with zlib deflate, then decode base64, to get the same object.
 
 Machine fields: `type` (`reponses`, `dialogue`, `revisions`), `lesson_id`, `date`, `part`, `parts`, and when relevant `answers`, `message`, `elapsed_min`, `grades` (`card_id`, `grade`, `reviewed_at`), `cards` (FSRS state).
 
-Your reply starts with `<!-- schopen -->`. Older lesson threads titled with the lesson id and label `leçon` may still exist. New sends do not append to them.
+`answers` is an object keyed by question code (`P1`, `E1`, `Q`). The value is the text, the chosen option, the ordered list joined by ` puis `, or the pairs `left : right`. Read this object. Do not ask him to retype anything.
+
+Your reply starts with `<!-- schopen -->`. If the comment names a question code (`P1`, `E2`, `Q`...), the app shows it under that question. Otherwise it shows the comment at the end of the lesson. Older lesson threads titled with the lesson id and label `leçon` may still exist. New sends do not append to them.

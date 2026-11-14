@@ -15,6 +15,26 @@ export interface DurationMin {
   max: number;
 }
 
+export type ResponseType = "court" | "long" | "choix" | "nombre" | "vrai_faux" | "ordre" | "appariement" | "prediction";
+
+export interface ResponsePair {
+  left: string;
+  right: string;
+}
+
+export interface QuestionResponse {
+  type: ResponseType;
+  consigne?: string;
+  choices?: string[];
+  items?: string[];
+  pairs?: ResponsePair[];
+  expected?: string | number | boolean | string[];
+  tolerance?: number;
+  explanation?: string;
+  hints?: string[];
+  confidence?: boolean;
+}
+
 export interface LessonQuestion {
   code: string;
   kind:
@@ -31,6 +51,7 @@ export interface LessonQuestion {
   prompt: string;
   solution: string;
   card_id?: string;
+  response?: QuestionResponse;
 }
 
 export interface Excerpt {
@@ -40,6 +61,7 @@ export interface Excerpt {
   translator?: string;
   lang?: string;
   text: string;
+  original?: string;
   close_reading?: string;
 }
 
@@ -156,10 +178,21 @@ export interface ReviewStateFile {
 
 export type GradeName = "again" | "hard" | "good" | "easy";
 
+export type ConfidenceLevel = "devine" | "peu" | "assez" | "sur";
+export type SelfJudgment = "juste" | "partiel" | "faux";
+
 export interface DraftAnswer {
   text: string;
   skipped: boolean;
   revealed: boolean;
+  choice?: string;
+  order?: string[];
+  pairs?: Record<string, string>;
+  confidence?: ConfidenceLevel;
+  judgment?: SelfJudgment;
+  hints?: number;
+  auto?: "juste" | "faux";
+  graded?: boolean;
 }
 
 export interface Activity {
