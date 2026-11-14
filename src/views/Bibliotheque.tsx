@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import { catalog, lessons, library } from "../content";
 import { MarkdownView } from "../components/MarkdownView";
 import { formatLongDate } from "../lib/dates";
-import { pastLessons } from "../lib/lessons";
+import { lessonHash, loadLessonReadState, pastLessons } from "../lib/lessons";
 import type { Lesson } from "../lib/types";
 import { useReviews } from "../state";
 
@@ -76,15 +76,24 @@ export function Bibliotheque() {
           </label>
           {filteredLessons.length === 0 ? <p>Aucune leçon ne correspond.</p> : null}
           <ul className="catalog">
-            {filteredLessons.map((lesson) => (
-              <li key={lesson.id}>
-                <p className="kicker">{lesson.subject_label}</p>
-                <h2>{lesson.title}</h2>
-                <p className="meta">{formatLongDate(lesson.date)}</p>
-                <p>Mot du jour : {lesson.mot_du_jour.terme}</p>
-                <a href={`#/precepteur/${encodeURIComponent(lesson.id)}`}>Fil de la leçon</a>
-              </li>
-            ))}
+            {filteredLessons.map((lesson) => {
+              const progress = loadLessonReadState(lesson);
+              return (
+                <li key={lesson.id} className="lesson-card">
+                  <a className="lesson-card-hit" href={lessonHash(lesson.id)}>
+                    <p className="kicker">{lesson.subject_label}</p>
+                    <h2>{lesson.title}</h2>
+                    <p className="meta">{formatLongDate(lesson.date)}</p>
+                    <p>Mot du jour : {lesson.mot_du_jour.terme}</p>
+                    <p className="pill">{progress.label}</p>
+                    <span className="button primary">Ouvrir la leçon</span>
+                  </a>
+                  <a className="lesson-thread" href={`#/precepteur/${encodeURIComponent(lesson.id)}`}>
+                    Fil de la leçon
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </section>
       ) : null}
