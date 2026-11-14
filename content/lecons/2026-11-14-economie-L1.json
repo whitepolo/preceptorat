@@ -1,0 +1,367 @@
+{
+  "schema_version": "1.0",
+  "id": "2026-11-14-economie-L1",
+  "title": "2026-11-14 · Économie · Leçon 1 : Rareté, choix et coût d'opportunité",
+  "date": "2026-11-14",
+  "weekday": "samedi",
+  "subject": "economie",
+  "subject_label": "Économie",
+  "lesson_number": 1,
+  "module": {
+    "id": "eco-1",
+    "title": "Intuition économique"
+  },
+  "duration_min": {
+    "min": 35,
+    "max": 45
+  },
+  "lang": "fr",
+  "objectives": [
+    "Énoncer la définition de l'économie de Robbins (1932) et ses trois conditions : fins multiples, moyens rares, usages alternatifs.",
+    "Calculer un coût d'opportunité comme la valeur nette de la meilleure option abandonnée, temps compris.",
+    "Appliquer le raisonnement de Bastiat (ce qu'on voit, ce qu'on ne voit pas) à un cas nouveau en nommant l'option invisible.",
+    "Distinguer ce qui entre dans un coût d'opportunité de ce qui n'y entre pas (une dépense faite dans tous les cas)."
+  ],
+  "prerequisites": [
+    "Pourcentages et coefficients multiplicateurs (Mathématiques L1)."
+  ],
+  "student_note": "Réponds dans le fil de discussion, en faisant précéder chaque réponse du code de la question (R1, P1, E1, Xf, S, Q, T1...). Ne lis une solution qu'après avoir répondu.",
+  "sources": [
+    {
+      "type": "primary",
+      "cite": "Lionel Robbins, An Essay on the Nature and Significance of Economic Science, Londres, Macmillan, 1932, p. 15."
+    },
+    {
+      "type": "primary",
+      "cite": "Frédéric Bastiat, Ce qu'on voit et ce qu'on ne voit pas (juillet 1850), introduction et chap. I, « La vitre cassée », dans Œuvres complètes de Frédéric Bastiat, t. V, Paris, Guillaumin, 1854."
+    },
+    {
+      "type": "secondary",
+      "cite": "Paul J. Ferraro et Laura O. Taylor, « Do Economists Recognize an Opportunity Cost When They See One? A Dismal Performance from the Dismal Science », Contributions to Economic Analysis & Policy, 4 (1), 2005, article 7, doi:10.2202/1538-0645.1469."
+    },
+    {
+      "type": "secondary",
+      "cite": "Roger E. Backhouse et Steven G. Medema, « Defining Economics: The Long Road to Acceptance of the Robbins Definition », Economica, 76, supplément 1, 2009, doi:10.1111/j.1468-0335.2009.00789.x."
+    },
+    {
+      "type": "method",
+      "cite": "J. Dunlosky et al., « Improving Students' Learning With Effective Learning Techniques », Psychological Science in the Public Interest, 14 (1), 2013, p. 4-58 (rappel espacé, pratique entrelacée)."
+    }
+  ],
+  "sections": [
+    {
+      "id": "rappel",
+      "title": "Rappel",
+      "duration_min": {
+        "min": 8,
+        "max": 10
+      },
+      "body": "Huit cartes dues aujourd'hui, mathématiques, philosophie et latin mélangés. Réponds de mémoire, sans regarder, puis note-toi dans l'application. Les cartes de vocabulaire *filius* et *filia* attendent encore leur première révision seule.",
+      "questions": [
+        {
+          "code": "R1",
+          "kind": "recall",
+          "prompt": "Comment divise-t-on par une fraction ? Calcule 3/4 ÷ 9/8.",
+          "solution": "On multiplie par son inverse : 3/4 × 8/9 = 24/36 = 2/3.",
+          "card_id": "MAT-001"
+        },
+        {
+          "code": "R2",
+          "kind": "recall",
+          "prompt": "Par quelle chaîne d'auteurs connaissons-nous surtout les Milésiens ?",
+          "solution": "Aristote (IVe s. av. J.-C.), puis son élève Théophraste (Opinions des physiciens, perdu, début de la doxographie), puis des commentateurs tardifs comme Simplicius (VIe s. apr. J.-C.), qui cite Théophraste.",
+          "card_id": "PHI-002"
+        },
+        {
+          "code": "R3",
+          "kind": "recall",
+          "prompt": "Un prix augmente de 10 %, puis baisse de 10 %. Variation totale, et pourquoi ?",
+          "solution": "1,1 × 0,9 = 0,99, soit − 1 %. Les variations successives se multiplient : la baisse porte sur une base plus grande.",
+          "card_id": "MAT-004"
+        },
+        {
+          "code": "R4",
+          "kind": "recall",
+          "prompt": "La forme *insulae* peut correspondre à deux cas. Lesquels, et comment les distinguer ?",
+          "solution": "Nominatif pluriel (« les îles ») ou génitif singulier (« de l'île »). On distingue grâce au verbe (*sunt* ou *est*), à l'accord d'un adjectif, et à la fonction dans la phrase.",
+          "card_id": "LAT-005"
+        },
+        {
+          "code": "R5",
+          "kind": "recall",
+          "prompt": "Un objet coûte 60 € TTC avec une TVA de 20 %. Prix hors taxe, et quelle erreur éviter ?",
+          "solution": "60 / 1,2 = 50 €. On divise par le coefficient ; retirer 20 % de 60 € (48 €) est faux, car les 20 % portent sur le prix hors taxe.",
+          "card_id": "MAT-005"
+        },
+        {
+          "code": "R6",
+          "kind": "recall",
+          "prompt": "Pourquoi, selon Anaximandre (Aristote, Du ciel II 13), la terre ne tombe-t-elle pas ?",
+          "solution": "Elle est au centre, à égale distance de tout, et n'a aucune raison d'aller d'un côté plutôt que d'un autre : elle reste en place par équilibre, sans appui. Cela corrige la thèse de Thalès (sur quoi reposerait l'eau ?).",
+          "card_id": "PHI-006"
+        },
+        {
+          "code": "R7",
+          "kind": "recall",
+          "prompt": "Que valent a⁰ et a⁻ⁿ (a non nul), et pourquoi ?",
+          "solution": "a⁰ = 1 et a⁻ⁿ = 1/aⁿ, pour que la règle aᵐ × aⁿ = aᵐ⁺ⁿ reste vraie (a⁰ × aⁿ = aⁿ ; a⁻ⁿ × aⁿ = a⁰ = 1).",
+          "card_id": "MAT-007"
+        },
+        {
+          "code": "R8",
+          "kind": "recall",
+          "prompt": "Donne le génitif singulier de *insula*, *fluvius* et *oppidum*.",
+          "solution": "*insulae*, *fluvii*, *oppidi*.",
+          "card_id": "LAT-003"
+        }
+      ]
+    },
+    {
+      "id": "prequestions",
+      "title": "Pré-questions",
+      "duration_min": {
+        "min": 1,
+        "max": 2
+      },
+      "body": "Réponds avant le cours, même au hasard. Se tromper ici aide à mieux retenir ensuite.",
+      "questions": [
+        {
+          "code": "P1",
+          "kind": "prequestion",
+          "prompt": "On t'offre une place de concert gratuite, non revendable. Aller à ce concert te coûte-t-il quelque chose ? Pourquoi ?",
+          "solution": "Oui, en général : tu renonces à la meilleure autre façon de passer la soirée. Si cette autre option t'aurait apporté un gain net (par exemple un autre concert qui vaut 50 $ pour toi et coûte 40 $, soit 10 $ net), c'est ce gain net que tu sacrifies. Le prix nul n'est pas un coût nul."
+        },
+        {
+          "code": "P2",
+          "kind": "prequestion",
+          "prompt": "Une tempête brise des milliers de vitres dans une ville. Les vitriers ont du travail pour des mois. La ville s'est-elle enrichie ?",
+          "solution": "Non. L'activité des vitriers est visible, mais l'argent dépensé pour remplacer les vitres aurait été dépensé ailleurs (souliers, livres...). La ville a dépensé pour revenir à l'état d'avant : elle a perdu la valeur des vitres détruites. C'est l'argument de Bastiat (1850)."
+        }
+      ]
+    },
+    {
+      "id": "cours",
+      "title": "Notion du jour",
+      "duration_min": {
+        "min": 10,
+        "max": 12
+      },
+      "body": "### N1. La rareté : pourquoi il faut choisir\n\nTu disposes chaque jour de 24 heures, d'un revenu limité, d'une attention limitée. Tes fins, elles, sont nombreuses : étudier, travailler, dormir, voir des amis, lire. Une heure donnée au latin n'est plus disponible pour les mathématiques. Voilà le point de départ de toute l'économie.\n\nEn 1932, l'économiste britannique Lionel Robbins (London School of Economics) en a tiré la définition devenue classique : « Economics is the science which studies human behaviour as a relationship between ends and scarce means which have alternative uses » (*An Essay on the Nature and Significance of Economic Science*, Londres, Macmillan, 1932, p. 15). Soit, en traduction de travail : « L'économie est la science qui étudie le comportement humain comme une relation entre des fins et des moyens rares qui ont des usages alternatifs. »\n\nTrois conditions, toutes nécessaires :\n\n1. **des fins multiples**, que l'on peut classer par ordre d'importance ;\n2. **des moyens rares**, c'est-à-dire insuffisants pour satisfaire toutes ces fins à la fois ;\n3. **des usages alternatifs** : le même moyen (une heure, un euro, un champ) peut servir à plusieurs fins.\n\nRare ne veut pas dire « très rare » : cela veut dire « moins abondant que ce que l'on voudrait en faire ». L'air que tu respires en forêt n'est pas rare en ce sens : en prendre plus ne prive personne. Les économistes l'appellent un *bien libre*. Un bien rare est un *bien économique*.\n\nRemarque décisive : la définition de Robbins ne délimite pas un domaine (l'argent, l'industrie, le commerce), mais un **aspect** de tout comportement. Dès qu'il y a des moyens rares à répartir entre des fins, il y a une question économique, même sans un seul euro en jeu.\n\n### N2. Le coût d'opportunité\n\nPuisque choisir une option, c'est renoncer aux autres, le vrai coût d'un choix n'est pas seulement ce que l'on paie : c'est ce à quoi l'on renonce.\n\n**Définition.** Le coût d'opportunité d'un choix est la valeur de la **meilleure** option à laquelle on renonce, mesurée **nette** de ce qu'elle aurait elle-même coûté.\n\nTrois précisions :\n\n- **la meilleure seulement**, et non la somme de toutes les options abandonnées : tu n'aurais pu en réaliser qu'une ;\n- **nette** : si l'option abandonnée t'aurait apporté 50 € de satisfaction et coûté 40 €, tu renonces à 10 € de gain net ;\n- **le temps compte** : une heure a un coût d'opportunité, même quand on ne paie rien.\n\nLe tableau ci-contre montre la méthode : lister les options, calculer le gain net de chacune, repérer la meilleure option *autre que celle choisie*.\n\n### N3. Ce qu'on voit et ce qu'on ne voit pas\n\nFrédéric Bastiat (1801-1850), économiste et député français, publie en juillet 1850 son dernier pamphlet, *Ce qu'on voit et ce qu'on ne voit pas*. Il y met en scène, sans le mot, le coût d'opportunité. Un enfant casse une vitre ; les voisins consolent le père : au moins, cela fait travailler le vitrier. Bastiat répond par l'extrait ci-dessous.\n\n### N4. Lien avec ce que tu sais déjà\n\nVendredi, tu as appris à calculer des pourcentages et des coefficients multiplicateurs. Ils serviront tout de suite : un coût d'opportunité se calcule souvent à partir d'un prix remisé, d'un salaire horaire, d'un taux. Et le principe jeudi des Milésiens, chercher ce qui est caché derrière ce qui apparaît, n'est pas si loin de Bastiat : l'économiste cherche l'effet invisible derrière l'effet visible.",
+      "excerpt": {
+        "work": "Frédéric Bastiat, Ce qu'on voit et ce qu'on ne voit pas (1850)",
+        "locus": "introduction, et chap. I, « La vitre cassée » (extraits)",
+        "edition": "Œuvres complètes de Frédéric Bastiat, t. V, Sophismes économiques et petits pamphlets II, Paris, Guillaumin, 1854 ; texte numérisé et validé sur Wikisource.",
+        "translator": "texte original français",
+        "lang": "fr",
+        "text": "Dans la sphère économique, un acte, une habitude, une institution, une loi n’engendrent pas seulement un effet, mais une série d’effets. De ces effets, le premier seul est immédiat ; il se manifeste simultanément avec sa cause, on le voit. Les autres ne se déroulent que successivement, on ne les voit pas ; heureux si on les prévoit.\n\nEntre un mauvais et un bon Économiste, voici toute la différence : l’un s’en tient à l’effet visible ; l’autre tient compte et de l’effet qu’on voit et de ceux qu’il faut prévoir.\n\n(Introduction)\n\n[...] Le vitrier va venir, il fera besogne, touchera six francs, se frottera les mains et bénira dans son cœur l’enfant terrible. C’est ce qu’on voit. [...]\n\nOn ne voit pas que, puisque notre bourgeois a dépensé six francs à une chose, il ne pourra plus les dépenser à une autre. On ne voit pas que s’il n’eût pas eu de vitre à remplacer, il eût remplacé, par exemple, ses souliers éculés ou mis un livre de plus dans sa bibliothèque. Bref, il aurait fait de ses six francs un emploi quelconque qu’il ne fera pas.\n\n[...] Dans la première hypothèse, celle de la vitre cassée, il dépense six francs, et a, ni plus ni moins que devant, la jouissance d’une vitre.\n\nDans la seconde, celle où l’accident ne fût pas arrivé, il aurait dépensé six francs en chaussure et aurait eu tout à la fois la jouissance d’une paire de souliers et celle d’une vitre.\n\n(chap. I, « La vitre cassée »)",
+        "close_reading": "Bastiat oppose deux comptes. Le compte visible ne suit que le vitrier : six francs gagnés. Le compte complet suit les six francs eux-mêmes : dépensés pour la vitre, ils ne vont plus aux souliers. La vitre réparée n'est pas une richesse nouvelle, c'est le retour à l'état d'avant. Le cordonnier, « troisième personnage » selon Bastiat, est l'option abandonnée : c'est lui qui personnifie le coût d'opportunité. Conclusion du chapitre : la société perd la valeur de l'objet détruit, ou, selon sa formule, « destruction n'est pas profit ».\n\nNote de méthode : l'argument ne dit pas qu'aucune dépense ne crée d'activité. Il dit qu'il faut toujours comparer à ce qui se serait passé autrement. Cette comparaison avec la situation « sinon » (le contrefactuel) sera, en deuxième année, le cœur de l'économétrie causale."
+      },
+      "figures": [
+        {
+          "type": "table",
+          "caption": "Méthode : le coût d'opportunité de la soirée choisie (exemple de Ferraro et Taylor, 2005, d'après Frank et Bernanke)",
+          "columns": [
+            "Option",
+            "Valeur pour toi",
+            "Prix payé",
+            "Gain net"
+          ],
+          "rows": [
+            [
+              "Concert de Clapton (place gratuite, choisi)",
+              "?",
+              "0 $",
+              "?"
+            ],
+            [
+              "Concert de Dylan",
+              "50 $",
+              "40 $",
+              "10 $"
+            ],
+            [
+              "Rester chez soi",
+              "0 $",
+              "0 $",
+              "0 $"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exemples",
+      "title": "Exemples résolus",
+      "duration_min": {
+        "min": 5,
+        "max": 7
+      },
+      "body": "Deux exemples complets, puis un à finir toi-même.",
+      "questions": [
+        {
+          "code": "X1",
+          "kind": "worked",
+          "prompt": "**La question qui a piégé 199 économistes.** En janvier 2005, Paul Ferraro et Laura Taylor ont posé à 199 économistes, réunis au congrès annuel de l'ASSA à Philadelphie, cette question adaptée d'un manuel de Frank et Bernanke : *Tu as gagné une place gratuite, non revendable, pour un concert d'Eric Clapton. Le même soir, Bob Dylan joue ; c'est ta meilleure autre option. La place pour Dylan coûte 40 $ ; tu serais prêt à payer jusqu'à 50 $ pour le voir. Il n'y a aucun autre coût. Quel est le coût d'opportunité d'aller voir Clapton : 0 $, 10 $, 40 $ ou 50 $ ?*\n\n**Résolution.** (1) Lister les options autres que le choix : Dylan, ou rester chez soi. (2) Gain net de Dylan : 50 $ de valeur moins 40 $ de prix = 10 $. Gain net de rester chez soi : 0 $. (3) La meilleure option abandonnée est Dylan, à 10 $ net. **Coût d'opportunité : 10 $.**\n\nPourquoi pas 50 $ ? Parce qu'en renonçant à Dylan, tu renonces aussi à payer 40 $ : un coût évité est un gain. Pourquoi pas 40 $ ? Parce que c'est le prix de Dylan, non ce que tu sacrifies. Pourquoi pas 0 $ ? Parce que gratuit ne veut pas dire sans renoncement.\n\nRésultat de l'enquête : seuls 21,6 % des répondants ont choisi 10 $, la réponse la moins fréquente (27,6 % ont choisi 50 $, 25,6 % 40 $, 25,1 % 0 $).",
+          "solution": "10 $ : la valeur nette de la meilleure option abandonnée (50 $ moins 40 $)."
+        },
+        {
+          "code": "X2",
+          "kind": "worked",
+          "prompt": "**Le coût d'une année d'études.** Une étudiante hésite entre une année d'études et un emploi. Données annuelles : frais d'inscription 3 000 € ; livres 400 € ; salaire net de l'emploi auquel elle renonce 18 000 € ; loyer et nourriture 9 000 €, qu'elle paierait de la même façon si elle travaillait.\n\n**Résolution.** On ne compte que ce qui **change** entre les deux options. Les frais (3 000 €) et les livres (400 €) n'existent que si elle étudie : ils comptent. Le salaire abandonné (18 000 €) est la meilleure option sacrifiée : il compte, et c'est de loin le poste le plus lourd. Le loyer et la nourriture (9 000 €) sont payés dans les deux cas : ils ne comptent pas.\n\n**Coût d'opportunité : 3 000 + 400 + 18 000 = 21 400 €**, soit plus de six fois les seuls frais visibles (3 400 €).",
+          "solution": "21 400 € : frais, livres et salaire abandonné ; le loyer, payé dans tous les cas, n'entre pas dans le calcul."
+        },
+        {
+          "code": "Xf",
+          "kind": "complete",
+          "prompt": "**À toi de finir : les comptes de Bastiat.** Complète le tableau pour l'hypothèse B, puis conclus.\n\n| | A. La vitre est cassée | B. La vitre n'est pas cassée |\n|---|---|---|\n| Dépense de Jacques Bonhomme | 6 francs (vitrier) | 6 francs (?) |\n| Ce que possède Jacques Bonhomme | une vitre | ? |\n| Recette du vitrier | 6 francs | ? |\n| Recette du cordonnier | 0 | ? |\n\nQuelle est, pour la société, la différence entre A et B ?",
+          "solution": "Hypothèse B : 6 francs dépensés chez le cordonnier ; Jacques possède une vitre **et** une paire de souliers ; vitrier 0 ; cordonnier 6 francs. Dans les deux cas, 6 francs de travail sont payés : l'emploi total est le même. Mais en B la société a une vitre et des souliers, en A seulement une vitre. La différence est la valeur de la vitre détruite : la société s'est appauvrie d'autant. « Destruction n'est pas profit »."
+        }
+      ]
+    },
+    {
+      "id": "regard",
+      "title": "Le regard des maîtres",
+      "duration_min": {
+        "min": 2,
+        "max": 3
+      },
+      "body": "Les historiens de la pensée économique ont étudié comment la définition de Robbins s'est imposée.",
+      "secondary": {
+        "work": "Roger E. Backhouse et Steven G. Medema, « Defining Economics: The Long Road to Acceptance of the Robbins Definition », Economica, 76, supplément 1, 2009",
+        "idea": "Backhouse et Medema montrent que la définition de Robbins rompt avec les définitions dites « classificatoires » de son temps, qui faisaient de l'économie l'étude de la richesse ou du bien-être matériel. Celle de Robbins est « analytique » : elle désigne un aspect de tout comportement, le choix sous rareté, et non un domaine d'activités. Robbins le dit lui-même (1932, p. 16) : tout comportement humain relève de l'économie en tant qu'il est soumis à la rareté. Les auteurs montrent aussi que cette définition, aujourd'hui banale dans les manuels, a mis plusieurs décennies à s'imposer.",
+        "question": "Selon la définition « analytique » de Robbins, le choix de consacrer tes 40 minutes du matin au latin plutôt qu'à la course à pied est-il une question économique ? Et selon une définition « classificatoire » par la richesse ?",
+        "solution": "Selon Robbins, oui : le temps est un moyen rare, il a des usages alternatifs (latin, course), et les fins sont multiples. Aucun argent n'est nécessaire. Selon une définition par la richesse, non, ou à peine : aucun bien marchand n'est produit ni échangé. C'est exactement l'élargissement que Backhouse et Medema décrivent : l'économie devient une manière de regarder tout choix sous rareté."
+      },
+      "questions": [
+        {
+          "code": "S",
+          "kind": "secondary",
+          "prompt": "Selon la définition « analytique » de Robbins, le choix de consacrer tes 40 minutes du matin au latin plutôt qu'à la course à pied est-il une question économique ? Et selon une définition « classificatoire » par la richesse ?",
+          "solution": "Selon Robbins, oui : le temps est un moyen rare, il a des usages alternatifs (latin, course), et les fins sont multiples. Aucun argent n'est nécessaire. Selon une définition par la richesse, non, ou à peine : aucun bien marchand n'est produit ni échangé. C'est exactement l'élargissement que Backhouse et Medema décrivent : l'économie devient une manière de regarder tout choix sous rareté."
+        }
+      ]
+    },
+    {
+      "id": "exercices",
+      "title": "Exercices",
+      "duration_min": {
+        "min": 8,
+        "max": 10
+      },
+      "body": "E2 mélange la leçon du jour avec les pourcentages de vendredi.",
+      "questions": [
+        {
+          "code": "E1",
+          "kind": "exercise",
+          "prompt": "Tu as un samedi après-midi libre (4 heures). Trois options : (a) donner un cours particulier payé 80 € (l'activité elle-même ne te plaît ni ne te déplaît) ; (b) aller à un concert : place 30 €, que tu valorises à 70 € ; (c) lire un livre, que tu valorises à 40 €, sans aucun coût. Tu choisis de lire.\n\n1. Quel est le coût d'opportunité de ta lecture ?\n2. Même question si le cours n'était payé que 30 €.\n3. Dans le cas 1, ton choix était-il raisonnable ?",
+          "solution": "Gains nets des options abandonnées : (a) 80 € ; (b) 70 − 30 = 40 €.\n\n1. Meilleure option abandonnée : le cours, 80 €. Coût d'opportunité : **80 €**.\n2. Le cours ne rapporte plus que 30 € ; la meilleure option abandonnée devient le concert, 40 € net. Coût d'opportunité : **40 €**.\n3. Non, du moins selon les valeurs données : la lecture vaut 40 € pour toi, et elle te coûte 80 €. Tu aurais fait mieux de donner le cours. Dans le cas 2, lire (40 €) et aller au concert (40 € net) se valent."
+        },
+        {
+          "code": "E2",
+          "kind": "exercise",
+          "prompt": "Une formation coûte 1 600 € au prix affiché ; tu obtiens une remise de 25 %. Elle demande aussi 12 heures, que tu aurais sinon passées à travailler à 15 € de l'heure. Quel est le coût d'opportunité total de la formation ? Montre le calcul du prix avec le coefficient multiplicateur.",
+          "solution": "Prix payé : 1 600 × (1 − 0,25) = 1 600 × 0,75 = **1 200 €**. Temps : 12 × 15 = **180 €** de salaire abandonné. Coût d'opportunité total : 1 200 + 180 = **1 380 €**. Erreur fréquente : oublier le temps, ce qui sous-estime le coût de 180 €."
+        },
+        {
+          "code": "E3",
+          "kind": "exercise",
+          "prompt": "Pour chaque situation, dis si les trois conditions de Robbins sont réunies (fins multiples, moyens rares, usages alternatifs), et donc s'il y a une question économique :\n\n(a) Répartir 40 minutes par jour entre le latin et les mathématiques.\n(b) Respirer l'air en marchant en forêt.\n(c) Un milliardaire décide comment occuper sa journée.",
+          "solution": "(a) Oui : le temps est rare, il a deux usages alternatifs, et deux fins sont en concurrence.\n(b) Non : l'air n'est pas rare en ce sens ; en respirer plus ne prive ni toi ni personne d'un autre usage. C'est un bien libre.\n(c) Oui : l'argent ne lui manque peut-être pas, mais ses heures sont limitées et ont des usages alternatifs. La rareté du temps suffit. C'est la force de la définition de Robbins : elle ne dépend pas de la richesse."
+        },
+        {
+          "code": "E4",
+          "kind": "exercise",
+          "prompt": "Une municipalité démolit une salle publique en bon état pour en construire une neuve, presque identique, « afin de soutenir l'emploi dans le bâtiment ». Coût : 2 millions d'euros, financés par l'impôt local.\n\nÀ la manière de Bastiat : (1) qu'est-ce qu'on voit ? (2) qu'est-ce qu'on ne voit pas ? (3) qui est le « troisième personnage » ?",
+          "solution": "(1) On voit le chantier, les ouvriers payés, 2 millions d'euros de commandes au bâtiment.\n(2) On ne voit pas ce que les contribuables auraient fait de ces 2 millions (dépenses, épargne, autres travaux), ni la valeur de la salle détruite, qui était encore utile. Au terme du chantier, la ville a une salle, comme avant, et 2 millions de moins.\n(3) Le troisième personnage : les commerçants, artisans ou entreprises chez qui les contribuables auraient dépensé cet argent, et dont l'activité est réduite d'autant. Ce raisonnement ne dit pas que toute dépense publique est inutile ; il dit qu'il faut la comparer à l'usage alternatif des mêmes ressources."
+        },
+        {
+          "code": "E5",
+          "kind": "exercise",
+          "prompt": "Reprends la question de Ferraro et Taylor (X1), mais suppose que tu ne serais prêt à payer que **35 $** pour voir Dylan, dont la place coûte toujours 40 $. Rester chez toi vaut 0 $ net. Quel est alors le coût d'opportunité d'aller voir Clapton ? Justifie.",
+          "solution": "**0 $.** Gain net de Dylan : 35 − 40 = −5 $ ; tu ne l'aurais pas choisi. La meilleure option abandonnée est donc de rester chez toi, à 0 $ net. Le coût d'opportunité se mesure par la meilleure option réellement disponible, pas par une option qu'on n'aurait jamais retenue."
+        }
+      ]
+    },
+    {
+      "id": "reflexion",
+      "title": "Question de réflexion",
+      "duration_min": {
+        "min": 2,
+        "max": 2
+      },
+      "questions": [
+        {
+          "code": "Q",
+          "kind": "reflection",
+          "prompt": "Pourquoi le coût d'opportunité se mesure-t-il par la **seule** meilleure option abandonnée, et non par la somme de toutes les options auxquelles on renonce ? Réponds en une ou deux phrases.",
+          "solution": "Parce que, sans le choix fait, tu n'aurais pu réaliser qu'une seule des autres options, la meilleure. Additionner toutes les options reviendrait à compter des plaisirs que tu n'aurais jamais pu avoir en même temps : ce serait surestimer ce que tu sacrifies réellement."
+        }
+      ]
+    },
+    {
+      "id": "ticket",
+      "title": "Ticket de sortie",
+      "duration_min": {
+        "min": 2,
+        "max": 2
+      },
+      "questions": [
+        {
+          "code": "T1",
+          "kind": "ticket",
+          "prompt": "Définis le coût d'opportunité en une phrase.",
+          "solution": "La valeur nette de la meilleure option à laquelle on renonce en faisant un choix."
+        },
+        {
+          "code": "T2",
+          "kind": "ticket",
+          "prompt": "Dans « La vitre cassée » de Bastiat, qui est le troisième personnage, et pourquoi ne le voit-on pas ?",
+          "solution": "Le cordonnier (ou tout autre producteur), chez qui Jacques Bonhomme aurait dépensé ses six francs. On ne le voit pas parce que sa perte est un « fait négatif » : une commande qui n'a pas eu lieu."
+        }
+      ]
+    }
+  ],
+  "retenir": [
+    "L'économie naît de la rareté : des fins multiples, des moyens limités qui ont des usages alternatifs (Robbins, 1932).",
+    "La définition de Robbins désigne un aspect de tout choix, non un domaine : le temps seul suffit à poser une question économique.",
+    "Le coût d'opportunité d'un choix est la valeur nette de la meilleure option abandonnée, temps compris ; une dépense faite dans tous les cas n'y entre pas.",
+    "Gratuit ne veut pas dire sans coût : même des économistes de métier se trompent sur ce point (Ferraro et Taylor, 2005).",
+    "Bastiat (1850) apprend à chercher l'effet qu'on ne voit pas : détruire puis réparer n'enrichit pas, car les ressources auraient servi ailleurs."
+  ],
+  "mot_du_jour": {
+    "code": "M",
+    "terme": "économie",
+    "texte": "Du grec *oikonomia*, formé sur *oîkos*, « la maison, le domaine », et *nómos*, « la règle, l'usage » : l'art d'administrer la maison. L'*Économique* de Xénophon (IVe siècle av. J.-C.) est un dialogue socratique sur la bonne gestion d'un domaine agricole. Le mot a gardé ce sens de gestion prudente (« faire des économies »), puis s'est élargi, au XVIIIe siècle, à « l'économie politique », la gestion de la maison commune."
+  },
+  "pour_aller_plus_loin": [
+    {
+      "type": "primaire",
+      "reference": "Lionel Robbins, An Essay on the Nature and Significance of Economic Science, Londres, Macmillan, 1932 (2e éd. revue, 1935).",
+      "note": "Le texte fondateur de la définition de l'économie par la rareté ; le chapitre I se lit en une heure.",
+      "citation": "Economics is the science which studies human behaviour as a relationship between ends and scarce means which have alternative uses.",
+      "citation_source": "1re éd., 1932, chap. I, p. 15"
+    },
+    {
+      "type": "primaire",
+      "reference": "Frédéric Bastiat, Ce qu'on voit et ce qu'on ne voit pas (1850), dans Œuvres complètes de Frédéric Bastiat, t. V, Sophismes économiques et petits pamphlets II, Paris, Guillaumin, 1854.",
+      "note": "Douze chapitres courts qui appliquent le même raisonnement à l'impôt, aux travaux publics, aux machines, au crédit.",
+      "citation": "Entre un mauvais et un bon Économiste, voici toute la différence : l’un s’en tient à l’effet visible ; l’autre tient compte et de l’effet qu’on voit et de ceux qu’il faut prévoir.",
+      "citation_source": "Introduction",
+      "lien": "https://fr.wikisource.org/wiki/Ce_qu%E2%80%99on_voit_et_ce_qu%E2%80%99on_ne_voit_pas"
+    },
+    {
+      "type": "secondaire",
+      "reference": "Paul J. Ferraro et Laura O. Taylor, « Do Economists Recognize an Opportunity Cost When They See One? A Dismal Performance from the Dismal Science », Contributions to Economic Analysis & Policy, 4 (1), 2005, article 7.",
+      "note": "L'enquête de X1 : pourquoi la notion la plus simple est si souvent mal appliquée, et ce que cela dit de l'enseignement de l'économie.",
+      "citation": "An avoided benefit is a cost, and an avoided cost is a benefit.",
+      "citation_source": "section « Survey Results »",
+      "lien": "https://doi.org/10.2202/1538-0645.1469"
+    },
+    {
+      "type": "secondaire",
+      "reference": "Roger E. Backhouse et Steven G. Medema, « Defining Economics: The Long Road to Acceptance of the Robbins Definition », Economica, 76, supplément 1, 2009.",
+      "note": "Histoire de la réception de la définition de Robbins, des années 1930 aux manuels d'après-guerre.",
+      "lien": "https://doi.org/10.1111/j.1468-0335.2009.00789.x"
+    }
+  ]
+}

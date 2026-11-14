@@ -15,6 +15,11 @@
       "date": "2026-11-13",
       "kind": "leçon",
       "summary": "Mathématiques L1 : fractions, pourcentages et puissances, avec la règle d'Archimède dans L'Arénaire ; contrôle d'entrée."
+    },
+    {
+      "date": "2026-11-14",
+      "kind": "leçon",
+      "summary": "Économie L1 : rareté, choix et coût d'opportunité, avec Robbins (1932) et la vitre cassée de Bastiat (1850)."
     }
   ],
   "entries": [
@@ -29,6 +34,10 @@
     {
       "date": "2026-11-13",
       "text": "2026-11-13 (ven) Mathématiques L1 : fractions (quatre règles), pourcentages (coefficient multiplicateur, variations successives, retour au prix hors taxe), puissances (règles, a⁰ = 1, a⁻ⁿ = 1/aⁿ) ; extrait Archimède, L'Arénaire (trad. de travail d'après Heath) ; contrôle d'entrée E1 à E5 (10 items, seuil 8) ; rappel PHI-001, 003, 004, 005, 007 et LAT-001, 004, 008 ; aucune réponse reçue aux leçons précédentes ; mot : calcul. Huit cartes nouvelles (MAT-001 à MAT-008), dues le 14 novembre."
+    },
+    {
+      "date": "2026-11-14",
+      "text": "2026-11-14 (sam) Économie L1 : rareté (définition de Robbins 1932, trois conditions, bien libre et bien économique) ; coût d'opportunité (meilleure option abandonnée, nette, temps compris) ; extrait Bastiat, Ce qu'on voit et ce qu'on ne voit pas, introduction et chap. I ; X1 question de Ferraro et Taylor (2005), X2 coût d'une année d'études, Xf comptes de Bastiat ; S : Backhouse et Medema (2009) ; rappel MAT-001, 004, 005, 007, PHI-002, 006, LAT-003, 005 ; aucune réponse reçue (aucune issue) ; mot : économie. Six cartes nouvelles (ECO-001 à ECO-006), dues le 15 novembre."
     }
   ]
 }

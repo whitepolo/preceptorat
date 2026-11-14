@@ -271,6 +271,60 @@
       "answer": "Dans la suite 1, 10, 100..., le produit de deux termes est un terme de la suite dont le rang se déduit en ajoutant les rangs (moins un) : notre 10ᵐ × 10ⁿ = 10ᵐ⁺ⁿ. Il s'en sert pour nommer de très grands nombres et montrer que le sable qui remplirait l'univers compte moins de 10⁶³ grains.",
       "created": "2026-11-13",
       "kind": "notion"
+    },
+    {
+      "id": "ECO-001",
+      "subject": "economie",
+      "subject_label": "Économie",
+      "prompt": "Quelle est la définition de l'économie de Robbins (1932), et quelles en sont les trois conditions ?",
+      "answer": "La science qui étudie le comportement humain comme une relation entre des fins et des moyens rares qui ont des usages alternatifs. Conditions : fins multiples, moyens rares, usages alternatifs.",
+      "created": "2026-11-14",
+      "kind": "notion"
+    },
+    {
+      "id": "ECO-002",
+      "subject": "economie",
+      "subject_label": "Économie",
+      "prompt": "Qu'est-ce que le coût d'opportunité d'un choix ? Donne les deux précisions essentielles.",
+      "answer": "La valeur de la meilleure option à laquelle on renonce. Seulement la meilleure (pas la somme de toutes), et nette de ce qu'elle aurait coûté ; le temps compte.",
+      "created": "2026-11-14",
+      "kind": "notion"
+    },
+    {
+      "id": "ECO-003",
+      "subject": "economie",
+      "subject_label": "Économie",
+      "prompt": "Place gratuite pour Clapton ; Dylan le même soir, place 40 $, valeur pour toi 50 $. Coût d'opportunité de Clapton, et pourquoi ?",
+      "answer": "10 $ : gain net de la meilleure option abandonnée (50 − 40). Un coût évité est un gain. Seuls 21,6 % des 199 économistes interrogés par Ferraro et Taylor (2005) l'ont trouvé.",
+      "created": "2026-11-14",
+      "kind": "notion"
+    },
+    {
+      "id": "ECO-004",
+      "subject": "economie",
+      "subject_label": "Économie",
+      "prompt": "Dans « La vitre cassée » (Bastiat, 1850), qu'est-ce qu'on voit et qu'est-ce qu'on ne voit pas ?",
+      "answer": "On voit les six francs gagnés par le vitrier. On ne voit pas les souliers (ou le livre) que Jacques Bonhomme aurait achetés : le cordonnier perd la commande, et la société perd la valeur de la vitre. « Destruction n'est pas profit ».",
+      "created": "2026-11-14",
+      "kind": "notion"
+    },
+    {
+      "id": "ECO-005",
+      "subject": "economie",
+      "subject_label": "Économie",
+      "prompt": "Coût d'opportunité d'une année d'études : le salaire abandonné et le loyer y entrent-ils ? Pourquoi ?",
+      "answer": "Le salaire abandonné, oui : c'est l'option sacrifiée, souvent le poste le plus lourd. Le loyer, non, s'il est payé dans les deux cas : on ne compte que ce qui change entre les options.",
+      "created": "2026-11-14",
+      "kind": "notion"
+    },
+    {
+      "id": "ECO-006",
+      "subject": "economie",
+      "subject_label": "Économie",
+      "prompt": "Qu'est-ce qu'un bien libre, par opposition à un bien économique ? Exemple.",
+      "answer": "Un bien libre n'est pas rare : en prendre plus ne prive personne d'un autre usage (l'air en forêt). Un bien économique est rare par rapport aux usages qu'on voudrait en faire.",
+      "created": "2026-11-14",
+      "kind": "notion"
     }
   ]
 }
