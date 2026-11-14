@@ -1,7 +1,7 @@
 import { useMemo } from "react";
-import { catalog, plan, progression } from "../content";
+import { catalog, lessons, plan, progression } from "../content";
 import { addDays, formatLongDate } from "../lib/dates";
-import { subjectLabel } from "../lib/lessons";
+import { accessibleLesson, lessonHash, subjectLabel } from "../lib/lessons";
 import { useReviews } from "../state";
 
 export function Parcours() {
@@ -108,12 +108,20 @@ export function Parcours() {
                 </p>
                 {module.support ? <p className="hint">Lecture d'appui : {module.support}</p> : null}
                 <ol>
-                  {module.lessons.map((lesson) => (
-                    <li key={lesson.title}>
-                      <span className={`status status-${lesson.status.replace(/\s/g, "-")}`}>{lesson.status}</span> {lesson.title}
-                      {lesson.date ? <span className="meta"> {lesson.date}</span> : null}
-                    </li>
-                  ))}
+                  {module.lessons.map((lesson) => {
+                    const published = lesson.lesson_id ? accessibleLesson(lessons, lesson.lesson_id, today) : null;
+                    const label = (
+                      <>
+                        <span className={`status status-${lesson.status.replace(/\s/g, "-")}`}>{lesson.status}</span> {lesson.title}
+                        {lesson.date ? <span className="meta"> {lesson.date}</span> : null}
+                      </>
+                    );
+                    return (
+                      <li key={lesson.title}>
+                        {published ? <a href={lessonHash(published.id)}>{label}</a> : label}
+                      </li>
+                    );
+                  })}
                 </ol>
               </article>
             );

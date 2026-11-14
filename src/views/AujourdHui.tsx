@@ -7,12 +7,12 @@ import { formatClock, formatDuration, formatLongDate, formatStamp } from "../lib
 import { listComments, listIssues, listRecentComments } from "../lib/github";
 import { buildIssueLinks, openFirstIssue, prepareIssueWindow, type IssueLink } from "../lib/issueLink";
 import { markSent, readSentMap } from "../lib/localProgress";
-import { excerptSides, lessonForToday, lessonQuestions, selectTonightLesson } from "../lib/lessons";
+import { accessibleLesson, excerptSides, lessonForToday, lessonHash, lessonOnDate, lessonQuestions, pastLessons, selectTonightLesson } from "../lib/lessons";
 import { isTutorMessage, stripTutorMarker } from "../lib/markdown";
 import { answerText, hasAttempt } from "../lib/response";
 import { splitTutorNotes } from "../lib/tutorNotes";
 import type { DraftAnswer, Figure, FurtherReading, Lesson, LessonQuestion, LessonSection } from "../lib/types";
-import { isWeekend, schoolWeek, studiedDates, studyStreak } from "../lib/week";
+import { isWeekend, schoolWeek, studiedDates, studyStreak, weekDayMark } from "../lib/week";
 import { useReviews } from "../state";
 
 function draftKey(id: string): string {
@@ -60,17 +60,6 @@ function useTimer(lessonId: string, today: string): number {
     };
   }, [key]);
   return ms;
-}
-
-function lessonFromHash(today: string): Lesson | null {
-  const hash = window.location.hash;
-  const explicit = /^#\/lecon\/([^/]+)/.exec(hash);
-  if (explicit) {
-    const id = decodeURIComponent(explicit[1]);
-    return lessons.find((lesson) => lesson.id === id && lesson.date <= today) ?? null;
-  }
-  if (hash.includes("/lire")) return lessonForToday(lessons, today);
-  return null;
 }
 
 function outcomeOf(question: LessonQuestion, draft: DraftAnswer | undefined): "reussi" | "revoir" | "ouvert" | "exemple" {
@@ -257,14 +246,8 @@ export function AujourdHui() {
     if (latest && latest.date === today) return null;
     return latest;
   }, [today]);
-  const [opened, setOpened] = useState<Lesson | null>(() => lessonFromHash(today));
   const [reply, setReply] = useState<string>("");
-
-  useEffect(() => {
-    const sync = () => setOpened(lessonFromHash(today));
-    window.addEventListener("hashchange", sync);
-    return () => window.removeEventListener("hashchange", sync);
-  }, [today]);
+  const archive = useMemo(() => pastLessons(lessons, today).slice(0, 4), [today]);
 
   useEffect(() => {
     let cancelled = false;
@@ -283,8 +266,6 @@ export function AujourdHui() {
       cancelled = true;
     };
   }, []);
-
-  if (opened) return <LessonFlow lesson={opened} today={today} onClose={() => { window.location.hash = "#/aujourd-hui"; }} />;
 
   const weekend = isWeekend(today);
   const week = schoolWeek(today);
@@ -306,7 +287,7 @@ export function AujourdHui() {
           </p>
           {recent ? (
             <p>
-              <a href={`#/lecon/${encodeURIComponent(recent.id)}/lire`}>Reprendre la dernière leçon : {recent.title}</a>
+              <a href={lessonHash(recent.id)}>Reprendre la dernière leçon : {recent.title}</a>
             </p>
           ) : null}
         </section>
@@ -315,13 +296,24 @@ export function AujourdHui() {
         {week.map((day) => {
           const done = studied.has(day.date);
           const isToday = day.date === today;
-          const published = lessons.some((item) => item.date === day.date);
-          const state = done ? "Faite" : day.date > today ? "À venir" : isToday ? "Aujourd'hui" : published ? "Passée" : "Sans leçon";
-          return (
-            <article key={day.date} className={isToday ? "week-day today" : done ? "week-day done" : "week-day"}>
+          const published = lessonOnDate(lessons, day.date);
+          const state = weekDayMark(day.date, today, Boolean(published), done);
+          const open = Boolean(published && published.date <= today);
+          const className = isToday ? "week-day today" : done ? "week-day done" : "week-day";
+          const body = (
+            <>
               <p className="kicker">{day.label}</p>
               <p>{day.subject}</p>
               <p className="meta">{state}</p>
+            </>
+          );
+          return open && published ? (
+            <a key={day.date} className={className} href={lessonHash(published.id)}>
+              {body}
+            </a>
+          ) : (
+            <article key={day.date} className={className}>
+              {body}
             </article>
           );
         })}
@@ -329,6 +321,21 @@ export function AujourdHui() {
       <p className="streak">
         Série : <strong>{streak}</strong> {streak === 1 ? "jour de semaine" : "jours de semaine"}
       </p>
+      {archive.length > 0 ? (
+        <section className="block">
+          <h2>Mes leçons</h2>
+          <ul className="quiet-list">
+            {archive.map((item) => (
+              <li key={item.id}>
+                <a href={lessonHash(item.id)}>
+                  {item.subject_label}, {formatLongDate(item.date)}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <a href="#/bibliotheque">Toutes les leçons</a>
+        </section>
+      ) : null}
       <section className="hub">
         <a className="hub-card" href="#/revisions">
           <p className="kicker">Révisions</p>
@@ -362,12 +369,30 @@ function LessonHero({ lesson }: { lesson: Lesson }) {
         <p>
           {done} sur {questions.length} questions tentées. Durée prévue : {formatDuration(lesson.duration_min)}.
         </p>
-        <a className="button primary" href="#/aujourd-hui/lire">
+        <a className="button primary" href={lessonHash(lesson.id)}>
           {done > 0 ? "Continuer la leçon" : "Commencer la leçon"}
         </a>
       </div>
     </section>
   );
+}
+
+export function LessonReader({ lessonId }: { lessonId: string }) {
+  const { today } = useReviews();
+  const lesson = useMemo(() => {
+    if (lessonId === "@today") return lessonForToday(lessons, today);
+    return accessibleLesson(lessons, lessonId, today);
+  }, [lessonId, today]);
+  if (!lesson) {
+    return (
+      <article className="sheet">
+        <h1>Cette leçon n'est pas ouverte</h1>
+        <p className="lede">Elle n'est pas encore publiée, ou son jour n'est pas arrivé.</p>
+        <a className="button" href="#/aujourd-hui">Retour à l'accueil</a>
+      </article>
+    );
+  }
+  return <LessonFlow lesson={lesson} today={today} onClose={() => { window.location.hash = "#/aujourd-hui"; }} />;
 }
 
 function LessonFlow({ lesson, today, onClose }: { lesson: Lesson; today: string; onClose: () => void }) {

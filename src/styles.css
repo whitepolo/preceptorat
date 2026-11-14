@@ -219,6 +219,17 @@ main {
   background: var(--paper);
 }
 .week-day p { margin: 0; }
+a.week-day { color: inherit; text-decoration: none; }
+.lesson-card { display: grid; gap: 0.55rem; }
+.lesson-card-hit {
+  display: grid;
+  gap: 0.35rem;
+  color: inherit;
+  text-decoration: none;
+}
+.lesson-card-hit .button { justify-self: start; margin-top: 0.35rem; }
+.lesson-thread { font-size: 0.95rem; }
+.quiet-list a { color: inherit; }
 .week-day.today { border-color: var(--accent); background: var(--accent-soft); }
 .week-day.done { background: var(--good-soft); }
 .streak { margin: 0.2rem 0 1rem; }

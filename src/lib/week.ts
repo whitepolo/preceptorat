@@ -32,8 +32,19 @@ export interface WeekDay {
   subject: string;
 }
 
+export type DayMark = "Faite" | "Passée" | "Aujourd'hui" | "À venir" | "Sans leçon";
+
+export function weekDayMark(date: string, today: string, hasLesson: boolean, studied: boolean): DayMark {
+  if (date > today) return "À venir";
+  if (date === today) return "Aujourd'hui";
+  if (studied) return "Faite";
+  if (hasLesson) return "Passée";
+  return "Sans leçon";
+}
+
 export function schoolWeek(today: string): WeekDay[] {
-  const monday = mondayOf(today);
+  let monday = mondayOf(today);
+  if (isWeekend(today)) monday = addDays(monday, 7);
   const friday = addDays(monday, 4);
   return [
     { date: monday, label: "Lundi", subject: "Latin" },

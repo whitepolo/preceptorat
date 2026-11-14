@@ -3,14 +3,14 @@ import { randomBytes } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { State } from "ts-fsrs";
 import { lessons, seedState } from "../content";
+import { accessibleLesson, lessonForToday, lessonHash, lessonQuestions, lessonReadState, parseLessonId, pastLessons, selectTonightLesson } from "./lessons";
 import { canReveal, formatAnswerComment } from "./answers";
 import { checkAnswer, hasThreadInstruction, inferResponse, parseNumber } from "./response";
-import { fridaySubject, isWeekend, schoolWeek, studyStreak } from "./week";
+import { fridaySubject, isWeekend, schoolWeek, studyStreak, weekDayMark } from "./week";
 import { splitTutorNotes } from "./tutorNotes";
 import { stateFromCatalog } from "./legacy";
 import { mauritiusDate } from "./dates";
 import { buildIssueLinks, deflateBase64, inflateBase64, ISSUE_URL_LIMIT } from "./issueLink";
-import { lessonForToday, selectTonightLesson } from "./lessons";
 import { applyProgress, collectProgress, isProgressFile, recordGrade } from "./localProgress";
 import { isTutorMessage, renderMarkdown, stripTutorMarker } from "./markdown";
 import { mergeStates, mergeWithPending, pickCard, pruneUnknownCards } from "./merge";
@@ -383,7 +383,39 @@ describe("réponses de leçon", () => {
     expect(studyStreak("2026-11-17", studied)).toBe(0);
     expect(fridaySubject("2026-11-13")).toBe("Mathématiques");
     expect(fridaySubject("2026-11-20")).toBe("Économie");
+    expect(schoolWeek("2026-11-13")[0].date).toBe("2026-11-09");
+    expect(schoolWeek("2026-11-15")[0].date).toBe("2026-11-16");
     expect(schoolWeek("2026-11-15").map((day) => day.label)).toEqual(["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi"]);
+    expect(weekDayMark("2026-11-17", "2026-11-15", true, false)).toBe("À venir");
+    expect(weekDayMark("2026-11-16", "2026-11-15", false, false)).toBe("À venir");
+    expect(weekDayMark("2026-11-09", "2026-11-13", false, false)).toBe("Sans leçon");
+    expect(weekDayMark("2026-11-13", "2026-11-15", true, true)).toBe("Faite");
+  });
+});
+
+describe("accès aux leçons", () => {
+  it("ouvre une leçon publiée par son identifiant, et refuse un jour futur", () => {
+    expect(parseLessonId("#/lecon/2026-11-11-latin-L4")).toBe("2026-11-11-latin-L4");
+    expect(parseLessonId("#/lecon/2026-11-13-mathematiques-L1/lire")).toBe("2026-11-13-mathematiques-L1");
+    expect(parseLessonId("#/precepteur/2026-11-11-latin-L4")).toBeNull();
+    expect(lessonHash("2026-11-11-latin-L4")).toBe("#/lecon/2026-11-11-latin-L4");
+    const today = "2026-11-15";
+    for (const id of ["2026-11-11-latin-L4", "2026-11-12-philosophie-L1", "2026-11-13-mathematiques-L1", "2026-11-14-economie-L1"]) {
+      const lesson = accessibleLesson(lessons, id, today);
+      expect(lesson?.id).toBe(id);
+      for (const question of lessonQuestions(lesson!)) {
+        expect(["court", "long", "choix", "nombre", "vrai_faux", "ordre", "appariement", "prediction"]).toContain(inferResponse(question).type);
+      }
+    }
+    expect(accessibleLesson(lessons, "2026-11-17-classiques-L1", today)).toBeNull();
+    expect(pastLessons(lessons, today).some((lesson) => lesson.date > today)).toBe(false);
+  });
+
+  it("décrit la progression locale d'une leçon", () => {
+    expect(lessonReadState({ questions: 4, attempted: 0, step: 0, steps: 8, sent: false }).label).toBe("non commencée");
+    expect(lessonReadState({ questions: 4, attempted: 1, step: 1, steps: 8, sent: false }).label).toBe("en cours, 25 %");
+    expect(lessonReadState({ questions: 4, attempted: 4, step: 2, steps: 8, sent: false }).kind).toBe("terminée");
+    expect(lessonReadState({ questions: 4, attempted: 2, step: 3, steps: 8, sent: true }).kind).toBe("envoyée");
   });
 });
 
