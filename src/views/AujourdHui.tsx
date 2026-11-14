@@ -4,12 +4,15 @@ import { QuestionCard } from "../components/QuestionCard";
 import { MarkdownView, Poem } from "../components/MarkdownView";
 import { answerStats, canReveal, formatAnswerComment } from "../lib/answers";
 import { formatClock, formatDuration, formatLongDate, formatStamp } from "../lib/dates";
-import { listRecentComments } from "../lib/github";
+import { listComments, listIssues, listRecentComments } from "../lib/github";
 import { buildIssueLinks, openFirstIssue, prepareIssueWindow, type IssueLink } from "../lib/issueLink";
 import { markSent, readSentMap } from "../lib/localProgress";
-import { lessonForToday, lessonQuestions, selectTonightLesson } from "../lib/lessons";
+import { excerptSides, lessonForToday, lessonQuestions, selectTonightLesson } from "../lib/lessons";
 import { isTutorMessage, stripTutorMarker } from "../lib/markdown";
-import type { DraftAnswer, Figure, FurtherReading, Lesson, LessonSection } from "../lib/types";
+import { answerText, hasAttempt } from "../lib/response";
+import { splitTutorNotes } from "../lib/tutorNotes";
+import type { DraftAnswer, Figure, FurtherReading, Lesson, LessonQuestion, LessonSection } from "../lib/types";
+import { isWeekend, schoolWeek, studiedDates, studyStreak } from "../lib/week";
 import { useReviews } from "../state";
 
 function draftKey(id: string): string {
@@ -68,6 +71,41 @@ function lessonFromHash(today: string): Lesson | null {
   }
   if (hash.includes("/lire")) return lessonForToday(lessons, today);
   return null;
+}
+
+function outcomeOf(question: LessonQuestion, draft: DraftAnswer | undefined): "reussi" | "revoir" | "ouvert" | "exemple" {
+  if (question.kind === "worked") return "exemple";
+  if (draft?.auto === "juste" || draft?.judgment === "juste") return "reussi";
+  if (draft?.auto === "faux" || draft?.judgment === "faux" || draft?.judgment === "partiel" || draft?.skipped || !hasAttempt(draft)) return "revoir";
+  return "ouvert";
+}
+
+function ResultList({ questions, empty }: { questions: LessonQuestion[]; empty: string }) {
+  if (!questions.length) return <p className="hint">{empty}</p>;
+  return (
+    <ul className="result-list">
+      {questions.map((question) => (
+        <li key={question.code}>{question.prompt.split("\n")[0].replace(/[*_`]/g, "")}</li>
+      ))}
+    </ul>
+  );
+}
+
+function Synthesis({ lesson, drafts }: { lesson: Lesson; drafts: Record<string, DraftAnswer> }) {
+  const questions = lessonQuestions(lesson);
+  const reussi = questions.filter((question) => outcomeOf(question, drafts[question.code]) === "reussi");
+  const ouvert = questions.filter((question) => outcomeOf(question, drafts[question.code]) === "ouvert");
+  const revoir = questions.filter((question) => outcomeOf(question, drafts[question.code]) === "revoir");
+  return (
+    <div className="synthesis">
+      <h2>Ce qui tient</h2>
+      <ResultList questions={reussi} empty="Rien n'est encore marqué juste." />
+      <h2>À relire</h2>
+      <ResultList questions={ouvert} empty="Aucune réponse en attente d'évaluation." />
+      <h2>À revoir</h2>
+      <ResultList questions={revoir} empty="Rien à reprendre." />
+    </div>
+  );
 }
 
 function countPhrase(count: number, one: string, many: string): string {
@@ -146,23 +184,7 @@ function SectionBody({ section }: { section: LessonSection }) {
       {section.figures?.map((figure) => (
         <TableFigure key={figure.caption} figure={figure} />
       ))}
-      {section.excerpt ? (
-        <figure className="excerpt">
-          <Poem text={section.excerpt.text} />
-          <figcaption>
-            <cite>{section.excerpt.work}</cite>
-            <span>{section.excerpt.locus}</span>
-            <span>{section.excerpt.edition}</span>
-            {section.excerpt.translator ? <span>{section.excerpt.translator}</span> : null}
-          </figcaption>
-          {section.excerpt.close_reading ? (
-            <div className="close-reading">
-              <p className="solution-label">Lecture</p>
-              <MarkdownView source={section.excerpt.close_reading} />
-            </div>
-          ) : null}
-        </figure>
-      ) : null}
+      {section.excerpt ? <ExcerptView excerpt={section.excerpt} /> : null}
       {section.secondary ? (
         <div className="masters">
           <p className="meta">{section.secondary.work}</p>
@@ -173,12 +195,47 @@ function SectionBody({ section }: { section: LessonSection }) {
   );
 }
 
+function ExcerptView({ excerpt }: { excerpt: NonNullable<LessonSection["excerpt"]> }) {
+  const sides = excerptSides(excerpt);
+  return (
+    <figure className="excerpt">
+      <figcaption>
+        <cite>{excerpt.work}</cite>
+        <span>{excerpt.locus}</span>
+        <span>{excerpt.edition}</span>
+        {excerpt.translator ? <span>{excerpt.translator}</span> : null}
+      </figcaption>
+      {sides.original ? (
+        <div className="bilingual">
+          <div>
+            <p className="solution-label">Texte</p>
+            <Poem text={sides.original} />
+          </div>
+          <div>
+            <p className="solution-label">Traduction</p>
+            <Poem text={sides.translation} />
+          </div>
+        </div>
+      ) : (
+        <Poem text={sides.translation} />
+      )}
+      {sides.reading ? (
+        <div className="close-reading">
+          <p className="solution-label">Lecture</p>
+          <MarkdownView source={sides.reading} />
+        </div>
+      ) : null}
+    </figure>
+  );
+}
+
 type Step =
   | { id: string; label: string; kind: "intro" }
   | { id: string; label: string; kind: "section"; index: number }
   | { id: string; label: string; kind: "retenir" }
   | { id: string; label: string; kind: "plus" }
-  | { id: string; label: string; kind: "mot" };
+  | { id: string; label: string; kind: "mot" }
+  | { id: string; label: string; kind: "synthese" };
 
 function buildSteps(lesson: Lesson): Step[] {
   const steps: Step[] = [{ id: "intro", label: "Objectifs", kind: "intro" }];
@@ -188,6 +245,7 @@ function buildSteps(lesson: Lesson): Step[] {
   steps.push({ id: "retenir", label: "À retenir", kind: "retenir" });
   if (lesson.pour_aller_plus_loin?.length) steps.push({ id: "plus", label: "Pour aller plus loin", kind: "plus" });
   steps.push({ id: "mot", label: "Mot du jour", kind: "mot" });
+  steps.push({ id: "synthese", label: "Synthèse", kind: "synthese" });
   return steps;
 }
 
@@ -228,24 +286,49 @@ export function AujourdHui() {
 
   if (opened) return <LessonFlow lesson={opened} today={today} onClose={() => { window.location.hash = "#/aujourd-hui"; }} />;
 
+  const weekend = isWeekend(today);
+  const week = schoolWeek(today);
+  const studied = studiedDates();
+  const streak = studyStreak(today, studied);
+
   return (
     <article className="sheet home">
       <p className="kicker">Aujourd'hui</p>
-      <h1>{lesson ? "La leçon du jour" : "La leçon du jour arrive à partir de 7\u00a0h"}</h1>
+      <h1>{lesson ? lesson.subject_label : weekend ? "Le week-end est libre" : "La leçon du jour arrive à partir de 7\u00a0h"}</h1>
       {lesson ? (
         <LessonHero lesson={lesson} />
       ) : (
         <section className="empty-hero">
-          <p>Schopen la dépose à partir de 7 h. En attendant, les révisions tiennent les matières déjà vues.</p>
+          <p>
+            {weekend
+              ? "Pas de leçon le samedi ni le dimanche. Lundi, le latin reprend."
+              : "Schopen la dépose à partir de 7 h. En attendant, les révisions tiennent les matières déjà vues."}
+          </p>
           {recent ? (
             <p>
               <a href={`#/lecon/${encodeURIComponent(recent.id)}/lire`}>Reprendre la dernière leçon : {recent.title}</a>
             </p>
-          ) : (
-            <p className="hint">Aucune leçon au nouveau format n'est encore passée.</p>
-          )}
+          ) : null}
         </section>
       )}
+      <section className="week" aria-label="Semaine">
+        {week.map((day) => {
+          const done = studied.has(day.date);
+          const isToday = day.date === today;
+          const published = lessons.some((item) => item.date === day.date);
+          const state = done ? "Faite" : day.date > today ? "À venir" : isToday ? "Aujourd'hui" : published ? "Passée" : "Sans leçon";
+          return (
+            <article key={day.date} className={isToday ? "week-day today" : done ? "week-day done" : "week-day"}>
+              <p className="kicker">{day.label}</p>
+              <p>{day.subject}</p>
+              <p className="meta">{state}</p>
+            </article>
+          );
+        })}
+      </section>
+      <p className="streak">
+        Série : <strong>{streak}</strong> {streak === 1 ? "jour de semaine" : "jours de semaine"}
+      </p>
       <section className="hub">
         <a className="hub-card" href="#/revisions">
           <p className="kicker">Révisions</p>
@@ -258,7 +341,7 @@ export function AujourdHui() {
         </a>
         <a className="hub-card" href="#/precepteur">
           <p className="kicker">Schopen</p>
-          <p>{reply || "Pas encore de réponse dans le fil."}</p>
+          <p>{reply || "Pas encore de réponse de Schopen."}</p>
         </a>
       </section>
     </article>
@@ -268,10 +351,7 @@ export function AujourdHui() {
 function LessonHero({ lesson }: { lesson: Lesson }) {
   const drafts = readDrafts(lesson.id);
   const questions = lessonQuestions(lesson);
-  const done = questions.filter((question) => {
-    const draft = drafts[question.code];
-    return Boolean(draft && (draft.text.trim() || draft.skipped));
-  }).length;
+  const done = questions.filter((question) => hasAttempt(drafts[question.code]) || drafts[question.code]?.skipped).length;
   const ratio = questions.length ? done / questions.length : 0;
   return (
     <section className="hero">
@@ -291,6 +371,7 @@ function LessonHero({ lesson }: { lesson: Lesson }) {
 }
 
 function LessonFlow({ lesson, today, onClose }: { lesson: Lesson; today: string; onClose: () => void }) {
+  const { grade } = useReviews();
   const elapsed = useTimer(lesson.id, today);
   const steps = useMemo(() => buildSteps(lesson), [lesson]);
   const [step, setStep] = useState(() => {
@@ -304,9 +385,37 @@ function LessonFlow({ lesson, today, onClose }: { lesson: Lesson; today: string;
   const [message, setMessage] = useState("");
   const [links, setLinks] = useState<IssueLink[]>([]);
   const [sentAt, setSentAt] = useState<string | null>(() => readSentMap()[`reponses:${lesson.id}`] ?? null);
+  const [tutorByCode, setTutorByCode] = useState<Record<string, string[]>>({});
+  const [tutorGeneral, setTutorGeneral] = useState<string[]>([]);
   const current = steps[step];
   const stats = answerStats(lesson, drafts);
   const over = elapsed > lesson.duration_min.max * 60_000;
+
+  useEffect(() => {
+    let cancelled = false;
+    const codes = new Set(lessonQuestions(lesson).map((question) => question.code));
+    listIssues()
+      .then(async (issues) => {
+        const match = issues.find((issue) => issue.title === lesson.id || issue.title.startsWith(`Réponses ${lesson.id}`));
+        if (!match) return { byCode: {}, general: [] as string[] };
+        const comments = await listComments(match.number);
+        return splitTutorNotes([match.body, ...comments.map((comment) => comment.body)], codes);
+      })
+      .then((notes) => {
+        if (cancelled || !notes) return;
+        setTutorByCode(notes.byCode);
+        setTutorGeneral(notes.general);
+      })
+      .catch(() => {
+        if (!cancelled) {
+          setTutorByCode({});
+          setTutorGeneral([]);
+        }
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [lesson]);
 
   useEffect(() => {
     localStorage.setItem(stepKey(lesson.id), String(step));
@@ -334,7 +443,7 @@ function LessonFlow({ lesson, today, onClose }: { lesson: Lesson; today: string;
     const answers: Record<string, string> = {};
     for (const question of lessonQuestions(lesson)) {
       const draft = drafts[question.code];
-      const text = draft?.text.trim() ?? "";
+      const text = answerText(draft);
       answers[question.code] = text || (draft?.skipped ? "(passée)" : "(sans réponse)");
     }
     const human = formatAnswerComment(lesson, drafts, minutes).replace(/^<!-- sebastien -->\s*/, "");
@@ -368,7 +477,7 @@ function LessonFlow({ lesson, today, onClose }: { lesson: Lesson; today: string;
           {step + 1} / {steps.length}
         </p>
         <button type="button" className="button quiet" onClick={() => setSommaire(true)}>
-          Sommaire
+          Vue d'ensemble
         </button>
       </div>
       <div className="progress" role="progressbar" aria-valuemin={1} aria-valuemax={steps.length} aria-valuenow={step + 1} aria-label="Avancement de la leçon">
@@ -383,12 +492,13 @@ function LessonFlow({ lesson, today, onClose }: { lesson: Lesson; today: string;
 
       {current.kind === "intro" ? (
         <section>
-          <p className="lede">{formatLongDate(lesson.date)}. {lesson.student_note}</p>
+          <p className="lede">{formatLongDate(lesson.date)}. {formatDuration(lesson.duration_min)}.</p>
           <ol className="objectives">
             {lesson.objectives.map((objective) => (
               <li key={objective}>{objective}</li>
             ))}
           </ol>
+          {lesson.student_note ? <p className="hint">{lesson.student_note}</p> : null}
         </section>
       ) : null}
 
@@ -400,8 +510,12 @@ function LessonFlow({ lesson, today, onClose }: { lesson: Lesson; today: string;
             <QuestionCard
               key={question.code}
               question={question}
-              draft={drafts[question.code] ?? { text: "", skipped: false, revealed: false }}
+              draft={drafts[question.code]}
+              notes={tutorByCode[question.code]}
               onChange={(next) => update(question.code, next)}
+              onGrade={(name) => {
+                if (question.card_id) void grade(question.card_id, name);
+              }}
             />
           ))}
         </section>
@@ -428,6 +542,18 @@ function LessonFlow({ lesson, today, onClose }: { lesson: Lesson; today: string;
         <section className="mot">
           <p className="terme">{lesson.mot_du_jour.terme}</p>
           <MarkdownView source={lesson.mot_du_jour.texte} />
+        </section>
+      ) : null}
+
+      {current.kind === "synthese" ? (
+        <section>
+          <Synthesis lesson={lesson} drafts={drafts} />
+          {tutorGeneral.map((note) => (
+            <aside key={note.slice(0, 40)} className="tutor-note">
+              <p className="solution-label">Schopen</p>
+              <MarkdownView source={note} />
+            </aside>
+          ))}
           <footer className="send">
             <p>
               {countPhrase(stats.filled, "réponse écrite", "réponses écrites")}, {countPhrase(stats.skipped, "passée", "passées")}, {countPhrase(stats.empty, "vide", "vides")}.
@@ -477,10 +603,10 @@ function LessonFlow({ lesson, today, onClose }: { lesson: Lesson; today: string;
       </div>
 
       {sommaire ? (
-        <div className="sheet-overlay" role="dialog" aria-modal="true" aria-label="Sommaire">
+        <div className="sheet-overlay" role="dialog" aria-modal="true" aria-label="Vue d'ensemble">
           <div className="sheet-panel">
             <header>
-              <h2>Sommaire</h2>
+              <h2>Vue d'ensemble</h2>
               <button type="button" className="button quiet" onClick={() => setSommaire(false)}>
                 Fermer
               </button>

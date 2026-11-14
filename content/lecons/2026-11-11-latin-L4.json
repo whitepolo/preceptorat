@@ -24,7 +24,7 @@
   "prerequisites": [
     "Leçons de latin 1 à 3 : est et sunt, non... sed, questions en -ne, accord de magnus, parvus et multi, nominatif singulier et pluriel des trois genres."
   ],
-  "student_note": "Réponds dans le fil de discussion, en faisant précéder chaque réponse du code de la question (C1, P1, E1, Xf, Q, T1...). Ne lis une solution qu'après avoir répondu.",
+  "student_note": "Écris les formes à côté de chaque question. La correction s'ouvre ensuite.",
   "sources": [
     {
       "type": "primary",
@@ -76,7 +76,11 @@
           "code": "P2",
           "kind": "prequestion",
           "prompt": "Tu connais déjà *insulae* au sens de « îles ». Cette même forme pourrait-elle vouloir dire autre chose ?",
-          "solution": "Oui : *insulae* est aussi le génitif singulier, « de l'île ». Le verbe et la fonction dans la phrase permettent de distinguer les deux valeurs. C'est un des pièges du jour."
+          "solution": "Oui : *insulae* est aussi le génitif singulier, « de l'île ». Le verbe et la fonction dans la phrase permettent de distinguer les deux valeurs. C'est un des pièges du jour.",
+          "response": {
+            "type": "vrai_faux",
+            "expected": true
+          }
         }
       ]
     },

@@ -1,5 +1,6 @@
 import type { DraftAnswer, Lesson } from "./types";
 import { lessonQuestions } from "./lessons";
+import { answerText } from "./response";
 
 export function formatAnswerComment(lesson: Lesson, drafts: Record<string, DraftAnswer>, elapsedMin: number | null): string {
   const lines = [
@@ -11,11 +12,18 @@ export function formatAnswerComment(lesson: Lesson, drafts: Record<string, Draft
   lines.push("");
   for (const question of lessonQuestions(lesson)) {
     const draft = drafts[question.code];
-    const text = draft?.text.trim() ?? "";
+    const text = answerText(draft);
     let value = text;
     if (!value && draft?.skipped) value = "(passée)";
     if (!value) value = "(sans réponse)";
-    lines.push(`**${question.code}.** ${value}`);
+    if (draft?.confidence) {
+      const labels = { devine: "je devine", peu: "peu sûr", assez: "assez sûr", sur: "sûr" };
+      value += ` (confiance : ${labels[draft.confidence]})`;
+    }
+    if (draft?.auto) value += ` [corrigé : ${draft.auto}]`;
+    else if (draft?.judgment) value += ` [auto-évaluation : ${draft.judgment}]`;
+    lines.push(`**${question.code}.** ${question.prompt.split("\n")[0]}`);
+    lines.push(value);
     lines.push("");
   }
   return lines.join("\n").trimEnd() + "\n";
@@ -27,7 +35,7 @@ export function answerStats(lesson: Lesson, drafts: Record<string, DraftAnswer>)
   let empty = 0;
   for (const question of lessonQuestions(lesson)) {
     const draft = drafts[question.code];
-    if (draft?.text.trim()) filled += 1;
+    if (answerText(draft)) filled += 1;
     else if (draft?.skipped) skipped += 1;
     else empty += 1;
   }
@@ -35,6 +43,5 @@ export function answerStats(lesson: Lesson, drafts: Record<string, DraftAnswer>)
 }
 
 export function canReveal(draft: DraftAnswer | undefined): boolean {
-  if (!draft) return false;
-  return draft.skipped || draft.text.trim().length > 0;
+  return answerText(draft).length > 0;
 }
