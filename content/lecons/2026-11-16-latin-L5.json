@@ -1,0 +1,737 @@
+{
+  "schema_version": "1.0",
+  "id": "2026-11-16-latin-L5",
+  "title": "2026-11-16 · Latin · Leçon 5 : la familia romaine, « cuius ? » et les nombres",
+  "date": "2026-11-16",
+  "weekday": "lundi",
+  "subject": "latin",
+  "subject_label": "Latin",
+  "lesson_number": 5,
+  "module": {
+    "id": "orberg-II",
+    "title": "Ørberg, chapitre II : le génitif"
+  },
+  "duration_min": {
+    "min": 35,
+    "max": 45
+  },
+  "lang": "fr",
+  "objectives": [
+    "Poser et comprendre les questions quis ?, quae ?, cuius ? et quot ?, et répondre à cuius ? par un génitif.",
+    "Compter de un à dix et accorder ūnus, duo, trēs avec le nom (ūnus servus, duae ancillae, tria oppida).",
+    "Développer et traduire une filiation romaine abrégée, comme M. Agrippa L. f. (Marcus Agrippa Lucii filius).",
+    "Repérer et traduire les génitifs de deux textes latins réels : la base de la statue de Cornélie et une phrase de Pline l'Ancien."
+  ],
+  "prerequisites": [
+    "Leçon de latin 4 : génitif singulier et pluriel des noms en -a, -us et -um ; filius, filia ; la forme insulae peut être un nominatif pluriel ou un génitif singulier."
+  ],
+  "student_note": "Lis les mots latins à voix haute (c toujours dur, v prononcé comme w), puis réponds sous chaque question. La correction s'ouvre ensuite.",
+  "sources": [
+    {
+      "type": "primary",
+      "cite": "Inscription du fronton du Panthéon, Rome : M(arcus) Agrippa L(ucii) f(ilius) co(n)s(ul) tertium fecit. Corpus Inscriptionum Latinarum, VI, 896."
+    },
+    {
+      "type": "primary",
+      "cite": "Base de la statue de Cornélie, Rome, portique d'Octavie (trouvée en 1878), Musées du Capitole : Cornelia Africani f(ilia) Gracchorum. Corpus Inscriptionum Latinarum, VI, 31610 (= VI, 10043)."
+    },
+    {
+      "type": "primary",
+      "cite": "Pline l'Ancien, Naturalis historia, XXXIV, 31, texte établi par Karl Mayhoff, Leipzig, Teubner (édition parue de 1875 à 1906)."
+    },
+    {
+      "type": "primary",
+      "cite": "Quintilien, Institutio oratoria, I, 1, 6, texte établi et traduit par Harold Edgeworth Butler, Cambridge (Mass.), Harvard University Press, et Londres, William Heinemann, 1920 (Loeb Classical Library)."
+    },
+    {
+      "type": "primary",
+      "cite": "Plutarque, Vie de Tiberius Gracchus, 1, 3 à 5, trad. Bernadotte Perrin, Plutarch's Lives, vol. X, Cambridge (Mass.), Harvard University Press, et Londres, William Heinemann, 1921 (Loeb Classical Library)."
+    },
+    {
+      "type": "method",
+      "cite": "Hans H. Ørberg, Lingua Latina per se illustrata. Pars I : Familia Romana, Grenaa, Domus Latina, 2003, chapitre II (familia, quis, quae, cuius, quot, nombres)."
+    },
+    {
+      "type": "secondary",
+      "cite": "Joseph Henry Allen et James Bradstreet Greenough, New Latin Grammar for Schools and Colleges, Boston, Ginn and Company, 1903, § 133 et 134 (nombres cardinaux et leur déclinaison)."
+    },
+    {
+      "type": "secondary",
+      "cite": "Mika Kajava, « Cornelia Africani f. Gracchorum », Arctos. Acta Philologica Fennica, 23, 1990, p. 119 à 131."
+    }
+  ],
+  "sections": [
+    {
+      "id": "rappel",
+      "title": "Rappel",
+      "duration_min": {
+        "min": 8,
+        "max": 10
+      },
+      "body": "Huit cartes dues aujourd'hui, toutes matières mélangées. Réponds de mémoire, sans relire tes leçons : c'est l'effort de rappel qui consolide. Après chaque correction, note honnêtement Juste, Partiel ou Faux ; la date de la prochaine révision en dépend.",
+      "questions": [
+        {
+          "code": "R1",
+          "kind": "recall",
+          "prompt": "À quelle question répond le génitif latin, et à quoi sert-il dans la phrase ?",
+          "solution": "Il répond à « de qui ? », « de quoi ? ». Il marque le complément du nom : appartenance, origine, ou le tout dont on prend une partie (*insula Italiae*, « une île de l'Italie »).",
+          "card_id": "LAT-002",
+          "response": {
+            "type": "court",
+            "hints": [
+              "Pense au mot français qu'il remplace.",
+              "*Sicilia insula Italiae est* : que fait *Italiae* ?"
+            ],
+            "explanation": "Le génitif relie un nom à un autre sans préposition : c'est lui qui répondra tout à l'heure à la question *cuius ?*."
+          }
+        },
+        {
+          "code": "R2",
+          "kind": "recall",
+          "prompt": "Quelle est la définition de l'économie donnée par Robbins (1932), et quelles en sont les trois conditions ?",
+          "solution": "La science qui étudie le comportement humain comme une relation entre des fins et des moyens rares qui ont des usages alternatifs. Conditions : fins multiples, moyens rares, usages alternatifs.",
+          "card_id": "ECO-001",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Fins, moyens... et quoi d'autre ?",
+              "Les moyens doivent être rares, et pouvoir servir à plusieurs choses."
+            ],
+            "explanation": "Si l'une des trois conditions manque (une seule fin, des moyens surabondants, ou un seul usage possible), il n'y a pas de choix économique."
+          }
+        },
+        {
+          "code": "R3",
+          "kind": "recall",
+          "prompt": "Comment additionne-t-on deux fractions de dénominateurs différents ? Calcule 3/8 + 5/12.",
+          "solution": "On met au même dénominateur (le plus petit multiple commun, ici 24), puis on ajoute les numérateurs : 9/24 + 10/24 = 19/24. On n'additionne jamais les dénominateurs.",
+          "card_id": "MAT-002",
+          "response": {
+            "type": "court",
+            "expected": "19/24",
+            "hints": [
+              "Cherche le plus petit nombre divisible par 8 et par 12.",
+              "3/8 = 9/24 ; et 5/12 = ?/24"
+            ],
+            "explanation": "19/24 est irréductible (19 est premier et ne divise pas 24)."
+          }
+        },
+        {
+          "code": "R4",
+          "kind": "recall",
+          "prompt": "Que désignent les lettres A et B dans la notation Diels-Kranz (par exemple DK 12 A 10, DK 12 B 1) ?",
+          "solution": "B : un fragment, les mots mêmes du penseur, cités par un auteur postérieur. A : un témoignage, ce qu'un autre auteur rapporte ou interprète. Le premier nombre désigne le penseur (12 : Anaximandre).",
+          "card_id": "PHI-001",
+          "response": {
+            "type": "court",
+            "hints": [
+              "L'une des deux lettres désigne les mots mêmes du penseur.",
+              "DK 12 B 1 est l'unique fragment d'Anaximandre."
+            ],
+            "explanation": "La distinction compte pour juger une source : un témoignage peut déjà interpréter, comme le « peut-être » d'Aristote sur Thalès."
+          }
+        },
+        {
+          "code": "R5",
+          "kind": "recall",
+          "prompt": "Dans « La vitre cassée » (Bastiat, 1850), qu'est-ce qu'on voit, et qu'est-ce qu'on ne voit pas ?",
+          "solution": "On voit les six francs gagnés par le vitrier. On ne voit pas les souliers (ou le livre) que Jacques Bonhomme aurait achetés : le cordonnier perd la commande, et la société perd la valeur de la vitre. « Destruction n'est pas profit ».",
+          "card_id": "ECO-004",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Qui gagne, et qui aurait gagné à la place ?",
+              "Pense au coût d'opportunité des six francs."
+            ],
+            "explanation": "C'est le coût d'opportunité appliqué à toute une économie : la dépense de réparation remplace une autre dépense, elle ne s'y ajoute pas."
+          }
+        },
+        {
+          "code": "R6",
+          "kind": "recall",
+          "prompt": "Complète : aᵐ × aⁿ = ? ; aᵐ / aⁿ = ? ; (aᵐ)ⁿ = ?",
+          "solution": "aᵐ⁺ⁿ ; aᵐ⁻ⁿ ; aᵐⁿ.",
+          "card_id": "MAT-006",
+          "response": {
+            "type": "court",
+            "hints": [
+              "Écris a² × a³ en entier : combien de facteurs a ?",
+              "Diviser retire des facteurs ; élever à une puissance répète le tout."
+            ],
+            "explanation": "a² × a³ = (a × a) × (a × a × a) = a⁵ : les exposants s'ajoutent. Le reste se déduit de la même façon."
+          }
+        },
+        {
+          "code": "R7",
+          "kind": "recall",
+          "prompt": "Qu'est-ce que l'ápeiron d'Anaximandre, et pourquoi n'est-ce aucun des éléments ?",
+          "solution": "L'illimité, l'indéterminé, d'où se séparent les contraires. Un élément pris pour principe, contraire des autres, l'emporterait sur eux et les détruirait ; l'indéterminé n'en favorise aucun.",
+          "card_id": "PHI-004",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Le mot grec veut dire « sans limite ».",
+              "Si le principe était l'eau, qu'arriverait-il au feu ?"
+            ],
+            "explanation": "L'argument est un argument d'équilibre : le principe doit rester neutre entre les contraires."
+          }
+        },
+        {
+          "code": "R8",
+          "kind": "recall",
+          "prompt": "Qu'est-ce que le coût d'opportunité d'un choix ? Donne les deux précisions essentielles.",
+          "solution": "La valeur de la meilleure option à laquelle on renonce. Seulement la meilleure (pas la somme de toutes), et nette de ce qu'elle aurait coûté ; le temps compte.",
+          "card_id": "ECO-002",
+          "response": {
+            "type": "court",
+            "hints": [
+              "Combien d'options abandonnées compte-t-on ?",
+              "Pense à Clapton et Dylan : 50 moins 40."
+            ],
+            "explanation": "On ne prend qu'une option, la meilleure, et on la compte nette de son propre coût."
+          }
+        }
+      ]
+    },
+    {
+      "id": "prequestions",
+      "title": "Pré-questions",
+      "duration_min": {
+        "min": 1,
+        "max": 2
+      },
+      "body": "Réponds avant de lire la leçon, même au hasard. Une erreur maintenant aide à retenir la bonne réponse ensuite.",
+      "questions": [
+        {
+          "code": "P1",
+          "kind": "prequestion",
+          "prompt": "Le latin a deux mots pour demander « qui ? » : *quis?* et *quae?*. À ton avis, qu'est-ce qui les distingue ?",
+          "solution": "Le genre de la personne sur laquelle on interroge : *Quis est Tiberius?* (un homme, masculin), *Quae est Cornelia?* (une femme, féminin). Le latin accorde jusqu'au mot interrogatif.",
+          "response": {
+            "type": "prediction",
+            "confidence": true,
+            "hints": [
+              "Pense à *magnus* et *magna*.",
+              "Tiberius est un homme, Cornelia une femme."
+            ],
+            "explanation": "*Quis* interroge sur un masculin, *quae* sur un féminin. Pour une chose (neutre), tu connais déjà *quid?*."
+          }
+        },
+        {
+          "code": "P2",
+          "kind": "prequestion",
+          "prompt": "Sur le fronton du Panthéon, à Rome, on lit en lettres de bronze : M·AGRIPPA·L·F·COS·TERTIVM·FECIT. Que signifient, à ton avis, les deux lettres L·F ?",
+          "solution": "*L(ucii) f(ilius)*, « fils de Lucius ». *L.* abrège le prénom Lucius, mis au génitif ; *f.* abrège *filius*. C'est la filiation, qui faisait partie du nom officiel d'un citoyen romain.",
+          "response": {
+            "type": "choix",
+            "choices": [
+              "Lucius fecit, « Lucius l'a fait »",
+              "Lucii filius, « fils de Lucius »",
+              "Legio fortis, « la légion courageuse »",
+              "Latinus factus, « devenu latin »"
+            ],
+            "expected": "Lucii filius, « fils de Lucius »",
+            "hints": [
+              "Le mot *filius* t'est connu depuis la leçon 4.",
+              "Le père est nommé au génitif : « de Lucius »."
+            ],
+            "explanation": "*L. f.* = *Lucii filius*. Le génitif du jour sert ici à dire de qui l'on est le fils."
+          }
+        }
+      ]
+    },
+    {
+      "id": "cours",
+      "title": "Notion du jour",
+      "duration_min": {
+        "min": 10,
+        "max": 12
+      },
+      "body": "### N1. La familia : qui est qui ?\n\nLe chapitre II d'Ørberg entre dans une maison romaine. Le mot *familia* y a un sens plus large que notre « famille » : c'est tout le monde qui vit sous l'autorité du maître de maison, parents, enfants, et aussi esclaves. Les noms de personnes suivent les déclinaisons que tu connais déjà : en *-us* pour les hommes, en *-a* pour les femmes, jamais en *-um*.\n\nDeux noms masculins font exception à l'apparence : *vir* (l'homme, le mari) et *puer* (le garçon). Leur nominatif finit en *-r*, mais tout le reste suit *fluvius* : génitif *viri*, *pueri* ; pluriel *viri*, *pueri* ; génitif pluriel *virorum*, *puerorum*. Retiens que *puer* garde son *e* (*pueri*). Enfin, *liberi*, « les enfants », n'existe qu'au pluriel : *liberi*, génitif *liberorum*.\n\n### N2. Quatre questions : quis ?, quae ?, cuius ?, quot ?\n\nLe chapitre se lit comme une suite de questions et de réponses. Voici les quatre mots qui les posent, avec la forme attendue dans la réponse (tableau 2).\n\n- *Quis est Tiberius?* « Qui est Tiberius ? » (masculin). Réponse au nominatif : *Tiberius filius est.*\n- *Quae est Cornelia?* « Qui est Cornélie ? » (féminin). Réponse : *Cornelia femina Romana est.*\n- *Cuius filius est Tiberius?* « De qui Tiberius est-il le fils ? », littéralement « fils de qui ? ». *Cuius* est le **génitif** de *quis* et de *quae* : la réponse est donc, elle aussi, au génitif. *Tiberius filius Corneliae est.*\n- *Quot liberi sunt?* « Combien d'enfants y a-t-il ? ». *Quot* ne change jamais de forme ; la réponse est un nombre.\n\nLa règle à retenir : **la question annonce le cas de la réponse.** *Quis ?* appelle un nominatif, *cuius ?* un génitif.\n\n### N3. Compter de un à dix\n\nSeuls les trois premiers nombres se déclinent et s'accordent en genre avec le nom (Allen et Greenough, § 134) : *ūnus servus*, *ūna ancilla*, *ūnum oppidum* ; *duo servi*, *duae ancillae*, *duo oppida* ; *trēs servi*, *trēs ancillae*, *tria oppida*. Ensuite, *quattuor, quīnque, sex, septem, octō, novem, decem* et *centum* (100) sont invariables : *septem filii*, *septem filiae*, *septem oppida*. Repère dans le tableau 3 les chiffres romains : I, II, III... jusqu'à X, et C pour *centum*.\n\nUne parenté utile : *duo* a donné « duo » et « duel », *trēs* « trio », *decem* « décembre » (le dixième mois de l'année romaine primitive, qui commençait en mars), *centum* « centaine » et « centurion ».\n\n### N4. Le génitif dans le nom romain : la filiation\n\nUn citoyen romain portait officiellement un prénom (*praenomen*), un nom de famille (*nomen*), sa **filiation**, et souvent un surnom (*cognomen*). La filiation dit de qui il est le fils, au génitif, presque toujours abrégée : *M. Tullius M. f. Cicero* se lit *Marcus Tullius Marci filius Cicero*, « Marcus Tullius Cicéron, fils de Marcus ». Les prénoms s'abrègent par leur initiale : M. = Marcus, L. = Lucius, C. = Gaius (la lettre C notait autrefois aussi le son g), Q. = Quintus. Une fille porte la même indication avec *filia* : *Laelia C. f.*, « Laelia, fille de Gaius ».\n\nLe génitif du prénom suit la déclinaison de *filius* : *Lucius*, génitif *Lucii* (on trouve aussi la forme contractée *Luci*) ; *Marcus*, *Marci* ; *Gaius*, *Gaii*.\n\n### Pourquoi cela compte\n\nAvec *cuius ?* et le génitif, tu peux déjà interroger et décrire une maisonnée entière. Surtout, tu peux lire les inscriptions, ces textes gravés qui couvrent les monuments de Rome : presque toutes nomment un homme ou une femme par sa filiation. Les deux inscriptions ci-dessous sont célèbres, et tu peux les lire en entier, ou presque.",
+      "figures": [
+        {
+          "type": "table",
+          "caption": "Tableau 1. La familia : nominatif et génitif singuliers",
+          "columns": [
+            "Masculin",
+            "Génitif",
+            "Féminin",
+            "Génitif"
+          ],
+          "rows": [
+            [
+              "*vir*, l'homme, le mari",
+              "*viri*",
+              "*femina*, la femme",
+              "*feminae*"
+            ],
+            [
+              "*puer*, le garçon",
+              "*pueri*",
+              "*puella*, la fille (jeune fille)",
+              "*puellae*"
+            ],
+            [
+              "*filius*, le fils",
+              "*filii*",
+              "*filia*, la fille (enfant de)",
+              "*filiae*"
+            ],
+            [
+              "*dominus*, le maître",
+              "*domini*",
+              "*domina*, la maîtresse de maison",
+              "*dominae*"
+            ],
+            [
+              "*servus*, l'esclave",
+              "*servi*",
+              "*ancilla*, la servante",
+              "*ancillae*"
+            ],
+            [
+              "*liberi* (pluriel seulement), les enfants",
+              "*liberorum*",
+              "",
+              ""
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "caption": "Tableau 2. Les mots interrogatifs du chapitre II",
+          "columns": [
+            "Question",
+            "Sens",
+            "Cas de la réponse",
+            "Exemple de réponse"
+          ],
+          "rows": [
+            [
+              "*Quis?*",
+              "qui ? (masculin)",
+              "nominatif",
+              "*Tiberius filius est.*"
+            ],
+            [
+              "*Quae?*",
+              "qui ? (féminin)",
+              "nominatif",
+              "*Cornelia femina Romana est.*"
+            ],
+            [
+              "*Quid?*",
+              "quoi ? (neutre, déjà vu)",
+              "nominatif",
+              "*Roma oppidum est.*"
+            ],
+            [
+              "*Cuius?*",
+              "de qui ? (génitif de quis et quae)",
+              "génitif",
+              "*Filius Corneliae est.*"
+            ],
+            [
+              "*Quot?*",
+              "combien ? (invariable)",
+              "un nombre",
+              "*Tres liberi sunt.*"
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "caption": "Tableau 3. Les nombres de un à dix, et cent",
+          "columns": [
+            "Chiffre",
+            "Masculin",
+            "Féminin",
+            "Neutre"
+          ],
+          "rows": [
+            [
+              "I",
+              "*ūnus*",
+              "*ūna*",
+              "*ūnum*"
+            ],
+            [
+              "II",
+              "*duo*",
+              "*duae*",
+              "*duo*"
+            ],
+            [
+              "III",
+              "*trēs*",
+              "*trēs*",
+              "*tria*"
+            ],
+            [
+              "IV (ou IIII)",
+              "*quattuor*",
+              "*quattuor*",
+              "*quattuor*"
+            ],
+            [
+              "V",
+              "*quīnque*",
+              "*quīnque*",
+              "*quīnque*"
+            ],
+            [
+              "VI",
+              "*sex*",
+              "*sex*",
+              "*sex*"
+            ],
+            [
+              "VII",
+              "*septem*",
+              "*septem*",
+              "*septem*"
+            ],
+            [
+              "VIII",
+              "*octō*",
+              "*octō*",
+              "*octō*"
+            ],
+            [
+              "IX (ou VIIII)",
+              "*novem*",
+              "*novem*",
+              "*novem*"
+            ],
+            [
+              "X",
+              "*decem*",
+              "*decem*",
+              "*decem*"
+            ],
+            [
+              "C",
+              "*centum*",
+              "*centum*",
+              "*centum*"
+            ]
+          ]
+        }
+      ],
+      "excerpt": {
+        "work": "Deux inscriptions latines de Rome : le fronton du Panthéon, et la base de la statue de Cornélie",
+        "locus": "Corpus Inscriptionum Latinarum, VI, 896 (Panthéon) ; VI, 31610 = VI, 10043 (Cornélie)",
+        "edition": "Corpus Inscriptionum Latinarum, vol. VI, Berlin. Sur la base de Cornélie, trouvée en 1878 au portique d'Octavie et conservée aux Musées du Capitole : Mika Kajava, « Cornelia Africani f. Gracchorum », Arctos, 23, 1990, p. 119 à 131.",
+        "translator": "traduction de travail, pour cette leçon",
+        "lang": "la",
+        "original": "M · AGRIPPA · L · F · COS · TERTIVM · FECIT\n\nCORNELIA · AFRICANI · F · | GRACCHORVM",
+        "text": "*M(arcus) Agrippa L(ucii) f(ilius) co(n)s(ul) tertium fecit.*\n\n*Cornelia Africani f(ilia) Gracchorum.*",
+        "close_reading": "**Le Panthéon.** Traduction de travail : « Marcus Agrippa, fils de Lucius, consul pour la troisième fois, a fait (ce monument). » Agrippa, l'ami et le gendre d'Auguste, fut consul pour la troisième fois en 27 av. J.-C. Le Panthéon que l'on visite aujourd'hui a été reconstruit au IIe siècle apr. J.-C. et achevé sous Hadrien, mais l'inscription reprend le nom du premier fondateur. Développe l'abréviation : *M.* = *Marcus* (nominatif, le sujet), *L. f.* = *Lucii filius*, « fils de Lucius » (le père au génitif). Les mots *consul tertium*, « consul pour la troisième fois », et *fecit*, « a fait », sont donnés ici pour que tu lises tout ; tu les retrouveras plus tard.\n\n**Cornélie.** Traduction de travail : « Cornélie, fille de l'Africain, (mère) des Gracques. » Cornélie était la fille de Scipion l'Africain, le vainqueur d'Hannibal, et la mère de Tiberius et de Gaius Gracchus, les deux tribuns de la plèbe. Pline l'Ancien rapporte qu'une statue d'elle, assise, se trouvait dans le portique de Métellus, puis dans les bâtiments d'Octavie (*Histoire naturelle*, XXXIV, 31). La base retrouvée en 1878 porte ces quatre mots, gravés à l'époque d'Auguste. Lis-les avec les outils du jour : *Cornelia* est au nominatif ; *Africani* est le génitif singulier de *Africanus* (son père, « de l'Africain ») ; *f.* abrège *filia* ; *Gracchorum* est le génitif pluriel de *Gracchus*, « des Gracques ». Le mot *mater* n'est pas écrit : le génitif pluriel suffit à faire comprendre « (la mère) des Gracques ». Deux génitifs, deux liens de parenté : une femme définie par son père et par ses fils."
+      }
+    },
+    {
+      "id": "exemples",
+      "title": "Exemples résolus",
+      "duration_min": {
+        "min": 5,
+        "max": 6
+      },
+      "body": "Lis les deux exemples complets, en suivant chaque étape, puis termine le troisième toi-même.",
+      "questions": [
+        {
+          "code": "X1",
+          "kind": "worked",
+          "prompt": "**Exemple 1. Répondre à cuius ?**\n\nQuestion : *Cuius filius est Tiberius?*\n\n1. Le mot interrogatif est *cuius*, un génitif : la réponse aura un génitif à la même place.\n2. On cherche « de qui ? » : la mère est Cornélie, *Cornelia*.\n3. On met *Cornelia* au génitif singulier : thème *Corneli-*, terminaison *-ae*, d'où *Corneliae*.\n4. On garde le reste de la question : *Tiberius filius Corneliae est.* « Tiberius est le fils de Cornélie. »",
+          "solution": "*Tiberius filius Corneliae est.* Le génitif *Corneliae* répond exactement au génitif *cuius*.",
+          "response": {
+            "type": "court",
+            "explanation": "Méthode : repérer le cas du mot interrogatif, puis mettre le nom de la réponse au même cas."
+          }
+        },
+        {
+          "code": "X2",
+          "kind": "worked",
+          "prompt": "**Exemple 2. Compter et accorder.**\n\nPlutarque rapporte que Cornélie eut douze enfants et que trois seulement survécurent : une fille et deux fils (*Vie de Tiberius Gracchus*, 1, 3 à 5). On veut dire en latin : « Dans la famille de Cornélie, il y a trois enfants : deux fils et une fille. »\n\n1. « De Cornélie » : génitif, *Corneliae*. « Dans la famille » : *in familia* (comme *in Italia*).\n2. « Trois enfants » : *liberi* est masculin pluriel, donc *trēs liberi* ; le verbe est au pluriel, *sunt*.\n3. « Deux fils » : *filii* est masculin, donc *duo filii* (et non *duae*).\n4. « Une fille » : *filia* est féminin, donc *ūna filia* (et non *ūnus*).\n\nRésultat : *In familia Corneliae trēs liberi sunt : duo filii et ūna filia.*",
+          "solution": "*In familia Corneliae trēs liberi sunt : duo filii et ūna filia.* Les nombres un, deux et trois prennent le genre du nom qu'ils comptent.",
+          "response": {
+            "type": "court",
+            "explanation": "*ūnus*, *duo*, *trēs* s'accordent ; à partir de *quattuor*, le nombre ne change plus."
+          }
+        },
+        {
+          "code": "Xf",
+          "kind": "complete",
+          "prompt": "**À toi de finir.** Quintilien, maître de rhétorique du Ier siècle apr. J.-C., cite des femmes cultivées et nomme l'une d'elles *Laelia C. filia* (*Institution oratoire*, I, 1, 6). Développe l'abréviation en latin, puis traduis. Les deux premières étapes sont faites :\n\n1. *Laelia* est au nominatif : c'est la personne nommée.\n2. *C.* est l'initiale du prénom Gaius.\n3. Écris le groupe complet en latin, puis traduis-le.",
+          "solution": "*Laelia Gaii filia* (forme contractée possible : *Gai filia*), « Laelia, fille de Gaius ». Le père est au génitif singulier, comme *Lucii* dans l'inscription d'Agrippa. Cette Laelia était la fille de Gaius Laelius, l'ami de Scipion Émilien ; Quintilien dit qu'elle reproduisait en parlant l'élégance de son père.",
+          "response": {
+            "type": "court",
+            "expected": "Laelia Gaii filia",
+            "hints": [
+              "Quel cas répond à « fille de qui ? » ?",
+              "*Gaius* se décline comme *filius* : *filius*, *filii* ; donc *Gaius*, ?"
+            ],
+            "explanation": "*Laelia Gaii filia* : le prénom du père passe au génitif, *filia* reste au nominatif, accordé avec *Laelia*."
+          }
+        }
+      ]
+    },
+    {
+      "id": "exercices",
+      "title": "Exercices",
+      "duration_min": {
+        "min": 9,
+        "max": 11
+      },
+      "questions": [
+        {
+          "code": "E1",
+          "kind": "exercise",
+          "prompt": "Associe chaque mot interrogatif à son sens.",
+          "solution": "*quis ?* : qui ? (un homme) ; *quae ?* : qui ? (une femme) ; *quid ?* : quoi ? ; *cuius ?* : de qui ? ; *quot ?* : combien ?",
+          "response": {
+            "type": "appariement",
+            "pairs": [
+              {
+                "left": "quis ?",
+                "right": "qui ? (masculin)"
+              },
+              {
+                "left": "quae ?",
+                "right": "qui ? (féminin)"
+              },
+              {
+                "left": "quid ?",
+                "right": "quoi ?"
+              },
+              {
+                "left": "cuius ?",
+                "right": "de qui ?"
+              },
+              {
+                "left": "quot ?",
+                "right": "combien ?"
+              }
+            ],
+            "hints": [
+              "*Quid* a été vu avec *Quid est Sicilia?*",
+              "*Cuius* est un génitif : quelle question française lui correspond ?"
+            ],
+            "explanation": "*Quis* et *quae* demandent une personne, selon son genre ; *quid* une chose ; *cuius* le possesseur ou le parent, au génitif ; *quot* un nombre."
+          }
+        },
+        {
+          "code": "E2",
+          "kind": "exercise",
+          "prompt": "Associe à chaque groupe la bonne forme du nombre (le chiffre est entre parenthèses) : *___ servus* (1), *___ ancillae* (2), *___ oppida* (3), *___ filii* (2), *___ filia* (1), *___ fluvii* (3).",
+          "solution": "*ūnus servus* ; *duae ancillae* ; *tria oppida* ; *duo filii* ; *ūna filia* ; *trēs fluvii*.",
+          "response": {
+            "type": "appariement",
+            "pairs": [
+              {
+                "left": "___ servus (1)",
+                "right": "ūnus"
+              },
+              {
+                "left": "___ ancillae (2)",
+                "right": "duae"
+              },
+              {
+                "left": "___ oppida (3)",
+                "right": "tria"
+              },
+              {
+                "left": "___ filii (2)",
+                "right": "duo"
+              },
+              {
+                "left": "___ filia (1)",
+                "right": "ūna"
+              },
+              {
+                "left": "___ fluvii (3)",
+                "right": "trēs"
+              }
+            ],
+            "hints": [
+              "Cherche d'abord le genre de chaque nom : *-us* masculin, *-a* féminin, *-um* neutre.",
+              "*Oppida* est un neutre pluriel : le neutre de *trēs* est *tria*."
+            ],
+            "explanation": "Un, deux et trois s'accordent : masculin *ūnus, duo, trēs* ; féminin *ūna, duae, trēs* ; neutre *ūnum, duo, tria*."
+          }
+        },
+        {
+          "code": "E3",
+          "kind": "exercise",
+          "prompt": "Lis à voix haute ce petit texte, écrit pour toi avec le vocabulaire connu. Ce n'est pas une citation : il résume ce que disent Plutarque et l'inscription de Cornélie. Puis réponds **en latin**, par une phrase complète, aux trois questions.\n\n> *Cornelia femina Romana est. Cornelia filia Africani est. Tiberius et Gaius filii Corneliae sunt ; Sempronia quoque filia Corneliae est. In familia Corneliae trēs liberi sunt : duo filii et ūna filia. Tiberius et Gaius Gracchi sunt ; Cornelia mater Gracchorum est. In familia multi servi et multae ancillae sunt.*\n\n(*mater*, la mère)\n\n1. *Quae est Cornelia?*\n2. *Cuius filii sunt Tiberius et Gaius?*\n3. *Quot filiae sunt in familia Corneliae?*",
+          "solution": "1. *Cornelia femina Romana est* (ou : *Cornelia filia Africani est*, ou *mater Gracchorum*).\n2. *Tiberius et Gaius filii Corneliae sunt.*\n3. *In familia Corneliae ūna filia est.* (Une seule fille : le verbe est au singulier, *est*.)",
+          "response": {
+            "type": "long",
+            "consigne": "Trois phrases latines complètes, une par question.",
+            "hints": [
+              "Reprends les mots de la question dans ta réponse.",
+              "Pour la question 2, *cuius* appelle un génitif : *Corneliae*.",
+              "Pour la question 3, attention au singulier : *ūna filia ... est*."
+            ],
+            "explanation": "Chaque réponse reprend la question et remplace le mot interrogatif par le renseignement, au même cas : nominatif pour *quae*, génitif pour *cuius*, nombre pour *quot*."
+          }
+        },
+        {
+          "code": "E4",
+          "kind": "exercise",
+          "prompt": "Remets dans l'ordre officiel romain les éléments du nom complet de Cicéron (prénom, nom de famille, filiation, surnom).",
+          "solution": "*Marcus Tullius Marci filius Cicero*, abrégé *M. Tullius M. f. Cicero* : prénom, nom de famille, filiation, surnom. Le père de Cicéron s'appelait lui aussi Marcus Tullius Cicero.",
+          "response": {
+            "type": "ordre",
+            "items": [
+              "Marcus",
+              "Tullius",
+              "Marci filius",
+              "Cicero"
+            ],
+            "hints": [
+              "Le prénom vient en premier.",
+              "La filiation se place entre le nom de famille et le surnom."
+            ],
+            "explanation": "Ordre officiel : *praenomen* (Marcus), *nomen* (Tullius), filiation au génitif (*Marci filius*), *cognomen* (Cicero)."
+          }
+        },
+        {
+          "code": "E5",
+          "kind": "exercise",
+          "prompt": "Voici la phrase où Pline l'Ancien mentionne la statue de Cornélie (*Histoire naturelle*, XXXIV, 31) :\n\n> *... sicuti Corneliae Gracchorum matri, quae fuit Africani prioris filia.*\n\nAides : *sicuti*, « comme (par exemple) » ; *Corneliae ... matri*, « à Cornélie, mère », les deux mots sont à un cas que nous verrons plus tard (le datif : la statue est élevée **pour** elle) ; *quae fuit*, « qui fut » ; *prior*, *prioris*, « le premier, l'aîné » (ici, au génitif comme *Africani*).\n\n1. Relève les deux groupes au génitif et traduis-les.\n2. Traduis toute la phrase.",
+          "solution": "1. *Gracchorum*, génitif pluriel de *Gracchus*, « des Gracques » ; *Africani prioris*, génitif singulier, « du premier Africain » (Scipion l'Africain, par opposition à Scipion Émilien, dit aussi l'Africain).\n2. « ... comme pour Cornélie, mère des Gracques, qui fut la fille du premier Africain. »\n\nAttention au piège de la leçon 4 : *Corneliae* a la forme d'un génitif singulier, mais ce n'en est pas un ici, car il va avec *matri* et ne répond pas à « de qui ? ». La même terminaison peut appartenir à plusieurs cas ; c'est la phrase qui tranche.",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Cherche les terminaisons *-orum* et *-i*.",
+              "*Africani prioris* forme un seul groupe : « du premier Africain ».",
+              "*Corneliae* va avec *matri* : regarde les aides."
+            ],
+            "explanation": "Pline dit exactement ce que dit la base : *Gracchorum matri*, « mère des Gracques », et *Africani filia*, « fille de l'Africain ». Les deux génitifs sont les mêmes que sur la pierre."
+          }
+        }
+      ]
+    },
+    {
+      "id": "reflexion",
+      "title": "Question de réflexion",
+      "duration_min": {
+        "min": 2,
+        "max": 2
+      },
+      "questions": [
+        {
+          "code": "Q",
+          "kind": "reflection",
+          "prompt": "Pourquoi la question *Quis est Tiberius?* appelle-t-elle une réponse au nominatif, alors que *Cuius filius est Tiberius?* appelle un génitif ? Explique-le en une ou deux phrases, avec tes mots.",
+          "solution": "Dans une question latine, le mot interrogatif occupe la place exacte du renseignement demandé, et il est déjà au cas de ce renseignement. *Quis* est un nominatif, attribut ou sujet : la réponse est un nom au nominatif. *Cuius* est un génitif, complément de *filius* : la réponse est donc un nom au génitif, *Corneliae*, à la même place dans la phrase.",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Remplace *cuius* par la réponse dans la phrase : quel mot prend sa place ?",
+              "Quel est le cas de *cuius* ?"
+            ],
+            "explanation": "C'est une règle générale, qui servira pour tous les cas : la question annonce la forme de la réponse."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ticket",
+      "title": "Ticket de sortie",
+      "duration_min": {
+        "min": 2,
+        "max": 2
+      },
+      "questions": [
+        {
+          "code": "T1",
+          "kind": "ticket",
+          "prompt": "Calcule et écris le résultat en chiffres : *trēs et quattuor et trēs* (« trois et quatre et trois »). Puis, de mémoire, dis-le en latin.",
+          "solution": "10, *decem*.",
+          "response": {
+            "type": "nombre",
+            "expected": 10,
+            "hints": [
+              "3 + 4 + 3.",
+              "Le mot latin a donné « décembre »."
+            ],
+            "explanation": "3 + 4 + 3 = 10, *decem* (chiffre romain X)."
+          }
+        },
+        {
+          "code": "T2",
+          "kind": "ticket",
+          "prompt": "Développe et traduis en français l'inscription du Panthéon, sans les deux derniers mots : *M. Agrippa L. f.*",
+          "solution": "*Marcus Agrippa Lucii filius*, « Marcus Agrippa, fils de Lucius ».",
+          "response": {
+            "type": "court",
+            "expected": "Marcus Agrippa Lucii filius, fils de Lucius",
+            "hints": [
+              "*M.* et *L.* sont des prénoms abrégés.",
+              "*f.* abrège un mot de la leçon 4 ; le père est au génitif."
+            ],
+            "explanation": "*M.* = *Marcus* ; *L. f.* = *Lucii filius*, le prénom du père au génitif."
+          }
+        }
+      ]
+    }
+  ],
+  "retenir": [
+    "*Quis ?* et *quae ?* demandent « qui ? » (masculin, féminin), *quid ?* « quoi ? », *quot ?* « combien ? » ; *cuius ?*, génitif, demande « de qui ? ».",
+    "La question annonce le cas de la réponse : à *Cuius filius est Tiberius?* on répond *Tiberius filius Corneliae est*, avec un génitif.",
+    "Seuls *ūnus, duo, trēs* s'accordent en genre (*ūna filia, duae ancillae, tria oppida*) ; de *quattuor* à *decem*, et *centum*, les nombres sont invariables.",
+    "La filiation romaine est un génitif abrégé : *M. Agrippa L. f.* se lit *Marcus Agrippa Lucii filius*, « fils de Lucius ».",
+    "La base de Cornélie, *Cornelia Africani f. Gracchorum*, la définit par deux génitifs : fille de l'Africain, mère des Gracques ; Pline dit de même *Gracchorum matri ... Africani prioris filia*."
+  ],
+  "mot_du_jour": {
+    "code": "M",
+    "terme": "familia",
+    "texte": "Le latin *familia* dérive de *famulus*, « serviteur de la maison ». À l'origine, la *familia* désigne donc l'ensemble des personnes et des biens placés sous l'autorité du maître de maison, esclaves compris, et non le seul groupe des parents et des enfants. Le français « famille » a gardé le mot et resserré le sens. La même famille de mots a donné « familier », du latin *familiaris*, « de la maison », et donc ce qui nous est connu."
+  },
+  "pour_aller_plus_loin": [
+    {
+      "type": "primaire",
+      "reference": "Pline l'Ancien, Naturalis historia, XXXIV, 31, texte établi par Karl Mayhoff, Leipzig, Teubner (édition parue de 1875 à 1906).",
+      "note": "Le passage sur les statues de femmes à Rome, où Pline décrit celle de Cornélie, assise, et son déplacement du portique de Métellus aux bâtiments d'Octavie.",
+      "citation": "sicuti Corneliae Gracchorum matri, quae fuit Africani prioris filia.",
+      "citation_source": "XXXIV, 31",
+      "lien": "https://penelope.uchicago.edu/Thayer/L/Roman/Texts/Pliny_the_Elder/34*.html"
+    },
+    {
+      "type": "primaire",
+      "reference": "Quintilien, Institutio oratoria, I, 1, 6, texte établi et traduit par Harold Edgeworth Butler, Cambridge (Mass.), Harvard University Press, et Londres, William Heinemann, 1920 (Loeb Classical Library).",
+      "note": "Le grand pédagogue romain sur l'instruction des parents, avec Cornélie, Laelia et Hortensia en exemples ; tu y reconnaîtras Gracchorum et Laelia C. filia.",
+      "citation": "in parentibus vero quam plurimum esse eruditionis optaverim, nec de patribus tantum loquor.",
+      "citation_source": "I, 1, 6 (éd. Butler)",
+      "lien": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2007.01.0059:book=1:chapter=1:section=6"
+    },
+    {
+      "type": "primaire",
+      "reference": "Plutarque, Vie de Tiberius Gracchus, 1, 3 à 5, dans Plutarch's Lives, vol. X, trad. Bernadotte Perrin, Cambridge (Mass.), Harvard University Press, et Londres, William Heinemann, 1921 (Loeb Classical Library).",
+      "note": "La source des nombres de l'exemple 2 : douze enfants, trois survivants, une fille et deux fils, élevés par Cornélie.",
+      "citation": "In this state she lost most of her children, but three survived; one daughter, who married Scipio the younger, and two sons, Tiberius and Caius",
+      "citation_source": "1, 5 (trad. Perrin)",
+      "lien": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Plutarch/Lives/Tiberius_Gracchus*.html"
+    },
+    {
+      "type": "secondaire",
+      "reference": "Mika Kajava, « Cornelia Africani f. Gracchorum », Arctos. Acta Philologica Fennica, 23, 1990, p. 119 à 131.",
+      "note": "Étude épigraphique de la base de Cornélie : sa découverte en 1878, la date augustéenne du texte, et l'étrangeté de Gracchorum sans le mot mater.",
+      "lien": "https://doi.org/10.71390/arctos.86913"
+    },
+    {
+      "type": "secondaire",
+      "reference": "Joseph Henry Allen et James Bradstreet Greenough, New Latin Grammar for Schools and Colleges, Boston, Ginn and Company, 1903, § 133 et 134.",
+      "note": "La liste des nombres cardinaux et ordinaux avec leurs chiffres romains, et la déclinaison de duo et de trēs.",
+      "citation": "Of the Cardinals only ūnus, duo, trēs, the hundreds above one hundred, and mīlle when used as a noun, are declinable.",
+      "citation_source": "§ 134",
+      "lien": "https://dcc.dickinson.edu/grammar/latin/declension-cardinals-and-ordinals"
+    },
+    {
+      "type": "secondaire",
+      "reference": "Hans H. Ørberg, Lingua Latina per se illustrata. Pars I : Familia Romana, Grenaa, Domus Latina, 2003, chapitre II.",
+      "note": "Le chapitre suivi par cette leçon : la maison de Iulius, ses questions quis, quae, cuius, quot, et les premiers nombres, en latin seul."
+    }
+  ]
+}

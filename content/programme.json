@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated": "2026-11-14",
+  "updated": "2026-11-16",
   "learner": "Sébastien",
   "tutor": "Schopen",
   "objective": "Culture d'honnête homme : classiques grecs, latins, chinois, indiens, arabes et africains, langues anciennes, mathématiques, sciences de base, art, philosophie, économie et économétrie en partant de zéro.",
@@ -47,17 +47,17 @@
     {
       "weekday": "vendredi",
       "subject": "mathematiques",
-      "note": "Mathématiques trois vendredis sur quatre, sciences de base un vendredi sur quatre."
+      "note": "En alternance : mathématiques un vendredi, économie le suivant (20 novembre : mathématiques ; 27 novembre : économie, L2). Un vendredi de mathématiques sur trois devient sciences de base et histoire des sciences."
     },
     {
       "weekday": "samedi",
-      "subject": "economie",
-      "note": "Économie la première année, économétrie la deuxième."
+      "subject": "Pas de leçon",
+      "note": "Depuis le 14 novembre 2026. Révisions libres dans l'application, si tu le souhaites. L'économie passe au vendredi."
     },
     {
       "weekday": "dimanche",
-      "subject": "quiz",
-      "note": "Quiz cumulatif (15 min) puis art et littérature (20 à 25 min)."
+      "subject": "Pas de leçon",
+      "note": "Depuis le 14 novembre 2026. Les rappels quotidiens remplacent le quiz ; l'art et la littérature sont intégrés aux Classiques du mardi."
     }
   ],
   "points_fragiles": [
@@ -72,8 +72,8 @@
       "id": "latin",
       "label": "Latin",
       "weekday": "lundi et mercredi",
-      "status": "en cours",
-      "position": "Leçon 4, mercredi 11 novembre 2026 : le génitif des première et deuxième déclinaisons, au début du chapitre II d'Ørberg. Les leçons 1 à 3 (chapitre I) ont été faites par échanges écrits, avant cette application.",
+      "status": "leçon du jour",
+      "position": "Leçon 5, lundi 16 novembre 2026 : la familia romaine, les questions quis, quae, cuius, quot, les nombres de un à dix et la filiation au génitif (chapitre II d'Ørberg). Prochaine leçon : mercredi 18 novembre.",
       "summary": "Lingua Latina per se illustrata (Ørberg), un demi-chapitre à un chapitre par semaine selon la maîtrise. Grammaire explicite après le texte. Vocabulaire en cartes, latin vers français puis français vers latin. Pas d'entrelacement à la première rencontre d'un mot.",
       "modules": [
         {
@@ -99,7 +99,13 @@
               "lesson_id": "2026-11-11-latin-L4"
             },
             {
-              "title": "Suite du chapitre II : familia, interrogatifs, nombres",
+              "title": "L5. La familia romaine, « cuius ? » et les nombres",
+              "date": "2026-11-16",
+              "status": "faite",
+              "lesson_id": "2026-11-16-latin-L5"
+            },
+            {
+              "title": "Suite : fin du chapitre II (meus, tuus, ceteri) et contrôle de maîtrise des chapitres I et II",
               "status": "à venir"
             }
           ]
@@ -570,8 +576,8 @@
     {
       "id": "economie",
       "label": "Économie",
-      "weekday": "samedi",
-      "status": "leçon du jour",
+      "weekday": "vendredi (en alternance avec les mathématiques)",
+      "status": "en cours",
       "position": "Leçon 1, samedi 14 novembre 2026 : rareté, choix et coût d'opportunité (Robbins, Bastiat). Unité 1, intuition économique.",
       "summary": "Environ 50 samedis. Chaque unité dure 3 à 5 leçons et se termine par un contrôle de maîtrise. Chaque notion part d'un cas concret. L'année 2 : statistiques puis économétrie causale, sur données réelles.",
       "modules": [

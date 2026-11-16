@@ -325,6 +325,78 @@
       "answer": "Un bien libre n'est pas rare : en prendre plus ne prive personne d'un autre usage (l'air en forêt). Un bien économique est rare par rapport aux usages qu'on voudrait en faire.",
       "created": "2026-11-14",
       "kind": "notion"
+    },
+    {
+      "id": "LAT-009",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Que demandent *quis ?*, *quae ?*, *quid ?*, *cuius ?* et *quot ?* ?",
+      "answer": "*quis ?* qui ? (masculin) ; *quae ?* qui ? (féminin) ; *quid ?* quoi ? ; *cuius ?* de qui ? (génitif de quis et quae) ; *quot ?* combien ? (invariable).",
+      "created": "2026-11-16",
+      "kind": "notion"
+    },
+    {
+      "id": "LAT-010",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Réponds en latin : *Cuius filius est Tiberius?* (sa mère est Cornelia). Pourquoi cette forme ?",
+      "answer": "*Tiberius filius Corneliae est.* *Cuius* est un génitif : la réponse met le nom au même cas, à la même place.",
+      "created": "2026-11-16",
+      "kind": "notion"
+    },
+    {
+      "id": "LAT-011",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Donne le masculin, le féminin et le neutre de « un », « deux » et « trois » en latin. Lesquels des nombres suivants changent de forme ?",
+      "answer": "*ūnus, ūna, ūnum* ; *duo, duae, duo* ; *trēs, trēs, tria*. Seuls ces trois-là se déclinent ; *quattuor* à *decem* et *centum* sont invariables.",
+      "created": "2026-11-16",
+      "kind": "notion"
+    },
+    {
+      "id": "LAT-012",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Développe et traduis la filiation de l'inscription du Panthéon : *M. Agrippa L. f.*",
+      "answer": "*Marcus Agrippa Lucii filius* : « Marcus Agrippa, fils de Lucius ». Le prénom du père est au génitif ; *f.* abrège *filius* (ou *filia* pour une femme).",
+      "created": "2026-11-16",
+      "kind": "notion"
+    },
+    {
+      "id": "LAT-013",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Que dit la base de statue *Cornelia Africani f. Gracchorum*, et à quels cas sont *Africani* et *Gracchorum* ?",
+      "answer": "« Cornélie, fille de l'Africain, (mère) des Gracques. » *Africani* : génitif singulier ; *Gracchorum* : génitif pluriel. Le mot *mater* n'est pas écrit.",
+      "created": "2026-11-16",
+      "kind": "notion"
+    },
+    {
+      "id": "LAT-014",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Que signifient *vir, viri* et *puer, pueri* ? Quelle particularité ont-ils ?",
+      "answer": "*vir* : l'homme, le mari ; *puer* : le garçon. Nominatif en *-r*, mais génitif en *-i* comme *fluvius* (*viri*, *pueri* : *puer* garde son *e*).",
+      "created": "2026-11-16",
+      "kind": "vocabulaire"
+    },
+    {
+      "id": "LAT-015",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Que signifient *dominus*, *domina*, *servus* et *ancilla* ?",
+      "answer": "*dominus* : le maître ; *domina* : la maîtresse de maison ; *servus* : l'esclave ; *ancilla* : la servante.",
+      "created": "2026-11-16",
+      "kind": "vocabulaire"
+    },
+    {
+      "id": "LAT-016",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Que signifie *liberi, liberorum*, et quelle est sa particularité ?",
+      "answer": "Les enfants (fils et filles). Le mot n'existe qu'au pluriel.",
+      "created": "2026-11-16",
+      "kind": "vocabulaire"
     }
   ]
 }
