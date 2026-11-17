@@ -397,6 +397,60 @@
       "answer": "Les enfants (fils et filles). Le mot n'existe qu'au pluriel.",
       "created": "2026-11-16",
       "kind": "vocabulaire"
+    },
+    {
+      "id": "CLA-001",
+      "subject": "classiques",
+      "subject_label": "Classiques des civilisations",
+      "prompt": "Qu'est-ce qu'un classique, au sens de ce cours ?",
+      "answer": "Une œuvre qu'une tradition continue de lire, de citer et de commenter, et qui sert de référence à d'autres œuvres ; pas seulement un texte ancien ou fameux.",
+      "created": "2026-11-17",
+      "kind": "notion"
+    },
+    {
+      "id": "CLA-002",
+      "subject": "classiques",
+      "subject_label": "Classiques des civilisations",
+      "prompt": "Situe la version standard de l'Épopée de Gilgamesh : langue, nombre de tablettes, attribution, date.",
+      "answer": "En akkadien, douze tablettes (arc du récit : I à XI), attribuée par la tradition à Sîn-lēqi-unninni d'Uruk, vers 1200 à 1000 av. J.-C.",
+      "created": "2026-11-17",
+      "kind": "notion"
+    },
+    {
+      "id": "CLA-003",
+      "subject": "classiques",
+      "subject_label": "Classiques des civilisations",
+      "prompt": "Quel est le titre antique de la version standard de Gilgamesh, et que signifie naqbu ?",
+      "answer": "*Ša naqba īmuru*, « Celui qui a vu le Fond » (l'incipit). *Naqbu* : le Fond, les eaux profondes, et la totalité de ce qui peut être connu.",
+      "created": "2026-11-17",
+      "kind": "notion"
+    },
+    {
+      "id": "CLA-004",
+      "subject": "classiques",
+      "subject_label": "Classiques des civilisations",
+      "prompt": "D'où viennent nos principaux manuscrits de Gilgamesh, et qui a identifié la tablette du Déluge ?",
+      "answer": "De la bibliothèque d'Assurbanipal à Ninive (VIIe siècle av. J.-C.). George Smith a présenté le récit du Déluge (tablette XI) le 3 décembre 1872.",
+      "created": "2026-11-17",
+      "kind": "notion"
+    },
+    {
+      "id": "CLA-005",
+      "subject": "classiques",
+      "subject_label": "Classiques des civilisations",
+      "prompt": "Pourquoi l'épopée commence-t-elle et finit-elle par les murs d'Uruk ?",
+      "answer": "Composition en anneau : l'immortalité du corps a échoué ; ce qui reste, c'est la ville et le texte. Pour Bottéro, la sagesse d'un homme qui ne voulait pas mourir.",
+      "created": "2026-11-17",
+      "kind": "notion"
+    },
+    {
+      "id": "CLA-006",
+      "subject": "classiques",
+      "subject_label": "Classiques des civilisations",
+      "prompt": "Gilgamesh a-t-il existé ? Que peut-on dire avec prudence ?",
+      "answer": "Un roi d'Uruk est possible au début des dynasties archaïques (vers 2700 à 2500 av. J.-C.), mais les témoignages (Liste royale, Tummal) sont tardifs ou légendaires ; le personnage lu est d'abord un héros de poème.",
+      "created": "2026-11-17",
+      "kind": "notion"
     }
   ]
 }

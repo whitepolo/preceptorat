@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated": "2026-11-16",
+  "updated": "2026-11-17",
   "learner": "Sébastien",
   "tutor": "Schopen",
   "objective": "Culture d'honnête homme : classiques grecs, latins, chinois, indiens, arabes et africains, langues anciennes, mathématiques, sciences de base, art, philosophie, économie et économétrie en partant de zéro.",
@@ -72,7 +72,7 @@
       "id": "latin",
       "label": "Latin",
       "weekday": "lundi et mercredi",
-      "status": "leçon du jour",
+      "status": "en cours",
       "position": "Leçon 5, lundi 16 novembre 2026 : la familia romaine, les questions quis, quae, cuius, quot, les nombres de un à dix et la filiation au génitif (chapitre II d'Ørberg). Prochaine leçon : mercredi 18 novembre.",
       "summary": "Lingua Latina per se illustrata (Ørberg), un demi-chapitre à un chapitre par semaine selon la maîtrise. Grammaire explicite après le texte. Vocabulaire en cartes, latin vers français puis français vers latin. Pas d'entrelacement à la première rencontre d'un mot.",
       "modules": [
@@ -116,8 +116,8 @@
       "id": "classiques",
       "label": "Classiques des civilisations",
       "weekday": "mardi",
-      "status": "prochaine leçon",
-      "position": "Module I, leçon 1, mardi 17 novembre 2026. Le fichier est déjà dans le dépôt. Il s'affiche le jour dit.",
+      "status": "en cours",
+      "position": "Module I, leçon 1, mardi 17 novembre 2026 : qu'est-ce qu'un classique ? Gilgamesh, le prologue et les murs d'Uruk. Prochaine leçon : mardi 24 novembre, tablette XI et le Déluge.",
       "summary": "Environ 52 mardis, du 17 novembre 2026 au 16 novembre 2027. Chaque leçon : une œuvre ou une figure, un extrait de source primaire cité, et le regard d'un classique secondaire (code S). Le mardi pose le cadre. Le jeudi, plus tard, entre dans l'argument.",
       "modules": [
         {
@@ -130,7 +130,7 @@
             {
               "title": "L1. Qu'est-ce qu'un classique ? Gilgamesh, le prologue et les murs d'Uruk",
               "date": "2026-11-17",
-              "status": "prévue",
+              "status": "faite",
               "lesson_id": "2026-11-17-classiques-L1"
             },
             {

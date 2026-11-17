@@ -22,7 +22,7 @@
     "Lire de près le cadre de l'œuvre (prologue et murs d'Uruk) et expliquer ce que le poème oppose à l'immortalité manquée.",
     "Distinguer ce que fait ce créneau du mardi et ce que fera la philosophie le jeudi."
   ],
-  "student_note": "Lis l'extrait, puis réponds à côté de chaque question.",
+  "student_note": "Lis l'extrait à voix basse, sans te presser ; chaque question a sa zone de réponse.",
   "sources": [
     {
       "type": "primary",
@@ -43,6 +43,139 @@
   ],
   "sections": [
     {
+      "id": "rappel",
+      "title": "Rappel",
+      "duration_min": {
+        "min": 7,
+        "max": 9
+      },
+      "body": "Huit cartes dues aujourd'hui, toutes matières mélangées : latin, mathématiques, philosophie, économie. Réponds de mémoire, sans relire tes leçons : c'est l'effort de rappel qui consolide. Après chaque correction, note honnêtement Juste, Partiel ou Faux ; la date de la prochaine révision en dépend.",
+      "questions": [
+        {
+          "code": "R1",
+          "kind": "recall",
+          "prompt": "Réponds en latin : *Cuius filius est Tiberius?* (sa mère est Cornelia). Pourquoi cette forme ?",
+          "solution": "*Tiberius filius Corneliae est.* *Cuius* est un génitif : la réponse met le nom au même cas, à la même place.",
+          "card_id": "LAT-010",
+          "response": {
+            "type": "court",
+            "hints": [
+              "*Cuius ?* est au génitif : la réponse aussi.",
+              "Cornelia devient *Corneliae*."
+            ],
+            "explanation": "On remplace le mot interrogatif par la réponse, au même cas et à la même place : *Tiberius filius Corneliae est*."
+          }
+        },
+        {
+          "code": "R2",
+          "kind": "recall",
+          "prompt": "Comment divise-t-on par une fraction ? Donne le résultat simplifié de 3/4 ÷ 9/8.",
+          "solution": "On multiplie par son inverse : 3/4 × 8/9 = 24/36 = 2/3.",
+          "card_id": "MAT-001",
+          "response": {
+            "type": "court",
+            "expected": "2/3",
+            "hints": [
+              "Diviser par une fraction, c'est multiplier par son inverse.",
+              "3/4 × 8/9, puis simplifie."
+            ],
+            "explanation": "3/4 × 8/9 = 24/36 = 2/3."
+          }
+        },
+        {
+          "code": "R3",
+          "kind": "recall",
+          "prompt": "Quel est le principe de Thalès selon Aristote, et que signifie le « peut-être » d'Aristote dans Métaphysique A 3 ?",
+          "solution": "L'eau (et la terre repose sur l'eau). Le « peut-être » montre que les raisons (nourriture et semences humides) sont une conjecture d'Aristote, non la parole de Thalès.",
+          "card_id": "PHI-003",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Un élément liquide.",
+              "Le « peut-être » porte sur les raisons, pas sur le principe."
+            ],
+            "explanation": "Aristote reconstruit les raisons de Thalès : c'est un témoignage, non un fragment."
+          }
+        },
+        {
+          "code": "R4",
+          "kind": "recall",
+          "prompt": "Place gratuite pour Clapton ; Dylan le même soir, place 40 $, valeur pour toi 50 $. Quel est, en dollars, le coût d'opportunité d'aller voir Clapton ?",
+          "solution": "10 $ : gain net de la meilleure option abandonnée (50 − 40). Un coût évité est un gain. Seuls 21,6 % des 199 économistes interrogés par Ferraro et Taylor (2005) l'ont trouvé.",
+          "card_id": "ECO-003",
+          "response": {
+            "type": "nombre",
+            "expected": 10,
+            "hints": [
+              "On compte la meilleure option abandonnée, nette de son prix.",
+              "50 moins 40."
+            ],
+            "explanation": "10 $ : la valeur de Dylan (50) moins son prix (40). Un coût évité est un gain."
+          }
+        },
+        {
+          "code": "R5",
+          "kind": "recall",
+          "prompt": "Donne le masculin, le féminin et le neutre de « un », « deux » et « trois » en latin. Lesquels des nombres suivants changent de forme ?",
+          "solution": "*ūnus, ūna, ūnum* ; *duo, duae, duo* ; *trēs, trēs, tria*. Seuls ces trois-là se déclinent ; *quattuor* à *decem* et *centum* sont invariables.",
+          "card_id": "LAT-011",
+          "response": {
+            "type": "court",
+            "hints": [
+              "*ūnus, ūna, ūnum* se décline comme *magnus*.",
+              "Le neutre de trois finit en *-a*."
+            ],
+            "explanation": "Seuls un, deux et trois se déclinent ; à partir de *quattuor*, le nombre ne change plus."
+          }
+        },
+        {
+          "code": "R6",
+          "kind": "recall",
+          "prompt": "Que valent a⁰ et a⁻ⁿ (a non nul), et pourquoi ?",
+          "solution": "a⁰ = 1 et a⁻ⁿ = 1/aⁿ, pour que la règle aᵐ × aⁿ = aᵐ⁺ⁿ reste vraie (a⁰ × aⁿ = aⁿ ; a⁻ⁿ × aⁿ = a⁰ = 1).",
+          "card_id": "MAT-007",
+          "response": {
+            "type": "long",
+            "hints": [
+              "a⁰ × aⁿ doit rester égal à aⁿ.",
+              "a⁻ⁿ × aⁿ = a⁰."
+            ],
+            "explanation": "Ces définitions ne sont pas arbitraires : ce sont les seules qui gardent vraie la règle des exposants."
+          }
+        },
+        {
+          "code": "R7",
+          "kind": "recall",
+          "prompt": "Résume l'unique fragment d'Anaximandre (DK 12 B 1) et son image.",
+          "solution": "Les êtres retournent à ce dont ils naissent, selon la nécessité, car ils se rendent justice et réparation de leur injustice selon l'ordre du temps. Le changement est une compensation réglée entre contraires, décrite avec le vocabulaire du droit.",
+          "card_id": "PHI-005",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Les êtres retournent à ce dont ils naissent.",
+              "Le vocabulaire est celui du tribunal : justice, réparation."
+            ],
+            "explanation": "Le changement est pensé comme une compensation réglée entre contraires, selon l'ordre du temps."
+          }
+        },
+        {
+          "code": "R8",
+          "kind": "recall",
+          "prompt": "Que dit la base de statue *Cornelia Africani f. Gracchorum*, et à quels cas sont *Africani* et *Gracchorum* ?",
+          "solution": "« Cornélie, fille de l'Africain, (mère) des Gracques. » *Africani* : génitif singulier ; *Gracchorum* : génitif pluriel. Le mot *mater* n'est pas écrit.",
+          "card_id": "LAT-013",
+          "response": {
+            "type": "court",
+            "hints": [
+              "*f.* abrège *filia*.",
+              "*-i* et *-orum* : deux génitifs, singulier puis pluriel."
+            ],
+            "explanation": "*Africani* génitif singulier, *Gracchorum* génitif pluriel ; le mot *mater* est sous-entendu."
+          }
+        }
+      ]
+    },
+    {
       "id": "prequestions",
       "title": "Pré-questions",
       "duration_min": {
@@ -55,13 +188,26 @@
           "code": "P1",
           "kind": "prequestion",
           "prompt": "Pourquoi commencer une culture générale des classiques par un poème de Mésopotamie, plutôt que par Homère ?",
-          "solution": "Parce que c'est le plus ancien grand récit littéraire que nous puissions encore lire de près, et qu'il pose déjà la mort, l'amitié, la cité et l'écriture. Homère viendra au module II : il n'est pas le commencement de l'épopée, seulement celui de l'épopée grecque."
+          "solution": "Parce que c'est le plus ancien grand récit littéraire que nous puissions encore lire de près, et qu'il pose déjà la mort, l'amitié, la cité et l'écriture. Homère viendra au module II : il n'est pas le commencement de l'épopée, seulement celui de l'épopée grecque.",
+          "response": {
+            "type": "prediction",
+            "confidence": true,
+            "hints": [
+              "Quel est le plus ancien grand récit que nous puissions encore lire ?"
+            ],
+            "explanation": "Homère n'est pas le commencement de l'épopée, seulement celui de l'épopée grecque."
+          }
         },
         {
           "code": "P2",
           "kind": "prequestion",
           "prompt": "Si un héros échoue à devenir immortel, que peut encore laisser un poème à ceux qui le lisent ?",
-          "solution": "Une ville, des murs, un récit fixé par écrit, une mesure du monde. Autrement dit une mémoire transmissible, alors que le corps du héros meurt."
+          "solution": "Une ville, des murs, un récit fixé par écrit, une mesure du monde. Autrement dit une mémoire transmissible, alors que le corps du héros meurt.",
+          "response": {
+            "type": "prediction",
+            "confidence": true,
+            "explanation": "Garde ta réponse en tête : le prologue et les murs d'Uruk vont y répondre."
+          }
         }
       ]
     },
@@ -96,13 +242,27 @@
           "code": "X1",
           "kind": "worked",
           "prompt": "Prenons I, 1-8. **Ce que le texte dit :** un homme a vu le Fond, il a connu les voies, il a rapporté un récit d'avant le Déluge ; cet homme est nommé au troisième vers, Gilgamesh. **Comment il est fait :** les deux premiers vers sont répétés en y insérant le nom ; la sagesse est dite plusieurs fois, par accumulation ; le Déluge entre dans le prologue avant d'être raconté. **Ce qu'il engage :** le héros vaut par ce qu'il a vu et rapporté, non par une victoire sur la mort, qui n'est pas mentionnée ici. Le mot *naqbu* tient ensemble la profondeur (les eaux) et la totalité (le savoir).",
-          "solution": "Le héros est nommé au troisième vers, par reprise des deux premiers. Il vaut par ce qu'il a vu et rapporté, non par une victoire sur la mort. *Naqbu* joint la profondeur et la totalité."
+          "solution": "Le héros est nommé au troisième vers, par reprise des deux premiers. Il vaut par ce qu'il a vu et rapporté, non par une victoire sur la mort. *Naqbu* joint la profondeur et la totalité.",
+          "response": {
+            "type": "court",
+            "explanation": "Méthode en trois temps : ce que le texte dit, comment il est fait, ce qu'il engage."
+          }
         },
         {
           "code": "Xf",
           "kind": "complete",
           "prompt": "À toi de finir, sur I, 24-28 (le coffret de cèdre et la tablette de lapis-lazuli). Les trois mêmes temps : que dit le passage, comment est-il fait (à qui s'adresse-t-il, par quels verbes), que signifie le geste d'ouvrir et de lire pour l'œuvre que tu as dans les mains ?",
-          "solution": "**Ce que le texte dit :** il faut ouvrir un coffret de cèdre, en ôter les fermoirs de bronze, prendre une tablette de lapis-lazuli et lire tout ce que Gilgamesh a traversé. **Comment il est fait :** une série d'impératifs (ouvre, fais sauter, prends, lis) s'adresse à un « tu », le même que celui qu'on a fait monter sur le rempart ; l'objet (cèdre, bronze, lapis) est précieux. **Ce qu'il engage :** l'épopée se montre elle-même comme un objet à ouvrir et à lire ; le lecteur accomplit le geste que le prologue décrit. C'est la définition concrète d'un classique."
+          "solution": "**Ce que le texte dit :** il faut ouvrir un coffret de cèdre, en ôter les fermoirs de bronze, prendre une tablette de lapis-lazuli et lire tout ce que Gilgamesh a traversé. **Comment il est fait :** une série d'impératifs (ouvre, fais sauter, prends, lis) s'adresse à un « tu », le même que celui qu'on a fait monter sur le rempart ; l'objet (cèdre, bronze, lapis) est précieux. **Ce qu'il engage :** l'épopée se montre elle-même comme un objet à ouvrir et à lire ; le lecteur accomplit le geste que le prologue décrit. C'est la définition concrète d'un classique.",
+          "response": {
+            "type": "long",
+            "consigne": "Les trois temps, en quelques phrases.",
+            "hints": [
+              "Compte les verbes à l'impératif : à qui parlent-ils ?",
+              "Cèdre, bronze, lapis-lazuli : que dit la valeur de l'objet ?",
+              "Toi aussi, tu ouvres un texte en ce moment."
+            ],
+            "explanation": "Le prologue décrit le geste même que fait le lecteur : ouvrir et lire."
+          }
         }
       ]
     },
@@ -124,7 +284,14 @@
           "code": "S",
           "kind": "secondary",
           "prompt": "En quoi le sous-titre de Bottéro éclaire-t-il le retour aux murs d'Uruk, là où le héros, précisément, n'a pas obtenu l'immortalité ?",
-          "solution": "Les murs et la tablette sont ce qui reste à la place de l'immortalité manquée. Bottéro lit l'épopée comme l'éducation d'un homme qui ne voulait pas mourir : le retour à Uruk n'est pas seulement un échec, c'est le moment où le héros, et le lecteur, reçoivent une sagesse à la mesure d'une vie mortelle, une ville et un récit, non un corps qui échapperait à la mort. George, en soulignant la composition en anneau, montre que le poème avait prévu cette leçon dès le prologue."
+          "solution": "Les murs et la tablette sont ce qui reste à la place de l'immortalité manquée. Bottéro lit l'épopée comme l'éducation d'un homme qui ne voulait pas mourir : le retour à Uruk n'est pas seulement un échec, c'est le moment où le héros, et le lecteur, reçoivent une sagesse à la mesure d'une vie mortelle, une ville et un récit, non un corps qui échapperait à la mort. George, en soulignant la composition en anneau, montre que le poème avait prévu cette leçon dès le prologue.",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Que reste-t-il quand le corps doit mourir ?",
+              "George parle de composition en anneau : où le poème revient-il ?"
+            ]
+          }
         }
       ]
     },
@@ -140,31 +307,97 @@
           "code": "E1",
           "kind": "exercise",
           "prompt": "Situe la version standard de l'épopée : ville du héros, langue, nombre de tablettes, personne à qui la tradition l'attribue, et siècle approximatif de cette mise en forme.",
-          "solution": "Ville : Uruk. Langue : l'akkadien. Douze tablettes. Attribution traditionnelle : Sîn-lēqi-unninni, exorciste et savant d'Uruk. Mise en forme : vers 1200 à 1000 av. J.-C. (période médio-babylonienne)."
+          "solution": "Ville : Uruk. Langue : l'akkadien. Douze tablettes. Attribution traditionnelle : Sîn-lēqi-unninni, exorciste et savant d'Uruk. Mise en forme : vers 1200 à 1000 av. J.-C. (période médio-babylonienne).",
+          "response": {
+            "type": "appariement",
+            "consigne": "Associe chaque élément à ce qui lui correspond pour la version standard.",
+            "pairs": [
+              {
+                "left": "Ville du héros",
+                "right": "Uruk"
+              },
+              {
+                "left": "Langue",
+                "right": "akkadien"
+              },
+              {
+                "left": "Nombre de tablettes",
+                "right": "douze"
+              },
+              {
+                "left": "Attribution traditionnelle",
+                "right": "Sîn-lēqi-unninni"
+              },
+              {
+                "left": "Mise en forme",
+                "right": "vers 1200 à 1000 av. J.-C."
+              }
+            ],
+            "explanation": "Les poèmes sumériens sur Bilgames sont plus anciens (vers 2100) ; la version standard les réorganise en akkadien."
+          }
         },
         {
           "code": "E2",
           "kind": "exercise",
           "prompt": "Pourquoi le poème commence-t-il et s'achève-t-il par les murs d'Uruk ? Qu'est-ce qui demeure, une fois manquée l'immortalité ? Réponds en quelques phrases, en t'appuyant sur l'extrait.",
-          "solution": "Les murs apparaissent dès le prologue et reviennent à la fin de la tablette XI, quand Gilgamesh rentre avec Ur-shanabi. Le poème encadre le voyage par ce qui, à Uruk, se voit et se mesure : briques cuites, fondations attribuées aux Sept Sages, plan en *šār*. L'immortalité du corps a échoué (le serpent emporte la plante). Il reste la cité et le texte."
+          "solution": "Les murs apparaissent dès le prologue et reviennent à la fin de la tablette XI, quand Gilgamesh rentre avec Ur-shanabi. Le poème encadre le voyage par ce qui, à Uruk, se voit et se mesure : briques cuites, fondations attribuées aux Sept Sages, plan en *šār*. L'immortalité du corps a échoué (le serpent emporte la plante). Il reste la cité et le texte.",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Où reviennent les murs à la fin ? Avec qui Gilgamesh rentre-t-il ?",
+              "Qu'emporte le serpent, et que reste-t-il à Uruk ?"
+            ]
+          }
         },
         {
           "code": "E3",
           "kind": "exercise",
-          "prompt": "Quel ordre le passage I, 18-28 donne-t-il au lecteur, et en quoi cela éclaire-t-il la définition d'un classique donnée au début du cours ?",
-          "solution": "L'ordre est de monter, de marcher, d'inspecter les fondations et les briques, puis d'ouvrir le coffret et de lire la tablette. Un classique n'est pas seulement un objet admiré de loin : c'est un texte qu'une tradition reprend, inspecte et relit. Le prologue met déjà le lecteur dans ce geste."
+          "prompt": "Dans le passage I, 18-28, remets dans l'ordre les gestes que le poème demande au lecteur. Puis observe ce que cette suite dit d'un classique, tel que le cours l'a défini.",
+          "solution": "L'ordre est de monter, de marcher, d'inspecter les fondations et les briques, puis d'ouvrir le coffret et de lire la tablette. Un classique n'est pas seulement un objet admiré de loin : c'est un texte qu'une tradition reprend, inspecte et relit. Le prologue met déjà le lecteur dans ce geste.",
+          "response": {
+            "type": "ordre",
+            "items": [
+              "Monter sur le rempart d'Uruk et marcher",
+              "Examiner les fondations",
+              "Inspecter l'appareil de briques",
+              "Ouvrir le coffret de cèdre",
+              "Faire sauter les fermoirs de bronze",
+              "Prendre la tablette de lapis-lazuli et lire"
+            ],
+            "hints": [
+              "On commence dehors, sur la ville, avant l'objet.",
+              "La lecture vient en dernier."
+            ],
+            "explanation": "On va de la ville au texte : un classique est un objet qu'une tradition inspecte, ouvre et relit, et le prologue met déjà le lecteur dans ce geste."
+          }
         },
         {
           "code": "E4",
           "kind": "exercise",
           "prompt": "Pour réviser le latin : traduis « Uruk est une grande ville. Elle n'est pas en Europe, mais en Asie. »",
-          "solution": "*Uruk oppidum magnum est. Uruk non in Europa, sed in Asia est.* On peut alléger : *Uruk oppidum magnum est, non in Europa, sed in Asia.*"
+          "solution": "*Uruk oppidum magnum est. Uruk non in Europa, sed in Asia est.* On peut alléger : *Uruk oppidum magnum est, non in Europa, sed in Asia.*",
+          "response": {
+            "type": "court",
+            "consigne": "Deux phrases latines, ou une seule allégée.",
+            "hints": [
+              "« Ville » : le mot de la leçon 3, *oppidum*, neutre.",
+              "*magnus* s'accorde au neutre ; « mais » se dit *sed*."
+            ],
+            "explanation": "*Oppidum* est neutre : *magnum*. *Non... sed...* oppose les deux lieux."
+          }
         },
         {
           "code": "E5",
           "kind": "exercise",
           "prompt": "Pourquoi la historicité de Gilgamesh est-elle plus fragile que celle de Hammurabi ? Quelle sorte de sources aurait-on besoin de trouver pour la renforcer ?",
-          "solution": "De Hammurabi, on a un règne daté (1792-1750 av. J.-C., chronologie moyenne), une capitale, et des documents de son temps, dont la stèle. De Gilgamesh, on a surtout des traditions plus tardives (Liste royale, poèmes, inscription de Tummal) et un indice onomastique archaïque. Pour renforcer la historicité, il faudrait une inscription ou une archive à peu près contemporaine du roi, le nommant clairement comme souverain d'Uruk, ce qui manque encore."
+          "solution": "De Hammurabi, on a un règne daté (1792-1750 av. J.-C., chronologie moyenne), une capitale, et des documents de son temps, dont la stèle. De Gilgamesh, on a surtout des traditions plus tardives (Liste royale, poèmes, inscription de Tummal) et un indice onomastique archaïque. Pour renforcer la historicité, il faudrait une inscription ou une archive à peu près contemporaine du roi, le nommant clairement comme souverain d'Uruk, ce qui manque encore.",
+          "response": {
+            "type": "long",
+            "hints": [
+              "De quand datent les documents qui parlent de chacun ?",
+              "Quel document de Hammurabi date de son propre règne ?"
+            ]
+          }
         }
       ]
     },
@@ -180,7 +413,14 @@
           "code": "Q",
           "kind": "reflection",
           "prompt": "Une œuvre est-elle classique parce qu'elle raconte des faits historiquement sûrs, ou parce qu'une tradition ne cesse de la relire ? Qu'est-ce qui s'ensuit pour le roi possible et pour le héros du poème ? Une ou deux phrases.",
-          "solution": "Une œuvre devient classique parce qu'on continue de la lire et de s'y rapporter, non parce que chaque fait raconté est historiquement garanti. On peut donc tenir ensemble un roi d'Uruk possible, mal attesté, et un héros de poème dont la force ne dépend pas de cette attestation."
+          "solution": "Une œuvre devient classique parce qu'on continue de la lire et de s'y rapporter, non parce que chaque fait raconté est historiquement garanti. On peut donc tenir ensemble un roi d'Uruk possible, mal attesté, et un héros de poème dont la force ne dépend pas de cette attestation.",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Pense à la définition du début du cours.",
+              "Faut-il que Gilgamesh ait existé pour que le poème compte ?"
+            ]
+          }
         }
       ]
     },
@@ -195,14 +435,32 @@
         {
           "code": "T1",
           "kind": "ticket",
-          "prompt": "Quel est le titre antique de la version standard, et que peut signifier le mot *naqbu* ?",
-          "solution": "*Ša naqba īmuru*, « Celui qui a vu le Fond ». *Naqbu* peut désigner le Fond, les eaux profondes, et la totalité de ce qui peut être connu."
+          "prompt": "Quel est le titre antique de la version standard ?",
+          "solution": "*Ša naqba īmuru*, « Celui qui a vu le Fond ». *Naqbu* peut désigner le Fond, les eaux profondes, et la totalité de ce qui peut être connu.",
+          "response": {
+            "type": "choix",
+            "choices": [
+              "Ša naqba īmuru, « Celui qui a vu le Fond »",
+              "Enūma eliš, « Lorsqu'en haut »",
+              "Atra-hasīs, « Le Supersage »",
+              "Ludlul bēl nēmeqi, « Je veux louer le seigneur de sagesse »"
+            ],
+            "expected": "Ša naqba īmuru, « Celui qui a vu le Fond »",
+            "explanation": "Le titre antique est l'incipit. *Naqbu* peut désigner le Fond, les eaux profondes, et la totalité de ce qui peut être connu. Les trois autres titres sont ceux d'autres œuvres akkadiennes."
+          }
         },
         {
           "code": "T2",
           "kind": "ticket",
           "prompt": "Où et à quelle époque ont été copiés nos principaux témoins de cette version ? Qui a identifié la tablette du Déluge, et en quelle année l'a-t-il présentée ?",
-          "solution": "À Ninive, dans la bibliothèque d'Assurbanipal, au VIIe siècle av. J.-C. George Smith a présenté la tablette du Déluge le 3 décembre 1872, devant la Society of Biblical Archaeology."
+          "solution": "À Ninive, dans la bibliothèque d'Assurbanipal, au VIIe siècle av. J.-C. George Smith a présenté la tablette du Déluge le 3 décembre 1872, devant la Society of Biblical Archaeology.",
+          "response": {
+            "type": "court",
+            "hints": [
+              "Une capitale assyrienne, un roi bibliophile.",
+              "Un employé du British Museum, en décembre."
+            ]
+          }
         }
       ]
     }
@@ -237,9 +495,9 @@
       "note": "Communication lue le 3 décembre 1872 : identification du récit du Déluge, tablette XI."
     },
     {
-      "type": "secondaire",
-      "reference": "Marchesi et al., dans Sallaberger et Schrakamp (dir.), ARCANE 3, Turnhout, Brepols, 2015.",
-      "note": "Mise au point sur un Gilgamesh historique possible : la Liste royale sumérienne n'est pas, dans ses premières sections, une chronique sûre."
+      "type": "primaire",
+      "reference": "Andrew George (trad.), The Epic of Gilgamesh. The Babylonian Epic Poem and Other Texts in Akkadian and Sumerian, Londres, Penguin Classics, 1999.",
+      "note": "Traduction anglaise intégrale par l'éditeur du texte critique, avec les poèmes sumériens sur Bilgames : la meilleure porte d'entrée pour lire toute l'œuvre."
     }
   ]
 }
