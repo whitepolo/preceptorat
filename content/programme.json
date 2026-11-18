@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated": "2026-11-17",
+  "updated": "2026-11-18",
   "learner": "Sébastien",
   "tutor": "Schopen",
   "objective": "Culture d'honnête homme : classiques grecs, latins, chinois, indiens, arabes et africains, langues anciennes, mathématiques, sciences de base, art, philosophie, économie et économétrie en partant de zéro.",
@@ -73,7 +73,7 @@
       "label": "Latin",
       "weekday": "lundi et mercredi",
       "status": "en cours",
-      "position": "Leçon 5, lundi 16 novembre 2026 : la familia romaine, les questions quis, quae, cuius, quot, les nombres de un à dix et la filiation au génitif (chapitre II d'Ørberg). Prochaine leçon : mercredi 18 novembre.",
+      "position": "Leçon 6, mercredi 18 novembre 2026 : les possessifs meus, tuus, noster, vester et ceteri, avec Martial (I, 38) et César (I, 1). Prochaine leçon : lundi 23 novembre, contrôle de maîtrise des chapitres I et II.",
       "summary": "Lingua Latina per se illustrata (Ørberg), un demi-chapitre à un chapitre par semaine selon la maîtrise. Grammaire explicite après le texte. Vocabulaire en cartes, latin vers français puis français vers latin. Pas d'entrelacement à la première rencontre d'un mot.",
       "modules": [
         {
@@ -105,8 +105,15 @@
               "lesson_id": "2026-11-16-latin-L5"
             },
             {
-              "title": "Suite : fin du chapitre II (meus, tuus, ceteri) et contrôle de maîtrise des chapitres I et II",
-              "status": "à venir"
+              "title": "L6. Les possessifs meus, tuus, noster, vester, et ceteri",
+              "date": "2026-11-18",
+              "status": "faite",
+              "lesson_id": "2026-11-18-latin-L6"
+            },
+            {
+              "title": "L7. Contrôle de maîtrise des chapitres I et II (seuil 80 %)",
+              "date": "2026-11-23",
+              "status": "prévue"
             }
           ]
         }

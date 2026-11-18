@@ -451,6 +451,60 @@
       "answer": "Un roi d'Uruk est possible au début des dynasties archaïques (vers 2700 à 2500 av. J.-C.), mais les témoignages (Liste royale, Tummal) sont tardifs ou légendaires ; le personnage lu est d'abord un héros de poème.",
       "created": "2026-11-17",
       "kind": "notion"
+    },
+    {
+      "id": "LAT-017",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "À quoi s'accorde l'adjectif possessif latin (*meus*, *tuus*...) ? Donne un exemple.",
+      "answer": "Avec le nom possédé (genre, nombre, cas), jamais avec le possesseur : une mère dit *filius meus*, un père dit *filia mea*.",
+      "created": "2026-11-18",
+      "kind": "notion"
+    },
+    {
+      "id": "LAT-018",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Donne le nominatif singulier et pluriel de *meus* aux trois genres. Quelle forme sert deux fois ?",
+      "answer": "*meus, mea, meum* ; *mei, meae, mea*. *Mea* est à la fois féminin singulier et neutre pluriel.",
+      "created": "2026-11-18",
+      "kind": "notion"
+    },
+    {
+      "id": "LAT-019",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Comment dit-on « notre » et « votre » en latin (trois genres) ? Traduis « nos enfants ».",
+      "answer": "*noster, nostra, nostrum* ; *vester, vestra, vestrum* (le *e* tombe devant la terminaison). « Nos enfants » : *liberi nostri*.",
+      "created": "2026-11-18",
+      "kind": "notion"
+    },
+    {
+      "id": "LAT-020",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Pourquoi dit-on *mater mea* et non *mater mei* ? Et comment dit-on « la mère de Marcus » ?",
+      "answer": "Pour « je, tu, nous, vous », le latin emploie l'adjectif possessif, pas le génitif du pronom (Allen et Greenough, § 302 a). Un nom de possesseur se met au génitif : *mater Marci*.",
+      "created": "2026-11-18",
+      "kind": "notion"
+    },
+    {
+      "id": "LAT-021",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Que signifie *ceteri, ceterae, cetera* ?",
+      "answer": "Les autres, le reste (pluriel, accordé comme *multi*) : *ceteri servi*, les autres esclaves ; *et cetera*, « et les autres choses ».",
+      "created": "2026-11-18",
+      "kind": "vocabulaire"
+    },
+    {
+      "id": "LAT-022",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Traduis Martial, I, 38 : *Quem recitas meus est, o Fidentine, libellus : sed male cum recitas, incipit esse tuus.* Pourquoi *meus* et *tuus* ont-ils la même terminaison ?",
+      "answer": "« Le petit livre que tu récites est le mien, ô Fidentinus ; mais quand tu le récites mal, il commence à être le tien. » Tous deux s'accordent avec *libellus* (masculin singulier) : seul le possesseur change, d'où le trait final.",
+      "created": "2026-11-18",
+      "kind": "notion"
     }
   ]
 }

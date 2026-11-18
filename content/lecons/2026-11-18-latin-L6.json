@@ -1,0 +1,560 @@
+{
+  "schema_version": "1.0",
+  "id": "2026-11-18-latin-L6",
+  "title": "2026-11-18 · Latin · Leçon 6 : meus, tuus, noster, vester, ou comment dire « mon » et « notre »",
+  "date": "2026-11-18",
+  "weekday": "mercredi",
+  "subject": "latin",
+  "subject_label": "Latin",
+  "lesson_number": 6,
+  "module": {
+    "id": "orberg-II",
+    "title": "Ørberg, chapitre II : le génitif"
+  },
+  "duration_min": {
+    "min": 35,
+    "max": 45
+  },
+  "lang": "fr",
+  "objectives": [
+    "Décliner au nominatif et au génitif meus, tuus, noster et vester, et les accorder avec le nom possédé (filia mea, liberi nostri).",
+    "Choisir entre un possessif et un génitif de nom (filius meus, mais filius Iulii) et employer ceteri, ceterae, cetera.",
+    "Lire et traduire deux textes latins réels fondés sur les possessifs : Martial, Épigrammes, I, 38, et César, Guerre des Gaules, I, 1 (nostra)."
+  ],
+  "prerequisites": [
+    "Leçons de latin 4 et 5 : génitif singulier et pluriel ; familia (filius, filia, liberi, servus, ancilla) ; quis, cuius, quot ; accord de magnus et multi ; piège du neutre pluriel en -a."
+  ],
+  "student_note": "Lis les mots latins à voix haute (c toujours dur, v prononcé comme w), puis réponds sous chaque question. La correction s'ouvre ensuite.",
+  "sources": [
+    {
+      "type": "primary",
+      "cite": "Martial, Épigrammes, I, 29 et I, 38, éd. et trad. D. R. Shackleton Bailey, Martial, Epigrams, vol. I, Cambridge (Mass.), Harvard University Press, 1993 (Loeb Classical Library 94)."
+    },
+    {
+      "type": "primary",
+      "cite": "César, De bello Gallico, I, 1, trad. H. J. Edwards, Caesar, The Gallic War, Londres, William Heinemann, et New York, G. P. Putnam's Sons, 1917 (Loeb Classical Library 72)."
+    },
+    {
+      "type": "method",
+      "cite": "Hans H. Ørberg, Lingua Latina per se illustrata. Pars I : Familia Romana, Grenaa, Domus Latina, 2003, chapitre II (la maison de Iulius et d'Aemilia)."
+    },
+    {
+      "type": "secondary",
+      "cite": "Joseph Henry Allen et James Bradstreet Greenough, New Latin Grammar for Schools and Colleges, Boston, Ginn and Company, 1903, § 302 (pronoms possessifs)."
+    }
+  ],
+  "sections": [
+    {
+      "id": "rappel",
+      "title": "Rappel",
+      "duration_min": {
+        "min": 8,
+        "max": 10
+      },
+      "body": "Huit cartes dues aujourd'hui, toutes matières mélangées. Réponds de mémoire, sans relire tes leçons : c'est l'effort de rappel qui consolide. Après chaque correction, note honnêtement Juste, Partiel ou Faux ; la date de la prochaine révision en dépend.",
+      "questions": [
+        {
+          "code": "R1",
+          "kind": "recall",
+          "prompt": "Développe et traduis la filiation de l'inscription du Panthéon : *M. Agrippa L. f.*",
+          "solution": "*Marcus Agrippa Lucii filius* : « Marcus Agrippa, fils de Lucius ». Le prénom du père est au génitif ; *f.* abrège *filius* (ou *filia* pour une femme).",
+          "card_id": "LAT-012",
+          "response": {
+            "type": "court",
+            "hints": [
+              "*f.* abrège un mot de la famille que tu connais.",
+              "Le prénom du père, *L.*, est au génitif : *Lucii*."
+            ]
+          }
+        },
+        {
+          "code": "R2",
+          "kind": "recall",
+          "prompt": "Situe la version standard de l'Épopée de Gilgamesh : langue, nombre de tablettes, attribution, date.",
+          "solution": "En akkadien, douze tablettes (l'arc du récit va de I à XI), attribuée par la tradition à Sîn-lēqi-unninni d'Uruk, vers 1200 à 1000 av. J.-C.",
+          "card_id": "CLA-002",
+          "response": {
+            "type": "long",
+            "hints": [
+              "La langue est sémitique, écrite en cunéiforme.",
+              "Le nom de l'auteur traditionnel commence par Sîn, le dieu Lune."
+            ]
+          }
+        },
+        {
+          "code": "R3",
+          "kind": "recall",
+          "prompt": "Par quel coefficient multiplie-t-on une quantité pour une hausse de t %, et pour une baisse de t % ? Donne l'exemple de 15 %.",
+          "solution": "Hausse : 1 + t/100 (× 1,15 pour + 15 %). Baisse : 1 − t/100 (× 0,85 pour − 15 %).",
+          "card_id": "MAT-003",
+          "response": {
+            "type": "court",
+            "hints": [
+              "Une hausse de 100 % double la quantité : quel coefficient ?"
+            ]
+          }
+        },
+        {
+          "code": "R4",
+          "kind": "recall",
+          "prompt": "Coût d'opportunité d'une année d'études : le salaire abandonné et le loyer y entrent-ils ? Pourquoi ?",
+          "solution": "Le salaire abandonné, oui : c'est l'option sacrifiée, souvent le poste le plus lourd. Le loyer, non, s'il est payé dans les deux cas : on ne compte que ce qui change entre les options.",
+          "card_id": "ECO-005",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Compare deux mondes : tu étudies, ou tu travailles.",
+              "Ce que tu paies dans les deux mondes compte-t-il ?"
+            ]
+          }
+        },
+        {
+          "code": "R5",
+          "kind": "recall",
+          "prompt": "Que demandent *quis ?*, *quae ?*, *quid ?*, *cuius ?* et *quot ?* ?",
+          "solution": "*quis ?* qui ? (masculin) ; *quae ?* qui ? (féminin) ; *quid ?* quoi ? ; *cuius ?* de qui ? (génitif de *quis* et *quae*) ; *quot ?* combien ? (invariable).",
+          "card_id": "LAT-009",
+          "response": {
+            "type": "court",
+            "hints": [
+              "Un de ces mots est un génitif.",
+              "*Quot liberi sunt?* attend un nombre."
+            ]
+          }
+        },
+        {
+          "code": "R6",
+          "kind": "recall",
+          "prompt": "Pourquoi l'Épopée de Gilgamesh commence-t-elle et finit-elle par les murs d'Uruk ?",
+          "solution": "Composition en anneau : l'immortalité du corps a échoué ; ce qui reste, c'est la ville et le texte. Pour Bottéro, c'est la sagesse d'un homme qui ne voulait pas mourir.",
+          "card_id": "CLA-005",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Que cherchait Gilgamesh, et l'a-t-il obtenu ?"
+            ]
+          }
+        },
+        {
+          "code": "R7",
+          "kind": "recall",
+          "prompt": "Qu'est-ce qu'un bien libre, par opposition à un bien économique ? Donne un exemple.",
+          "solution": "Un bien libre n'est pas rare : en prendre plus ne prive personne d'un autre usage (l'air en forêt). Un bien économique est rare par rapport aux usages qu'on voudrait en faire.",
+          "card_id": "ECO-006",
+          "response": {
+            "type": "court",
+            "hints": [
+              "Pense à la définition de Robbins : des moyens rares."
+            ]
+          }
+        },
+        {
+          "code": "R8",
+          "kind": "recall",
+          "prompt": "Quelle règle Archimède énonce-t-il dans *L'Arénaire*, et dans quel but ?",
+          "solution": "Dans la suite 1, 10, 100..., le produit de deux termes est un terme de la suite dont le rang se déduit en ajoutant les rangs (moins un) : notre 10ᵐ × 10ⁿ = 10ᵐ⁺ⁿ. Il s'en sert pour nommer de très grands nombres et montrer que le sable qui remplirait l'univers compte moins de 10⁶³ grains.",
+          "card_id": "MAT-008",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Le titre parle de sable.",
+              "La règle ressemble à aᵐ × aⁿ = aᵐ⁺ⁿ."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "prequestions",
+      "title": "Pré-questions",
+      "duration_min": {
+        "min": 1,
+        "max": 2
+      },
+      "body": "Réponds avant de lire la leçon, même au hasard. Une erreur maintenant aide à retenir la bonne réponse ensuite.",
+      "questions": [
+        {
+          "code": "P1",
+          "kind": "prequestion",
+          "prompt": "Aemilia, la mère, parle de sa fille Iulia : *Iulia filia mea est.* Iulius, le père, parle de la même fille. À ton avis, écrit-il *filia mea* ou *filia meus* ? Pourquoi ?",
+          "solution": "Il écrit aussi *filia mea*. Le possessif s'accorde avec le nom possédé (*filia*, féminin), pas avec la personne qui parle. Que le possesseur soit un homme ou une femme ne change rien.",
+          "response": {
+            "type": "prediction",
+            "confidence": true
+          }
+        },
+        {
+          "code": "P2",
+          "kind": "prequestion",
+          "prompt": "Un père dit « mes fils » en parlant de Marcus et de Quintus. Quelle forme choisir ?",
+          "solution": "*filii mei* : *filii* est au nominatif masculin pluriel, donc le possessif prend la même terminaison, *mei*. *filiorum* est un génitif, et *meus*, *mea* n'ont pas le bon nombre ou le bon genre.",
+          "response": {
+            "type": "choix",
+            "choices": [
+              "*filii mei*",
+              "*filii meus*",
+              "*filii mea*",
+              "*filiorum meus*"
+            ],
+            "expected": "*filii mei*"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cours",
+      "title": "Notion du jour",
+      "duration_min": {
+        "min": 10,
+        "max": 12
+      },
+      "body": "### N1. Dire « mon », « ton », « notre », « votre »\n\nPour parler de sa famille, on a besoin de « mon fils », « ta fille », « nos enfants ». Le latin emploie pour cela des **adjectifs possessifs** : *meus* (mon), *tuus* (ton), *noster* (notre), *vester* (votre). Ce sont de vrais adjectifs, déclinés exactement comme *magnus, magna, magnum* que tu connais : *-us* au masculin, *-a* au féminin, *-um* au neutre.\n\nLa règle décisive est donnée par la grammaire d'Allen et Greenough (§ 302) : le possessif prend le genre, le nombre et le cas **du nom auquel il se rapporte**, non ceux du possesseur. Une mère dit donc *filius meus*, « mon fils », avec la terminaison masculine de *filius* ; un père dit *filia mea*, « ma fille ». Le français fait de même (« sa mère » se dit pour la mère d'un homme), l'anglais non (*his mother*, *her mother*).\n\nLe possessif se place d'ordinaire **après** le nom : *filius meus*, *liberi nostri*. Placé avant, il insiste : *meus filius*, « mon fils à moi ». Et quand le contexte suffit, le latin l'omet souvent.\n\n### N2. Possessif ou génitif ?\n\nTu sais déjà dire « le fils de Iulius » : *filius Iulii*, avec un génitif. Pour « mon fils », en revanche, on n'emploie pas le génitif du pronom « moi » : on dit *domus mea*, « ma maison », et non *domus mei* (Allen et Greenough, § 302 a). Retiens la répartition du tableau 2 : un **nom** de possesseur se met au génitif ; « je », « tu », « nous », « vous » deviennent un **adjectif** accordé.\n\nDeux remarques de forme. *Noster* et *vester* perdent leur *e* dès qu'on ajoute une terminaison, à la différence de *puer*, qui garde le sien (*pueri*) : *noster, nostra, nostrum* ; *nostri*. Et pour « son, sa, leur », le latin a deux mots, *suus* et *eius*, dont l'emploi demande une leçon à part : on les verra plus tard.\n\n### N3. *ceteri, ceterae, cetera* : les autres\n\nPour compléter la maison, un mot utile : *ceteri* (masculin), *ceterae* (féminin), *cetera* (neutre), « les autres », « le reste ». Il s'emploie au pluriel et s'accorde comme *multi, multae, multa* : *ceteri servi* (les autres esclaves), *ceterae ancillae*, *cetera oppida*. Seul, il désigne des personnes : *Marcus et ceteri*, « Marcus et les autres ». Le français l'a gardé dans *et cetera*, « et les autres choses » (neutre pluriel).\n\n### N4. Un poète qui se fait voler ses vers\n\nMartial (vers 40 à vers 104 apr. J.-C.) a publié à Rome des livres d'épigrammes, de courts poèmes qui finissent sur un trait. Au livre I, plusieurs pièces visent un certain Fidentinus, qui récite en public les poèmes de Martial comme s'ils étaient les siens (I, 29, 38, 53, 72). L'épigramme I, 38 tient en deux vers, et tout repose sur deux possessifs. Lis l'extrait ci-dessous à voix haute, puis la lecture suivie.",
+      "figures": [
+        {
+          "type": "table",
+          "caption": "Tableau 1. Les possessifs, au nominatif et au génitif",
+          "columns": [
+            "Forme",
+            "Masculin",
+            "Féminin",
+            "Neutre"
+          ],
+          "rows": [
+            [
+              "*meus*, nominatif singulier",
+              "*meus*",
+              "*mea*",
+              "*meum*"
+            ],
+            [
+              "*meus*, génitif singulier",
+              "*mei*",
+              "*meae*",
+              "*mei*"
+            ],
+            [
+              "*meus*, nominatif pluriel",
+              "*mei*",
+              "*meae*",
+              "*mea*"
+            ],
+            [
+              "*meus*, génitif pluriel",
+              "*meorum*",
+              "*mearum*",
+              "*meorum*"
+            ],
+            [
+              "*tuus*, nominatif singulier et pluriel",
+              "*tuus*, *tui*",
+              "*tua*, *tuae*",
+              "*tuum*, *tua*"
+            ],
+            [
+              "*noster*, nominatif singulier et pluriel",
+              "*noster*, *nostri*",
+              "*nostra*, *nostrae*",
+              "*nostrum*, *nostra*"
+            ],
+            [
+              "*vester*, nominatif singulier et pluriel",
+              "*vester*, *vestri*",
+              "*vestra*, *vestrae*",
+              "*vestrum*, *vestra*"
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "caption": "Tableau 2. Possessif ou génitif",
+          "columns": [
+            "Français",
+            "Latin",
+            "Pourquoi"
+          ],
+          "rows": [
+            [
+              "mon fils",
+              "*filius meus*",
+              "« je » devient un adjectif, accordé avec *filius*"
+            ],
+            [
+              "ma mère (dit par Marcus)",
+              "*mater mea*",
+              "accord avec *mater*, féminin, même si Marcus est un homme"
+            ],
+            [
+              "nos enfants",
+              "*liberi nostri*",
+              "masculin pluriel, comme *liberi*"
+            ],
+            [
+              "le fils de Iulius",
+              "*filius Iulii*",
+              "un nom de possesseur se met au génitif"
+            ],
+            [
+              "les servantes d'Aemilia",
+              "*ancillae Aemiliae*",
+              "génitif singulier de *Aemilia*"
+            ]
+          ]
+        }
+      ],
+      "excerpt": {
+        "work": "Martial, Épigrammes, livre I, épigramme 38",
+        "locus": "I, 38 (deux vers, distique élégiaque)",
+        "edition": "Texte latin de The Latin Library (thelatinlibrary.com, Martial, livre I) ; édition de référence avec traduction anglaise : D. R. Shackleton Bailey, Martial, Epigrams, vol. I, Harvard University Press, 1993 (Loeb Classical Library 94).",
+        "translator": "traduction de travail, pour cette leçon",
+        "lang": "fr",
+        "original": "Quem recitas meus est, o Fidentine, libellus:\nsed male cum recitas, incipit esse tuus.",
+        "text": "Le petit livre que tu récites est le mien, ô Fidentinus ;\nmais quand tu le récites mal, il commence à être le tien.",
+        "close_reading": "**Les mots.** *libellus* : le petit livre, le recueil (diminutif de *liber*) ; *quem* : que, pronom qui reprend *libellus* ; *recitas* : tu récites, tu lis en public ; *o Fidentine* : ô Fidentinus, forme qu'on prend pour appeler quelqu'un ; *sed* : mais ; *male* : mal ; *cum* : quand ; *incipit* : il commence ; *esse* : être.\n\n**Ce que dit le texte.** Le recueil que Fidentinus lit en public appartient à Martial. Mais Fidentinus le lit si mal qu'il le défigure, et ce poème mal dit devient vraiment le sien.\n\n**Comment il est fait.** Le sujet, *libellus*, est rejeté à la fin du premier vers, loin de *meus* : on attend de savoir ce qui est « à moi ». Le second vers répète *recitas*, puis garde pour le dernier mot le possessif inverse, *tuus*. *Meus* et *tuus* ont la même terminaison, masculin singulier, parce qu'ils s'accordent tous deux avec *libellus* ; seul le possesseur change. Tout le trait tient dans ce passage de *meus* à *tuus*.\n\n**Ce que cela engage.** À Rome, un livre « publié » circulait en copies et se faisait entendre en lectures publiques ; rien n'empêchait un autre de réciter vos vers. Martial ne réclame pas un droit : il se moque. Le bien qu'on vole se dégrade entre les mains du voleur."
+      }
+    },
+    {
+      "id": "exemples",
+      "title": "Exemples résolus",
+      "duration_min": {
+        "min": 5,
+        "max": 6
+      },
+      "body": "Lis les deux exemples complets, en suivant chaque étape, puis termine le troisième toi-même.",
+      "questions": [
+        {
+          "code": "X1",
+          "kind": "worked",
+          "prompt": "**Exemple complet.** Iulius et Aemilia parlent de leurs enfants, Marcus et Iulia. Que disent-ils chacun ?\n\n1. Le nom possédé : *filius* (Marcus), masculin singulier ; *filia* (Iulia), féminin singulier.\n2. Le possesseur : « moi », donc *meus*.\n3. L'accord avec le nom possédé : *filius meus*, *filia mea*.\n4. Résultat : Iulius dit *Marcus filius meus est, Iulia filia mea est*, et Aemilia dit exactement la même chose. Ensemble, ils disent *Marcus et Iulia liberi nostri sunt* : *liberi*, masculin pluriel, donc *nostri*.",
+          "solution": "Le sexe de celui qui parle ne change rien : le possessif regarde le nom possédé.",
+          "response": {
+            "type": "court"
+          }
+        },
+        {
+          "code": "X2",
+          "kind": "worked",
+          "prompt": "**Exemple complet.** César, *Guerre des Gaules*, I, 1, que tu as rencontré à la leçon 4 : *Gallia est omnis divisa in partes tres, quarum unam incolunt Belgae, aliam Aquitani, tertiam qui ipsorum lingua Celtae, nostra Galli appellantur.*\n\n1. Repérer le possessif : *nostra*, « notre ».\n2. Chercher le nom auquel il se rapporte : il n'est pas répété. *Nostra* fait écho à *ipsorum lingua*, « dans leur propre langue » ; il faut comprendre *nostra (lingua)*, féminin singulier comme *lingua*.\n3. Traduire : « la troisième, ceux qui dans leur propre langue s'appellent Celtes, dans la nôtre Gaulois ». Le « nous » de César, ce sont les Romains, qui parlent latin.\n4. Remarque : *lingua* et *nostra* sont ici à un cas que tu verras plus tard (l'ablatif, « dans », « par ») ; l'accord en genre suffit pour comprendre.",
+          "solution": "Le possessif peut rester seul quand le nom vient d'être dit : on le complète par le nom sous-entendu, avec le même genre.",
+          "response": {
+            "type": "court"
+          }
+        },
+        {
+          "code": "Xf",
+          "kind": "complete",
+          "prompt": "**À toi de finir.** Dans une autre épigramme contre Fidentinus (I, 29, vers 3 et 4), Martial lui propose un marché :\n\n*Si mea vis dici, gratis tibi carmina mittam :*\n*si dici tua vis, hoc eme, ne mea sint.*\n\nMots : *si* : si ; *vis* : tu veux ; *dici* : être dit, qu'on les dise ; *gratis* : gratuitement ; *tibi* : à toi ; *carmina* : les poèmes (neutre pluriel) ; *mittam* : j'enverrai ; *hoc eme* : achète cela ; *ne ... sint* : pour qu'ils ne soient pas.\n\nÉtapes 1 et 2 faites : le nom est *carmina*, neutre pluriel ; les possessifs sont *mea* (deux fois) et *tua*. Termine : étape 3, explique la terminaison de *mea* et *tua* ; étape 4, traduis les deux vers.",
+          "solution": "3. *Mea* et *tua* sont au neutre pluriel, comme *carmina* (souviens-toi du piège du neutre pluriel en *-a*, leçon 3 : *oppida*). Ce ne sont pas des féminins singuliers.\n4. « Si tu veux qu'on les dise miens, je t'enverrai mes poèmes gratuitement ; si tu veux qu'on les dise tiens, achète-les, pour qu'ils ne soient plus miens. » Ici, le possessif est seul et renvoie à *carmina*, comme *nostra* chez César renvoyait à *lingua*.",
+          "response": {
+            "type": "court",
+            "hints": [
+              "*carmina* ressemble à *oppida* : quelle est sa terminaison ?",
+              "*mea* peut être un féminin singulier ou un neutre pluriel. Lequel convient à *carmina* ?",
+              "Pour la traduction, *mea* et *tua* seuls se rendent par « miens », « tiens »."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "exercices",
+      "title": "Exercices",
+      "duration_min": {
+        "min": 8,
+        "max": 10
+      },
+      "questions": [
+        {
+          "code": "E1",
+          "kind": "exercise",
+          "prompt": "Associe chaque expression française à sa traduction latine.",
+          "solution": "ma fille : *filia mea* ; mes fils : *filii mei* ; ton oppidum : *oppidum tuum* ; nos enfants : *liberi nostri* ; vos servantes : *ancillae vestrae* ; mes oppida : *oppida mea*. À chaque fois, la terminaison du possessif copie le genre et le nombre du nom.",
+          "response": {
+            "type": "appariement",
+            "pairs": [
+              {
+                "left": "ma fille",
+                "right": "*filia mea*"
+              },
+              {
+                "left": "mes fils",
+                "right": "*filii mei*"
+              },
+              {
+                "left": "ton oppidum",
+                "right": "*oppidum tuum*"
+              },
+              {
+                "left": "nos enfants",
+                "right": "*liberi nostri*"
+              },
+              {
+                "left": "vos servantes",
+                "right": "*ancillae vestrae*"
+              },
+              {
+                "left": "mes oppida",
+                "right": "*oppida mea*"
+              }
+            ],
+            "hints": [
+              "Commence par repérer le genre et le nombre du nom.",
+              "*oppida* est un neutre pluriel : le possessif finit aussi en *-a*."
+            ]
+          }
+        },
+        {
+          "code": "E2",
+          "kind": "exercise",
+          "prompt": "Aemilia parle de son fils Quintus : *Quintus filius ___ est.* Quelle forme complète la phrase ?",
+          "solution": "*meus* : le possessif s'accorde avec *filius*, masculin singulier, même si celle qui parle est une femme. *Mea* serait l'erreur typique : accorder avec le possesseur.",
+          "response": {
+            "type": "choix",
+            "choices": [
+              "*meus*",
+              "*mea*",
+              "*meum*",
+              "*mei*"
+            ],
+            "expected": "*meus*",
+            "explanation": "*filius* est masculin singulier, donc *meus*. Le possessif regarde le nom possédé, pas Aemilia."
+          }
+        },
+        {
+          "code": "E3",
+          "kind": "exercise",
+          "prompt": "Vrai ou faux : pour dire « Cornélie est ma mère », on peut écrire *Cornelia mater mei est*.",
+          "solution": "Faux. Le latin emploie l'adjectif possessif, non le génitif de « moi » : *Cornelia mater mea est* (Allen et Greenough, § 302 a : *domus mea*, non *domus mei*). Le génitif reste pour un nom : *Cornelia mater Gracchorum est*.",
+          "response": {
+            "type": "vrai_faux",
+            "expected": false,
+            "explanation": "On dit *mater mea*. Le génitif sert pour un nom de possesseur (*mater Gracchorum*), pas pour « moi »."
+          }
+        },
+        {
+          "code": "E4",
+          "kind": "exercise",
+          "prompt": "Traduis en latin, en plaçant le possessif après le nom :\n\na) Marcus et Quintus sont nos fils.\nb) Les autres esclaves sont les esclaves de Iulius.",
+          "solution": "a) *Marcus et Quintus filii nostri sunt.* (*filii*, masculin pluriel, donc *nostri* ; deux sujets, donc *sunt*.)\nb) *Ceteri servi servi Iulii sunt.* (*ceteri* s'accorde avec *servi* ; « de Iulius » est un nom de possesseur, donc génitif *Iulii*.) On accepte aussi *Ceteri servi Iulii sunt*, « les autres esclaves sont à Iulius ».",
+          "response": {
+            "type": "court",
+            "hints": [
+              "a) Deux sujets : *est* ou *sunt* ?",
+              "b) « de Iulius » : un nom, donc un génitif. « les autres » : *ceteri*, accordé avec *servi*."
+            ]
+          }
+        },
+        {
+          "code": "E5",
+          "kind": "exercise",
+          "prompt": "Lis ce petit texte, composé pour la leçon avec les personnages d'Ørberg, puis réponds.\n\n*Iulius : « Marcus et Quintus filii mei sunt ; Iulia filia mea est. Medus et Davus servi mei sunt ; ceteri servi quoque mei sunt. »*\n*Aemilia : « Liberi nostri tres sunt. Syra ancilla mea est. »*\n\na) *Quot liberi sunt?* b) *Cuius servi sunt Medus et Davus?* (réponds en latin) c) Que signifie *ceteri servi* ? d) Pourquoi Aemilia dit-elle *nostri* et non *mei* ?",
+          "solution": "a) *Tres* : trois (Marcus, Quintus, Iulia).\nb) *Medus et Davus servi Iulii sunt.* À *cuius ?* on répond par un génitif.\nc) « Les autres esclaves » : *ceteri* s'accorde avec *servi*, masculin pluriel.\nd) Les enfants sont à elle et à Iulius : « nos enfants ». *Nostri* (et non *nostra*) parce que *liberi* est masculin pluriel.",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Compte les noms cités comme *filii* et *filia*.",
+              "*cuius ?* attend un génitif : de qui sont-ils les esclaves ?",
+              "d) Combien de possesseurs pour les enfants ?"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "reflexion",
+      "title": "Question de réflexion",
+      "duration_min": {
+        "min": 2,
+        "max": 2
+      },
+      "questions": [
+        {
+          "code": "Q",
+          "kind": "reflection",
+          "prompt": "Pourquoi l'accord du possessif avec la chose possédée, et non avec le possesseur, permet-il à Martial (I, 38) de faire tenir tout son trait dans le passage de *meus* à *tuus* ? Réponds en une ou deux phrases.",
+          "solution": "Parce que *meus* et *tuus* s'accordent tous deux avec le même nom, *libellus*, ils ont la même terminaison : rien ne change sauf le possesseur. Le lecteur voit donc l'objet rester identique pendant que la propriété bascule, et la pointe, placée au dernier mot, tombe d'un coup.",
+          "response": {
+            "type": "long"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ticket",
+      "title": "Ticket de sortie",
+      "duration_min": {
+        "min": 2,
+        "max": 2
+      },
+      "questions": [
+        {
+          "code": "T1",
+          "kind": "ticket",
+          "prompt": "Combien de formes différentes *meus* a-t-il au nominatif, en comptant les trois genres, au singulier et au pluriel ?",
+          "solution": "5 : *meus, mea, meum* au singulier ; *mei, meae, mea* au pluriel. *Mea* sert deux fois (féminin singulier et neutre pluriel).",
+          "response": {
+            "type": "nombre",
+            "expected": 5,
+            "hints": [
+              "Écris les six cases, puis cherche le doublon."
+            ]
+          }
+        },
+        {
+          "code": "T2",
+          "kind": "ticket",
+          "prompt": "Traduis en latin : « nos filles » et « vos fils ».",
+          "solution": "*filiae nostrae* ; *filii vestri*.",
+          "response": {
+            "type": "court",
+            "hints": [
+              "*filiae*, féminin pluriel ; *filii*, masculin pluriel."
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "retenir": [
+    "Les possessifs *meus, tuus, noster, vester* (mon, ton, notre, votre) se déclinent comme *magnus, magna, magnum* ; *noster* et *vester* perdent leur *e* devant la terminaison (*nostri, vestra*).",
+    "Le possessif s'accorde avec le nom possédé, jamais avec le possesseur : une mère dit *filius meus*, un père *filia mea*.",
+    "Pour « je », « tu », « nous », « vous », on emploie le possessif (*mater mea*, non *mater mei*) ; un nom de possesseur se met au génitif (*filius Iulii*).",
+    "*Ceteri, ceterae, cetera*, « les autres », s'accorde comme *multi* ; on le retrouve dans *et cetera*.",
+    "Chez Martial (I, 38), *meus* et *tuus* se rapportent au même *libellus* : seul le possesseur change, et le trait tombe sur le dernier mot, *tuus*."
+  ],
+  "mot_du_jour": {
+    "code": "M",
+    "terme": "libellus",
+    "texte": "*Libellus*, « petit livre », est le diminutif de *liber*, le livre, mot qui désignait d'abord la pellicule intérieure de l'écorce, sur laquelle on écrivait. Martial appelle ainsi ses recueils. Le français en a tiré « libelle », un court écrit, le plus souvent satirique ou diffamatoire, et le verbe « libeller », rédiger un acte ou un chèque dans les formes. Le même *liber* a donné « librairie » et l'anglais *library*."
+  },
+  "pour_aller_plus_loin": [
+    {
+      "type": "primaire",
+      "reference": "Martial, Epigrams, vol. I, éd. et trad. D. R. Shackleton Bailey, Cambridge (Mass.), Harvard University Press, 1993 (Loeb Classical Library 94), livre I, épigrammes 29, 38, 53 et 72.",
+      "note": "Le cycle complet contre Fidentinus, le plagiaire : quatre variations sur meus, tuus et noster, texte latin en regard d'une traduction savante.",
+      "citation": "Quem recitas meus est, o Fidentine, libellus: sed male cum recitas, incipit esse tuus.",
+      "citation_source": "Martial, Épigrammes, I, 38 (texte de The Latin Library)",
+      "lien": "https://www.thelatinlibrary.com/martial/mart1.shtml"
+    },
+    {
+      "type": "secondaire",
+      "reference": "Joseph Henry Allen et James Bradstreet Greenough, New Latin Grammar for Schools and Colleges, Boston, Ginn and Company, 1903, § 302 (édition en ligne des Dickinson College Commentaries).",
+      "note": "La règle d'accord des possessifs et leurs emplois (omission, sens de « mes gens », renforcement), avec des exemples tirés de Cicéron, César et Virgile.",
+      "citation": "The possessive pronouns are derivative adjectives, which take the gender, number, and case of the noun to which they belong, not those of the possessor.",
+      "citation_source": "§ 302",
+      "lien": "https://dcc.dickinson.edu/grammar/latin/possessive-pronouns"
+    },
+    {
+      "type": "primaire",
+      "reference": "César, The Gallic War, trad. H. J. Edwards, Londres, William Heinemann, et New York, G. P. Putnam's Sons, 1917 (Loeb Classical Library 72), livre I, chapitre 1.",
+      "note": "Le début de la Guerre des Gaules, où César oppose la langue des Gaulois à « la nôtre » : un texte que tu pourras relire en entier à mesure que les cas s'ajoutent.",
+      "citation": "tertiam qui ipsorum lingua Celtae, nostra Galli appellantur.",
+      "citation_source": "De bello Gallico, I, 1, 1",
+      "lien": "https://www.thelatinlibrary.com/caesar/gall1.shtml"
+    },
+    {
+      "type": "secondaire",
+      "reference": "Hans H. Ørberg, Lingua Latina per se illustrata. Pars I : Familia Romana, Grenaa, Domus Latina, 2003, chapitre II.",
+      "note": "La maison de Iulius et d'Aemilia, en latin seul : relis le chapitre en cherchant chaque génitif et en te demandant comment Iulius dirait « mon » à la place."
+    }
+  ]
+}
