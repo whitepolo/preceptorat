@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated": "2026-11-18",
+  "updated": "2026-11-20",
   "learner": "Sébastien",
   "tutor": "Schopen",
   "objective": "Culture d'honnête homme : classiques grecs, latins, chinois, indiens, arabes et africains, langues anciennes, mathématiques, sciences de base, art, philosophie, économie et économétrie en partant de zéro.",
@@ -482,7 +482,7 @@
       "label": "Mathématiques",
       "weekday": "vendredi",
       "status": "en cours",
-      "position": "Leçon 1, vendredi 13 novembre 2026 : fractions, pourcentages et puissances, avec le contrôle d'entrée (8 items justes sur 10 pour passer à l'algèbre).",
+      "position": "Leçon 2, vendredi 20 novembre 2026 : équations du premier degré, avec al-jabr et al-muqābala d'al-Khwārizmī (troisième problème, Rosen 1831). Prochaine leçon de mathématiques : vendredi 4 décembre (le 27 novembre est un vendredi d'économie).",
       "summary": "Arithmétique, algèbre, fonctions, exponentielle et logarithme, dérivée, sommes, probabilités, algèbre linéaire. Un vendredi sur quatre : sciences et histoire des sciences.",
       "modules": [
         {
@@ -496,17 +496,24 @@
               "lesson_id": "2026-11-13-mathematiques-L1"
             }
           ],
-          "current": true
+          "current": false
         },
         {
           "id": "math-2",
           "title": "Algèbre",
           "lessons": [
             {
-              "title": "Équations, inéquations, systèmes",
+              "title": "L2. Équations du premier degré ; al-jabr et al-muqābala d'al-Khwārizmī",
+              "date": "2026-11-20",
+              "status": "faite",
+              "lesson_id": "2026-11-20-mathematiques-L2"
+            },
+            {
+              "title": "Suite : mise en équation, inéquations, systèmes",
               "status": "à venir"
             }
-          ]
+          ],
+          "current": true
         },
         {
           "id": "math-3",
@@ -585,7 +592,7 @@
       "label": "Économie",
       "weekday": "vendredi (en alternance avec les mathématiques)",
       "status": "en cours",
-      "position": "Leçon 1, samedi 14 novembre 2026 : rareté, choix et coût d'opportunité (Robbins, Bastiat). Unité 1, intuition économique.",
+      "position": "Leçon 1, samedi 14 novembre 2026 : rareté, choix et coût d'opportunité (Robbins, Bastiat). Unité 1, intuition économique. Prochaine leçon : vendredi 27 novembre, L2.",
       "summary": "Environ 50 samedis. Chaque unité dure 3 à 5 leçons et se termine par un contrôle de maîtrise. Chaque notion part d'un cas concret. L'année 2 : statistiques puis économétrie causale, sur données réelles.",
       "modules": [
         {

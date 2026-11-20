@@ -35,6 +35,11 @@
       "date": "2026-11-18",
       "kind": "leçon",
       "summary": "Latin L6 : les possessifs meus, tuus, noster, vester et ceteri, avec Martial (I, 38) et César (Guerre des Gaules, I, 1)."
+    },
+    {
+      "date": "2026-11-20",
+      "kind": "leçon",
+      "summary": "Mathématiques L2 : équations du premier degré, avec al-jabr et al-muqābala d'al-Khwārizmī (troisième problème, trad. Rosen 1831)."
     }
   ],
   "entries": [
@@ -65,6 +70,10 @@
     {
       "date": "2026-11-18",
       "text": "2026-11-18 (mer) Latin L6 : adjectifs possessifs meus, tuus, noster, vester (accord avec le nom possédé, Allen et Greenough § 302) ; possessif ou génitif (mater mea, filius Iulii) ; ceteri, ceterae, cetera ; extraits : Martial I, 38 (et I, 29, v. 3 et 4 en Xf), César BG I, 1 (nostra) ; rappel LAT-009, 012, CLA-002, 005, MAT-003, 008, ECO-005, 006 ; aucune réponse reçue (aucune issue) ; pas de section S ni C ; mot : libellus. Six cartes nouvelles (LAT-017 à LAT-022), dues le 19 novembre."
+    },
+    {
+      "date": "2026-11-20",
+      "text": "2026-11-20 (ven) Mathématiques L2 : équations du premier degré (règles de la balance, développer, chasser les fractions, regrouper, diviser, vérifier) ; al-Khwārizmī, al-jabr (restauration) et al-muqābala (mise en face), vocabulaire chose, racine, carré, nombre ; extrait : troisième problème (Rosen 1831, p. 37 et 38) ; X1 7x − 5 = 3x + 11, X2 3(x − 2) = x/2 + 9, Xf legs (Rosen p. 86 et 87, x = 5) ; E1 à E5 dont fractions et pourcentages entrelacés ; pas de section S ni C ; rappel LAT-017, 019, 022, CLA-001, 004, 006, PHI-007, ECO-002 ; aucune réponse reçue au contrôle d'entrée de la leçon 1 (aucune issue) ; mot : algèbre. Sept cartes nouvelles (MAT-009 à MAT-015), dues le 21 novembre."
     }
   ]
 }

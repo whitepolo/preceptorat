@@ -505,6 +505,69 @@
       "answer": "« Le petit livre que tu récites est le mien, ô Fidentinus ; mais quand tu le récites mal, il commence à être le tien. » Tous deux s'accordent avec *libellus* (masculin singulier) : seul le possesseur change, d'où le trait final.",
       "created": "2026-11-18",
       "kind": "notion"
+    },
+    {
+      "id": "MAT-009",
+      "subject": "mathematiques",
+      "subject_label": "Mathématiques",
+      "prompt": "Quelles opérations peut-on faire sur les deux membres d'une équation sans changer ses solutions ?",
+      "answer": "Ajouter ou retrancher un même nombre (ou une même expression) aux deux membres ; multiplier ou diviser les deux membres par un même nombre non nul.",
+      "created": "2026-11-20",
+      "kind": "notion"
+    },
+    {
+      "id": "MAT-010",
+      "subject": "mathematiques",
+      "subject_label": "Mathématiques",
+      "prompt": "Que désignent al-jabr et al-muqābala chez al-Khwārizmī ? Un exemple pour chacun.",
+      "answer": "Al-jabr, la restauration : ajouter aux deux membres la quantité retranchée (10 − x = 4x devient 10 = 5x). Al-muqābala, la mise en face : retirer des deux membres les termes semblables (x² + x = x² + 4 devient x = 4).",
+      "created": "2026-11-20",
+      "kind": "notion"
+    },
+    {
+      "id": "MAT-011",
+      "subject": "mathematiques",
+      "subject_label": "Mathématiques",
+      "prompt": "Résous 7x − 5 = 3x + 11 et vérifie.",
+      "answer": "4x − 5 = 11, puis 4x = 16, donc x = 4. Vérification : 7 × 4 − 5 = 23 et 3 × 4 + 11 = 23.",
+      "created": "2026-11-20",
+      "kind": "notion"
+    },
+    {
+      "id": "MAT-012",
+      "subject": "mathematiques",
+      "subject_label": "Mathématiques",
+      "prompt": "Comment résoudre une équation qui contient des fractions, comme x/3 + x/4 = 14 ?",
+      "answer": "Multiplier les deux membres (tous les termes) par le dénominateur commun, ici 12 : 4x + 3x = 168, soit 7x = 168, donc x = 24.",
+      "created": "2026-11-20",
+      "kind": "notion"
+    },
+    {
+      "id": "MAT-013",
+      "subject": "mathematiques",
+      "subject_label": "Mathématiques",
+      "prompt": "Après une hausse de 20 %, un prix vaut 54 €. Écris l'équation et trouve le prix de départ.",
+      "answer": "1,2x = 54, donc x = 54 / 1,2 = 45 €. On divise par le coefficient ; retirer 20 % de 54 serait faux.",
+      "created": "2026-11-20",
+      "kind": "notion"
+    },
+    {
+      "id": "MAT-014",
+      "subject": "mathematiques",
+      "subject_label": "Mathématiques",
+      "prompt": "Troisième problème d'al-Khwārizmī : dix est partagé en deux parts, et le quotient de l'une par l'autre vaut quatre. Mise en équation et solution ?",
+      "answer": "Une part vaut x, l'autre 10 − x : (10 − x) / x = 4, donc 10 − x = 4x, 5x = 10, x = 2. Les parts sont 2 et 8 (8 / 2 = 4).",
+      "created": "2026-11-20",
+      "kind": "notion"
+    },
+    {
+      "id": "MAT-015",
+      "subject": "mathematiques",
+      "subject_label": "Mathématiques",
+      "prompt": "D'où vient le mot « algèbre » ?",
+      "answer": "De *al-jabr*, « la restauration », dans le titre du traité d'al-Khwārizmī (Bagdad, vers 820). Le verbe *jabara* signifie remettre en état, réduire une fracture ; en espagnol et en portugais, un *algebrista* remettait les os.",
+      "created": "2026-11-20",
+      "kind": "notion"
     }
   ]
 }

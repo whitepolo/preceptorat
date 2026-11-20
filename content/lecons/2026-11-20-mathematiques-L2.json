@@ -1,0 +1,515 @@
+{
+  "schema_version": "1.0",
+  "id": "2026-11-20-mathematiques-L2",
+  "title": "2026-11-20 · Mathématiques · Leçon 2 : Résoudre une équation du premier degré, avec al-jabr et al-muqābala d'al-Khwārizmī",
+  "date": "2026-11-20",
+  "weekday": "vendredi",
+  "subject": "mathematiques",
+  "subject_label": "Mathématiques",
+  "lesson_number": 2,
+  "module": {
+    "id": "math-2",
+    "title": "Algèbre : équations, inéquations, systèmes"
+  },
+  "duration_min": {
+    "min": 35,
+    "max": 45
+  },
+  "lang": "fr",
+  "objectives": [
+    "Résoudre une équation du premier degré à une inconnue, avec parenthèses ou fractions, en faisant la même opération sur les deux membres, puis vérifier la solution.",
+    "Reconnaître les deux opérations d'al-Khwārizmī : al-jabr (restaurer un membre diminué) et al-muqābala (retirer des deux membres les termes semblables).",
+    "Mettre en équation un problème simple, comme le « troisième problème » d'al-Khwārizmī : choisir l'inconnue, écrire l'égalité, résoudre, vérifier."
+  ],
+  "prerequisites": [
+    "Leçon de mathématiques 1 : fractions (dénominateur commun, multiplication, inverse), pourcentages et coefficient multiplicateur."
+  ],
+  "student_note": "Papier et crayon, sans calculatrice. Écris chaque étape sur une ligne et vérifie toujours ta solution dans l'équation de départ.",
+  "sources": [
+    {
+      "type": "primary",
+      "cite": "Al-Khwārizmī, al-Kitāb al-mukhtaṣar fī ḥisāb al-jabr wa-l-muqābala, éd. et trad. Frederic Rosen, The Algebra of Mohammed ben Musa, Londres, Oriental Translation Fund, 1831, p. 3, 7, 37 et 38, 86 et 87 ; notes p. 177 à 179."
+    },
+    {
+      "type": "secondary",
+      "cite": "Al-Khwārizmī, Le commencement de l'algèbre, texte établi, traduit et commenté par Roshdi Rashed, Paris, Librairie scientifique et technique Albert Blanchard, 2007."
+    },
+    {
+      "type": "method",
+      "cite": "C. A. Barbieri et al., « A meta-analysis of the worked examples effect on mathematics performance », Educational Psychology Review, 35, 2023, article 11 ; D. Rohrer, R. F. Dedrick et S. Stershic, « Interleaved practice improves mathematics learning », Journal of Educational Psychology, 107 (3), 2015, p. 900 à 908."
+    }
+  ],
+  "sections": [
+    {
+      "id": "rappel",
+      "title": "Rappel",
+      "duration_min": {
+        "min": 8,
+        "max": 10
+      },
+      "body": "Huit questions mêlées, de mémoire, sans regarder tes notes. Note-toi honnêtement : la note règle la prochaine révision de chaque carte.",
+      "questions": [
+        {
+          "code": "R1",
+          "kind": "recall",
+          "prompt": "À quoi s'accorde l'adjectif possessif latin (*meus*, *tuus*...) ? Donne un exemple.",
+          "solution": "Avec le nom possédé (genre, nombre, cas), jamais avec le possesseur : une mère dit *filius meus*, un père dit *filia mea*.",
+          "card_id": "LAT-017",
+          "response": {
+            "type": "court",
+            "hints": [
+              "Pense à une mère qui parle de son fils.",
+              "La terminaison du possessif copie celle du nom qu'il accompagne."
+            ]
+          }
+        },
+        {
+          "code": "R2",
+          "kind": "recall",
+          "prompt": "Qu'est-ce qu'un classique, au sens de ce cours ?",
+          "solution": "Une œuvre qu'une tradition continue de lire, de citer et de commenter, et qui sert de référence à d'autres œuvres ; pas seulement un texte ancien ou fameux.",
+          "card_id": "CLA-001",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Le critère n'est pas l'âge du texte.",
+              "Trois verbes : lire, citer, commenter."
+            ]
+          }
+        },
+        {
+          "code": "R3",
+          "kind": "recall",
+          "prompt": "Comment Anaximène explique-t-il que tout vienne de l'air ? Range les états de l'air, du plus raréfié au plus condensé.",
+          "solution": "Par condensation et raréfaction : raréfié, l'air devient feu ; condensé, vent, nuage, eau, terre, pierre. Les différences de qualité deviennent des différences de densité.",
+          "card_id": "PHI-007",
+          "response": {
+            "type": "ordre",
+            "consigne": "Du plus raréfié au plus condensé.",
+            "items": [
+              "feu",
+              "air",
+              "vent",
+              "nuage",
+              "eau",
+              "terre",
+              "pierre"
+            ],
+            "explanation": "Raréfié, l'air devient feu ; condensé, il devient vent, puis nuage, eau, terre et pierre. Les différences de qualité deviennent des différences de densité."
+          }
+        },
+        {
+          "code": "R4",
+          "kind": "recall",
+          "prompt": "Traduis Martial, I, 38 : *Quem recitas meus est, o Fidentine, libellus : sed male cum recitas, incipit esse tuus.* Pourquoi *meus* et *tuus* ont-ils la même terminaison ?",
+          "solution": "« Le petit livre que tu récites est le mien, ô Fidentinus ; mais quand tu le récites mal, il commence à être le tien. » Tous deux s'accordent avec *libellus* (masculin singulier) : seul le possesseur change, d'où le trait final.",
+          "card_id": "LAT-022",
+          "response": {
+            "type": "long",
+            "hints": [
+              "*libellus* : le petit livre.",
+              "*incipit esse* : il commence à être."
+            ]
+          }
+        },
+        {
+          "code": "R5",
+          "kind": "recall",
+          "prompt": "D'où viennent nos principaux manuscrits de Gilgamesh, et qui a identifié la tablette du Déluge ?",
+          "solution": "De la bibliothèque d'Assurbanipal à Ninive (VIIe siècle av. J.-C.). George Smith a présenté le récit du Déluge (tablette XI) le 3 décembre 1872.",
+          "card_id": "CLA-004",
+          "response": {
+            "type": "court",
+            "hints": [
+              "Une capitale assyrienne, sur le Tigre.",
+              "Un employé du British Museum, en 1872."
+            ]
+          }
+        },
+        {
+          "code": "R6",
+          "kind": "recall",
+          "prompt": "Qu'est-ce que le coût d'opportunité d'un choix ? Donne les deux précisions essentielles.",
+          "solution": "La valeur de la meilleure option à laquelle on renonce. Seulement la meilleure (pas la somme de toutes), et nette de ce qu'elle aurait coûté ; le temps compte.",
+          "card_id": "ECO-002",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Une seule option compte : laquelle ?",
+              "Pense aussi à ce que l'option abandonnée aurait coûté."
+            ]
+          }
+        },
+        {
+          "code": "R7",
+          "kind": "recall",
+          "prompt": "Comment dit-on « notre » et « votre » en latin (trois genres) ? Traduis « nos enfants ».",
+          "solution": "*noster, nostra, nostrum* ; *vester, vestra, vestrum* (le *e* tombe devant la terminaison). « Nos enfants » : *liberi nostri*.",
+          "card_id": "LAT-019",
+          "response": {
+            "type": "court",
+            "hints": [
+              "Ils se déclinent comme *magnus, magna, magnum*, mais perdent un *e*.",
+              "« Enfants » : *liberi*, masculin pluriel."
+            ]
+          }
+        },
+        {
+          "code": "R8",
+          "kind": "recall",
+          "prompt": "Gilgamesh a-t-il existé ? Que peut-on dire avec prudence ?",
+          "solution": "Un roi d'Uruk est possible au début des dynasties archaïques (vers 2700 à 2500 av. J.-C.), mais les témoignages (Liste royale, Tummal) sont tardifs ou légendaires ; le personnage lu est d'abord un héros de poème.",
+          "card_id": "CLA-006",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Distingue le roi possible et le héros du poème.",
+              "Les sources qui le nomment sont-elles contemporaines ?"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "prequestions",
+      "title": "Pré-questions",
+      "duration_min": {
+        "min": 1,
+        "max": 2
+      },
+      "body": "Deux questions avant le cours. Se tromper ici n'a aucune importance : chercher prépare la mémoire.",
+      "questions": [
+        {
+          "code": "P1",
+          "kind": "prequestion",
+          "prompt": "Dans l'égalité 5x − 7 = 2x + 8, quelle première opération simplifie l'équation sans changer sa solution ?",
+          "solution": "« Retrancher 2x des deux membres » : on obtient 3x − 7 = 8. Ajouter 7 des deux côtés serait aussi permis. En revanche, retrancher 2x d'un seul côté, ou diviser un seul membre, change l'égalité.",
+          "response": {
+            "type": "choix",
+            "choices": [
+              "Retrancher 2x du membre de droite seulement",
+              "Retrancher 2x des deux membres",
+              "Diviser le membre de gauche par 5",
+              "Remplacer − 7 par + 7"
+            ],
+            "expected": "Retrancher 2x des deux membres",
+            "explanation": "Une équation est une balance : toute opération faite sur un plateau doit être faite sur l'autre."
+          }
+        },
+        {
+          "code": "P2",
+          "kind": "prequestion",
+          "prompt": "D'où vient, selon toi, le mot « algèbre » ? Fais une hypothèse, même au hasard.",
+          "solution": "De l'arabe *al-jabr*, « la restauration », mot du titre du traité d'al-Khwārizmī (Bagdad, IXe siècle). Le verbe *jabara* signifie d'abord remettre en place, réparer un os brisé. La leçon explique ce que ce mot veut dire en calcul.",
+          "response": {
+            "type": "prediction",
+            "confidence": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "cours",
+      "title": "Notion du jour",
+      "duration_min": {
+        "min": 10,
+        "max": 12
+      },
+      "body": "### N1. Une équation est une balance\n\nUne **équation** est une égalité qui contient une inconnue, notée x. **Résoudre**, c'est trouver la ou les valeurs de x qui rendent l'égalité vraie. Pour y parvenir, on la transforme en équations de plus en plus simples, qui ont **les mêmes solutions** : on dit qu'elles sont équivalentes.\n\nImage utile : une balance en équilibre. Tant que tu fais **la même chose sur les deux plateaux**, l'équilibre demeure. D'où deux règles, qui suffisent pour toute la leçon :\n\n1. On peut **ajouter ou retrancher** un même nombre, ou une même expression (par exemple 2x), aux deux membres.\n2. On peut **multiplier ou diviser** les deux membres par un même nombre **non nul**.\n\nLe but est toujours le même : regrouper les x d'un côté, les nombres de l'autre, puis diviser pour obtenir **une seule** inconnue (x = ...). On termine par une **vérification** : on remplace x par la valeur trouvée dans l'équation de départ.\n\nExemple minimal : 4x = 20. On divise les deux membres par 4 : x = 5. Vérification : 4 × 5 = 20.\n\n### N2. Al-Khwārizmī et le livre qui a donné son nom à l'algèbre\n\nMuḥammad ibn Mūsā al-Khwārizmī (vers 780 à vers 850) travaillait à Bagdad sous le calife al-Ma'mūn (règne de 813 à 833). Vers 820, il y fait circuler un *Abrégé du calcul par la restauration et la mise en face*, en arabe *al-jabr wa-l-muqābala*. Dans sa préface, il dit le destiner aux besoins de tous les jours : héritages, legs, partages, procès, commerce, arpentage, creusement de canaux (traduction Rosen, 1831, p. 3). Traduit en latin au XIIe siècle, le livre a donné son nom à la discipline : *algebra*. Le nom de l'auteur, latinisé en *Algoritmi*, a donné « algorithme ».\n\nAl-Khwārizmī **n'a aucun symbole** : tout est écrit en mots. Le tableau 1 donne son vocabulaire. Il ramène tout problème à **six cas** types, dont le plus simple est « des racines égales à des nombres », c'est-à-dire notre équation ax = b. Son exemple : « quatre racines sont égales à vingt ; alors une racine est égale à cinq » (Rosen, p. 7).\n\nSes deux opérations, qui ont donné le titre du livre :\n\n- **al-jabr**, « la restauration » : quand un membre contient une quantité **retranchée**, on le « complète » en ajoutant cette quantité, et on ajoute autant à l'autre membre. Ainsi 10 − x = 4x devient 10 = 5x. Rosen (p. 178) donne l'exemple x² − 6 = 23, qui devient x² = 29.\n- **al-muqābala**, « la mise en face » : on retire des deux membres les quantités **semblables**. Ainsi x² + x = x² + 4 devient x = 4 (Rosen, p. 179).\n\nPourquoi ces deux noms ? Al-Khwārizmī ne manie que des quantités positives : une équation comme 10 − x = 4x est pour lui « défectueuse » d'un côté. Il faut d'abord la « restaurer » pour n'avoir que des termes ajoutés, puis « mettre en face » ce qui se correspond. Ce sont exactement nos règles de la balance, vues comme deux gestes distincts.\n\n### N3. Le texte : le troisième problème\n\nLe texte ci-dessous est un problème réel du traité. Lis-le en remplaçant mentalement « chose » par x.",
+      "excerpt": {
+        "work": "Al-Khwārizmī, Abrégé du calcul par la restauration et la mise en face (al-Kitāb al-mukhtaṣar fī ḥisāb al-jabr wa-l-muqābala)",
+        "locus": "problèmes variés, « troisième problème » (éd. Rosen, p. 37 et 38)",
+        "edition": "Texte arabe et traduction anglaise : Frederic Rosen, The Algebra of Mohammed ben Musa, Londres, Oriental Translation Fund, 1831.",
+        "translator": "traduction de travail, pour cette leçon, d'après la traduction anglaise de F. Rosen (1831), dans le domaine public",
+        "lang": "fr",
+        "text": "« J'ai divisé dix en deux parts. J'ai ensuite divisé l'une par l'autre, et le quotient a été quatre.\n\nCalcul : suppose que l'une des deux parts soit chose, et l'autre dix moins chose. Divise alors dix moins chose par chose, de manière à obtenir quatre. Tu sais que si l'on multiplie le quotient par le diviseur, la somme qui a été divisée est rétablie. Dans la présente question, le quotient est quatre et le diviseur est chose. Multiplie donc quatre par chose ; le résultat est quatre choses, qui sont égales à la somme à diviser, laquelle était dix moins chose. Réduis maintenant par la chose, que tu ajoutes aux quatre choses. Nous avons alors cinq choses égales à dix ; donc une chose est égale à deux, et c'est l'une des deux parts. Cette question te renvoie à l'un des six cas, à savoir « des racines égales à des nombres ». »",
+        "close_reading": "1. **Choisir l'inconnue.** « Suppose que l'une des deux parts soit chose » : x est l'une des parts, donc l'autre vaut 10 − x. C'est le premier geste de toute mise en équation.\n\n2. **Écrire l'égalité.** Le quotient vaut quatre : (10 − x) / x = 4. Al-Khwārizmī se débarrasse de la division par un raisonnement d'arithmétique : quotient fois diviseur redonne le dividende, donc 4x = 10 − x.\n\n3. **Restaurer (al-jabr).** Le membre 10 − x est « défectueux » d'une chose. On ajoute x des deux côtés : 4x + x = 10, soit **5x = 10**. C'est le geste « que tu ajoutes aux quatre choses ».\n\n4. **Réduire à une seule chose.** On divise par 5 : **x = 2**. Les deux parts sont 2 et 8.\n\n5. **Vérifier** (il ne le fait pas ici, toi si) : 8 / 2 = 4. Juste.\n\nRemarque : tout le raisonnement est en mots, mais la structure est déjà celle de nos équations. Ce qui manquait, c'étaient les symboles, venus bien plus tard (Viète, 1591 ; Descartes, *La Géométrie*, 1637, qui note l'inconnue x)."
+      },
+      "figures": [
+        {
+          "type": "table",
+          "caption": "Tableau 1. Le vocabulaire d'al-Khwārizmī et le nôtre",
+          "columns": [
+            "Al-Khwārizmī (trad. Rosen)",
+            "En notation moderne",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "chose (shay') ou racine (jidhr)",
+              "x",
+              "« quatre racines » : 4x"
+            ],
+            [
+              "carré (māl)",
+              "x²",
+              "« un carré » : x²"
+            ],
+            [
+              "nombre, dirhams",
+              "une constante",
+              "« vingt » : 20"
+            ],
+            [
+              "al-jabr, restauration",
+              "ajouter aux deux membres ce qui est retranché",
+              "10 − x = 4x devient 10 = 5x"
+            ],
+            [
+              "al-muqābala, mise en face",
+              "retirer des deux membres les termes semblables",
+              "x² + x = x² + 4 devient x = 4"
+            ],
+            [
+              "réduire à une seule chose",
+              "diviser par le coefficient de x",
+              "5x = 10 devient x = 2"
+            ]
+          ]
+        }
+      ],
+      "questions": []
+    },
+    {
+      "id": "exemples",
+      "title": "Exemples résolus",
+      "duration_min": {
+        "min": 5,
+        "max": 7
+      },
+      "body": "Deux exemples complets, puis un à finir, tiré du traité lui-même.",
+      "questions": [
+        {
+          "code": "X1",
+          "kind": "worked",
+          "prompt": "Résoudre 7x − 5 = 3x + 11.\n\n1. **Mise en face** : on retire 3x des deux membres. 7x − 3x − 5 = 11, soit 4x − 5 = 11.\n2. **Restauration** : le membre de gauche est diminué de 5 ; on ajoute 5 des deux côtés. 4x = 16.\n3. **Une seule chose** : on divise par 4. x = 4.\n4. **Vérification** : à gauche 7 × 4 − 5 = 23 ; à droite 3 × 4 + 11 = 23. Juste.",
+          "solution": "x = 4. Ordre utile : regrouper les x, regrouper les nombres, diviser, vérifier."
+        },
+        {
+          "code": "X2",
+          "kind": "worked",
+          "prompt": "Résoudre 3(x − 2) = x/2 + 9.\n\n1. **Développer** : 3x − 6 = x/2 + 9.\n2. **Chasser la fraction** : on multiplie les deux membres par 2 (nombre non nul). 6x − 12 = x + 18.\n3. **Mise en face** : on retire x des deux membres. 5x − 12 = 18.\n4. **Restauration** : on ajoute 12 des deux côtés. 5x = 30.\n5. **Une seule chose** : x = 6.\n6. **Vérification** : 3 × (6 − 2) = 12 et 6/2 + 9 = 12. Juste.\n\nPiège classique : en multipliant par 2, on multiplie **tous** les termes des deux membres, y compris le 9 (d'où 18) et le − 6 (d'où − 12).",
+          "solution": "x = 6. Avec des fractions, on multiplie d'abord les deux membres par le dénominateur commun."
+        },
+        {
+          "code": "Xf",
+          "kind": "complete",
+          "prompt": "À toi de finir. Dans son chapitre sur les legs, al-Khwārizmī cherche une somme inconnue (la « chose ») et aboutit à l'égalité suivante (Rosen, p. 86 et 87) :\n\nx = 10/3 + x/3\n\n1. **Mise en face** : on retire x/3 des deux membres. Il reste x − x/3 = ... , soit (2/3)x = 10/3.\n2. **Compléter la chose** : pour passer des deux tiers de x à x entier, on multiplie les deux membres par 3/2. x = ...\n3. Vérifie ta valeur dans l'égalité de départ.\n\nDonne la valeur de x.",
+          "solution": "(2/3)x = 10/3, donc x = 10/3 × 3/2 = 30/6 = **5**. Vérification : 10/3 + 5/3 = 15/3 = 5. Al-Khwārizmī dit la même chose en mots : il reste « deux tiers de chose, égaux à trois dirhams et un tiers » ; on complète la chose en ajoutant à chaque membre sa moitié, et l'on trouve cinq dirhams.",
+          "response": {
+            "type": "nombre",
+            "expected": 5,
+            "hints": [
+              "x − x/3, c'est trois tiers de x moins un tiers de x.",
+              "Multiplier 10/3 par 3/2 : multiplie les numérateurs, puis les dénominateurs, et simplifie."
+            ],
+            "explanation": "(2/3)x = 10/3 ; on multiplie par 3/2 : x = 5. Vérification : 10/3 + 5/3 = 5."
+          }
+        }
+      ]
+    },
+    {
+      "id": "exercices",
+      "title": "Exercices",
+      "duration_min": {
+        "min": 8,
+        "max": 10
+      },
+      "body": "Cinq exercices, dont deux qui reprennent la leçon 1 (fractions, pourcentages).",
+      "questions": [
+        {
+          "code": "E1",
+          "kind": "exercise",
+          "prompt": "Résous 5x + 8 = 2x + 29.",
+          "solution": "Mise en face : 3x + 8 = 29. Restauration à l'envers (on retranche 8) : 3x = 21. Donc **x = 7**. Vérification : 43 = 43.",
+          "response": {
+            "type": "nombre",
+            "expected": 7,
+            "hints": [
+              "Commence par retirer 2x des deux membres.",
+              "Tu dois arriver à 3x = 21."
+            ],
+            "explanation": "3x + 8 = 29, puis 3x = 21, donc x = 7. Vérification : 5 × 7 + 8 = 43 et 2 × 7 + 29 = 43."
+          }
+        },
+        {
+          "code": "E2",
+          "kind": "exercise",
+          "prompt": "Remets dans l'ordre les étapes de la résolution de 4(x − 3) = 2(x + 5).",
+          "solution": "4x − 12 = 2x + 10 (développer) ; 2x − 12 = 10 (retirer 2x des deux membres) ; 2x = 22 (ajouter 12) ; x = 11 (diviser par 2) ; vérification 4 × 8 = 32 et 2 × 16 = 32.",
+          "response": {
+            "type": "ordre",
+            "consigne": "De la première étape à la dernière.",
+            "items": [
+              "4x − 12 = 2x + 10",
+              "2x − 12 = 10",
+              "2x = 22",
+              "x = 11",
+              "4 × 8 = 32 et 2 × 16 = 32"
+            ],
+            "hints": [
+              "On développe d'abord les parenthèses.",
+              "La vérification vient toujours en dernier."
+            ],
+            "explanation": "Développer, regrouper les x (mise en face), regrouper les nombres (restauration), diviser, vérifier."
+          }
+        },
+        {
+          "code": "E3",
+          "kind": "exercise",
+          "prompt": "Entrelacement avec les fractions de la leçon 1. Résous x/3 + x/4 = 14.",
+          "solution": "Dénominateur commun 12 : on multiplie les deux membres par 12. 4x + 3x = 168, soit 7x = 168, donc **x = 24**. Vérification : 8 + 6 = 14. (Autre voie : x/3 + x/4 = 7x/12.)",
+          "response": {
+            "type": "nombre",
+            "expected": 24,
+            "hints": [
+              "Le plus petit dénominateur commun de 3 et 4 est 12.",
+              "12 × x/3 = 4x et 12 × x/4 = 3x."
+            ],
+            "explanation": "En multipliant par 12 : 7x = 168, d'où x = 24. Vérification : 24/3 + 24/4 = 8 + 6 = 14."
+          }
+        },
+        {
+          "code": "E4",
+          "kind": "exercise",
+          "prompt": "Entrelacement avec les pourcentages de la leçon 1. Après une baisse de 15 %, un manteau coûte 170 €. Écris l'équation dont le prix initial x est solution, puis donne x (en euros).",
+          "solution": "Coefficient d'une baisse de 15 % : 0,85. Équation : 0,85x = 170. Donc x = 170 / 0,85 = **200 €**. Erreur à éviter : ajouter 15 % à 170 (on obtiendrait 195,50 €), car les 15 % portent sur le prix initial, pas sur le prix réduit.",
+          "response": {
+            "type": "nombre",
+            "expected": 200,
+            "hints": [
+              "Baisse de 15 % : on multiplie par 1 − 15/100.",
+              "0,85x = 170 ; il reste à diviser."
+            ],
+            "explanation": "0,85x = 170, donc x = 200 €. Ajouter 15 % à 170 € serait faux : le pourcentage porte sur le prix initial."
+          }
+        },
+        {
+          "code": "E5",
+          "kind": "exercise",
+          "prompt": "Associe chaque transformation à l'opération qui la produit.",
+          "solution": "10 − x = 4x devient 10 = 5x : al-jabr (restauration). x² − 6 = 23 devient x² = 29 : al-jabr aussi. x² + x = x² + 4 devient x = 4 : al-muqābala (mise en face). 5x = 10 devient x = 2 : réduire à une seule chose (diviser).",
+          "response": {
+            "type": "appariement",
+            "consigne": "Une opération par transformation.",
+            "pairs": [
+              {
+                "left": "10 − x = 4x devient 10 = 5x",
+                "right": "al-jabr : ajouter aux deux membres la quantité retranchée"
+              },
+              {
+                "left": "x² + x = x² + 4 devient x = 4",
+                "right": "al-muqābala : retirer des deux membres les termes semblables"
+              },
+              {
+                "left": "5x = 10 devient x = 2",
+                "right": "réduire à une seule chose : diviser par le coefficient"
+              },
+              {
+                "left": "x/2 + 3 = 7 devient x + 6 = 14",
+                "right": "multiplier les deux membres par un même nombre non nul"
+              }
+            ],
+            "hints": [
+              "Al-jabr fait disparaître un « moins ».",
+              "Al-muqābala supprime ce qui est identique des deux côtés."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "reflexion",
+      "title": "Question de réflexion",
+      "duration_min": {
+        "min": 2,
+        "max": 2
+      },
+      "questions": [
+        {
+          "code": "Q",
+          "kind": "reflection",
+          "prompt": "Pourquoi a-t-on le droit de diviser les deux membres d'une équation par 5, mais pas de les multiplier par 0 ? Réponds en une ou deux phrases.",
+          "solution": "Multiplier ou diviser par un nombre non nul est réversible : on peut revenir à l'équation de départ, donc les solutions restent les mêmes. Multiplier par 0 donne 0 = 0, vrai pour tout x : l'information est détruite et l'on ne peut plus revenir en arrière.",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Que devient 4x = 20 si l'on multiplie les deux côtés par 0 ?",
+              "Une bonne opération doit pouvoir être défaite."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ticket",
+      "title": "Ticket de sortie",
+      "duration_min": {
+        "min": 2,
+        "max": 2
+      },
+      "questions": [
+        {
+          "code": "T1",
+          "kind": "ticket",
+          "prompt": "Résous 6x − 4 = 2x + 12.",
+          "solution": "4x − 4 = 12, puis 4x = 16, donc **x = 4**. Vérification : 20 = 20.",
+          "response": {
+            "type": "nombre",
+            "expected": 4,
+            "explanation": "6x − 2x = 12 + 4, soit 4x = 16 et x = 4."
+          }
+        },
+        {
+          "code": "T2",
+          "kind": "ticket",
+          "prompt": "Passer de 3x − 2 = 10 à 3x = 12 : de quelle opération d'al-Khwārizmī s'agit-il ?",
+          "solution": "**Al-jabr**, la restauration : le membre de gauche était diminué de 2 ; on le complète en ajoutant 2, et l'on ajoute 2 à l'autre membre.",
+          "response": {
+            "type": "choix",
+            "choices": [
+              "al-jabr (restauration)",
+              "al-muqābala (mise en face)",
+              "réduire à une seule chose"
+            ],
+            "expected": "al-jabr (restauration)",
+            "explanation": "On fait disparaître une quantité retranchée en l'ajoutant aux deux membres : c'est al-jabr."
+          }
+        }
+      ]
+    }
+  ],
+  "retenir": [
+    "Une équation est une balance : on peut ajouter ou retrancher la même quantité aux deux membres, et les multiplier ou les diviser par un même nombre non nul.",
+    "Méthode : développer, chasser les fractions, regrouper les x d'un côté et les nombres de l'autre, diviser par le coefficient de x, puis vérifier dans l'équation de départ.",
+    "Al-Khwārizmī (Bagdad, IXe siècle) appelle al-jabr, la restauration, le geste qui fait disparaître une quantité retranchée en l'ajoutant aux deux membres : 10 − x = 4x devient 10 = 5x.",
+    "Al-muqābala, la mise en face, retire des deux membres les termes semblables : x² + x = x² + 4 devient x = 4.",
+    "Mettre en équation, c'est appeler « chose » l'inconnue, exprimer les autres quantités avec elle, puis écrire l'égalité que dit l'énoncé."
+  ],
+  "mot_du_jour": {
+    "code": "M",
+    "terme": "algèbre",
+    "texte": "« Algèbre » vient de *al-jabr*, premier mot du titre d'al-Khwārizmī, à travers le latin médiéval *algebra*. Le verbe arabe *jabara* signifie d'abord remettre en état ce qui est brisé, en particulier réduire une fracture. Frederic Rosen (1831, p. 178) rappelle qu'en espagnol et en portugais un *algebrista* était aussi celui qui remettait les os en place. En mathématiques, on « remet en état » le membre d'une équation diminué d'une quantité. Le nom de l'auteur, latinisé en *Algoritmi*, a donné « algorithme »."
+  },
+  "pour_aller_plus_loin": [
+    {
+      "type": "primaire",
+      "reference": "Muḥammad ibn Mūsā al-Khwārizmī, The Algebra of Mohammed ben Musa, texte arabe éd. et trad. Frederic Rosen, Londres, Oriental Translation Fund, 1831.",
+      "note": "Le traité lui-même, en anglais avec le texte arabe : les six cas, puis des dizaines de problèmes résolus en mots, faciles à retraduire en équations.",
+      "citation": "a short work on Calculating by (the rules of) Completion and Reduction, confining it to what is easiest and most useful in arithmetic, such as men constantly require in cases of inheritance, legacies, partition, law-suits, and trade",
+      "citation_source": "Rosen 1831, préface d'al-Khwārizmī, p. 3",
+      "lien": "https://archive.org/details/algebraofmohamme00khuwrich"
+    },
+    {
+      "type": "secondaire",
+      "reference": "Al-Khwārizmī, Le commencement de l'algèbre, texte établi, traduit et commenté par Roshdi Rashed, Paris, Librairie scientifique et technique Albert Blanchard, 2007 (Sciences dans l'histoire), VIII + 386 p.",
+      "note": "Première édition critique, texte arabe en regard d'une traduction française, précédée de l'étude « Al-Khwārizmī mathématicien » (p. 1 à 79) : pourquoi ce livre fonde l'algèbre comme discipline.",
+      "lien": "https://www.sudoc.fr/117179906"
+    },
+    {
+      "type": "secondaire",
+      "reference": "Victor J. Katz, A History of Mathematics. An Introduction, 3e éd., Boston, Addison-Wesley, 2009.",
+      "note": "Manuel universitaire d'histoire des mathématiques ; le chapitre sur les mathématiques en terre d'Islam situe al-Khwārizmī entre l'héritage grec et indien et ses successeurs."
+    }
+  ]
+}
