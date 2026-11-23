@@ -568,6 +568,60 @@
       "answer": "De *al-jabr*, « la restauration », dans le titre du traité d'al-Khwārizmī (Bagdad, vers 820). Le verbe *jabara* signifie remettre en état, réduire une fracture ; en espagnol et en portugais, un *algebrista* remettait les os.",
       "created": "2026-11-20",
       "kind": "notion"
+    },
+    {
+      "id": "LAT-023",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Quelles sont les quatre questions de la méthode pour analyser une forme latine ambiguë ?",
+      "answer": "1) Quel est le mot de base (nominatif singulier) ? 2) Quel genre ? 3) Quelles analyses possibles de la terminaison ? 4) Laquelle la phrase confirme-t-elle : verbe (*est* ou *sunt*), accord de l'adjectif, question posée, fonction ?",
+      "created": "2026-11-23",
+      "kind": "notion"
+    },
+    {
+      "id": "LAT-024",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Analyse et traduis : *Insulae Graeciae multae sunt.*",
+      "answer": "*Insulae* : nominatif pluriel, sujet de *sunt* (accord *multae*) ; *Graeciae* : génitif singulier, complément du nom. « Les îles de la Grèce sont nombreuses. »",
+      "created": "2026-11-23",
+      "kind": "notion"
+    },
+    {
+      "id": "LAT-025",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Dans les inscriptions latines anciennes, comment lire *ei* et la terminaison *-ai* ? Exemples.",
+      "answer": "*ei* se lit *ī* (*heic* = *hic*, *deico* = *dico*, *mareitum* = *maritum*) ; *-ai* est l'ancien *-ae* du génitif singulier (*pulcrai feminae* = *pulchrae feminae*).",
+      "created": "2026-11-23",
+      "kind": "notion"
+    },
+    {
+      "id": "LAT-026",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Traduis et analyse le vers 2 de l'épitaphe de Claudia : *Heic est sepulcrum hau pulcrum pulcrai feminae.*",
+      "answer": "« Ici est le tombeau, pas beau, d'une belle femme. » *Pulcrai feminae* (= *pulchrae feminae*) est un génitif singulier, complément de *sepulcrum* : le verbe *est* est singulier et a déjà son sujet.",
+      "created": "2026-11-23",
+      "kind": "notion"
+    },
+    {
+      "id": "LAT-027",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Épitaphe de Claudia : que signifie *Gnatos duos creavit. Horunc alterum in terra linquit, alium sub terra locat*, et à quel cas est *horunc* ?",
+      "answer": "« Elle a mis au monde deux fils ; de ceux-ci, elle laisse l'un sur la terre, elle place l'autre sous la terre » : l'un vit, l'autre est mort. *Horunc* = *horum* (+ *-ce*), génitif pluriel partitif, comme *horum omnium* chez César.",
+      "created": "2026-11-23",
+      "kind": "notion"
+    },
+    {
+      "id": "LAT-028",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Que signifient *hospes* et *sepulcrum* ? Un mot français issu de chacun.",
+      "answer": "*hospes, hospitis* : l'étranger de passage, l'hôte (celui qui reçoit ou est reçu), d'où « hôte », « hospitalité », « hôpital ». *sepulcrum, sepulcri* (neutre) : le tombeau, d'où « sépulcre », « sépulture ».",
+      "created": "2026-11-23",
+      "kind": "vocabulaire"
     }
   ]
 }

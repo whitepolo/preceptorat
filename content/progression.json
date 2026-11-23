@@ -40,6 +40,11 @@
       "date": "2026-11-20",
       "kind": "leçon",
       "summary": "Mathématiques L2 : équations du premier degré, avec al-jabr et al-muqābala d'al-Khwārizmī (troisième problème, trad. Rosen 1831)."
+    },
+    {
+      "date": "2026-11-23",
+      "kind": "leçon",
+      "summary": "Latin L7 : contrôle de maîtrise des chapitres I et II (10 points, seuil 8), avec l'épitaphe de Claudia (CIL VI 15346)."
     }
   ],
   "entries": [
@@ -74,6 +79,10 @@
     {
       "date": "2026-11-20",
       "text": "2026-11-20 (ven) Mathématiques L2 : équations du premier degré (règles de la balance, développer, chasser les fractions, regrouper, diviser, vérifier) ; al-Khwārizmī, al-jabr (restauration) et al-muqābala (mise en face), vocabulaire chose, racine, carré, nombre ; extrait : troisième problème (Rosen 1831, p. 37 et 38) ; X1 7x − 5 = 3x + 11, X2 3(x − 2) = x/2 + 9, Xf legs (Rosen p. 86 et 87, x = 5) ; E1 à E5 dont fractions et pourcentages entrelacés ; pas de section S ni C ; rappel LAT-017, 019, 022, CLA-001, 004, 006, PHI-007, ECO-002 ; aucune réponse reçue au contrôle d'entrée de la leçon 1 (aucune issue) ; mot : algèbre. Sept cartes nouvelles (MAT-009 à MAT-015), dues le 21 novembre."
+    },
+    {
+      "date": "2026-11-23",
+      "text": "2026-11-23 (lun) Latin L7 : contrôle de maîtrise des chapitres I et II d'Ørberg (E1 à E5, 2 points chacun, seuil 8 sur 10 : analyse de formes, pluriels, thème avec génitif et possessifs, texte avec cuius et quot, compréhension) ; synthèse nominatif et génitif des trois modèles, terminaisons ambiguës -ae, -i, -a et méthode en quatre questions ; extrait : épitaphe de Claudia (CIL VI 15346 = CLE 52), orthographe archaïque ei et -ai ; X1 Insulae Graeciae multae sunt, X2 pulcrai feminae, Xf horunc alterum ; pas de section S ni C ; rappel PHI-002, PHI-006, MAT-010, MAT-012, MAT-013, CLA-003, CLA-006, ECO-003 ; aucune réponse reçue (aucune issue) ; mot : hospes. Six cartes nouvelles (LAT-023 à LAT-028), dues le 24 novembre."
     }
   ]
 }

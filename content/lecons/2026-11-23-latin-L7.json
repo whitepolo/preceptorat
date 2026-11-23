@@ -1,0 +1,517 @@
+{
+  "schema_version": "1.0",
+  "id": "2026-11-23-latin-L7",
+  "title": "2026-11-23 · Latin · Leçon 7 : contrôle de maîtrise des chapitres I et II, avec l'épitaphe de Claudia",
+  "date": "2026-11-23",
+  "weekday": "lundi",
+  "subject": "latin",
+  "subject_label": "Latin",
+  "lesson_number": 7,
+  "module": {
+    "id": "orberg-II",
+    "title": "Ørberg, chapitre II : le génitif"
+  },
+  "duration_min": {
+    "min": 35,
+    "max": 45
+  },
+  "lang": "fr",
+  "objectives": [
+    "Atteindre au moins 8 sur 10 au contrôle de maîtrise des chapitres I et II d'Ørberg : pluriels, accords, génitif singulier et pluriel, cuius et quot, nombres, possessifs.",
+    "Analyser une forme ambiguë en -ae, -i ou -a avec la méthode en quatre questions, en tranchant par le verbe, l'accord et la fonction.",
+    "Lire une épitaphe latine réelle (Claudia, CIL VI 15346) en normalisant l'orthographe archaïque (ei pour i, -ai pour -ae) et y repérer génitifs, nombre et possessif."
+  ],
+  "prerequisites": [
+    "Leçons de latin 1 à 6 : est et sunt, pluriel et genres, génitif singulier et pluriel, familia, quis, cuius, quot, nombres, possessifs meus, tuus, noster, vester."
+  ],
+  "student_note": "Fais le contrôle sans relire tes leçons : c'est ce que tu sais sans aide qui compte. Lis les vers de l'épitaphe à voix haute (c toujours dur, v prononcé comme w).",
+  "sources": [
+    {
+      "type": "primary",
+      "cite": "Épitaphe de Claudia, CIL VI 15346 = CIL I² 1211 = ILS 8403 ; F. Bücheler, Carmina Latina epigraphica, fasc. I, Leipzig, Teubner, 1895, n° 52 (texte de la base Musisque Deoque, Università Ca' Foscari Venezia)."
+    },
+    {
+      "type": "primary",
+      "cite": "César, De bello Gallico, I, 1 (horum omnium), déjà lu en leçon 4."
+    },
+    {
+      "type": "method",
+      "cite": "Hans H. Ørberg, Lingua Latina per se illustrata. Pars I : Familia Romana, Grenaa, Domus Latina, 2003, chapitres I et II."
+    },
+    {
+      "type": "secondary",
+      "cite": "Joseph Henry Allen et James Bradstreet Greenough, New Latin Grammar for Schools and Colleges, Boston, Ginn and Company, 1903, § 43 a (génitif ancien en -āī), éd. Meagan Ayer, Dickinson College Commentaries, 2014."
+    }
+  ],
+  "sections": [
+    {
+      "id": "rappel",
+      "title": "Rappel",
+      "duration_min": {
+        "min": 8,
+        "max": 10
+      },
+      "body": "Huit cartes dues aujourd'hui, toutes matières mélangées, sauf le latin, que le contrôle mobilise déjà. Réponds de mémoire, sans relire tes leçons : c'est l'effort de rappel qui consolide. Après chaque correction, note honnêtement Juste, Partiel ou Faux ; la date de la prochaine révision en dépend.",
+      "questions": [
+        {
+          "code": "R1",
+          "kind": "recall",
+          "prompt": "Par quelle chaîne d'auteurs connaissons-nous surtout les penseurs de Milet (Thalès, Anaximandre, Anaximène) ?",
+          "solution": "Aristote (IVe siècle av. J.-C.), puis son élève Théophraste (*Opinions des physiciens*, perdu, point de départ de la doxographie), puis des commentateurs tardifs comme Simplicius (VIe siècle apr. J.-C.), qui cite Théophraste.",
+          "card_id": "PHI-002",
+          "response": {
+            "type": "court",
+            "hints": [
+              "Trois noms : un maître, son élève, un commentateur très tardif.",
+              "L'élève d'Aristote a écrit des *Opinions des physiciens*."
+            ]
+          }
+        },
+        {
+          "code": "R2",
+          "kind": "recall",
+          "prompt": "Que désignent *al-jabr* et *al-muqābala* chez al-Khwārizmī ? Donne un exemple pour chacun.",
+          "solution": "*Al-jabr*, la restauration : ajouter aux deux membres la quantité retranchée (10 − x = 4x devient 10 = 5x). *Al-muqābala*, la mise en face : retirer des deux membres les termes semblables (x² + x = x² + 4 devient x = 4).",
+          "card_id": "MAT-010",
+          "response": {
+            "type": "long",
+            "hints": [
+              "L'une ajoute pour supprimer un terme retranché ; l'autre retire ce qui est commun aux deux membres."
+            ]
+          }
+        },
+        {
+          "code": "R3",
+          "kind": "recall",
+          "prompt": "Quel est le titre antique de la version standard de Gilgamesh, et que signifie *naqbu* ?",
+          "solution": "*Ša naqba īmuru*, « Celui qui a vu le Fond » (c'est l'incipit). *Naqbu* : le Fond, les eaux profondes, et la totalité de ce qui peut être connu.",
+          "card_id": "CLA-003",
+          "response": {
+            "type": "court",
+            "hints": [
+              "Le titre antique est le premier vers du poème.",
+              "Le mot désigne à la fois des eaux souterraines et un savoir total."
+            ]
+          }
+        },
+        {
+          "code": "R4",
+          "kind": "recall",
+          "prompt": "Une place gratuite pour Clapton ; le même soir, Dylan, place à 40 $, que tu estimes à 50 $. Quel est le coût d'opportunité d'aller voir Clapton (en dollars) ?",
+          "solution": "10 $ : le gain net de la meilleure option abandonnée (50 − 40). Seuls 21,6 % des 199 économistes interrogés par Ferraro et Taylor (2005) ont trouvé cette réponse.",
+          "card_id": "ECO-003",
+          "response": {
+            "type": "nombre",
+            "expected": 10,
+            "hints": [
+              "Ne compte que la meilleure option abandonnée, et nette de son prix."
+            ],
+            "explanation": "Dylan vaut 50 $ pour toi et coûte 40 $ : tu renonces à un gain net de 10 $."
+          }
+        },
+        {
+          "code": "R5",
+          "kind": "recall",
+          "prompt": "Pourquoi, selon Anaximandre (rapporté par Aristote, *Du ciel* II 13), la terre ne tombe-t-elle pas ?",
+          "solution": "Elle est au centre, à égale distance de tout, et n'a aucune raison d'aller d'un côté plutôt que d'un autre : elle reste en place par équilibre, sans appui. Cela répond à Thalès (sur quoi reposerait l'eau ?).",
+          "card_id": "PHI-006",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Pense à une raison de symétrie, non à un support."
+            ]
+          }
+        },
+        {
+          "code": "R6",
+          "kind": "recall",
+          "prompt": "Après une hausse de 20 %, un prix vaut 54 €. Quel était le prix de départ, en euros ?",
+          "solution": "1,2x = 54, donc x = 54 / 1,2 = 45 €. On divise par le coefficient ; retirer 20 % de 54 serait faux.",
+          "card_id": "MAT-013",
+          "response": {
+            "type": "nombre",
+            "expected": 45,
+            "hints": [
+              "Écris l'équation avec le coefficient multiplicateur de la hausse."
+            ],
+            "explanation": "1,2 × 45 = 54. Retirer 20 % de 54 donnerait 43,2, ce qui est faux : les 20 % portent sur le prix de départ."
+          }
+        },
+        {
+          "code": "R7",
+          "kind": "recall",
+          "prompt": "Gilgamesh a-t-il existé ? Que peut-on dire avec prudence ?",
+          "solution": "Un roi d'Uruk est possible au début des dynasties archaïques (vers 2700 à 2500 av. J.-C.), mais les témoignages (Liste royale sumérienne, inscription du Tummal) sont tardifs ou légendaires : le personnage que nous lisons est d'abord un héros de poème.",
+          "card_id": "CLA-006",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Distingue le roi possible et le héros du texte.",
+              "Pense à la nature des documents qui le nomment."
+            ]
+          }
+        },
+        {
+          "code": "R8",
+          "kind": "recall",
+          "prompt": "Résous x/3 + x/4 = 14.",
+          "solution": "On multiplie tous les termes par 12 : 4x + 3x = 168, soit 7x = 168, donc x = 24. Vérification : 8 + 6 = 14.",
+          "card_id": "MAT-012",
+          "response": {
+            "type": "nombre",
+            "expected": 24,
+            "hints": [
+              "Multiplie les deux membres, terme par terme, par le dénominateur commun."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "prequestions",
+      "title": "Pré-questions",
+      "duration_min": {
+        "min": 1,
+        "max": 2
+      },
+      "body": "Deux questions avant le cours. Réponds même si tu n'es pas sûr : tenter avant d'apprendre aide à retenir.",
+      "questions": [
+        {
+          "code": "P1",
+          "kind": "prequestion",
+          "prompt": "Sur une tombe romaine, on lit *pulcrai feminae*. À quelle forme du latin que tu connais ce *pulcrai* ressemble-t-il, et que pourrait-il signifier ?",
+          "solution": "*Pulcrai* est l'ancienne graphie de *pulchrae*, « belle » : *pulcrai feminae* = *pulchrae feminae*. Ici, c'est un génitif singulier, « d'une belle femme ». La terminaison ancienne *-ai* est devenue *-ae*.",
+          "response": {
+            "type": "prediction",
+            "confidence": true
+          }
+        },
+        {
+          "code": "P2",
+          "kind": "prequestion",
+          "prompt": "La forme *insulae*, seule, sans phrase autour : peut-on savoir à coup sûr s'il s'agit de « les îles » ou de « de l'île » ?",
+          "solution": "Non. *Insulae* est à la fois nominatif pluriel et génitif singulier. Seuls le verbe (*est* ou *sunt*), l'accord d'un adjectif et la place du mot dans la phrase permettent de trancher. C'est le cœur du contrôle d'aujourd'hui.",
+          "response": {
+            "type": "prediction",
+            "confidence": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "cours",
+      "title": "Notion du jour : faire le point sur les chapitres I et II",
+      "duration_min": {
+        "min": 8,
+        "max": 10
+      },
+      "body": "Aujourd'hui, pas de grammaire nouvelle : on vérifie que les chapitres I et II d'Ørberg sont solides avant d'aborder le chapitre III. Tout ce que tu as vu tient dans deux tableaux et une méthode.\n\n**N1. Les formes à connaître.** Trois modèles, deux nombres, deux cas (nominatif et génitif). La règle constante : on **remplace** la terminaison du nominatif singulier, on ne l'ajoute pas au mot entier (*oppida*, jamais *oppidia*).\n\n**N2. Une méthode en quatre questions pour toute forme.** 1) Quel est le mot de base (nominatif singulier) ? 2) Quel genre ? 3) Quelles analyses possibles de la terminaison ? 4) Lequel de ces cas la phrase confirme-t-elle : le verbe (*est* ou *sunt*), l'accord de l'adjectif, la question posée (*cuius ?* appelle un génitif) ? Trois terminaisons piègent souvent : *-ae*, *-i* et *-a*.\n\n**N3. Le reste du chapitre II, en une ligne chacun.** *Quis, quae, quid, cuius, quot* : la question annonce le cas de la réponse. *Ūnus, duo, trēs* s'accordent (*duae filiae*, *tria oppida*) ; *quattuor* à *decem* et *centum* sont invariables. Les possessifs *meus, tuus, noster, vester* s'accordent avec le nom possédé (*filius meus*, dit Aemilia), et pour « de moi » on dit *mea*, non *mei* (*mater mea*). *Non... sed* oppose, *-ne* pose une question, *-que* et *et* coordonnent.\n\n**N4. Un texte réel : l'épitaphe de Claudia.** Les Romains lisaient le latin aussi sur les tombeaux, au bord des routes. Cette épitaphe en vers, d'orthographe archaïque, est l'un des textes funéraires latins les plus cités. La pierre est perdue : on la connaît par des copies anciennes, et son authenticité a même été discutée. Deux règles d'orthographe suffisent pour la lire : **ei** se lit *ī* (*heic* = *hic*, *deico* = *dico*, *deilexit* = *dilexit*, *mareitum* = *maritum*), et **-ai** est l'ancienne terminaison de *-ae* au génitif singulier (*pulcrai* = *pulchrae*). Allen et Greenough (§ 43 a) le notent : le génitif singulier de la première déclinaison se terminait anciennement en *-āī*.",
+      "figures": [
+        {
+          "type": "table",
+          "caption": "Nominatif et génitif des trois modèles des chapitres I et II",
+          "columns": [
+            "Cas et nombre",
+            "insula (féminin, -a)",
+            "fluvius (masculin, -us)",
+            "oppidum (neutre, -um)"
+          ],
+          "rows": [
+            [
+              "Nominatif singulier",
+              "insula",
+              "fluvius",
+              "oppidum"
+            ],
+            [
+              "Génitif singulier",
+              "insulae",
+              "fluvii",
+              "oppidi"
+            ],
+            [
+              "Nominatif pluriel",
+              "insulae",
+              "fluvii",
+              "oppida"
+            ],
+            [
+              "Génitif pluriel",
+              "insularum",
+              "fluviorum",
+              "oppidorum"
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "caption": "Les trois terminaisons qui piègent, et ce qui tranche",
+          "columns": [
+            "Terminaison",
+            "Analyses possibles",
+            "Indice décisif"
+          ],
+          "rows": [
+            [
+              "-ae (insulae, pulchrae)",
+              "nominatif pluriel ou génitif singulier",
+              "sunt ou est ; complément d'un autre nom (sepulcrum feminae)"
+            ],
+            [
+              "-i (fluvii, Marci)",
+              "nominatif pluriel ou génitif singulier",
+              "sunt ou est ; question cuius ? ; complément d'un nom (filius Marci)"
+            ],
+            [
+              "-a (insula, oppida)",
+              "nominatif singulier féminin ou nominatif pluriel neutre",
+              "mot de base (insula ou oppidum) ; est ou sunt ; accord (parva)"
+            ]
+          ]
+        }
+      ],
+      "excerpt": {
+        "work": "Épitaphe de Claudia (Rome, époque républicaine), en sénaires iambiques",
+        "locus": "CIL VI 15346 = CIL I² 1211 = ILS 8403 = CLE 52, vers 1 à 8",
+        "edition": "Franz Bücheler, Carmina Latina epigraphica, fasc. I, Leipzig, Teubner, 1895, n° 52 ; texte vérifié sur la base Musisque Deoque (Università Ca' Foscari Venezia).",
+        "translator": "traduction de travail, pour cette leçon, d'après le texte cité",
+        "lang": "fr",
+        "original": "Hospes, quod deico, paullum est, asta ac pellege.\nHeic est sepulcrum hau pulcrum pulcrai feminae.\nNomen parentes nominarunt Claudiam.\nSuom mareitum corde deilexit souo.\nGnatos duos creavit. Horunc alterum\nin terra linquit, alium sub terra locat.\nSermone lepido, tum autem incessu commodo.\nDomum servavit. Lanam fecit. Dixi. Abei.",
+        "text": "Passant, ce que j'ai à dire est peu de chose : arrête-toi et lis jusqu'au bout.\nVoici le tombeau, sans beauté, d'une belle femme.\nSes parents lui ont donné le nom de Claudia.\nElle a aimé son mari de tout son cœur.\nElle a mis au monde deux fils ; de ceux-ci, elle laisse l'un\nsur la terre, elle place l'autre sous la terre.\nD'une conversation charmante, et aussi d'une démarche convenable.\nElle a gardé la maison. Elle a filé la laine. J'ai dit. Va-t'en.",
+        "close_reading": "**Ce que tu reconnais déjà.** *Est* (deux fois) ; *sepulcrum*, un neutre en *-um* comme *oppidum* ; *pulcrai feminae*, génitif singulier, complément de *sepulcrum* : « le tombeau d'une belle femme » ; *duos*, le nombre « deux » accordé avec *gnatos* (les fils, cf. « natal ») ; *horunc*, c'est-à-dire *horum* renforcé, génitif pluriel partitif, exactement comme *horum omnium* chez César : « de ceux-ci ». *Suom... souo* sont des formes anciennes du possessif *suus*, « son », qui se décline comme *meus*.\n\n**Ce qui est nouveau, et seulement glosé aujourd'hui.** Les verbes au passé (*deilexit*, *creavit*, *servavit*, *fecit*) et les formes en *-um* ou *-am* complément (*Claudiam*, *domum*, *lanam*) relèvent de l'accusatif et du parfait, que tu verras plus tard. Ne les apprends pas encore.\n\n**Comment le texte est fait.** Il s'ouvre et se ferme sur le passant (*Hospes... Abei*) : le tombeau parle à celui qui marche. Au v. 2, le jeu *hau pulcrum pulcrai* oppose la pierre modeste à la femme belle. Au v. 6, *in terra* et *sub terra* placent les deux fils de part et d'autre du sol, l'un vivant, l'autre mort. Le v. 8 aligne des phrases de deux mots : la maison, la laine, l'éloge traditionnel de la matrone romaine."
+      }
+    },
+    {
+      "id": "exemples",
+      "title": "Exemples résolus",
+      "duration_min": {
+        "min": 5,
+        "max": 6
+      },
+      "body": "Deux analyses modèles avec la méthode en quatre questions, puis une à finir. Lis chaque étape avant de passer à la suivante.",
+      "questions": [
+        {
+          "code": "X1",
+          "kind": "worked",
+          "prompt": "**Exemple résolu.** *Insulae Graeciae multae sunt.*\n\n1) *Insulae* vient de *insula*, féminin ; analyses possibles : nominatif pluriel ou génitif singulier. *Graeciae* vient de *Graecia*, féminin ; mêmes analyses possibles.\n2) Le verbe est *sunt* : il faut un sujet pluriel. *Multae*, féminin pluriel, s'accorde avec ce sujet.\n3) Les deux mots ne peuvent pas être tous deux sujets : *Graecia* est un pays unique, donc *Graeciae* est le génitif singulier, complément de *insulae*.\n4) Traduction : « Les îles de la Grèce sont nombreuses. »",
+          "solution": "*Insulae* : nominatif pluriel, sujet de *sunt*. *Graeciae* : génitif singulier, complément du nom. « Les îles de la Grèce sont nombreuses. »"
+        },
+        {
+          "code": "X2",
+          "kind": "worked",
+          "prompt": "**Exemple résolu sur l'épitaphe.** *Heic est sepulcrum hau pulcrum pulcrai feminae.*\n\n1) Normaliser l'orthographe : *Hic est sepulcrum haud pulchrum pulchrae feminae.* (*ei* se lit *ī* ; *-ai* devient *-ae* ; *hau* = *haud*, « pas ».)\n2) *Sepulcrum* : neutre en *-um*, singulier, sujet de *est*. *Pulcrum* s'y accorde.\n3) *Pulchrae feminae* : nominatif pluriel ou génitif singulier ? Le verbe est *est*, singulier, et le sujet est déjà *sepulcrum* : *feminae* est donc un génitif singulier, complément de *sepulcrum*.\n4) Traduction : « Ici est le tombeau, pas beau, d'une belle femme. »",
+          "solution": "*Pulcrai feminae* = *pulchrae feminae*, génitif singulier : « d'une belle femme ». Le jeu de mots oppose *hau pulcrum* (le tombeau) et *pulcrai* (la femme)."
+        },
+        {
+          "code": "Xf",
+          "kind": "complete",
+          "prompt": "**À toi de finir.** *Gnatos duos creavit. Horunc alterum in terra linquit, alium sub terra locat.*\n\n1) *Gnatos* est l'ancienne forme de *natos*, « les fils » (cf. « natal ») ; *duos* est le nombre « deux », accordé avec lui. On sait donc que Claudia a eu deux fils.\n2) *Horunc* se lit *horum*, renforcé par une particule *-c(e)*. Quel est le cas et le nombre de *horum*, et quel passage de César, vu en leçon 4, emploie la même forme ?\n3) Traduis *horum alterum... alium* et dis ce que le texte apprend du destin des deux fils.",
+          "solution": "2) *Horum* est un génitif pluriel (masculin), partitif : « de ceux-ci ». C'est la forme de César, *Guerre des Gaules*, I, 1 : *Horum omnium fortissimi sunt Belgae*, « de tous ceux-ci, les plus braves sont les Belges ».\n3) « De ceux-ci, l'un..., l'autre... » : elle laisse l'un sur la terre (il vit) et place l'autre sous la terre (il est mort et enseveli).",
+          "response": {
+            "type": "court",
+            "consigne": "Réponds aux points 2 et 3.",
+            "hints": [
+              "Une terminaison en *-orum* : quel cas, quel nombre ?",
+              "Relis la phrase de César sur les Belges : *Horum omnium fortissimi...*",
+              "*in terra* et *sub terra* : sur la terre, sous la terre."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "exercices",
+      "title": "Exercices : contrôle de maîtrise",
+      "duration_min": {
+        "min": 10,
+        "max": 12
+      },
+      "body": "**Contrôle de maîtrise des chapitres I et II.** Cinq exercices, 2 points chacun, soit 10 points. Fais-les sans relire le cours ni les tableaux. Pour les réponses ouvertes, compare ta réponse à la correction et note-la honnêtement : Juste (2 points), Partiel (1 point), Faux (0).\n\nSeuil : **8 sur 10**. À 8 ou plus, la prochaine leçon de latin (mercredi) ouvre le chapitre III. En dessous, mercredi sera une leçon corrective sur les points manqués seulement, avec d'autres exemples, puis un nouveau contrôle court.",
+      "questions": [
+        {
+          "code": "E1",
+          "kind": "exercise",
+          "prompt": "Associe chaque forme, dans son contexte, à son analyse. (Un demi-point par paire.)",
+          "solution": "*insulae* dans *Insulae magnae sunt* : nominatif pluriel féminin (sujet de *sunt*). *oppida* dans *Oppida parva sunt* : nominatif pluriel neutre. *Marci* dans *Quintus filius Marci est* : génitif singulier. *insularum* dans *Sicilia una insularum est* (« la Sicile est l'une des îles ») : génitif pluriel partitif.",
+          "response": {
+            "type": "appariement",
+            "pairs": [
+              {
+                "left": "*insulae*, dans *Insulae magnae sunt.*",
+                "right": "nominatif pluriel féminin"
+              },
+              {
+                "left": "*oppida*, dans *Oppida parva sunt.*",
+                "right": "nominatif pluriel neutre"
+              },
+              {
+                "left": "*Marci*, dans *Quintus filius Marci est.*",
+                "right": "génitif singulier"
+              },
+              {
+                "left": "*insularum*, dans *Sicilia una insularum est.*",
+                "right": "génitif pluriel"
+              }
+            ],
+            "hints": [
+              "Commence par la forme en *-arum* : elle n'a qu'une analyse.",
+              "Pour les deux formes au pluriel, regarde le mot de base : *insula* ou *oppidum* ?"
+            ]
+          }
+        },
+        {
+          "code": "E2",
+          "kind": "exercise",
+          "prompt": "Mets ces deux phrases au pluriel (un point par phrase) :\n\na) *Fluvius magnus est.*\nb) *Oppidum parvum est.*",
+          "solution": "a) *Fluvii magni sunt.* b) *Oppida parva sunt.* On remplace la terminaison du singulier (*-us* devient *-i*, *-um* devient *-a*), on ne l'ajoute pas : ni *magnii*, ni *oppidia*, ni *parvia*. Le verbe passe de *est* à *sunt*.",
+          "response": {
+            "type": "court",
+            "hints": [
+              "Trois mots changent dans chaque phrase : le nom, l'adjectif et le verbe.",
+              "Remplace, n'ajoute pas : *-um* devient *-a*."
+            ]
+          }
+        },
+        {
+          "code": "E3",
+          "kind": "exercise",
+          "prompt": "Traduis en latin (un point par phrase) :\n\na) Aemilia est la mère de Marcus et de Quintus.\nb) Nos esclaves ne sont pas nombreux, mais vos servantes sont nombreuses.",
+          "solution": "a) *Aemilia mater Marci et Quinti est.* (Les noms de possesseurs au génitif ; *est* en fin de phrase est l'ordre habituel, mais *Aemilia est mater...* est juste aussi.)\nb) *Servi nostri non multi sunt, sed ancillae vestrae multae sunt.* (*Nostri* s'accorde avec *servi*, *vestrae* avec *ancillae* ; *non... sed* pour l'opposition.)",
+          "response": {
+            "type": "court",
+            "hints": [
+              "a) « de Marcus » : génitif de *Marcus*.",
+              "b) Le possessif se place après le nom et s'accorde avec lui : *servi nostri*, *ancillae vestrae*."
+            ]
+          }
+        },
+        {
+          "code": "E4",
+          "kind": "exercise",
+          "prompt": "Lis ce petit texte, puis réponds en latin aux deux questions (un point par réponse).\n\n> *Iulius vir Romanus est, Aemilia femina Romana. Marcus et Quintus filii Iulii et Aemiliae sunt ; Iulia filia est. In familia Iulii multi servi sunt, sed ancillae non multae : Syra et Delia ancillae sunt. Medus quoque servus Iulii est.*\n\na) *Cuius filius est Quintus ?*\nb) *Quot ancillae sunt in familia Iulii ?*",
+          "solution": "a) *Quintus filius Iulii et Aemiliae est.* (*Cuius ?* appelle un génitif : la réponse met le nom au génitif.)\nb) *Duae ancillae* (ou *Duae ancillae sunt in familia Iulii*). *Duo* s'accorde avec *ancillae*, féminin : *duae*.",
+          "response": {
+            "type": "court",
+            "hints": [
+              "*Cuius ?* signifie « de qui ? » : réponds avec un génitif.",
+              "Compte les servantes nommées, puis accorde « deux » au féminin."
+            ]
+          }
+        },
+        {
+          "code": "E5",
+          "kind": "exercise",
+          "prompt": "D'après l'épitaphe de Claudia (vers 5 et 6), que sait-on de ses enfants ? (2 points)",
+          "solution": "Elle a eu deux fils (*gnatos duos*) ; l'un vit encore (*in terra linquit*, elle le laisse sur la terre), l'autre est mort et enseveli (*alium sub terra locat*, elle le place sous la terre).",
+          "response": {
+            "type": "choix",
+            "choices": [
+              "Deux fils : l'un est vivant, l'autre est mort.",
+              "Deux filles : toutes deux sont vivantes.",
+              "Deux fils : tous deux sont morts avant elle.",
+              "Un fils et une fille : le fils est mort."
+            ],
+            "expected": "Deux fils : l'un est vivant, l'autre est mort.",
+            "explanation": "*Gnatos duos* : deux fils. *Horunc alterum in terra linquit* : l'un, elle le laisse sur la terre ; *alium sub terra locat* : l'autre, elle le place sous la terre."
+          }
+        }
+      ]
+    },
+    {
+      "id": "reflexion",
+      "title": "Question de réflexion",
+      "duration_min": {
+        "min": 2,
+        "max": 2
+      },
+      "questions": [
+        {
+          "code": "Q",
+          "kind": "reflection",
+          "prompt": "Quelle preuve ? En latin classique, *pulchrae feminae* pourrait être un nominatif pluriel (« de belles femmes » sujet) aussi bien qu'un génitif singulier. Qu'est-ce qui, dans le vers 2 de l'épitaphe, prouve qu'il s'agit d'un génitif singulier ? Réponds en une ou deux phrases.",
+          "solution": "Le verbe *est* est au singulier et a déjà son sujet, *sepulcrum* : *pulchrae feminae* ne peut donc pas être sujet ; il complète *sepulcrum* (« le tombeau de... »). Le reste du texte le confirme : il ne parle que d'une femme, Claudia. La forme seule ne suffit jamais : c'est la phrase qui tranche.",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Quel est le verbe du vers, et quel est déjà son sujet ?"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ticket",
+      "title": "Ticket de sortie",
+      "duration_min": {
+        "min": 2,
+        "max": 2
+      },
+      "questions": [
+        {
+          "code": "T1",
+          "kind": "ticket",
+          "prompt": "Donne le génitif pluriel de *filia* et de *servus*.",
+          "solution": "*filiarum* et *servorum*.",
+          "response": {
+            "type": "court",
+            "hints": [
+              "*-a* donne *-arum* ; *-us* donne *-orum*."
+            ]
+          }
+        },
+        {
+          "code": "T2",
+          "kind": "ticket",
+          "prompt": "Vrai ou faux : on écrit *tria oppida* et *tres insulae*, mais *quattuor* ne change jamais de forme.",
+          "solution": "Vrai. *Trēs* (masculin et féminin) et *tria* (neutre) s'accordent ; *quattuor* à *decem* et *centum* sont invariables.",
+          "response": {
+            "type": "vrai_faux",
+            "expected": true,
+            "explanation": "*Ūnus, duo, trēs* s'accordent ; à partir de *quattuor*, le nombre ne se décline plus."
+          }
+        }
+      ]
+    }
+  ],
+  "retenir": [
+    "Au pluriel comme au génitif, on remplace la terminaison du nominatif singulier : *insula*, *insulae*, *insularum* ; *fluvius*, *fluvii*, *fluviorum* ; *oppidum*, *oppidi*, *oppida*, *oppidorum*.",
+    "Les formes en *-ae* et en *-i* peuvent être nominatif pluriel ou génitif singulier, et *-a* peut être féminin singulier ou neutre pluriel : c'est le verbe (*est*, *sunt*), l'accord et la fonction qui tranchent.",
+    "La question annonce le cas de la réponse (*cuius ?* appelle un génitif) ; *ūnus, duo, trēs* s'accordent, *quattuor* à *decem* sont invariables ; le possessif s'accorde avec le nom possédé.",
+    "Dans les inscriptions anciennes, *ei* se lit *ī* et *-ai* est l'ancien génitif en *-ae* : *heic* = *hic*, *pulcrai feminae* = *pulchrae feminae*.",
+    "L'épitaphe de Claudia (CIL VI 15346) dit en huit vers une vie de matrone romaine : un nom, un mari aimé, deux fils, l'un vivant et l'autre mort, la maison et la laine."
+  ],
+  "mot_du_jour": {
+    "code": "M",
+    "terme": "hospes",
+    "texte": "*Hospes*, premier mot de l'épitaphe, désigne l'étranger de passage, celui qu'on reçoit, et aussi celui qui reçoit : le même mot vaut pour les deux côtés de l'hospitalité. Le français a gardé ce double sens dans « hôte », qui vient de *hospes, hospitis*. De la même famille viennent « hospitalité », « hospice » et « hôpital » (*hospitale*, la maison où l'on accueille), puis « hôtel », qui en est une forme ancienne. Sur la tombe, *hospes* est le passant, l'inconnu à qui la pierre demande de s'arrêter et de lire."
+  },
+  "pour_aller_plus_loin": [
+    {
+      "type": "primaire",
+      "reference": "Franz Bücheler (éd.), Carmina Latina epigraphica, fasc. I, Leipzig, Teubner, 1895 (Anthologia Latina, pars posterior), n° 52 = CIL VI 15346 = CIL I² 1211 = ILS 8403.",
+      "note": "L'édition de référence des épitaphes en vers : celle de Claudia, et des centaines d'autres, souvent courtes, où réapparaissent la famille et le génitif.",
+      "citation": "Domum seruauit. lanam fecit. dixi. abei.",
+      "citation_source": "CLE 52, vers 8 (texte de la base Musisque Deoque)",
+      "lien": "https://www.mqdq.it/ce/testo/ordinata/pf2245288"
+    },
+    {
+      "type": "secondaire",
+      "reference": "Joseph Henry Allen et James Bradstreet Greenough, New Latin Grammar for Schools and Colleges, Boston, Ginn and Company, 1903, § 43, éd. en ligne Meagan Ayer, Carlisle (Pa.), Dickinson College Commentaries, 2014.",
+      "note": "Les formes particulières de la première déclinaison : le génitif ancien en -āī de l'épitaphe, et le vieux génitif de pater familias.",
+      "citation": "The genitive singular anciently ended in -āī (dissyllabic), which is occasionally found, as in aulāī.",
+      "citation_source": "§ 43 a",
+      "lien": "https://dcc.dickinson.edu/grammar/latin/1st-declension-case-forms"
+    },
+    {
+      "type": "secondaire",
+      "reference": "Sheena Finnigan, Working Moms: Motherhood, Occupation, and Status in Roman Italy, ca. 100 BCE-150 CE, thèse de doctorat (histoire), University of Wisconsin-Madison, 2022, introduction.",
+      "note": "Part de l'épitaphe de Claudia pour montrer combien ce texte célèbre, perdu et peut-être même un faux, a façonné l'image moderne de la femme romaine.",
+      "lien": "https://asset.library.wisc.edu/1711.dl/735ASPRQSIRWA9C/R/file-ecbca.pdf"
+    },
+    {
+      "type": "secondaire",
+      "reference": "Hans H. Ørberg, Lingua Latina per se illustrata. Pars I : Familia Romana, Grenaa, Domus Latina, 2003, chapitres I et II.",
+      "note": "Relis les deux chapitres d'un trait, en latin seul : si tout se comprend sans effort, tu es prêt pour le chapitre III."
+    }
+  ]
+}
