@@ -1,0 +1,536 @@
+{
+  "schema_version": "1.0",
+  "id": "2026-11-24-classiques-L2",
+  "title": "2026-11-24 · Classiques · Leçon 2 : Gilgamesh, tablette XI : Uta-napišti et le Déluge",
+  "date": "2026-11-24",
+  "weekday": "mardi",
+  "subject": "classiques",
+  "subject_label": "Classiques des civilisations",
+  "lesson_number": 2,
+  "module": {
+    "id": "I",
+    "title": "Naissances : épopée, sagesse, royauté écrite"
+  },
+  "duration_min": {
+    "min": 35,
+    "max": 45
+  },
+  "lang": "fr",
+  "objectives": [
+    "Situer la tablette XI dans l'arc de l'épopée et dire pourquoi Gilgamesh va trouver Uta-napišti.",
+    "Lire de près le récit du Déluge (ruse d'Ea, tempête, oiseaux, sacrifice) et en nommer trois procédés littéraires.",
+    "Comparer Gilgamesh XI, Atra-hasīs et la Genèse avec prudence : parallèles précis, différences de sens, pas de simple copie.",
+    "Expliquer ce que les deux échecs (le sommeil, la plante) et le retour aux murs d'Uruk apprennent au héros."
+  ],
+  "prerequisites": [
+    "Classiques, leçon 1 : Uruk, la version standard en douze tablettes, le prologue et les murs."
+  ],
+  "student_note": "Lis les quatre extraits à voix basse, lentement ; chaque question a sa zone de réponse.",
+  "sources": [
+    {
+      "type": "primary",
+      "cite": "A. R. George (éd.), révision G. Rozzi et E. Jiménez, Poem of Gilgameš, Standard Babylonian, chapitre XI, electronic Babylonian Library (eBL), LMU Munich, 2022 (texte akkadien, traduction anglaise et numérotation des lignes)."
+    },
+    {
+      "type": "primary",
+      "cite": "A. R. George, The Babylonian Gilgamesh Epic. Introduction, Critical Edition and Cuneiform Texts, 2 vol., Oxford, Oxford University Press, 2003."
+    },
+    {
+      "type": "primary",
+      "cite": "La Sainte Bible, trad. Louis Segond, 1910, Genèse 6 à 9 (citations de Gn 6, 15 ; 8, 4 ; 8, 6 à 12 ; 8, 21)."
+    },
+    {
+      "type": "primary",
+      "cite": "W. G. Lambert et A. R. Millard, Atra-ḫasīs. The Babylonian Story of the Flood, avec The Sumerian Flood Story par M. Civil, Oxford, Clarendon Press, 1969."
+    },
+    {
+      "type": "secondary",
+      "cite": "Jean Bottéro, L'Épopée de Gilgameš. Le grand homme qui ne voulait pas mourir, Paris, Gallimard, 1992."
+    }
+  ],
+  "sections": [
+    {
+      "id": "rappel",
+      "title": "Rappel",
+      "duration_min": {
+        "min": 8,
+        "max": 10
+      },
+      "body": "Huit cartes dues aujourd'hui, toutes matières mélangées : latin, mathématiques, classiques, philosophie, économie. Réponds de mémoire, sans relire tes leçons. Après chaque correction, note honnêtement Juste, Partiel ou Faux : la date de la prochaine révision en dépend.",
+      "questions": [
+        {
+          "code": "R1",
+          "kind": "recall",
+          "prompt": "Analyse et traduis : *Insulae Graeciae multae sunt.*",
+          "solution": "*Insulae* : nominatif pluriel, sujet de *sunt* (accord *multae*) ; *Graeciae* : génitif singulier, complément du nom. « Les îles de la Grèce sont nombreuses. »",
+          "card_id": "LAT-024",
+          "response": {
+            "type": "court",
+            "hints": [
+              "Lequel des deux mots en -ae s'accorde avec *multae* et commande *sunt* ?",
+              "L'autre répond à la question « de quoi ? »."
+            ],
+            "explanation": "*Insulae* est le sujet pluriel (avec *multae* et *sunt*) ; *Graeciae* est un génitif singulier : « les îles de la Grèce »."
+          }
+        },
+        {
+          "code": "R2",
+          "kind": "recall",
+          "prompt": "Résous 7x − 5 = 3x + 11, puis vérifie.",
+          "solution": "4x − 5 = 11, puis 4x = 16, donc x = 4. Vérification : 7 × 4 − 5 = 23 et 3 × 4 + 11 = 23.",
+          "card_id": "MAT-011",
+          "response": {
+            "type": "nombre",
+            "expected": 4,
+            "consigne": "La valeur de x.",
+            "hints": [
+              "Retire 3x des deux membres.",
+              "4x − 5 = 11 : ajoute 5, puis divise par 4."
+            ],
+            "explanation": "4x = 16, donc x = 4 ; les deux membres valent 23."
+          }
+        },
+        {
+          "code": "R3",
+          "kind": "recall",
+          "prompt": "Situe la version standard de l'Épopée de Gilgamesh : langue, nombre de tablettes, attribution, date.",
+          "solution": "En akkadien, douze tablettes (arc du récit : I à XI), attribuée par la tradition à Sîn-lēqi-unninni d'Uruk, vers 1200 à 1000 av. J.-C.",
+          "card_id": "CLA-002",
+          "response": {
+            "type": "court",
+            "hints": [
+              "La langue n'est pas le sumérien.",
+              "Un savant d'Uruk, dont le nom invoque le dieu-lune Sîn."
+            ],
+            "explanation": "Akkadien, douze tablettes, Sîn-lēqi-unninni, vers 1200 à 1000 av. J.-C."
+          }
+        },
+        {
+          "code": "R4",
+          "kind": "recall",
+          "prompt": "Qu'est-ce que l'ápeiron d'Anaximandre, et pourquoi n'est-ce aucun des éléments ?",
+          "solution": "L'illimité, l'indéterminé, d'où se séparent les contraires. Un élément pris pour principe, contraire des autres, l'emporterait sur eux et les détruirait ; l'indéterminé n'en favorise aucun.",
+          "card_id": "PHI-004",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Le mot veut dire « sans limite ».",
+              "Que ferait l'eau, si elle était infinie, au feu ?"
+            ],
+            "explanation": "L'indéterminé ne favorise aucun des contraires, alors qu'un élément infini détruirait les autres."
+          }
+        },
+        {
+          "code": "R5",
+          "kind": "recall",
+          "prompt": "Pourquoi dit-on *mater mea* et non *mater mei* ? Et comment dit-on « la mère de Marcus » ?",
+          "solution": "Pour « je, tu, nous, vous », le latin emploie l'adjectif possessif, pas le génitif du pronom (Allen et Greenough, § 302 a). Un nom de possesseur se met au génitif : *mater Marci*.",
+          "card_id": "LAT-020",
+          "response": {
+            "type": "court",
+            "hints": [
+              "*mea* s'accorde avec *mater*.",
+              "Pour un nom propre, on revient au génitif : Marcus, Marci."
+            ],
+            "explanation": "Possessif pour les personnes de l'interlocution ; génitif pour un nom : *mater Marci*."
+          }
+        },
+        {
+          "code": "R6",
+          "kind": "recall",
+          "prompt": "Coût d'opportunité d'une année d'études : le salaire abandonné et le loyer y entrent-ils ? Pourquoi ?",
+          "solution": "Le salaire abandonné, oui : c'est l'option sacrifiée, souvent le poste le plus lourd. Le loyer, non, s'il est payé dans les deux cas : on ne compte que ce qui change entre les options.",
+          "card_id": "ECO-005",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Que perds-tu en choisissant d'étudier plutôt que de travailler ?",
+              "Un coût payé quel que soit le choix change-t-il la comparaison ?"
+            ],
+            "explanation": "On ne compte que ce qui diffère entre les options : le salaire abandonné oui, le loyer payé de toute façon non."
+          }
+        },
+        {
+          "code": "R7",
+          "kind": "recall",
+          "prompt": "D'où viennent nos principaux manuscrits de Gilgamesh, et qui a identifié la tablette du Déluge ?",
+          "solution": "De la bibliothèque d'Assurbanipal à Ninive (VIIe siècle av. J.-C.). George Smith a présenté le récit du Déluge (tablette XI) le 3 décembre 1872.",
+          "card_id": "CLA-004",
+          "response": {
+            "type": "court",
+            "hints": [
+              "Une capitale assyrienne, sur le Tigre.",
+              "Un assyriologue anglais, en 1872."
+            ],
+            "explanation": "Ninive, bibliothèque d'Assurbanipal ; George Smith, 3 décembre 1872. C'est cette tablette que nous lisons aujourd'hui."
+          }
+        },
+        {
+          "code": "R8",
+          "kind": "recall",
+          "prompt": "Troisième problème d'al-Khwārizmī : dix est partagé en deux parts, et le quotient de l'une par l'autre vaut quatre. Mise en équation et solution ?",
+          "solution": "Une part vaut x, l'autre 10 − x : (10 − x) / x = 4, donc 10 − x = 4x, 5x = 10, x = 2. Les parts sont 2 et 8 (8 / 2 = 4).",
+          "card_id": "MAT-014",
+          "response": {
+            "type": "court",
+            "hints": [
+              "Appelle x la petite part : l'autre vaut 10 − x.",
+              "Multiplie les deux membres par x."
+            ],
+            "explanation": "(10 − x) / x = 4 donne 5x = 10 : les parts sont 2 et 8."
+          }
+        }
+      ]
+    },
+    {
+      "id": "prequestions",
+      "title": "Pré-questions",
+      "duration_min": {
+        "min": 1,
+        "max": 2
+      },
+      "body": "Réponds même au hasard : chercher avant de savoir aide à retenir.",
+      "questions": [
+        {
+          "code": "P1",
+          "kind": "prequestion",
+          "prompt": "Uta-napišti est le seul homme devenu immortel. À ton avis, pourquoi raconte-t-il le Déluge à Gilgamesh, au lieu de lui donner simplement une recette ?",
+          "solution": "Parce que son immortalité tient à un événement unique, le Déluge, et à une décision des dieux qui ne se répétera pas. Le récit montre à Gilgamesh que son cas n'est pas reproductible.",
+          "response": {
+            "type": "prediction",
+            "confidence": true,
+            "explanation": "Garde ta réponse en tête : la fin du récit (lignes 203 à 208) y répond."
+          }
+        },
+        {
+          "code": "P2",
+          "kind": "prequestion",
+          "prompt": "Dans la Genèse, Noé lâche un corbeau puis une colombe. Devine : quels oiseaux lâche le héros mésopotamien, et lequel ne revient pas ?",
+          "solution": "Une colombe, une hirondelle, puis un corbeau ; c'est le corbeau qui ne revient pas, parce qu'il a trouvé de quoi se nourrir.",
+          "response": {
+            "type": "prediction",
+            "confidence": true,
+            "explanation": "L'ordre est presque inversé par rapport à la Genèse : on va le lire."
+          }
+        }
+      ]
+    },
+    {
+      "id": "cours",
+      "title": "Notion du jour",
+      "duration_min": {
+        "min": 11,
+        "max": 13
+      },
+      "body": "### Où en est le poème\n\nÀ la tablette VII, Enkidu tombe malade ; il meurt, et Gilgamesh le pleure à la tablette VIII. Il découvre qu'il mourra lui aussi. Aux tablettes IX et X, il quitte Uruk, franchit les monts Mashu par le chemin du soleil, rencontre la cabaretière Shiduri au bord de la mer, puis le passeur Ur-shanabi, qui lui fait traverser les Eaux de la mort. Au bout du monde, « à l'embouchure des fleuves », vit Uta-napišti, le Lointain : un homme à qui les dieux ont donné la vie sans fin. Son nom évoque l'idée de « trouver la vie » (*napištu*, « la vie »). La tablette XI est la réponse qu'il fait à la question de Gilgamesh : comment as-tu trouvé la vie ?\n\n### Ce que contient la tablette XI\n\n| Lignes | Épisode |\n| --- | --- |\n| 1 à 7 | Gilgamesh s'étonne : Uta-napišti est fait comme lui. « Comment as-tu trouvé la vie ? » |\n| 8 à 206 | Récit du Déluge, à la première personne : le secret d'Ea, le bateau, la tempête, les oiseaux, le sacrifice, la querelle des dieux, la bénédiction d'Enlil |\n| 207 à 246 | Épreuve : ne pas dormir six jours et sept nuits. Gilgamesh s'endort aussitôt ; sept pains en témoignent |\n| 247 à 270 | Bain et vêtement royal : Gilgamesh redevient un roi présentable |\n| 271 à 307 | La plante de jouvence, cueillie au fond de l'Apsû, volée par un serpent qui mue |\n| 308 à 328 | Larmes, retour à Uruk, et reprise du prologue : les murs, les briques, la mesure de la ville |\n\nLes numéros de lignes suivent l'édition en ligne de l'electronic Babylonian Library (texte d'A. R. George, révisé par G. Rozzi et E. Jiménez), très proche de l'édition imprimée de George (2003). La version standard est connue par environ 75 manuscrits. Pour la tablette XI, les plus nombreux sont des copies néo-assyriennes de Ninive, comme la tablette K 3375 du British Museum, mais il en existe aussi d'Assur, de Kalhu (Nimrud) et de Babylone.\n\n### Un récit plus ancien que l'épopée\n\nLe Déluge n'a pas été inventé pour Gilgamesh. À la ligne 197, Ea appelle le héros **Atra-hasīs**, « le Supersage » : c'est le nom du héros d'un autre poème akkadien, *Atra-hasīs*, dont une copie paléo-babylonienne date du XVIIe siècle av. J.-C. Ce poème raconte toute l'histoire : les dieux créent l'humanité pour porter leur travail, le bruit des hommes trouble le repos d'Enlil, qui envoie l'épidémie, la famine, puis le Déluge. La version standard de Gilgamesh reprend cet épisode et le fait raconter par le survivant lui-même. Il existe aussi un récit sumérien, dont le héros s'appelle Ziusudra, et, bien plus tard, le prêtre babylonien Bérose (IIIe siècle av. J.-C.) en donne une version grecque, où le héros se nomme Xisouthros.\n\n### Une comparaison, avec prudence\n\n| | Gilgamesh XI | Genèse 6 à 9 |\n| --- | --- | --- |\n| Cause | Décision de l'assemblée des grands dieux ; la tablette XI ne la motive presque pas (Atra-hasīs parle du bruit des hommes) | La violence et la corruption de la terre (Gn 6, 11 à 13) |\n| Avertissement | Ea, lié par serment, parle à une palissade de roseaux | Dieu parle directement à Noé |\n| Bateau | Un cube : surface d'un *ikû*, côtés de dix perches de haut, six ponts (l. 58 à 61) | L'arche : 300 coudées sur 50 et 30 (Gn 6, 15) |\n| Durée | Six jours et sept nuits de tempête (l. 128 à 129) | Quarante jours de pluie, des mois de décrue |\n| Échouage | Mont Nimush (l. 142) | Montagnes d'Ararat (Gn 8, 4) |\n| Oiseaux | Colombe, hirondelle, puis corbeau, qui ne revient pas | Corbeau, puis trois fois la colombe ; la dernière ne revient pas |\n| Sacrifice | Les dieux sentent la bonne odeur et s'assemblent « comme des mouches » | « L'Éternel sentit une odeur agréable » (Gn 8, 21) |\n| Issue | Uta-napišti et sa femme deviennent « comme les dieux », au loin | Alliance avec Noé et toute chair ; pas d'immortalité |\n\nLes ressemblances de détail (les oiseaux, l'odeur du sacrifice) sont trop précises pour être un hasard : la Genèse connaît une tradition mésopotamienne du Déluge. Mais le récit biblique, dont la rédaction est plus tardive et dont les étapes sont discutées par les biblistes, la transforme : un seul Dieu, une faute humaine, une alliance. On parle donc d'une tradition partagée et retravaillée, non d'une simple copie. Quant à l'archéologie, les couches d'inondation fouillées à Ur, à Kish ou à Shuruppak ne datent pas de la même époque : elles attestent des crues locales, fréquentes dans une plaine alluviale, et non un déluge unique.\n\n### Art et littérature : comment le récit est fait\n\nTrois procédés reviennent, et tu vas les retrouver dans l'extrait.\n1. **La répétition qui compte les jours** : « un jour, un second jour, le mont Nimush tint le bateau » (l. 144 à 146). La phrase se répète, seuls les nombres avancent ; l'attente devient sensible.\n2. **Les comparaisons tirées du quotidien** : la déesse crie « comme une femme qui accouche » (l. 117), les dieux se recroquevillent « comme des chiens » (l. 116), puis s'assemblent « comme des mouches » (l. 163). Les dieux du poème ne sortent pas grandis du Déluge.\n3. **La formule qui fait écho** : « les larmes coulaient le long de mon visage » (l. 139, Uta-napišti devant les humains changés en argile) revient presque mot pour mot à la ligne 309, quand Gilgamesh pleure la plante perdue.",
+      "excerpt": {
+        "work": "Épopée de Gilgamesh, version standard akkadienne, tablette XI",
+        "locus": "tablette XI, lignes 9 à 14, 19 à 27, 128 à 131, 134 à 139, 142 à 143, 147 à 156, 161 à 163 (numérotation de l'eBL)",
+        "edition": "A. R. George (éd.), révision G. Rozzi et E. Jiménez, Poem of Gilgameš, Standard Babylonian, chapitre XI, electronic Babylonian Library, LMU Munich, 2022 ; voir A. R. George, The Babylonian Gilgamesh Epic, Oxford University Press, 2003.",
+        "translator": "traduction de travail, pour cette leçon, d'après le texte akkadien et la traduction anglaise d'A. R. George dans l'édition citée ; les parenthèses (...) signalent une coupure ou une lacune",
+        "lang": "fr",
+        "text": "**A. Le secret d'Ea (l. 9 à 14 et 19 à 27).** Uta-napišti parle.\n\n> 9 « Je vais te dévoiler, Gilgamesh, une chose cachée,\n> 10 et je vais te dire un secret des dieux.\n> 11 Shuruppak, une ville que tu connais toi-même,\n> 12 la ville qui est située sur la rive de l'Euphrate,\n> 13 cette ville était ancienne, et les dieux étaient en elle,\n> 14 quand les grands dieux résolurent de faire le Déluge. (...)\n> 19 Le prince Ea avait prêté serment avec eux,\n> 20 mais il répéta leurs paroles à une palissade de roseaux :\n> 21 \"Palissade, palissade ! Mur, mur !\n> 22 Écoute, palissade ! Prête attention, mur !\n> 23 Homme de Shuruppak, fils d'Ubar-Tutu,\n> 24 démolis ta maison, construis un bateau !\n> 25 Abandonne les richesses, cherche la vie !\n> 26 Méprise les biens, sauve la vie !\n> 27 Fais monter dans le bateau la semence de tous les êtres vivants !\" »\n\n**B. Après la tempête (l. 128 à 131 et 134 à 139).**\n\n> 128 Six jours et sept nuits\n> 129 soufflèrent le vent, le Déluge, la tempête qui aplatissait le pays.\n> 130 Quand arriva le septième jour,\n> 131 la tempête se relâcha, (le Déluge prit fin). (...)\n> 134 Je regardai le temps : le silence s'était établi,\n> 135 et tous les humains étaient retournés à l'argile. (...)\n> 137 J'ouvris une lucarne, et la lumière du soleil tomba sur ma joue.\n> 138 Je tombai à genoux, je m'assis et je pleurai,\n> 139 et les larmes coulaient le long de mon visage.\n\n**C. Le mont Nimush et les oiseaux (l. 142 à 143 et 147 à 156).**\n\n> 142 Sur le mont Nimush le bateau s'échoua ;\n> 143 le mont Nimush tint le bateau et ne le laissa plus bouger. (...)\n> 147 Quand arriva le septième jour,\n> 148 je fis sortir une colombe et je la lâchai.\n> 149 La colombe partit, (...)\n> 150 aucun perchoir ne lui apparut, et elle revint vers moi.\n> 151 Je fis sortir une hirondelle et je la lâchai.\n> 152 L'hirondelle partit, (...)\n> 153 aucun perchoir ne lui apparut, et elle revint vers moi.\n> 154 Je fis sortir un corbeau et je le lâchai.\n> 155 Le corbeau partit, et il vit les eaux se retirer :\n> 156 il mangea, gratta, picora, et ne revint pas vers moi.\n\n**D. Le sacrifice (l. 161 à 163).**\n\n> 161 Les dieux sentirent l'odeur,\n> 162 les dieux sentirent la bonne odeur,\n> 163 les dieux s'assemblèrent comme des mouches autour du sacrifiant.",
+        "original": "21 kikkiš kikkiš igār igār\n22 kikkišu šimē-ma igāru hissas\n23 šuruppakû mār ubār-tutu\n24 uqur bīta bini eleppa\n25 muššir mešrâ-ma šeʾi napšāti\n26 makkūra zēr-ma napišta bulliṭ",
+        "close_reading": "**Ce que le texte dit.** Les dieux ont juré de garder secret leur projet. Ea, dieu de la sagesse et des eaux douces, a juré avec eux. Il ne parle donc pas à l'homme : il parle au mur de la maison de roseaux, et l'homme, derrière, entend. C'est une ruse de juriste : le serment est tenu à la lettre et trahi dans les faits. À la ligne 196, Ea le dira lui-même à Enlil : « je n'ai pas dévoilé le secret des grands dieux », il l'a seulement fait voir en songe.\n\n**Comment il est fait.** Les vers 25 et 26 sont construits en parallèle : deux impératifs, deux fois l'opposition entre les biens et la vie. En akkadien, *napšāti* (« la vie, les vivants ») et *napišta* (« la vie ») reviennent, et la ligne 27 reprend encore le même mot (*zēr napšāti*, « la semence des vivants »). Tout le passage pèse ainsi un seul choix. Plus loin, le nombre sept organise le récit : six jours et sept nuits de tempête, le septième jour où la tempête cesse, le septième jour où l'on lâche les oiseaux. Les trois oiseaux forment une petite gradation : deux reviennent, faute de perchoir ; le troisième trouve à manger, et son absence est la bonne nouvelle.\n\n**Ce que cela engage.** Le survivant ne raconte pas un triomphe. Quand il ouvre la lucarne, il voit les humains « retournés à l'argile », la matière dont, dans la tradition mésopotamienne, ils avaient été faits, et il pleure. Et Gilgamesh écoute une histoire qui ne peut pas se reproduire : Uta-napišti a reçu la vie une fois, par une assemblée des dieux convoquée après un cataclysme. « Qui donc réunira les dieux pour toi ? » (l. 207)."
+      }
+    },
+    {
+      "id": "exemples",
+      "title": "Exemples résolus",
+      "duration_min": {
+        "min": 5,
+        "max": 6
+      },
+      "body": "Deux analyses modèles en trois temps (ce que le texte dit, comment il est fait, ce qu'il engage), puis une à finir.",
+      "questions": [
+        {
+          "code": "X1",
+          "kind": "worked",
+          "prompt": "**Analyse modèle : la palissade de roseaux (l. 19 à 27).**\n\n1. *Ce que le texte dit.* Ea, tenu par le serment des dieux, s'adresse à un mur ; l'homme de Shuruppak entend l'ordre de construire un bateau et d'y faire monter la semence des vivants.\n2. *Comment il est fait.* Double apostrophe au mur (« Palissade, palissade ! Mur, mur ! »), puis passage brusque à « Homme de Shuruppak » : le destinataire réel apparaît au troisième vers. Les impératifs vont par paires et opposent les biens à la vie.\n3. *Ce qu'il engage.* Dans ce monde, les dieux sont liés par leurs serments comme des contractants, et la sagesse d'Ea consiste à les tourner sans les rompre. Le salut de l'humanité tient à une ruse, non à un mérite moral du héros, que le texte ne mentionne pas.",
+          "solution": "Le passage dit l'ordre d'Ea ; il est fait d'apostrophes et d'impératifs en parallèle ; il engage une image des dieux liés par serment, et un salut obtenu par la ruse."
+        },
+        {
+          "code": "X2",
+          "kind": "worked",
+          "prompt": "**Analyse modèle : les dieux et l'odeur du sacrifice (l. 161 à 163, avec Genèse 8, 20 à 21).**\n\n1. *Ce que le texte dit.* Uta-napišti sacrifie au sommet de la montagne ; les dieux sentent l'odeur et accourent.\n2. *Comment il est fait.* Le vers 162 répète le vers 161 en ajoutant un seul mot, « bonne » : c'est le procédé de la reprise augmentée. Puis vient la comparaison, « comme des mouches », qui rabaisse les dieux affamés : pendant le Déluge, plus personne ne leur offrait de sacrifices.\n3. *Ce qu'il engage.* La Genèse garde le motif de l'odeur (« L'Éternel sentit une odeur agréable », Gn 8, 21, trad. Segond, 1910) mais efface toute faim divine : Dieu y prend une décision, ne plus maudire la terre. Même motif, deux théologies : ici des dieux nombreux, dépendants des hommes ; là un Dieu unique qui s'engage.",
+          "solution": "Reprise augmentée et comparaison dégradante ; la Genèse conserve l'odeur mais en fait le point de départ d'une promesse divine."
+        },
+        {
+          "code": "Xf",
+          "kind": "complete",
+          "prompt": "**À toi de finir : l'écho des larmes.**\n\nLigne 139, Uta-napišti, devant les humains changés en argile : « les larmes coulaient le long de mon visage ». Ligne 309, Gilgamesh, après que le serpent a emporté la plante : « les larmes coulaient le long de son visage ».\n\n1. *Ce que le texte dit* : deux hommes pleurent, l'un sur l'humanité détruite, l'autre sur sa jeunesse perdue.\n2. *Comment il est fait* : la même formule, à 170 lignes de distance.\n3. *Ce qu'il engage* : complète en deux phrases. Que suggère ce rapprochement sur ce que Gilgamesh vient d'apprendre ?",
+          "solution": "Le poème met en face les deux pleurs : celui qui a survécu au Déluge a pleuré la mort de tous, et Gilgamesh pleure maintenant sa propre condition mortelle. L'écho fait de Gilgamesh un homme parmi les hommes « retournés à l'argile » : il n'est pas l'exception qu'était Uta-napišti, et c'est ce qu'il accepte en revenant à Uruk.",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Sur quoi pleure Uta-napišti, et de quoi sont faits les humains ?",
+              "Après la plante, Gilgamesh est-il encore une exception ?"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "regard",
+      "title": "Le regard des maîtres",
+      "duration_min": {
+        "min": 2,
+        "max": 3
+      },
+      "body": "Bottéro résume l'épopée dans son sous-titre : l'histoire du « grand homme qui ne voulait pas mourir ». Lu ainsi, le Déluge n'est pas d'abord un récit de catastrophe : c'est un récit enchâssé, que le survivant fait pour répondre à une question sur la mort. L'édition en ligne de l'eBL dit la même chose de la structure d'ensemble : Gilgamesh part en quête de l'immortalité, « but fails and returns empty-handed to Uruk » (« mais échoue et revient les mains vides à Uruk »). (Paraphrase de la lecture de Bottéro ; la citation anglaise vient de l'introduction de l'eBL au poème.)",
+      "secondary": {
+        "work": "Jean Bottéro, L'Épopée de Gilgameš. Le grand homme qui ne voulait pas mourir, Paris, Gallimard, 1992",
+        "idea": "Bottéro résume l'épopée dans son sous-titre : l'histoire du « grand homme qui ne voulait pas mourir ». Lu ainsi, le Déluge n'est pas d'abord un récit de catastrophe : c'est un récit enchâssé, que le survivant fait pour répondre à une question sur la mort. L'édition en ligne de l'eBL dit la même chose de la structure d'ensemble : Gilgamesh part en quête de l'immortalité, « but fails and returns empty-handed to Uruk » (« mais échoue et revient les mains vides à Uruk »). (Paraphrase de la lecture de Bottéro ; la citation anglaise vient de l'introduction de l'eBL au poème.)",
+        "question": "Si le Déluge est raconté pour répondre à « comment as-tu trouvé la vie ? », qu'apprend Gilgamesh en l'écoutant, avant même ses deux échecs (le sommeil, la plante) ?",
+        "solution": "Il apprend que l'immortalité d'Uta-napišti n'est pas une technique transmissible : elle a été donnée une seule fois, par une assemblée des dieux réunie après un cataclysme, à un homme sauvé par la ruse d'Ea. « Qui donc réunira les dieux pour toi ? » (l. 207). Les épreuves du sommeil et de la plante ne font que confirmer, par l'expérience, ce que le récit a déjà montré : il ne vaincra pas la mort, il ne peut vaincre même le sommeil."
+      },
+      "questions": [
+        {
+          "code": "S",
+          "kind": "secondary",
+          "prompt": "Si le Déluge est raconté pour répondre à « comment as-tu trouvé la vie ? », qu'apprend Gilgamesh en l'écoutant, avant même ses deux échecs (le sommeil, la plante) ?",
+          "solution": "Il apprend que l'immortalité d'Uta-napišti n'est pas une technique transmissible : elle a été donnée une seule fois, par une assemblée des dieux réunie après un cataclysme, à un homme sauvé par la ruse d'Ea. « Qui donc réunira les dieux pour toi ? » (l. 207). Les épreuves du sommeil et de la plante ne font que confirmer, par l'expérience, ce que le récit a déjà montré : il ne vaincra pas la mort, il ne peut vaincre même le sommeil.",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Relis la ligne 207 : qui convoque les dieux ?",
+              "Le cas d'Uta-napišti peut-il se reproduire ?"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "exercices",
+      "title": "Exercices",
+      "duration_min": {
+        "min": 8,
+        "max": 10
+      },
+      "questions": [
+        {
+          "code": "E1",
+          "kind": "exercise",
+          "prompt": "Remets dans l'ordre les épisodes de la tablette XI.",
+          "solution": "La question de Gilgamesh ; le secret d'Ea et la palissade ; la construction du bateau ; la tempête de six jours et sept nuits ; les oiseaux lâchés ; le sacrifice ; la bénédiction d'Enlil ; l'épreuve du sommeil ; la plante et le serpent ; le retour aux murs d'Uruk.",
+          "response": {
+            "type": "ordre",
+            "items": [
+              "La question de Gilgamesh : comment as-tu trouvé la vie ?",
+              "Ea parle à la palissade de roseaux",
+              "La construction du bateau",
+              "La tempête de six jours et sept nuits",
+              "Les oiseaux lâchés",
+              "Le sacrifice et les dieux « comme des mouches »",
+              "Enlil bénit Uta-napišti et sa femme",
+              "L'épreuve du sommeil et les sept pains",
+              "La plante et le serpent",
+              "Le retour aux murs d'Uruk"
+            ],
+            "hints": [
+              "Le récit du Déluge vient d'abord, les épreuves de Gilgamesh ensuite.",
+              "Le poème se termine là où il avait commencé, au prologue."
+            ],
+            "explanation": "Le récit enchâssé (l. 8 à 206) précède les deux épreuves ; la tablette finit sur la reprise du prologue."
+          }
+        },
+        {
+          "code": "E2",
+          "kind": "exercise",
+          "prompt": "Associe chaque trait de Gilgamesh XI à son équivalent dans la Genèse 6 à 9.",
+          "solution": "Mont Nimush : montagnes d'Ararat. Colombe, hirondelle, puis corbeau : corbeau, puis trois fois la colombe. Ea parle à une palissade : Dieu parle directement à Noé. Bateau cubique : arche de 300 coudées sur 50 et 30. Six jours et sept nuits : quarante jours de pluie. Survivants « comme les dieux » : alliance, sans immortalité.",
+          "response": {
+            "type": "appariement",
+            "pairs": [
+              {
+                "left": "Le bateau s'échoue sur le mont Nimush",
+                "right": "L'arche s'arrête sur les montagnes d'Ararat"
+              },
+              {
+                "left": "Colombe, hirondelle, puis corbeau, qui ne revient pas",
+                "right": "Corbeau, puis trois fois la colombe, qui finit par ne plus revenir"
+              },
+              {
+                "left": "Ea, lié par serment, parle à une palissade de roseaux",
+                "right": "Dieu parle directement à Noé"
+              },
+              {
+                "left": "Un bateau cubique, aux côtés de dix perches",
+                "right": "Une arche de 300 coudées sur 50 et 30"
+              },
+              {
+                "left": "Six jours et sept nuits de tempête",
+                "right": "Quarante jours de pluie"
+              },
+              {
+                "left": "Le survivant et sa femme deviennent « comme les dieux »",
+                "right": "Une alliance avec Noé et toute chair, sans immortalité"
+              }
+            ],
+            "hints": [
+              "Commence par les lieux et les oiseaux.",
+              "Dans la Genèse, personne ne devient immortel."
+            ],
+            "explanation": "Les parallèles sont réels, mais chaque récit a ses traits propres : ruse et immortalité d'un côté, parole directe et alliance de l'autre."
+          }
+        },
+        {
+          "code": "E3",
+          "kind": "exercise",
+          "prompt": "Dans l'extrait C, pourquoi le corbeau qui ne revient pas est-il une bonne nouvelle pour Uta-napišti ?",
+          "solution": "Le corbeau « vit les eaux se retirer », mangea, gratta, picora (l. 155 à 156) : il a trouvé de la terre et de la nourriture. Son absence prouve que le sol est sorti des eaux, alors que la colombe et l'hirondelle étaient revenues faute de perchoir.",
+          "response": {
+            "type": "choix",
+            "choices": [
+              "Il a trouvé de quoi se poser et se nourrir : la terre est sortie des eaux.",
+              "Il s'est noyé, ce qui prouve que les dieux sont encore en colère.",
+              "Il est allé prévenir les dieux du sacrifice.",
+              "Il a rejoint la colombe et l'hirondelle sur le mont Nimush."
+            ],
+            "expected": "Il a trouvé de quoi se poser et se nourrir : la terre est sortie des eaux.",
+            "explanation": "Lignes 155 et 156 : il voit les eaux se retirer, mange, gratte, picore. Les deux premiers oiseaux revenaient faute de perchoir."
+          }
+        },
+        {
+          "code": "E4",
+          "kind": "exercise",
+          "prompt": "Le bateau d'Uta-napišti a des côtés hauts de dix perches (l. 58). Une perche (*nindan*) mesure environ 6 m. Quelle hauteur, en mètres, cela fait-il à peu près ? Sa surface d'un *ikû* correspond à un carré d'environ 60 m de côté : quelle forme a donc le bateau ?",
+          "solution": "10 × 6 = 60 m de haut, sur une base d'environ 60 m sur 60 : un cube. Le texte l'avait annoncé : « sa largeur et sa longueur seront égales » (l. 30). Un cube de cette taille flotterait mal : c'est un bateau de récit, pas un plan de chantier.",
+          "response": {
+            "type": "nombre",
+            "expected": 60,
+            "tolerance": 5,
+            "consigne": "La hauteur en mètres ; pense ensuite à la forme.",
+            "hints": [
+              "Multiplie le nombre de perches par la longueur d'une perche.",
+              "Base de 60 m sur 60, hauteur de 60 m : quel solide ?"
+            ],
+            "explanation": "Environ 60 m de haut sur une base de 60 m sur 60 : un cube, comme l'annonçait la ligne 30."
+          }
+        },
+        {
+          "code": "E5",
+          "kind": "exercise",
+          "prompt": "Ea a juré de garder le secret des dieux. Explique en deux ou trois phrases comment il le garde et le trahit à la fois, et ce que cela dit des dieux de ce poème.",
+          "solution": "Ea ne parle pas à l'homme mais à la palissade de roseaux ; l'homme entend derrière (l. 20 à 23). Devant Enlil, il soutient qu'il n'a « pas dévoilé le secret des grands dieux », il a seulement fait voir un songe à Atra-hasīs (l. 196 à 197). Ces dieux sont liés par des serments et des formes, comme des parties à un contrat ; la sagesse d'Ea est une habileté à tourner la lettre de l'engagement.",
+          "response": {
+            "type": "long",
+            "hints": [
+              "À qui s'adresse Ea, grammaticalement, au vers 21 ?",
+              "Relis les lignes 196 et 197 : sa défense devant Enlil."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "reflexion",
+      "title": "Question de réflexion",
+      "duration_min": {
+        "min": 2,
+        "max": 2
+      },
+      "questions": [
+        {
+          "code": "Q",
+          "kind": "reflection",
+          "prompt": "Pourquoi le poème fait-il raconter le Déluge par Uta-napišti à Gilgamesh, au lieu de le raconter lui-même, comme le fait *Atra-hasīs* ? Une ou deux phrases.",
+          "solution": "Parce que le récit devient une réponse personnelle à la question de Gilgamesh sur la mort : le seul homme immortel explique lui-même que son sort fut unique. L'épisode change de fonction : de récit des origines, il devient leçon de sagesse sur la condition mortelle, ce qui prépare le retour à Uruk.",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Que demande Gilgamesh à la ligne 7 ?",
+              "Qu'a de plus fort un témoin qui dit « moi » ?"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ticket",
+      "title": "Ticket de sortie",
+      "duration_min": {
+        "min": 2,
+        "max": 2
+      },
+      "questions": [
+        {
+          "code": "T1",
+          "kind": "ticket",
+          "prompt": "Sous quel nom Ea désigne-t-il le héros du Déluge à la ligne 197, et à quel autre poème ce nom renvoie-t-il ?",
+          "solution": "Atra-hasīs, « le Supersage », héros du poème akkadien du même nom, qui raconte la création des hommes et le Déluge.",
+          "response": {
+            "type": "choix",
+            "choices": [
+              "Atra-hasīs, héros d'un poème akkadien du Déluge",
+              "Humbaba, gardien de la forêt des Cèdres",
+              "Enkidu, l'ami de Gilgamesh",
+              "Ur-shanabi, le passeur"
+            ],
+            "expected": "Atra-hasīs, héros d'un poème akkadien du Déluge",
+            "explanation": "Ziusudra est le nom du héros dans le récit sumérien ; Atra-hasīs, « le Supersage », celui du poème akkadien."
+          }
+        },
+        {
+          "code": "T2",
+          "kind": "ticket",
+          "prompt": "Qui emporte la plante de jouvence, et que fait-il aussitôt ?",
+          "solution": "Un serpent, attiré par son parfum ; en s'en allant, il mue, il rejette sa vieille peau (l. 305 à 307). Le rajeunissement passe au serpent, pas à l'homme.",
+          "response": {
+            "type": "court",
+            "hints": [
+              "Un animal qui change de peau.",
+              "Lignes 305 à 307."
+            ],
+            "explanation": "Le serpent mue en s'éloignant : c'est lui, non Gilgamesh, qui rajeunit."
+          }
+        }
+      ]
+    }
+  ],
+  "retenir": [
+    "La tablette XI répond à la question de Gilgamesh, « comment as-tu trouvé la vie ? » : Uta-napišti, le Lointain, raconte lui-même le Déluge.",
+    "Ea, lié par le serment des dieux, parle à une palissade de roseaux ; l'homme de Shuruppak entend, construit un bateau cubique et y fait monter « la semence de tous les êtres vivants ».",
+    "Après six jours et sept nuits, le bateau s'échoue sur le mont Nimush ; la colombe et l'hirondelle reviennent, le corbeau ne revient pas ; les dieux affamés s'assemblent « comme des mouches » autour du sacrifice.",
+    "Le récit est plus ancien que l'épopée (Atra-hasīs, le Supersage ; Ziusudra en sumérien) ; la Genèse en garde des détails précis mais le transforme : un seul Dieu, une faute humaine, une alliance.",
+    "Gilgamesh échoue à veiller sept nuits, puis perd la plante, emportée par un serpent qui mue ; il revient aux murs d'Uruk, ce qui reste à un mortel."
+  ],
+  "mot_du_jour": {
+    "code": "M",
+    "terme": "déluge",
+    "texte": "Le français *déluge* vient du latin *diluvium*, « inondation », formé sur *diluere*, « délayer, dissoudre, laver » (de *di-* et *luere*, « laver »). L'akkadien dit *abūbu*, mot qui désigne le Déluge et, par extension, une force qui balaie tout : dans les inscriptions royales, un roi attaque « comme le Déluge ». Ligne 135 de la tablette XI : après l'*abūbu*, les humains sont « retournés à l'argile », *ṭiṭṭu*."
+  },
+  "pour_aller_plus_loin": [
+    {
+      "type": "primaire",
+      "reference": "A. R. George (éd.), révision G. Rozzi et E. Jiménez, Poem of Gilgameš, Standard Babylonian, chapitre XI, electronic Babylonian Library (eBL), LMU Munich, 2022.",
+      "note": "Toute la tablette XI en ligne, ligne par ligne : texte akkadien, manuscrits et traduction anglaise de George, en accès libre.",
+      "citation": "Abandon riches and seek survival! Spurn property and save life!",
+      "citation_source": "tablette XI, lignes 25 et 26 (traduction anglaise d'A. R. George, eBL)",
+      "lien": "https://www.ebl.lmu.de/corpus/L/1/4/SB/XI"
+    },
+    {
+      "type": "primaire",
+      "reference": "W. G. Lambert et A. R. Millard, Atra-ḫasīs. The Babylonian Story of the Flood, avec The Sumerian Flood Story par M. Civil, Oxford, Clarendon Press, 1969.",
+      "note": "L'édition de référence du poème d'Atra-hasīs et du récit sumérien de Ziusudra : le Déluge dans son récit complet, de la création des hommes au cataclysme."
+    },
+    {
+      "type": "primaire",
+      "reference": "La Sainte Bible, trad. Louis Segond, 1910, Genèse, chapitres 6 à 9.",
+      "note": "Le récit biblique du Déluge, à lire après la tablette XI pour mesurer parallèles et différences.",
+      "citation": "Il lâcha le corbeau, qui sortit, partant et revenant, jusqu'à ce que les eaux eussent séché sur la terre.",
+      "citation_source": "Genèse 8, 7",
+      "lien": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Gen%C3%A8se"
+    },
+    {
+      "type": "secondaire",
+      "reference": "A. R. George, The Babylonian Gilgamesh Epic. Introduction, Critical Edition and Cuneiform Texts, 2 vol., Oxford, Oxford University Press, 2003.",
+      "note": "L'édition critique imprimée : introduction sur l'histoire du texte et commentaire de la tablette XI."
+    },
+    {
+      "type": "secondaire",
+      "reference": "Jean Bottéro, L'Épopée de Gilgameš. Le grand homme qui ne voulait pas mourir, Paris, Gallimard, 1992.",
+      "note": "Lecture d'appui du module I : traduction française savante et lecture de l'épopée comme sagesse sur la mortalité."
+    }
+  ]
+}

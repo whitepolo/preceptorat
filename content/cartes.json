@@ -622,6 +622,60 @@
       "answer": "*hospes, hospitis* : l'étranger de passage, l'hôte (celui qui reçoit ou est reçu), d'où « hôte », « hospitalité », « hôpital ». *sepulcrum, sepulcri* (neutre) : le tombeau, d'où « sépulcre », « sépulture ».",
       "created": "2026-11-23",
       "kind": "vocabulaire"
+    },
+    {
+      "id": "CLA-007",
+      "subject": "classiques",
+      "subject_label": "Classiques des civilisations",
+      "prompt": "Pourquoi Gilgamesh va-t-il trouver Uta-napišti, et que lui demande-t-il au début de la tablette XI ?",
+      "answer": "Après la mort d'Enkidu, il craint la mort et cherche le seul homme devenu immortel. Il lui demande comment il a trouvé la vie (l. 7) ; la réponse est le récit du Déluge.",
+      "created": "2026-11-24",
+      "kind": "notion"
+    },
+    {
+      "id": "CLA-008",
+      "subject": "classiques",
+      "subject_label": "Classiques des civilisations",
+      "prompt": "Comment Ea prévient-il l'homme de Shuruppak sans rompre son serment ?",
+      "answer": "Il répète le projet des dieux à une palissade de roseaux (« Palissade, palissade ! Mur, mur ! »), et l'homme entend derrière ; devant Enlil, il dira n'avoir fait voir qu'un songe à Atra-hasīs (l. 196 et 197).",
+      "created": "2026-11-24",
+      "kind": "notion"
+    },
+    {
+      "id": "CLA-009",
+      "subject": "classiques",
+      "subject_label": "Classiques des civilisations",
+      "prompt": "Dans Gilgamesh XI, où le bateau s'échoue-t-il, et quels oiseaux sont lâchés, dans quel ordre ?",
+      "answer": "Sur le mont Nimush. Une colombe et une hirondelle, qui reviennent faute de perchoir, puis un corbeau, qui trouve à manger et ne revient pas.",
+      "created": "2026-11-24",
+      "kind": "notion"
+    },
+    {
+      "id": "CLA-010",
+      "subject": "classiques",
+      "subject_label": "Classiques des civilisations",
+      "prompt": "Quel autre poème akkadien raconte le Déluge, et que signifie le nom de son héros ? Nomme aussi le héros sumérien.",
+      "answer": "Atra-hasīs, « le Supersage » (nom donné par Ea à la ligne 197) ; copie paléo-babylonienne du XVIIe siècle av. J.-C. Le héros sumérien est Ziusudra (Xisouthros chez Bérose).",
+      "created": "2026-11-24",
+      "kind": "notion"
+    },
+    {
+      "id": "CLA-011",
+      "subject": "classiques",
+      "subject_label": "Classiques des civilisations",
+      "prompt": "Donne deux parallèles précis et deux différences entre Gilgamesh XI et la Genèse 6 à 9.",
+      "answer": "Parallèles : les oiseaux lâchés pour voir si les eaux baissent ; l'odeur du sacrifice sentie par la divinité. Différences : plusieurs dieux et une ruse d'Ea contre un Dieu unique qui parle à Noé ; immortalité d'Uta-napišti contre alliance avec Noé. Tradition partagée et retravaillée, non simple copie.",
+      "created": "2026-11-24",
+      "kind": "notion"
+    },
+    {
+      "id": "CLA-012",
+      "subject": "classiques",
+      "subject_label": "Classiques des civilisations",
+      "prompt": "Quelles sont les deux épreuves manquées de Gilgamesh à la fin de la tablette XI, et comment finit-elle ?",
+      "answer": "Il ne peut veiller six jours et sept nuits (sept pains le prouvent), puis un serpent emporte la plante de jouvence et mue. Il revient à Uruk et fait regarder les murs à Ur-shanabi, reprise du prologue.",
+      "created": "2026-11-24",
+      "kind": "notion"
     }
   ]
 }

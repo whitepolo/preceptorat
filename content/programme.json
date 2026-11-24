@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated": "2026-11-23",
+  "updated": "2026-11-24",
   "learner": "Sébastien",
   "tutor": "Schopen",
   "objective": "Culture d'honnête homme : classiques grecs, latins, chinois, indiens, arabes et africains, langues anciennes, mathématiques, sciences de base, art, philosophie, économie et économétrie en partant de zéro.",
@@ -125,7 +125,7 @@
       "label": "Classiques des civilisations",
       "weekday": "mardi",
       "status": "en cours",
-      "position": "Module I, leçon 1, mardi 17 novembre 2026 : qu'est-ce qu'un classique ? Gilgamesh, le prologue et les murs d'Uruk. Prochaine leçon : mardi 24 novembre, tablette XI et le Déluge.",
+      "position": "Module I, leçon 2, mardi 24 novembre 2026 : Gilgamesh, tablette XI, Uta-napišti et le Déluge (avec Atra-hasīs et la Genèse 6 à 9). Prochaine leçon : mardi 1er décembre, L'Histoire de Sinouhé.",
       "summary": "Environ 52 mardis, du 17 novembre 2026 au 16 novembre 2027. Chaque leçon : une œuvre ou une figure, un extrait de source primaire cité, et le regard d'un classique secondaire (code S). Le mardi pose le cadre. Le jeudi, plus tard, entre dans l'argument.",
       "modules": [
         {
@@ -143,11 +143,14 @@
             },
             {
               "title": "L2. Gilgamesh, tablette XI : Uta-napišti et le Déluge",
-              "status": "à venir"
+              "status": "faite",
+              "date": "2026-11-24",
+              "lesson_id": "2026-11-24-classiques-L2"
             },
             {
               "title": "L3. Égypte, Moyen Empire : L'Histoire de Sinouhé",
-              "status": "à venir"
+              "status": "prévue",
+              "date": "2026-12-01"
             },
             {
               "title": "L4. L'Enseignement de Ptahhotep et la maât",
