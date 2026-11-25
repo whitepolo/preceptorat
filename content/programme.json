@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated": "2026-11-24",
+  "updated": "2026-11-25",
   "learner": "Sébastien",
   "tutor": "Schopen",
   "objective": "Culture d'honnête homme : classiques grecs, latins, chinois, indiens, arabes et africains, langues anciennes, mathématiques, sciences de base, art, philosophie, économie et économétrie en partant de zéro.",
@@ -73,7 +73,7 @@
       "label": "Latin",
       "weekday": "lundi et mercredi",
       "status": "en cours",
-      "position": "Leçon 7, lundi 23 novembre 2026 : contrôle de maîtrise des chapitres I et II (seuil 8 sur 10), avec l'épitaphe de Claudia (CIL VI 15346). Prochaine leçon : mercredi 25 novembre, chapitre III si le contrôle atteint 8 sur 10, sinon leçon corrective sur les points manqués.",
+      "position": "Leçon 8, mercredi 25 novembre 2026 : ouverture du chapitre III (Puer improbus), l'accusatif singulier et le verbe à la 3e personne, avec Ovide, Pontiques IV, 10, 5. Résultats du contrôle de la leçon 7 non reçus : les points fragiles éventuels seront repris. Prochaine leçon : lundi 30 novembre, suite du chapitre III (accusatif pluriel, quem, quam).",
       "summary": "Lingua Latina per se illustrata (Ørberg), un demi-chapitre à un chapitre par semaine selon la maîtrise. Grammaire explicite après le texte. Vocabulaire en cartes, latin vers français puis français vers latin. Pas d'entrelacement à la première rencontre d'un mot.",
       "modules": [
         {
@@ -90,7 +90,7 @@
         {
           "id": "orberg-II",
           "title": "Ørberg, chapitre II : le génitif",
-          "current": true,
+          "current": false,
           "lessons": [
             {
               "title": "L4. Le génitif, ou « de qui ? »",
@@ -115,6 +115,19 @@
               "date": "2026-11-23",
               "status": "faite",
               "lesson_id": "2026-11-23-latin-L7"
+            }
+          ]
+        },
+        {
+          "id": "orberg-III",
+          "title": "Ørberg, chapitre III : l'accusatif et le verbe",
+          "current": true,
+          "lessons": [
+            {
+              "title": "L8. L'accusatif singulier et le verbe à la 3e personne (qui fait quoi à qui ?)",
+              "date": "2026-11-25",
+              "status": "faite",
+              "lesson_id": "2026-11-25-latin-L8"
             }
           ]
         }

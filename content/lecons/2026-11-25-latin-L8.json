@@ -1,0 +1,611 @@
+{
+  "schema_version": "1.0",
+  "id": "2026-11-25-latin-L8",
+  "title": "2026-11-25 · Latin · Leçon 8 : chapitre III, l'accusatif et le verbe (qui fait quoi à qui ?)",
+  "date": "2026-11-25",
+  "weekday": "mercredi",
+  "subject": "latin",
+  "subject_label": "Latin",
+  "lesson_number": 8,
+  "module": {
+    "id": "orberg-III",
+    "title": "Ørberg, chapitre III : l'accusatif et le verbe"
+  },
+  "duration_min": {
+    "min": 35,
+    "max": 45
+  },
+  "lang": "fr",
+  "objectives": [
+    "Former l'accusatif singulier des modèles connus (*insulam*, *fluvium*, *oppidum*, *puerum*) et reconnaître un accusatif à son *-m* final, même sur un mot nouveau.",
+    "Trouver le sujet (nominatif) et l'objet (accusatif) d'une phrase, quel que soit l'ordre des mots, et la traduire.",
+    "Reconnaître la 3e personne du verbe (*-t* au singulier, *-nt* au pluriel) et répondre aux questions *quis ?*, *quem ?* et *cur ?* avec *quia*.",
+    "Lire et analyser une phrase réelle : Ovide, *Pontiques* IV, 10, 5 (*Gutta cavat lapidem*)."
+  ],
+  "prerequisites": [
+    "Latin, leçons 1 à 7 : est et sunt, pluriel et genres, génitif, familia, quis, cuius, quot, possessifs."
+  ],
+  "student_note": "Lis à voix haute chaque phrase latine (c toujours dur, v prononcé comme w) et, pour chaque phrase, trouve d'abord le verbe, puis le sujet, puis l'objet.",
+  "sources": [
+    {
+      "type": "primary",
+      "cite": "Ovide, Pontiques, IV, 10, 5 à 8, éd. J. A. Richmond, Leipzig, Teubner, 1990."
+    },
+    {
+      "type": "primary",
+      "cite": "Pétrone, Satyricon, 45 (Manus manum lavat), éd. K. Müller, Petronius, Satyricon reliquiae, Stuttgart et Leipzig, Teubner, 1995."
+    },
+    {
+      "type": "primary",
+      "cite": "Sénèque, Apocoloquintose, 9 (manus manum lavat), éd. P. T. Eden, Seneca, Apocolocyntosis, Cambridge, Cambridge University Press, 1984."
+    },
+    {
+      "type": "primary",
+      "cite": "Virgile, Énéide, I, 1 (Arma virumque cano)."
+    },
+    {
+      "type": "method",
+      "cite": "Hans H. Ørberg, Lingua Latina per se illustrata. Pars I : Familia Romana, Grenaa, Domus Latina, 2003, chapitre III."
+    },
+    {
+      "type": "secondary",
+      "cite": "J. H. Allen et J. B. Greenough, New Latin Grammar for Schools and Colleges, Boston, Ginn and Company, 1903, § 387 (accusatif d'objet) et § 595 et 596 (ordre des mots), éd. Meagan Ayer, Dickinson College Commentaries."
+    }
+  ],
+  "sections": [
+    {
+      "id": "rappel",
+      "title": "Rappel",
+      "duration_min": {
+        "min": 8,
+        "max": 10
+      },
+      "body": "Huit cartes dues aujourd'hui, toutes matières mélangées. Réponds de mémoire, sans relire tes leçons : c'est l'effort de rappel qui consolide. Après chaque correction, note honnêtement Juste, Partiel ou Faux ; la date de la prochaine révision en dépend.",
+      "questions": [
+        {
+          "code": "R1",
+          "kind": "recall",
+          "prompt": "Comment Ea prévient-il l'homme de Shuruppak du Déluge sans rompre son serment ?",
+          "solution": "Il répète le projet des dieux à une palissade de roseaux (« Palissade, palissade ! Mur, mur ! »), et l'homme entend derrière. Devant Enlil, il dira n'avoir fait voir qu'un songe à Atra-hasīs (tablette XI, l. 196 et 197).",
+          "card_id": "CLA-008",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Ea ne parle pas directement à l'homme.",
+              "Pense à un mur fait de roseaux."
+            ]
+          }
+        },
+        {
+          "code": "R2",
+          "kind": "recall",
+          "prompt": "Quelles sont les quatre questions de la méthode pour analyser une forme latine ambiguë ?",
+          "solution": "1) Quel est le mot de base (nominatif singulier) ? 2) Quel genre ? 3) Quelles analyses possibles de la terminaison ? 4) Laquelle la phrase confirme-t-elle : verbe (*est* ou *sunt*), accord de l'adjectif, question posée, fonction ?",
+          "card_id": "LAT-023",
+          "response": {
+            "type": "long",
+            "hints": [
+              "On part du mot de base, on finit par la phrase.",
+              "Entre les deux : le genre, puis toutes les analyses possibles."
+            ]
+          }
+        },
+        {
+          "code": "R3",
+          "kind": "recall",
+          "prompt": "Un prix augmente de 10 %, puis baisse de 10 %. Quelle est la variation totale, en pourcentage (avec son signe) ?",
+          "solution": "1,1 × 0,9 = 0,99, soit − 1 %. Les variations successives se multiplient : la baisse porte sur une base plus grande.",
+          "card_id": "MAT-004",
+          "response": {
+            "type": "nombre",
+            "expected": -1,
+            "tolerance": 0.01,
+            "hints": [
+              "Multiplie les deux coefficients.",
+              "1,1 × 0,9 = ?"
+            ],
+            "explanation": "1,1 × 0,9 = 0,99 : le prix final vaut 99 % du prix de départ, soit une baisse de 1 %."
+          }
+        },
+        {
+          "code": "R4",
+          "kind": "recall",
+          "prompt": "Résume l'unique fragment d'Anaximandre (DK 12 B 1) et son image.",
+          "solution": "Les êtres retournent à ce dont ils naissent, selon la nécessité, car ils se rendent justice et réparation de leur injustice selon l'ordre du temps. Le changement est une compensation réglée entre contraires, décrite avec le vocabulaire du droit.",
+          "card_id": "PHI-005",
+          "response": {
+            "type": "long",
+            "hints": [
+              "L'image vient du tribunal.",
+              "Naissance et retour, injustice et réparation."
+            ]
+          }
+        },
+        {
+          "code": "R5",
+          "kind": "recall",
+          "prompt": "Réponds en latin : *Cuius filius est Tiberius ?* (sa mère est Cornelia). Pourquoi cette forme ?",
+          "solution": "*Tiberius filius Corneliae est.* *Cuius* est un génitif : la réponse met le nom au même cas, à la même place.",
+          "card_id": "LAT-010",
+          "response": {
+            "type": "court",
+            "hints": [
+              "*Cuius ?* signifie « de qui ? ».",
+              "Génitif singulier d'un nom en *-a* : *-ae*."
+            ]
+          }
+        },
+        {
+          "code": "R6",
+          "kind": "recall",
+          "prompt": "Dans « La vitre cassée » (Bastiat, 1850), qu'est-ce qu'on voit et qu'est-ce qu'on ne voit pas ?",
+          "solution": "On voit les six francs gagnés par le vitrier. On ne voit pas les souliers (ou le livre) que Jacques Bonhomme aurait achetés : le cordonnier perd la commande, et la société perd la valeur de la vitre. « Destruction n'est pas profit ».",
+          "card_id": "ECO-004",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Un artisan gagne, un autre perd une commande.",
+              "Pense au coût d'opportunité des six francs."
+            ]
+          }
+        },
+        {
+          "code": "R7",
+          "kind": "recall",
+          "prompt": "Quelles opérations peut-on faire sur les deux membres d'une équation sans changer ses solutions ?",
+          "solution": "Ajouter ou retrancher un même nombre (ou une même expression) aux deux membres ; multiplier ou diviser les deux membres par un même nombre non nul.",
+          "card_id": "MAT-009",
+          "response": {
+            "type": "court",
+            "hints": [
+              "Deux couples d'opérations, avec une seule interdiction."
+            ]
+          }
+        },
+        {
+          "code": "R8",
+          "kind": "recall",
+          "prompt": "Quelles sont les deux épreuves manquées de Gilgamesh à la fin de la tablette XI, et comment finit-elle ?",
+          "solution": "Il ne peut veiller six jours et sept nuits (sept pains le prouvent), puis un serpent emporte la plante de jouvence et mue. Il revient à Uruk et fait regarder les murs à Ur-shanabi, reprise du prologue.",
+          "card_id": "CLA-012",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Une épreuve de veille, puis une plante perdue.",
+              "La fin rejoint le début du poème."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "prequestions",
+      "title": "Pré-questions",
+      "duration_min": {
+        "min": 1,
+        "max": 2
+      },
+      "body": "Deux questions avant le cours. Réponds même si tu n'es pas sûr : tenter avant d'apprendre aide à retenir.",
+      "questions": [
+        {
+          "code": "P1",
+          "kind": "prequestion",
+          "prompt": "Devine avant le cours : dans *Iuliam Marcus pulsat* (*pulsat* : « frappe »), qui frappe, et qui est frappé ?",
+          "solution": "Marcus frappe, Julia est frappée. *Marcus* est au nominatif : c'est le sujet. *Iuliam*, avec son *-m*, est à l'accusatif : c'est l'objet, même s'il vient en premier. « Marcus frappe Julia. »",
+          "response": {
+            "type": "prediction",
+            "confidence": true
+          }
+        },
+        {
+          "code": "P2",
+          "kind": "prequestion",
+          "prompt": "Pourquoi, à ton avis, *Iulia* devient-il *Iuliam* dans cette phrase ?",
+          "solution": "Parce que Julia n'est plus sujet mais objet de l'action. Le latin marque la fonction par la terminaison (le cas) : *-a* pour le sujet, *-am* pour l'objet. En français, c'est surtout la place du mot qui le dit.",
+          "response": {
+            "type": "prediction",
+            "confidence": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "cours",
+      "title": "Notion du jour : l'accusatif et le verbe à la troisième personne",
+      "duration_min": {
+        "min": 10,
+        "max": 12
+      },
+      "body": "Le contrôle de lundi portait sur les chapitres I et II. Aucun résultat n'est encore arrivé : on ouvre donc le chapitre III comme prévu, en reprenant au passage les formes des deux premiers chapitres. Si le contrôle révèle des points fragiles, la prochaine leçon les reprendra.\n\n**N1. Le chapitre III, *Puer improbus*.** Le chapitre d'Ørberg change de décor : après la géographie et la famille, une petite scène domestique, un garçon insupportable (*improbus*), sa sœur, et des parents qui interviennent. Pour raconter « qui fait quoi à qui », il faut deux outils nouveaux : un **verbe d'action** et un **cas pour l'objet**, l'accusatif.\n\n**N2. L'accusatif, cas de l'objet.** Jusqu'ici, tu connais le nominatif (le sujet : *Iulia cantat*, « Julia chante ») et le génitif (le complément du nom : *filia Iulii*). L'accusatif marque le **complément d'objet direct**, ce qui subit l'action : *Marcus Iuliam pulsat*, « Marcus frappe Julia ». La grammaire d'Allen et Greenough le pose en une phrase : le complément d'objet direct d'un verbe transitif se met à l'accusatif (§ 387). Au singulier, la marque est presque toujours un **-m** (tableau ci-dessous). Une règle sans exception : au neutre, l'accusatif a la **même forme** que le nominatif (*oppidum*, *oppidum*).\n\n**N3. Le verbe à la troisième personne.** *Est* et *sunt* t'ont donné le modèle : **-t** au singulier (« il, elle »), **-nt** au pluriel (« ils, elles »). Les verbes d'action suivent la même règle, avec une voyelle qui change selon le verbe : *cantat* (il chante), *videt* (il voit), *audit* (il entend). Le latin n'a pas besoin de pronom sujet : *cantat* suffit pour « il chante » ou « elle chante ».\n\n**N4. L'ordre des mots est libre, la terminaison ne l'est pas.** *Marcus Iuliam pulsat*, *Iuliam Marcus pulsat* et *Iuliam pulsat Marcus* disent la même chose : c'est Marcus qui frappe. L'ordre ne sert qu'à mettre un mot en valeur ; le plus courant place le sujet en tête et le verbe à la fin (Allen et Greenough, § 595 et 596). Pour lire, on cherche donc d'abord le verbe, puis son sujet au nominatif, puis l'objet à l'accusatif. Les questions suivent le même partage : *Quis Iuliam pulsat ?* (« qui frappe Julia ? », réponse au nominatif : *Marcus*) ; *Quem Marcus pulsat ?* (« qui Marcus frappe-t-il ? », réponse à l'accusatif : *Iuliam*) ; *Cur ?* (« pourquoi ? »), réponse en *quia...* (« parce que... »).\n\n**N5. Une phrase vraie : Ovide, en exil.** Exilé par Auguste en 8 apr. J.-C. à Tomes, sur la mer Noire, Ovide écrit de là des lettres en vers, les *Pontiques*. Dans la lettre IV, 10, à son ami Albinovanus, il dit qu'à force de durer, tout s'use, sauf sa propre endurance. Le premier vers de l'extrait est devenu proverbe. Un autre proverbe, *Manus manum lavat* (« une main lave l'autre », on se rend service mutuellement), est attesté deux fois au Ier siècle : chez Pétrone, dans le discours d'Échion au banquet de Trimalcion (*Satyricon* 45), et chez Sénèque, dans la bouche d'Hercule (*Apocoloquintose* 9). Même structure : sujet au nominatif, objet à l'accusatif, verbe en *-t*.",
+      "figures": [
+        {
+          "type": "table",
+          "caption": "Nominatif, accusatif et génitif singuliers des modèles connus",
+          "columns": [
+            "Cas (singulier)",
+            "insula (fém., -a)",
+            "fluvius (masc., -us)",
+            "oppidum (neutre, -um)",
+            "puer (masc., -er)"
+          ],
+          "rows": [
+            [
+              "Nominatif (sujet)",
+              "insula",
+              "fluvius",
+              "oppidum",
+              "puer"
+            ],
+            [
+              "Accusatif (objet)",
+              "insulam",
+              "fluvium",
+              "oppidum",
+              "puerum"
+            ],
+            [
+              "Génitif (de qui ?)",
+              "insulae",
+              "fluvii",
+              "oppidi",
+              "pueri"
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "caption": "La troisième personne : -t au singulier, -nt au pluriel",
+          "columns": [
+            "Verbe",
+            "Sens",
+            "Singulier (il, elle)",
+            "Pluriel (ils, elles)"
+          ],
+          "rows": [
+            [
+              "esse",
+              "être",
+              "est",
+              "sunt"
+            ],
+            [
+              "cantare",
+              "chanter",
+              "cantat",
+              "cantant"
+            ],
+            [
+              "videre",
+              "voir",
+              "videt",
+              "vident"
+            ],
+            [
+              "audire",
+              "entendre",
+              "audit",
+              "audiunt"
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "caption": "Vocabulaire du jour (verbes à la 3e personne du singulier, mots de question)",
+          "columns": [
+            "Latin",
+            "Français",
+            "Latin",
+            "Français"
+          ],
+          "rows": [
+            [
+              "cantat",
+              "il (elle) chante",
+              "videt",
+              "il voit"
+            ],
+            [
+              "plorat",
+              "il pleure",
+              "audit",
+              "il entend"
+            ],
+            [
+              "pulsat",
+              "il frappe",
+              "venit",
+              "il vient"
+            ],
+            [
+              "vocat",
+              "il appelle",
+              "ridet",
+              "il rit"
+            ],
+            [
+              "verberat",
+              "il bat, il fouette",
+              "respondet",
+              "il répond"
+            ],
+            [
+              "quem ?",
+              "qui ? (objet)",
+              "cur ?",
+              "pourquoi ?"
+            ],
+            [
+              "quia",
+              "parce que",
+              "nunc",
+              "maintenant"
+            ]
+          ]
+        }
+      ],
+      "excerpt": {
+        "work": "Ovide, Pontiques (Epistulae ex Ponto)",
+        "locus": "livre IV, lettre 10, vers 5 à 7",
+        "edition": "Texte latin de l'édition de J. A. Richmond, P. Ovidi Nasonis Ex Ponto libri quattuor, Leipzig, Teubner, 1990 (texte contrôlé sur The Latin Library, qui écrit u pour v).",
+        "translator": "traduction de travail, pour cette leçon, d'après le texte cité",
+        "lang": "fr",
+        "original": "Gutta cavat lapidem, consumitur anulus usu,\natteritur pressa vomer aduncus humo.\nTempus edax igitur praeter nos omnia perdet.",
+        "text": "La goutte creuse la pierre, l'anneau s'use à force d'être porté,\nle soc recourbé s'use contre la terre qu'il presse.\nLe temps vorace détruira donc tout, excepté moi.",
+        "close_reading": "**Vers 5, première moitié : tout ce que tu sais lire.** *Gutta* : nominatif singulier (modèle *insula*), sujet. *Cavat* : verbe à la 3e personne du singulier, « creuse ». *Lapidem* : accusatif singulier de *lapis, lapidis* (la pierre), un nom d'un autre modèle que tu verras plus tard, mais le **-m** final suffit à reconnaître l'objet. Trois mots, une phrase complète : la goutte (sujet) creuse (verbe) la pierre (objet).\n\n**Le reste du distique.** *Consumitur* et *atteritur* finissent en *-tur* : ce sont des passifs (« est consumé », « est usé »), à reconnaître plus tard. Les sujets sont *anulus* et *vomer*, au nominatif. Le vers 7 revient à l'actif : *Tempus* (sujet) *perdet* (« détruira », un futur) *omnia* (accusatif neutre pluriel, « toutes choses »). *Praeter nos* : « sauf nous », c'est à dire, chez Ovide qui parle de lui au pluriel, « sauf moi ».\n\n**Ce que le passage engage.** L'image de la goutte est d'ordinaire citée comme une leçon de persévérance. Chez Ovide, elle sert l'inverse : tout cède avec le temps, la pierre, le fer, et seul l'exilé, lui, ne s'use pas dans son malheur. Le vers 8 le dit : même la mort est vaincue par sa dureté (*mors quoque victa mea*)."
+      }
+    },
+    {
+      "id": "exemples",
+      "title": "Exemples résolus",
+      "duration_min": {
+        "min": 5,
+        "max": 6
+      },
+      "body": "Deux analyses modèles, toujours dans le même ordre : verbe, sujet, objet. Puis une à finir, sur le premier vers de Virgile.",
+      "questions": [
+        {
+          "code": "X1",
+          "kind": "worked",
+          "prompt": "**Exemple résolu.** *Marcum Iulia non videt, sed audit.*\n\n1) Les verbes : *videt* et *audit*, 3e personne du singulier (« voit », « entend »). Il faut un sujet singulier.\n2) Le nominatif : *Iulia* (terminaison *-a*, modèle *insula*) : c'est le sujet.\n3) L'accusatif : *Marcum* (*Marcus* devient *Marcum*) : c'est l'objet, placé en tête pour le mettre en valeur.\n4) *Non... sed* : « ne... pas, mais ».\n\nTraduction : « Julia ne voit pas Marcus, mais elle l'entend. »",
+          "solution": "*Iulia* sujet (nominatif), *Marcum* objet (accusatif), *videt* et *audit* au singulier. « Julia ne voit pas Marcus, mais elle l'entend. » L'ordre latin met Marcus en avant ; le français, lui, doit replacer le sujet en tête."
+        },
+        {
+          "code": "X2",
+          "kind": "worked",
+          "prompt": "**Exemple résolu sur Ovide.** *Gutta cavat lapidem.*\n\n1) Le verbe : *cavat*, 3e personne du singulier, « creuse ».\n2) Le sujet : *gutta*, nominatif singulier en *-a*.\n3) L'objet : *lapidem*, accusatif singulier ; le nom est inconnu (*lapis*, la pierre), mais la terminaison en **-m** et la place de l'objet attendu par *cavat* suffisent.\n\nTraduction : « La goutte creuse la pierre. »",
+          "solution": "*Gutta* : sujet ; *cavat* : verbe ; *lapidem* : objet à l'accusatif. Même devant un mot nouveau, le **-m** du singulier signale l'accusatif."
+        },
+        {
+          "code": "Xf",
+          "kind": "complete",
+          "prompt": "**À toi de finir.** Le premier vers de l'*Énéide* de Virgile commence ainsi : *Arma virumque cano*. Tu sais que *-que* signifie « et », et que *arma* (« les armes ») est un neutre pluriel.\n\n1) À quel cas est *virum*, et de quel mot connu vient-il ?\n2) *Cano* ne finit pas en *-t*. Qui est donc le sujet ? (Indice : *-o* marque la 1re personne.)\n3) Traduis les trois mots.",
+          "solution": "1) *Virum* est l'accusatif singulier de *vir* (l'homme), comme *puer* donne *puerum*. C'est un objet, coordonné à *arma* par *-que* ; *arma*, neutre, a même forme au nominatif et à l'accusatif, et c'est ici un accusatif. 2) *Cano* est à la 1re personne du singulier : « je chante ». Le sujet est le poète lui-même. 3) « Je chante les armes et l'homme » (*Énéide* I, 1) : l'homme est Énée.",
+          "response": {
+            "type": "court",
+            "hints": [
+              "Compare avec *puer*, *puerum*.",
+              "Si *-t* veut dire « il », que peut vouloir dire *-o* ?",
+              "Le poète parle de lui : « je chante... »"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "exercices",
+      "title": "Exercices",
+      "duration_min": {
+        "min": 10,
+        "max": 12
+      },
+      "body": "Cinq exercices, du plus simple au texte suivi. Fais-les sans regarder les tableaux, puis vérifie.",
+      "questions": [
+        {
+          "code": "E1",
+          "kind": "exercise",
+          "prompt": "Associe chaque nominatif à son accusatif singulier.",
+          "solution": "*insula* donne *insulam* ; *fluvius*, *fluvium* ; *oppidum*, *oppidum* (neutre : même forme) ; *puer*, *puerum* ; *filia*, *filiam* ; *servus*, *servum*.",
+          "response": {
+            "type": "appariement",
+            "pairs": [
+              {
+                "left": "insula",
+                "right": "insulam"
+              },
+              {
+                "left": "fluvius",
+                "right": "fluvium"
+              },
+              {
+                "left": "oppidum",
+                "right": "oppidum"
+              },
+              {
+                "left": "puer",
+                "right": "puerum"
+              },
+              {
+                "left": "filia",
+                "right": "filiam"
+              },
+              {
+                "left": "servus",
+                "right": "servum"
+              }
+            ],
+            "explanation": "Au singulier, l'accusatif finit en *-m* : *-a* donne *-am*, *-us* et *-er* donnent *-um*. Le neutre ne change pas."
+          }
+        },
+        {
+          "code": "E2",
+          "kind": "exercise",
+          "prompt": "Que signifie *Servum dominus vocat.* ?",
+          "solution": "« Le maître appelle l'esclave. » *Dominus* est au nominatif (sujet), *servum* à l'accusatif (objet). L'ordre met l'esclave en tête, mais ne change pas qui appelle.",
+          "response": {
+            "type": "choix",
+            "choices": [
+              "Le maître appelle l'esclave.",
+              "L'esclave appelle le maître.",
+              "L'esclave du maître appelle.",
+              "Le maître et l'esclave appellent."
+            ],
+            "expected": "Le maître appelle l'esclave.",
+            "explanation": "*Servum* finit en *-um* : c'est l'objet. *Dominus*, en *-us*, est le sujet de *vocat*.",
+            "hints": [
+              "Cherche le mot au nominatif : c'est lui qui agit."
+            ]
+          }
+        },
+        {
+          "code": "E3",
+          "kind": "exercise",
+          "prompt": "Traduis en latin :\n\na) Marcus frappe Quintus.\nb) La servante appelle la maîtresse.",
+          "solution": "a) *Marcus Quintum pulsat.* b) *Ancilla dominam vocat.* Le sujet reste au nominatif, l'objet prend le *-m* de l'accusatif, le verbe se place de préférence à la fin. Tout autre ordre est grammaticalement juste si les terminaisons le sont (*Quintum Marcus pulsat*).",
+          "response": {
+            "type": "court",
+            "hints": [
+              "Quel mot subit l'action ? Mets-le à l'accusatif.",
+              "*Quintus* devient *Quintum* ; *domina* devient *dominam*."
+            ]
+          }
+        },
+        {
+          "code": "E4",
+          "kind": "exercise",
+          "prompt": "Lis ce petit texte à voix haute, puis compte : combien de mots y sont à l'accusatif ? (Le vocabulaire est dans le tableau de la notion du jour.)\n\n> *Iulia cantat. Marcus Iuliam audit et pulsat. Iulia plorat. Aemilia Iuliam audit et venit. Aemilia Marcum videt, sed Quintum non videt. « Quis Iuliam pulsat ? » Quintus respondet : « Marcus Iuliam pulsat. » « Cur ? » « Quia Iulia cantat ! » Iulius venit et Marcum verberat. Nunc Marcus plorat, et Iulia ridet.*",
+          "solution": "Sept : *Iuliam* (Marcus l'entend et la frappe), *Iuliam* (Aemilia l'entend), *Marcum* (Aemilia le voit), *Quintum* (elle ne le voit pas), *Iuliam* (*Quis Iuliam pulsat ?*), *Iuliam* (*Marcus Iuliam pulsat*), *Marcum* (Iulius le bat). Les autres noms (*Iulia*, *Marcus*, *Aemilia*, *Quintus*, *Iulius*) sont des sujets, au nominatif.",
+          "response": {
+            "type": "nombre",
+            "expected": 7,
+            "hints": [
+              "Cherche les noms propres terminés par *-m*.",
+              "*Iuliam* revient plusieurs fois : compte chaque occurrence."
+            ],
+            "explanation": "Sept accusatifs : quatre *Iuliam*, deux *Marcum*, un *Quintum*."
+          }
+        },
+        {
+          "code": "E5",
+          "kind": "exercise",
+          "prompt": "D'après le même texte, réponds en latin aux trois questions.\n\na) *Quem Marcus pulsat ?*\nb) *Cur Marcus Iuliam pulsat ?*\nc) *Quis nunc ridet ?*",
+          "solution": "a) *Iuliam* (ou *Marcus Iuliam pulsat*) : *quem ?* appelle un accusatif. b) *Quia Iulia cantat.* c) *Iulia* (ou *Iulia ridet*) : *quis ?* appelle un nominatif.",
+          "response": {
+            "type": "court",
+            "hints": [
+              "*Quem ?* demande l'objet : réponds à l'accusatif.",
+              "*Cur ?* appelle *quia...*",
+              "*Quis ?* demande le sujet : réponds au nominatif."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "reflexion",
+      "title": "Question de réflexion",
+      "duration_min": {
+        "min": 2,
+        "max": 2
+      },
+      "questions": [
+        {
+          "code": "Q",
+          "kind": "reflection",
+          "prompt": "Quelle preuve ? Dans *Oppidum Marcus videt*, *oppidum* pourrait être nominatif ou accusatif (neutre). Comment sait-on que c'est Marcus qui voit la ville, et non la ville qui voit Marcus ? Réponds en une ou deux phrases.",
+          "solution": "*Marcus*, en *-us*, ne peut être qu'un nominatif : c'est donc le sujet de *videt*, et comme le verbe singulier n'a qu'un sujet, *oppidum* est l'objet, à l'accusatif. Si la ville voyait Marcus, on lirait *Oppidum Marcum videt*. Quand une forme est ambiguë, c'est l'autre mot, dont la forme est sûre, qui tranche.",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Laquelle des deux formes n'a qu'une analyse possible ?",
+              "Que lirait-on si c'était la ville qui voyait Marcus ?"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ticket",
+      "title": "Ticket de sortie",
+      "duration_min": {
+        "min": 2,
+        "max": 2
+      },
+      "questions": [
+        {
+          "code": "T1",
+          "kind": "ticket",
+          "prompt": "Vrai ou faux : dans *Oppidum magnum est*, *oppidum* est à l'accusatif.",
+          "solution": "Faux. *Est* (« est ») n'a pas d'objet : *oppidum* est le sujet, au nominatif, et *magnum* l'attribut. La forme seule ne suffit pas, au neutre ; c'est le verbe qui tranche.",
+          "response": {
+            "type": "vrai_faux",
+            "expected": false,
+            "explanation": "Le verbe *esse* ne prend pas d'objet : *oppidum* est ici sujet, au nominatif."
+          }
+        },
+        {
+          "code": "T2",
+          "kind": "ticket",
+          "prompt": "Mets à l'accusatif singulier : *filius*, *ancilla*, *vir*.",
+          "solution": "*filium*, *ancillam*, *virum*.",
+          "response": {
+            "type": "court",
+            "hints": [
+              "*-us* et *-er* donnent *-um* ; *-a* donne *-am*."
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "retenir": [
+    "L'accusatif est le cas du complément d'objet direct : *Marcus Iuliam pulsat*, « Marcus frappe Julia ».",
+    "Au singulier, l'accusatif finit en *-m* : *insulam*, *fluvium*, *puerum*, *virum* ; au neutre, il a la même forme que le nominatif (*oppidum*).",
+    "Le verbe à la 3e personne finit en *-t* au singulier et en *-nt* au pluriel, comme *est* et *sunt* : *cantat*, *cantant* ; le pronom sujet est inutile.",
+    "L'ordre des mots est libre et sert à mettre en valeur ; ce sont les terminaisons qui disent qui fait quoi : on cherche le verbe, puis le sujet au nominatif, puis l'objet à l'accusatif.",
+    "*Quis ?* appelle un nominatif, *quem ?* un accusatif, *cur ?* une réponse en *quia* ; *Gutta cavat lapidem* (Ovide, *Pontiques* IV, 10, 5) en est un modèle en trois mots."
+  ],
+  "mot_du_jour": {
+    "code": "M",
+    "terme": "accusatif",
+    "texte": "Les grammairiens grecs appelaient ce cas *aitiatikē ptōsis*, le cas « de ce qui est causé », c'est à dire de ce que l'action produit ou atteint. Or le grec *aitia* signifie à la fois « la cause » et « l'accusation » : les Latins ont rendu le terme par *accusativus*, le cas « de l'accusation », d'où notre « accusatif ». Le nom ne dit donc rien de la fonction du cas, et beaucoup de grammairiens l'ont jugé mal traduit ; il est pourtant resté dans toute la grammaire européenne."
+  },
+  "pour_aller_plus_loin": [
+    {
+      "type": "primaire",
+      "reference": "Ovide, Pontiques (Epistulae ex Ponto), livre IV, lettre 10, éd. J. A. Richmond, P. Ovidi Nasonis Ex Ponto libri quattuor, Leipzig, Teubner, 1990.",
+      "note": "Lis la lettre entière à Albinovanus : l'image de la goutte y sert une plainte d'exilé, non une leçon de patience.",
+      "citation": "Gutta cauat lapidem, consumitur anulus usu,",
+      "citation_source": "Pontiques IV, 10, 5 (texte de The Latin Library)",
+      "lien": "https://www.thelatinlibrary.com/ovid/ovid.ponto4.shtml"
+    },
+    {
+      "type": "secondaire",
+      "reference": "Joseph Henry Allen et James Bradstreet Greenough, New Latin Grammar for Schools and Colleges, Boston, Ginn and Company, 1903, § 387, éd. en ligne Meagan Ayer, Carlisle (Pa.), Dickinson College Commentaries.",
+      "note": "La règle de l'accusatif d'objet, avec ses limites : verbes tantôt transitifs, tantôt employés sans objet.",
+      "citation": "The direct object of a transitive verb is put in the accusative",
+      "citation_source": "§ 387",
+      "lien": "https://dcc.dickinson.edu/grammar/latin/accusative-direct-object"
+    },
+    {
+      "type": "secondaire",
+      "reference": "Joseph Henry Allen et James Bradstreet Greenough, New Latin Grammar for Schools and Colleges, Boston, Ginn and Company, 1903, § 595 à 597 (ordre des mots), éd. en ligne Meagan Ayer, Dickinson College Commentaries.",
+      "note": "Pourquoi le latin déplace ses mots : l'ordre exprime l'importance relative des idées, non la fonction.",
+      "citation": "Latin differs from English in having more freedom in the arrangement of words for the purpose of showing the relative importance of the ideas in a sentence.",
+      "citation_source": "§ 595",
+      "lien": "https://dcc.dickinson.edu/grammar/latin/order-words"
+    },
+    {
+      "type": "primaire",
+      "reference": "Pétrone, Satyricon, 45, éd. Konrad Müller, Petronius, Satyricon reliquiae, Stuttgart et Leipzig, Teubner, 1995.",
+      "note": "Le discours d'Échion au banquet de Trimalcion, où le latin parlé d'un affranchi fait entendre le proverbe Manus manum lavat.",
+      "citation": "Manus manum lavat.",
+      "citation_source": "Satyricon 45, fin du chapitre (texte de The Latin Library)",
+      "lien": "https://www.thelatinlibrary.com/petronius1.html"
+    },
+    {
+      "type": "secondaire",
+      "reference": "Hans H. Ørberg, Lingua Latina per se illustrata. Pars I : Familia Romana, Grenaa, Domus Latina, 2003, chapitre III (Puer improbus).",
+      "note": "Lis le chapitre en latin seul : avec les tableaux du jour, l'histoire se comprend sans traduction."
+    }
+  ]
+}

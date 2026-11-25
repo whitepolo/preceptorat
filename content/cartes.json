@@ -676,6 +676,69 @@
       "answer": "Il ne peut veiller six jours et sept nuits (sept pains le prouvent), puis un serpent emporte la plante de jouvence et mue. Il revient à Uruk et fait regarder les murs à Ur-shanabi, reprise du prologue.",
       "created": "2026-11-24",
       "kind": "notion"
+    },
+    {
+      "id": "LAT-029",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Donne l'accusatif singulier de *insula*, *fluvius*, *oppidum* et *puer*. Quelle règle vaut pour le neutre ?",
+      "answer": "*insulam*, *fluvium*, *oppidum*, *puerum*. Au neutre, l'accusatif a toujours la même forme que le nominatif.",
+      "created": "2026-11-25",
+      "kind": "notion"
+    },
+    {
+      "id": "LAT-030",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "À quoi sert l'accusatif ? Quelle question latine l'appelle, et laquelle appelle le nominatif ?",
+      "answer": "Il marque le complément d'objet direct (*Marcus Iuliam pulsat*). *Quem ?* appelle un accusatif ; *quis ?* appelle le sujet, au nominatif.",
+      "created": "2026-11-25",
+      "kind": "notion"
+    },
+    {
+      "id": "LAT-031",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Quelle est la terminaison de la 3e personne du verbe au singulier et au pluriel ? Donne *cantat*, *videt*, *audit* au pluriel.",
+      "answer": "*-t* au singulier, *-nt* au pluriel (comme *est*, *sunt*) : *cantant*, *vident*, *audiunt*. Le pronom sujet est inutile.",
+      "created": "2026-11-25",
+      "kind": "notion"
+    },
+    {
+      "id": "LAT-032",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Traduis *Iuliam Marcus pulsat* et dis pourquoi *Marcus Iuliam pulsat* a le même sens.",
+      "answer": "« Marcus frappe Julia. » Les terminaisons, non la place, marquent la fonction : *Marcus*, nominatif, est sujet ; *Iuliam*, accusatif, est objet. L'ordre ne fait que mettre en valeur.",
+      "created": "2026-11-25",
+      "kind": "notion"
+    },
+    {
+      "id": "LAT-033",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Traduis et analyse Ovide, *Pontiques* IV, 10, 5 : *Gutta cavat lapidem*.",
+      "answer": "« La goutte creuse la pierre. » *Gutta* : nominatif, sujet ; *cavat* : 3e personne du singulier ; *lapidem* : accusatif de *lapis*, objet. Chez Ovide, en exil, tout s'use avec le temps, sauf son endurance.",
+      "created": "2026-11-25",
+      "kind": "notion"
+    },
+    {
+      "id": "LAT-034",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Que signifient *cantat*, *plorat*, *pulsat*, *vocat*, *verberat* ?",
+      "answer": "Il (elle) chante, pleure, frappe, appelle, bat (fouette).",
+      "created": "2026-11-25",
+      "kind": "vocabulaire"
+    },
+    {
+      "id": "LAT-035",
+      "subject": "latin",
+      "subject_label": "Latin",
+      "prompt": "Que signifient *videt*, *audit*, *venit*, *ridet*, *respondet*, et *cur ?*, *quia*, *nunc* ?",
+      "answer": "Il voit, entend, vient, rit, répond ; pourquoi ?, parce que, maintenant.",
+      "created": "2026-11-25",
+      "kind": "vocabulaire"
     }
   ]
 }
