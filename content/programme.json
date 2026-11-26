@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "learner": "Sébastien",
   "tutor": "Schopen",
   "objective": "Culture d'honnête homme : classiques grecs, latins, chinois, indiens, arabes et africains, langues anciennes, mathématiques, sciences de base, art, philosophie, économie et économétrie en partant de zéro.",
@@ -431,7 +431,7 @@
       "label": "Philosophie",
       "weekday": "jeudi",
       "status": "en cours",
-      "position": "Leçon 1, jeudi 12 novembre 2026 : fragments et témoignages, Milet et la question du principe (Thalès, Anaximandre, Anaximène).",
+      "position": "Leçon 2, jeudi 26 novembre 2026 : Pythagore et Xénophane, le nombre (rapports musicaux, Aristote, Métaphysique A 5 ; Philolaos, B 6) et la critique des dieux (B 11 à B 34). Prochaine leçon : jeudi 3 décembre, Héraclite.",
       "summary": "Présocratiques, Platon, Aristote, Confucius et Mencius, le Daodejing, le Bouddha et les Upaniṣad. Lectures d'appui : Pierre Hadot ; Anne Cheng pour la pensée chinoise.",
       "modules": [
         {
@@ -441,16 +441,26 @@
             {
               "title": "L1. Fragments et témoignages ; Milet et la question du principe",
               "date": "2026-11-12",
-              "status": "prévue",
+              "status": "faite",
               "lesson_id": "2026-11-12-philosophie-L1"
             },
             {
-              "title": "Suite : Pythagore, Héraclite, Parménide",
+              "title": "L2. Pythagore et Xénophane : le nombre et la critique des dieux",
+              "date": "2026-11-26",
+              "status": "faite",
+              "lesson_id": "2026-11-26-philosophie-L2"
+            },
+            {
+              "title": "L3. Héraclite : le logos et l'unité des contraires",
+              "status": "prévue"
+            },
+            {
+              "title": "Suite : Parménide et l'école d'Élée",
               "status": "à venir"
             }
           ],
           "current": true,
-          "support": "Pierre Hadot, Qu'est-ce que la philosophie antique ?, 1995 ; Kirk, Raven et Schofield, The Presocratic Philosophers, 2e éd., 1983."
+          "support": "Pierre Hadot, Qu'est-ce que la philosophie antique ?, 1995 ; Kirk, Raven et Schofield, The Presocratic Philosophers, 2e éd., 1983 ; Walter Burkert, Lore and Science in Ancient Pythagoreanism, 1972."
         },
         {
           "id": "philo-2",

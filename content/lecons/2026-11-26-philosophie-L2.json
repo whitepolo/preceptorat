@@ -1,0 +1,573 @@
+{
+  "schema_version": "1.0",
+  "id": "2026-11-26-philosophie-L2",
+  "title": "2026-11-26 · Philosophie · Leçon 2 : Pythagore et Xénophane, le nombre et la critique des dieux",
+  "date": "2026-11-26",
+  "weekday": "jeudi",
+  "subject": "philosophie",
+  "subject_label": "Philosophie",
+  "lesson_number": 2,
+  "module": {
+    "id": "philo-1",
+    "title": "Présocratiques"
+  },
+  "duration_min": {
+    "min": 35,
+    "max": 45
+  },
+  "lang": "fr",
+  "objectives": [
+    "Distinguer ce que les témoins proches (Xénophane, Hérodote, Platon, Aristote) disent de Pythagore de la légende tardive.",
+    "Expliquer la thèse pythagoricienne « le ciel entier est harmonie et nombre » à partir des rapports musicaux (2 : 1, 3 : 2, 4 : 3, 9 : 8) et calculer un intervalle.",
+    "Reconstituer en prémisses et conclusion l'argument de Xénophane contre les dieux à forme humaine, et dire quelle prémisse fonde sa thèse d'un dieu unique.",
+    "Distinguer, avec les fragments B 18 et B 34, dire vrai, savoir avec clarté, opinion et recherche."
+  ],
+  "prerequisites": [
+    "Philosophie, leçon 1 : fragments (B) et témoignages (A), Milet et la question du principe.",
+    "Mathématiques, leçon 1 : multiplier et diviser des fractions."
+  ],
+  "student_note": "Lis les extraits A à F lentement, à voix basse ; garde de quoi écrire un calcul de fractions pour Xf et E4.",
+  "sources": [
+    {
+      "type": "primary",
+      "cite": "Aristote, Métaphysique A 5, 985b23 à 986b8, texte de W. D. Ross, Oxford, Clarendon Press, 1924."
+    },
+    {
+      "type": "primary",
+      "cite": "H. Diels, Die Fragmente der Vorsokratiker, Berlin, Weidmann, 1903 ; H. Diels et W. Kranz, 6e éd., Berlin, Weidmann, 1951 et 1952 : Xénophane (DK 21), Héraclite (DK 22), Philolaos (DK 44)."
+    },
+    {
+      "type": "primary",
+      "cite": "Diogène Laërce, Vies et doctrines des philosophes illustres, VIII, 36, éd. R. D. Hicks, Cambridge (Mass.), Harvard University Press, 1925."
+    },
+    {
+      "type": "primary",
+      "cite": "Platon, République X, 600a-b, texte de J. Burnet, Platonis opera, t. IV, Oxford, Clarendon Press, 1902."
+    },
+    {
+      "type": "primary",
+      "cite": "Hérodote, Histoires IV, 95, texte de C. Hude, Oxford, Clarendon Press, 1908."
+    },
+    {
+      "type": "secondary",
+      "cite": "Walter Burkert, Lore and Science in Ancient Pythagoreanism, trad. E. L. Minar Jr., Cambridge (Mass.), Harvard University Press, 1972."
+    },
+    {
+      "type": "secondary",
+      "cite": "J. H. Lesher, Xenophanes of Colophon. Fragments, Toronto, University of Toronto Press, 1992."
+    }
+  ],
+  "sections": [
+    {
+      "id": "rappel",
+      "title": "Rappel",
+      "duration_min": {
+        "min": 8,
+        "max": 10
+      },
+      "body": "Huit cartes dues aujourd'hui, toutes matières mélangées : philosophie, latin, mathématiques, classiques, économie. Réponds de mémoire, sans relire tes leçons : c'est l'effort de rappel qui consolide. Après chaque correction, note honnêtement Juste, Partiel ou Faux ; la date de la prochaine révision en dépend.",
+      "questions": [
+        {
+          "code": "R1",
+          "kind": "recall",
+          "prompt": "Que désignent les lettres A et B dans la notation Diels-Kranz (par exemple DK 12 A 10, DK 12 B 1) ?",
+          "solution": "B : un fragment, les mots mêmes du penseur cités par un auteur postérieur. A : un témoignage, ce qu'un autre auteur rapporte ou interprète. Le premier nombre désigne le penseur (11 Thalès, 12 Anaximandre, 13 Anaximène).",
+          "card_id": "PHI-001",
+          "response": {
+            "type": "court",
+            "hints": [
+              "Une lettre pour les mots mêmes, l'autre pour ce qu'on rapporte.",
+              "Et le premier nombre ?"
+            ]
+          }
+        },
+        {
+          "code": "R2",
+          "kind": "recall",
+          "prompt": "Donne l'accusatif singulier de *insula*, *fluvius*, *oppidum* et *puer*. Quelle règle vaut pour le neutre ?",
+          "solution": "*insulam*, *fluvium*, *oppidum*, *puerum*. Au neutre, l'accusatif a toujours la même forme que le nominatif.",
+          "card_id": "LAT-029",
+          "response": {
+            "type": "court",
+            "hints": [
+              "Première déclinaison : -am ; deuxième : -um.",
+              "Et le neutre, comparé à son nominatif ?"
+            ]
+          }
+        },
+        {
+          "code": "R3",
+          "kind": "recall",
+          "prompt": "D'où vient le mot « algèbre » ?",
+          "solution": "De *al-jabr*, « la restauration », dans le titre du traité d'al-Khwārizmī (Bagdad, vers 820). Le verbe *jabara* signifie remettre en état, réduire une fracture ; en espagnol et en portugais, un *algebrista* remettait les os.",
+          "card_id": "MAT-015",
+          "response": {
+            "type": "court",
+            "hints": [
+              "Un mathématicien de Bagdad, vers 820.",
+              "Le mot arabe veut dire « restauration »."
+            ]
+          }
+        },
+        {
+          "code": "R4",
+          "kind": "recall",
+          "prompt": "Dans Gilgamesh XI, où le bateau s'échoue-t-il, et quels oiseaux sont lâchés, dans quel ordre ?",
+          "solution": "Sur le mont Nimush. Une colombe et une hirondelle, qui reviennent faute de perchoir, puis un corbeau, qui trouve à manger et ne revient pas.",
+          "card_id": "CLA-009",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Une montagne au nom court.",
+              "Trois oiseaux : deux reviennent, le dernier non."
+            ]
+          }
+        },
+        {
+          "code": "R5",
+          "kind": "recall",
+          "prompt": "Quelle est la définition de l'économie de Robbins (1932), et quelles en sont les trois conditions ?",
+          "solution": "La science qui étudie le comportement humain comme une relation entre des fins et des moyens rares qui ont des usages alternatifs. Conditions : fins multiples, moyens rares, usages alternatifs.",
+          "card_id": "ECO-001",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Des fins, des moyens...",
+              "Trois conditions : combien de fins, quels moyens, quels usages ?"
+            ]
+          }
+        },
+        {
+          "code": "R6",
+          "kind": "recall",
+          "prompt": "Quelle est la terminaison de la 3e personne du verbe au singulier et au pluriel ? Donne *cantat*, *videt*, *audit* au pluriel.",
+          "solution": "*-t* au singulier, *-nt* au pluriel (comme *est*, *sunt*) : *cantant*, *vident*, *audiunt*. Le pronom sujet est inutile.",
+          "card_id": "LAT-031",
+          "response": {
+            "type": "court",
+            "hints": [
+              "Pense à *est* et *sunt*.",
+              "Attention : *audit* donne une forme en -iunt."
+            ]
+          }
+        },
+        {
+          "code": "R7",
+          "kind": "recall",
+          "prompt": "Quel autre poème akkadien raconte le Déluge, et que signifie le nom de son héros ? Nomme aussi le héros sumérien.",
+          "solution": "Atra-hasīs, « le Supersage » (nom donné par Ea à la ligne 197) ; copie paléo-babylonienne du XVIIe siècle av. J.-C. Le héros sumérien est Ziusudra (Xisouthros chez Bérose).",
+          "card_id": "CLA-010",
+          "response": {
+            "type": "court",
+            "hints": [
+              "Le nom veut dire « le Supersage ».",
+              "Le héros sumérien commence par Z."
+            ]
+          }
+        },
+        {
+          "code": "R8",
+          "kind": "recall",
+          "prompt": "Dans les inscriptions latines anciennes, comment lire *ei* et la terminaison *-ai* ? Exemples.",
+          "solution": "*ei* se lit *ī* (*heic* = *hic*, *deico* = *dico*, *mareitum* = *maritum*) ; *-ai* est l'ancien *-ae* du génitif singulier (*pulcrai feminae* = *pulchrae feminae*).",
+          "card_id": "LAT-025",
+          "response": {
+            "type": "court",
+            "hints": [
+              "Pense à *heic* et à *pulcrai*.",
+              "Un son long, et une ancienne terminaison de génitif."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "prequestions",
+      "title": "Pré-questions",
+      "duration_min": {
+        "min": 1,
+        "max": 2
+      },
+      "body": "Réponds même au hasard : chercher avant de savoir aide à retenir.",
+      "questions": [
+        {
+          "code": "P1",
+          "kind": "prequestion",
+          "prompt": "Les Grecs du VIe siècle avant notre ère représentaient leurs dieux sous une forme humaine. Un poète de ce temps attaque cette habitude en imaginant ce que feraient des bœufs, des chevaux ou des lions s'ils avaient des mains. Devine son argument.",
+          "solution": "S'ils savaient peindre et sculpter, les chevaux feraient des dieux en forme de chevaux, les bœufs des dieux en forme de bœufs (Xénophane, DK 21 B 15). Chacun projette sa propre forme : l'image des dieux renseigne sur celui qui la fait, non sur les dieux.",
+          "response": {
+            "type": "prediction",
+            "confidence": true,
+            "explanation": "Garde ta réponse : l'extrait D de la notion du jour la confirme ou la corrige."
+          }
+        },
+        {
+          "code": "P2",
+          "kind": "prequestion",
+          "prompt": "On pince une corde tendue, puis on bloque exactement son milieu et on pince une moitié. Que va-t-on entendre, par rapport à la première note ?",
+          "solution": "La même note, une octave plus haut : longueurs dans le rapport 2 à 1. C'est l'un des faits qui ont conduit les pythagoriciens à voir des nombres au cœur des choses.",
+          "response": {
+            "type": "prediction",
+            "confidence": true,
+            "explanation": "Les rapports des longueurs de corde sont l'objet de l'extrait B."
+          }
+        }
+      ]
+    },
+    {
+      "id": "cours",
+      "title": "Notion du jour",
+      "duration_min": {
+        "min": 11,
+        "max": 13
+      },
+      "body": "### N1. Pythagore : un homme célèbre, presque sans texte\n\nPythagore naît à Samos, en Ionie, vers 570 av. J.-C. ; vers 530, il s'installe à Crotone, en Italie du Sud, où il fonde une communauté qui a ses règles de vie. Il n'a rien écrit qui nous soit parvenu. D'où la règle de méthode de ta leçon 1 : **distinguer les témoins proches des récits tardifs**.\n\n| Témoin | Date | Ce qu'il dit de Pythagore |\n|---|---|---|\n| Xénophane, DK 21 B 7 | VIe siècle av. J.-C., contemporain | Se moque de sa croyance au passage des âmes d'un corps à l'autre (extrait C) |\n| Héraclite, DK 22 B 40 | vers 500 av. J.-C. | Le range parmi ceux que le grand savoir n'a pas rendus sensés |\n| Hérodote, IV, 95 | vers 430 av. J.-C. | « Pythagore, fils de Mnésarque », « non le plus faible des sages » (σοφιστής) des Grecs, lié à une doctrine de survie après la mort |\n| Platon, *République* X, 600a-b | IVe siècle av. J.-C. | Le seul passage des dialogues qui le nomme : il fut aimé pour avoir laissé une « manière de vivre » que ses successeurs appellent encore pythagoricienne |\n| Aristote, *Métaphysique* A 5 | IVe siècle av. J.-C. | Parle presque toujours des « pythagoriciens », non de Pythagore lui-même (extrait A) |\n| Porphyre et Jamblique, *Vies de Pythagore* | IIIe et IVe siècles apr. J.-C. | Biographies merveilleuses, huit siècles après lui |\n\nDeux choses sont donc sûres : un enseignement sur l'âme et sa survie, et un genre de vie communautaire. La « philosophie des nombres » est attestée chez les pythagoriciens du Ve siècle, notamment Philolaos de Crotone. Le célèbre théorème du triangle rectangle ne lui est attribué que tard (Proclus, au Ve siècle apr. J.-C., commentant Euclide I, 47, le rapporte par ouï-dire), et la relation était connue bien avant : une tablette paléo-babylonienne, dite Plimpton 322 (vers 1800 av. J.-C.), donne déjà des triplets comme 119, 120, 169.\n\n### N2. « Le ciel entier est harmonie et nombre »\n\nLes Milésiens cherchaient le principe dans une matière : l'eau, l'illimité, l'air. Les pythagoriciens le cherchent dans une **structure**. Le fait décisif est musical (extrait B) : les accords consonants correspondent à des rapports de petits nombres entiers entre longueurs de corde.\n\n| Intervalle | Nom grec | Rapport des longueurs |\n|---|---|---|\n| Octave | *dia pasōn* | 2 : 1 (double) |\n| Quinte | *di' oxeiān* | 3 : 2 (hémiole) |\n| Quarte | *syllabā* | 4 : 3 (épitrite) |\n| Ton | *epogdoon* | 9 : 8 (quinte divisée par quarte) |\n\nLes nombres 1, 2, 3, 4 suffisent pour ces trois accords ; leur somme fait 10, la décade, que les pythagoriciens tenaient pour parfaite. Aristote en tire une leçon critique : ils ont voulu dix corps célestes, et faute d'en voir plus de neuf, ils en ont inventé un dixième, l'anti-Terre (extrait A, fin). La théorie a commandé les faits.\n\n### N3. Xénophane : critiquer les dieux, mesurer le savoir\n\nXénophane de Colophon, en Ionie, né vers 570 av. J.-C., poète errant (il dit avoir parcouru la Grèce pendant soixante-sept ans, DK 21 B 8), écrit en vers. Il ne cherche pas d'abord le principe du monde : il examine ce que les hommes croient des dieux, et comment ils pourraient le savoir. Trois étapes :\n\n1. **Critique morale** (B 11) : Homère et Hésiode prêtent aux dieux le vol, l'adultère, la tromperie, que les hommes eux-mêmes blâment.\n2. **Critique de la projection** (B 14, B 16, B 15) : chaque peuple, et chaque espèce si elle savait peindre, fait les dieux à son image.\n3. **Thèse positive** (B 23 à B 26) : un dieu unique, sans ressemblance avec les mortels, qui pense et voit tout entier, meut tout par la pensée et reste immobile, car il ne lui « convient » pas de se déplacer.\n\nEnfin, une réflexion sur le savoir lui-même (extrait F) : aucun homme ne sait avec clarté ; mais en cherchant, avec le temps, on trouve mieux. Héraclite, que tu liras au prochain jeudi de philosophie, cite Pythagore et Xénophane ensemble dans son reproche contre le grand savoir (B 40).",
+      "excerpt": {
+        "work": "Aristote, Métaphysique ; Philolaos ; Xénophane de Colophon (fragments)",
+        "locus": "Aristote, Métaphysique A 5, 985b23 à 986a3 et 986a8 à 12 ; Philolaos, DK 44 B 6 ; Xénophane, DK 21 B 7, B 11, B 14, B 15, B 16, B 18, B 23 à B 26, B 34",
+        "edition": "Aristote : texte de W. D. Ross, Aristotle's Metaphysics, Oxford, Clarendon Press, 1924 (Perseus Digital Library). Fragments : H. Diels, Die Fragmente der Vorsokratiker, Berlin, Weidmann, 1903 ; numérotation de H. Diels et W. Kranz, 6e éd., Berlin, Weidmann, 1951 et 1952. Diogène Laërce VIII, 36 contrôlé sur l'édition de R. D. Hicks (Perseus).",
+        "translator": "traduction de travail, pour cette leçon, d'après les textes grecs cités ; les crochets [...] marquent les coupures",
+        "lang": "fr",
+        "text": "**A. Aristote, *Métaphysique* A 5, 985b23 à 986a3, puis 986a8 à 12.**\n\n> En même temps que ces penseurs, et avant eux, ceux qu'on appelle les pythagoriciens s'attachèrent aux mathématiques ; ils furent les premiers à les faire avancer et, nourris en elles, ils crurent que leurs principes étaient les principes de tous les êtres. [...] Ils voyaient dans les nombres les propriétés et les rapports des accords musicaux ; [...] ils supposèrent donc que les éléments des nombres étaient les éléments de tous les êtres, et que le ciel entier était harmonie et nombre. [...] Comme la décade paraît parfaite et embrasser toute la nature des nombres, ils disent que les corps qui se meuvent dans le ciel sont dix ; et comme neuf seulement sont visibles, ils en inventent un dixième, l'anti-Terre.\n\n**B. Philolaos de Crotone, DK 44 B 6 (fin), cité par Stobée.**\n\n> La grandeur de l'harmonie, c'est la quarte et la quinte ; la quinte est plus grande que la quarte d'un neuf-huitièmes. [...] La quarte est dans le rapport épitrite, la quinte dans le rapport hémiole, l'octave dans le rapport double.\n\n**C. Xénophane, DK 21 B 7, cité par Diogène Laërce, VIII, 36.** Il s'agit de Pythagore.\n\n> Un jour, passant près d'un jeune chien qu'on battait, il en eut pitié, dit-on, et prononça ces mots : « Arrête, ne frappe plus ; c'est l'âme d'un ami, je l'ai reconnue en entendant sa voix. »\n\n**D. Xénophane, les dieux des mortels.**\n\n> B 11. Homère et Hésiode ont attribué aux dieux tout ce qui, chez les hommes, est honte et blâme : voler, commettre l'adultère et se tromper les uns les autres.\n>\n> B 14. Mais les mortels croient que les dieux sont nés, et qu'ils ont leurs vêtements, leur voix et leur corps.\n>\n> B 16. Les Éthiopiens disent que leurs dieux ont le nez camus et la peau noire ; les Thraces, qu'ils ont les yeux clairs et les cheveux roux.\n>\n> B 15. Mais si les bœufs, les chevaux et les lions avaient des mains, ou pouvaient peindre de leurs mains et faire les ouvrages que font les hommes, les chevaux peindraient des figures de dieux pareilles aux chevaux, les bœufs pareilles aux bœufs, et ils leur feraient un corps tel que celui que chacun possède.\n\n**E. Xénophane, le dieu.**\n\n> B 23. Un seul dieu, le plus grand parmi les dieux et les hommes, qui ne ressemble aux mortels ni par le corps ni par la pensée.\n>\n> B 24. Tout entier il voit, tout entier il pense, tout entier il entend.\n>\n> B 25. Mais, sans effort, il ébranle toutes choses par la pensée de son esprit.\n>\n> B 26. Il demeure toujours au même lieu, sans bouger en rien ; et il ne lui convient pas d'aller tantôt ici, tantôt là.\n\n**F. Xénophane, le savoir.**\n\n> B 18. Les dieux n'ont pas tout dévoilé aux mortels dès le commencement ; mais avec le temps, en cherchant, ils trouvent mieux.\n>\n> B 34. Et le clair, aucun homme ne l'a su, et il n'y en aura aucun qui le sache, sur les dieux et sur tout ce dont je parle ; car même si, par chance, il lui arrivait de dire parfaitement ce qui est, lui-même pourtant ne le sait pas : sur toutes choses il n'y a que l'opinion.",
+        "original": "A. Métaph. 985b23-26 : ἐν δὲ τούτοις καὶ πρὸ τούτων οἱ καλούμενοι Πυθαγόρειοι τῶν μαθημάτων ἁψάμενοι πρῶτοι ταῦτά τε προήγαγον, καὶ ἐντραφέντες ἐν αὐτοῖς τὰς τούτων ἀρχὰς τῶν ὄντων ἀρχὰς ᾠήθησαν εἶναι πάντων. 986a1-3 : τὰ τῶν ἀριθμῶν στοιχεῖα τῶν ὄντων στοιχεῖα πάντων ὑπέλαβον εἶναι, καὶ τὸν ὅλον οὐρανὸν ἁρμονίαν εἶναι καὶ ἀριθμόν.\nB. DK 44 B 6 : ἁ δὲ συλλαβὰ ἐπίτριτον, τὸ δὲ δι' ὀξειᾶν ἡμιόλιον, τὸ διὰ πασᾶν δὲ διπλόον.\nD. B 15 : ἀλλ' εἰ χεῖρας ἔχον βόες ἵπποι τ' ἠὲ λέοντες / ἢ γράψαι χείρεσσι καὶ ἔργα τελεῖν ἅπερ ἄνδρες, / ἵπποι μέν θ' ἵπποισι βόες δέ τε βουσὶν ὁμοίας / καί κε θεῶν ἰδέας ἔγραφον καὶ σώματ' ἐποίουν / τοιαῦθ' οἷόν περ καὐτοὶ δέμας εἶχον ἕκαστοι.\nE. B 23 : εἷς θεός, ἔν τε θεοῖσι καὶ ἀνθρώποισι μέγιστος, / οὔτε δέμας θνητοῖσιν ὁμοίιος οὔτε νόημα.\nF. B 34 : καὶ τὸ μὲν οὖν σαφὲς οὔτις ἀνὴρ γένετ' οὐδέ τις ἔσται / εἰδὼς ἀμφὶ θεῶν τε καὶ ἅσσα λέγω περὶ πάντων· / εἰ γὰρ καὶ τὰ μάλιστα τύχοι τετελεσμένον εἰπών, / αὐτὸς ὅμως οὐκ οἶδε· δόκος δ' ἐπὶ πᾶσι τέτυκται.",
+        "close_reading": "**Ce que les textes disent.** Aristote rapporte une thèse (les principes des nombres sont les principes des êtres) et en donne les raisons : les nombres sont « premiers », et ils rendent compte des accords musicaux. Philolaos donne ces accords en chiffres. Xénophane, de son côté, ne propose pas un principe matériel : il juge des croyances.\n\n**Comment ils sont faits.** Aristote construit une longue phrase causale (« puisque... puisque... ils supposèrent »), puis un exemple qui la retourne contre ses auteurs : l'anti-Terre. Xénophane avance par contraste (« mais », B 14, B 15, B 25) et par une expérience de pensée (B 15) : des animaux imaginés peintres font voir ce que nous ne voyons pas chez nous.\n\n**Ce qu'ils engagent.** Deux attitudes qui fondent la philosophie : chercher une structure intelligible sous les apparences (les pythagoriciens) ; et se demander d'où vient une croyance, et si elle est justifiée (Xénophane). Remarque de méthode : dans B 34, le texte de Diels (1903) lit γένετ' (« n'a été ») ; l'édition Diels et Kranz lit ἴδεν (« n'a vu »). Le sens général ne change pas."
+      },
+      "figures": [
+        {
+          "type": "table",
+          "caption": "Trois façons de chercher, du VIe au Ve siècle av. J.-C.",
+          "columns": [
+            "Penseurs",
+            "Question",
+            "Réponse type"
+          ],
+          "rows": [
+            [
+              "Milésiens (leçon 1)",
+              "De quoi tout est-il fait ?",
+              "L'eau, l'illimité, l'air"
+            ],
+            [
+              "Pythagoriciens",
+              "Quelle structure ordonne tout ?",
+              "Le nombre et ses rapports"
+            ],
+            [
+              "Xénophane",
+              "Que valent nos croyances sur les dieux, et que pouvons-nous savoir ?",
+              "Un dieu sans ressemblance humaine ; l'opinion, et la recherche"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exemples",
+      "title": "Exemples résolus",
+      "duration_min": {
+        "min": 5,
+        "max": 7
+      },
+      "body": "Deux analyses modèles en trois temps (ce que le texte dit, comment il est fait, ce qu'il engage), puis un calcul à finir.",
+      "questions": [
+        {
+          "code": "X1",
+          "kind": "worked",
+          "prompt": "**Analyse modèle : l'argument de Xénophane contre les dieux à forme humaine (B 14 à B 16).**\n\n1. *Ce que le texte dit.* Les mortels prêtent aux dieux naissance, vêtements, voix et corps (B 14). Les Éthiopiens les font noirs au nez camus, les Thraces roux aux yeux clairs (B 16). Des bœufs ou des chevaux peintres les feraient bœufs ou chevaux (B 15).\n2. *Comment il est fait.* Un raisonnement en trois temps. Prémisse 1 (constat) : chaque peuple représente ses dieux à sa ressemblance. Prémisse 2 (expérience de pensée) : toute espèce capable de peindre ferait de même ; la ressemblance suit donc toujours celui qui représente, quel que soit l'objet. Conclusion : ces images s'expliquent par celui qui les fait ; elles ne sont pas une preuve de ce que sont les dieux.\n3. *Ce qu'il engage.* Une question nouvelle : non plus « que disent les poètes ? », mais « d'où vient cette croyance, et la justifie-t-on ? ». L'argument ôte sa valeur de preuve à l'image humaine des dieux ; il ne démontre pas encore à lui seul ce qu'est le dieu. Pour cela, Xénophane ajoute une autre prémisse (B 23 à B 26).",
+          "solution": "Prémisse 1 : chaque peuple fait ses dieux à son image. Prémisse 2 : toute espèce le ferait. Conclusion : l'image révèle celui qui la fait, elle ne prouve rien sur les dieux."
+        },
+        {
+          "code": "X2",
+          "kind": "worked",
+          "prompt": "**Analyse modèle : l'anti-Terre, ou la théorie qui commande les faits (Aristote, Métaph. A 5, 986a8 à 12).**\n\n1. *Ce que le texte dit.* Les pythagoriciens tiennent la décade pour parfaite ; ils posent donc dix corps célestes. On n'en voit que neuf ; ils en ajoutent un, invisible, l'anti-Terre.\n2. *Comment il est fait.* Aristote présente d'abord la thèse avec ses bonnes raisons (les accords musicaux), puis donne cet exemple, sans commentaire long : le simple récit suffit à montrer le défaut.\n3. *Ce qu'il engage.* Un critère de méthode encore valable : une théorie doit se régler sur les observations, et non l'inverse. Aristote fait ici l'histoire de la philosophie comme on fera plus tard l'histoire des sciences, en jugeant les doctrines.",
+          "solution": "Quand l'observation (neuf corps) contredit la théorie (dix est parfait), les pythagoriciens corrigent les faits et non la théorie : c'est ce que leur reproche Aristote."
+        },
+        {
+          "code": "Xf",
+          "kind": "complete",
+          "prompt": "**À toi de finir : le ton, calculé par Philolaos (B 6).**\n\nUne corde donne une note. Pour monter d'une quinte, on garde les 2/3 de sa longueur (rapport 3 : 2) ; pour monter d'une quarte, les 3/4 (rapport 4 : 3). Philolaos dit que la quinte dépasse la quarte d'un ton.\n\nDéjà fait : monter d'une quinte puis d'une quarte, c'est multiplier les rapports : 3/2 × 4/3 = 12/6 = 2, l'octave.\n\nÀ toi : le ton est ce qui reste quand on retire la quarte de la quinte, donc le quotient 3/2 ÷ 4/3. Calcule-le, puis écris-le en nombre décimal.",
+          "solution": "3/2 ÷ 4/3 = 3/2 × 3/4 = 9/8 = 1,125 : le rapport du ton, le *epogdoon* de Philolaos. Diviser par une fraction, c'est multiplier par son inverse (carte MAT-001).",
+          "response": {
+            "type": "nombre",
+            "expected": 1.125,
+            "tolerance": 0.001,
+            "consigne": "Le rapport du ton, en nombre décimal.",
+            "hints": [
+              "Diviser par 4/3, c'est multiplier par 3/4.",
+              "3/2 × 3/4 = 9/8 ; reste à diviser 9 par 8."
+            ],
+            "explanation": "3/2 × 3/4 = 9/8 = 1,125. C'est le neuf-huitièmes (epogdoon) de Philolaos, B 6."
+          }
+        }
+      ]
+    },
+    {
+      "id": "regard",
+      "title": "Le regard des maîtres",
+      "duration_min": {
+        "min": 2,
+        "max": 3
+      },
+      "body": "Walter Burkert, dans *Weisheit und Wissenschaft* (1962), traduit sous le titre *Lore and Science in Ancient Pythagoreanism* (1972), a renouvelé la question en triant les sources. Sa thèse, résumée ici en paraphrase : les témoignages proches font de Pythagore un maître religieux et charismatique, qui enseigne la survie et la migration des âmes et un genre de vie ; la science mathématique des pythagoriciens est surtout attestée au Ve siècle, chez Philolaos ; et l'image d'un Pythagore fondateur de toute la philosophie des nombres doit beaucoup aux platoniciens de l'Ancienne Académie, qui lui ont prêté leurs propres doctrines. Le livre est devenu la référence de toute étude sérieuse du pythagorisme, même pour ceux qui en discutent certaines conclusions.",
+      "secondary": {
+        "work": "Walter Burkert, Lore and Science in Ancient Pythagoreanism, trad. Edwin L. Minar Jr., Cambridge (Mass.), Harvard University Press, 1972 (éd. originale : Weisheit und Wissenschaft. Studien zu Pythagoras, Philolaos und Platon, Nuremberg, Hans Carl, 1962)",
+        "idea": "Walter Burkert, dans *Weisheit und Wissenschaft* (1962), traduit sous le titre *Lore and Science in Ancient Pythagoreanism* (1972), a renouvelé la question en triant les sources. Sa thèse, résumée ici en paraphrase : les témoignages proches font de Pythagore un maître religieux et charismatique, qui enseigne la survie et la migration des âmes et un genre de vie ; la science mathématique des pythagoriciens est surtout attestée au Ve siècle, chez Philolaos ; et l'image d'un Pythagore fondateur de toute la philosophie des nombres doit beaucoup aux platoniciens de l'Ancienne Académie, qui lui ont prêté leurs propres doctrines. Le livre est devenu la référence de toute étude sérieuse du pythagorisme, même pour ceux qui en discutent certaines conclusions.",
+        "question": "Lequel des témoins de la notion du jour soutient le mieux la thèse de Burkert sur le Pythagore « maître religieux », et pourquoi a-t-il plus de poids qu'une *Vie de Pythagore* de Jamblique ?",
+        "solution": "Xénophane, B 7 (et aussi Hérodote IV, 95, ou Platon, *République* 600b, sur le genre de vie) : il est contemporain de Pythagore et se moque de sa croyance au retour des âmes ; c'est donc la doctrine qu'on lui connaissait de son vivant. Jamblique écrit huit siècles plus tard, dans un milieu néoplatonicien qui a intérêt à faire de Pythagore le père de sa propre philosophie. Un témoin proche, et même hostile, vaut mieux qu'un admirateur tardif."
+      },
+      "questions": [
+        {
+          "code": "S",
+          "kind": "secondary",
+          "prompt": "Lequel des témoins de la notion du jour soutient le mieux la thèse de Burkert sur le Pythagore « maître religieux », et pourquoi a-t-il plus de poids qu'une *Vie de Pythagore* de Jamblique ?",
+          "solution": "Xénophane, B 7 (et aussi Hérodote IV, 95, ou Platon, *République* 600b, sur le genre de vie) : il est contemporain de Pythagore et se moque de sa croyance au retour des âmes ; c'est donc la doctrine qu'on lui connaissait de son vivant. Jamblique écrit huit siècles plus tard, dans un milieu néoplatonicien qui a intérêt à faire de Pythagore le père de sa propre philosophie. Un témoin proche, et même hostile, vaut mieux qu'un admirateur tardif.",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Lequel des témoins était contemporain de Pythagore ?",
+              "Qu'est-ce qu'un témoin moqueur ne peut pas avoir inventé pour flatter ?"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "exercices",
+      "title": "Exercices",
+      "duration_min": {
+        "min": 8,
+        "max": 10
+      },
+      "questions": [
+        {
+          "code": "E1",
+          "kind": "exercise",
+          "prompt": "Associe chaque fragment de Xénophane à la thèse qu'il exprime.",
+          "solution": "B 7 : le passage des âmes, raillé chez Pythagore. B 11 : les dieux d'Homère et d'Hésiode font ce que les hommes blâment. B 16 : chaque peuple donne aux dieux ses propres traits. B 23 : un dieu unique, sans ressemblance avec les mortels. B 26 : le dieu reste immobile, car se déplacer ne lui convient pas. B 34 : même qui dit vrai ne sait pas avec clarté.",
+          "response": {
+            "type": "appariement",
+            "pairs": [
+              {
+                "left": "B 7 (le jeune chien battu)",
+                "right": "Raillerie du passage des âmes chez Pythagore"
+              },
+              {
+                "left": "B 11 (Homère et Hésiode)",
+                "right": "Les dieux des poètes font ce que les hommes blâment"
+              },
+              {
+                "left": "B 16 (Éthiopiens et Thraces)",
+                "right": "Chaque peuple prête aux dieux ses propres traits"
+              },
+              {
+                "left": "B 23 (un seul dieu)",
+                "right": "Un dieu sans ressemblance avec les mortels"
+              },
+              {
+                "left": "B 26 (toujours au même lieu)",
+                "right": "Le dieu ne se déplace pas : cela ne lui convient pas"
+              },
+              {
+                "left": "B 34 (le clair)",
+                "right": "Même qui dit vrai ne le sait pas avec clarté"
+              }
+            ],
+            "hints": [
+              "Commence par les deux fragments les plus imagés : le chien, et les peuples.",
+              "B 23 et B 26 décrivent le dieu ; B 34 parle du savoir humain."
+            ],
+            "explanation": "Critique (B 7, B 11, B 16), thèse positive (B 23, B 26), réflexion sur le savoir (B 34)."
+          }
+        },
+        {
+          "code": "E2",
+          "kind": "exercise",
+          "prompt": "Vrai ou faux : dans la *Métaphysique* (A 5), Aristote attribue la doctrine des nombres à Pythagore en personne, en le nommant.",
+          "solution": "Faux. Aristote parle des « pythagoriciens », littéralement « ceux qu'on appelle les pythagoriciens » (οἱ καλούμενοι Πυθαγόρειοι, 985b23), sans attribuer la thèse à Pythagore lui-même. C'est l'un des appuis de la prudence moderne (Burkert).",
+          "response": {
+            "type": "vrai_faux",
+            "expected": false,
+            "hints": [
+              "Relis le début de l'extrait A : qui est le sujet ?"
+            ],
+            "explanation": "Aristote dit « ceux qu'on appelle les pythagoriciens » : il vise une école, sans nommer le maître."
+          }
+        },
+        {
+          "code": "E3",
+          "kind": "exercise",
+          "prompt": "Remets dans l'ordre l'argument complet de Xénophane, du constat à la thèse.",
+          "solution": "1. Les poètes prêtent aux dieux des fautes que les hommes blâment (B 11). 2. Chaque peuple fait ses dieux à son image (B 16). 3. Toute espèce capable de peindre ferait de même (B 15). 4. Donc ces images viennent de ceux qui les font et ne prouvent rien sur les dieux. 5. Or on ne doit prêter au divin que ce qui lui convient (B 26). 6. Donc un seul dieu, sans ressemblance avec les mortels (B 23).",
+          "response": {
+            "type": "ordre",
+            "items": [
+              "Les poètes prêtent aux dieux des fautes que les hommes blâment (B 11)",
+              "Chaque peuple fait ses dieux à son image (B 16)",
+              "Toute espèce capable de peindre ferait de même (B 15)",
+              "Donc ces images viennent de ceux qui les font et ne prouvent rien sur les dieux",
+              "Or on ne doit prêter au divin que ce qui lui convient (B 26)",
+              "Donc un seul dieu, sans ressemblance avec les mortels (B 23)"
+            ],
+            "hints": [
+              "Les deux « donc » ne peuvent venir qu'après leurs prémisses.",
+              "La critique précède la thèse positive."
+            ],
+            "explanation": "D'abord la critique (morale, puis de la projection), puis la conclusion négative, enfin la prémisse de convenance qui permet la thèse positive."
+          }
+        },
+        {
+          "code": "E4",
+          "kind": "exercise",
+          "prompt": "Une corde mesure 120 cm. On monte d'une quinte (on garde les 2/3 de la longueur), puis, à partir de la nouvelle note, d'une quarte (on garde les 3/4). Quelle longueur de corde, en centimètres, reste-t-il ? Quel intervalle a-t-on parcouru depuis la note de départ ?",
+          "solution": "120 × 2/3 = 80 cm, puis 80 × 3/4 = 60 cm. C'est la moitié de 120 : une octave (2/3 × 3/4 = 1/2). Quinte et quarte font une octave, comme le dit le calcul de Philolaos.",
+          "response": {
+            "type": "nombre",
+            "expected": 60,
+            "tolerance": 0.5,
+            "consigne": "La longueur finale en centimètres ; pense ensuite à l'intervalle.",
+            "hints": [
+              "Calcule d'abord 120 × 2/3.",
+              "Puis multiplie le résultat par 3/4, et compare à 120."
+            ],
+            "explanation": "120 × 2/3 = 80, puis 80 × 3/4 = 60 : la moitié de la corde, donc l'octave."
+          }
+        },
+        {
+          "code": "E5",
+          "kind": "exercise",
+          "prompt": "Que nie exactement Xénophane dans B 34 ?",
+          "solution": "Il nie qu'un homme puisse savoir avec clarté, même quand il dit vrai : dire juste par chance n'est pas savoir. Il ne nie ni la vérité, ni la recherche (B 18 dit qu'on trouve mieux avec le temps), ni l'existence du dieu.",
+          "response": {
+            "type": "choix",
+            "choices": [
+              "Qu'un homme puisse savoir avec clarté ce qui est, même quand il dit vrai",
+              "Qu'il existe une vérité sur les dieux",
+              "Que la recherche puisse faire progresser les hommes",
+              "Que les dieux existent"
+            ],
+            "expected": "Qu'un homme puisse savoir avec clarté ce qui est, même quand il dit vrai",
+            "hints": [
+              "Relis la troisième ligne : « même si, par chance, il lui arrivait de dire parfaitement ce qui est ».",
+              "Compare avec B 18 : la recherche y est-elle condamnée ?"
+            ],
+            "explanation": "B 34 distingue dire vrai et savoir ; B 18 maintient le progrès par la recherche. Ce n'est pas un scepticisme total."
+          }
+        }
+      ]
+    },
+    {
+      "id": "reflexion",
+      "title": "Question de réflexion",
+      "duration_min": {
+        "min": 2,
+        "max": 3
+      },
+      "questions": [
+        {
+          "code": "Q",
+          "kind": "reflection",
+          "prompt": "Pourquoi l'argument des bœufs et des chevaux (B 15 et B 16) ne suffit-il pas, à lui seul, à prouver que le dieu n'a pas une forme humaine ? Quelle prémisse Xénophane doit-il ajouter ? Une ou deux phrases.",
+          "solution": "Parce que montrer d'où vient une croyance (la projection) n'établit pas qu'elle est fausse : l'argument ôte sa justification à l'image humaine, il ne prouve pas le contraire. Xénophane ajoute une prémisse sur ce qui convient au divin (B 26 : il ne lui « convient » pas d'aller ici et là ; B 11 : les fautes humaines sont indignes d'un dieu). C'est cette idée normative du divin, non la seule critique, qui fonde la thèse de B 23.",
+          "response": {
+            "type": "long",
+            "hints": [
+              "Une croyance d'origine douteuse peut-elle, par hasard, être vraie ?",
+              "Quel mot de B 26 dit ce qui est digne d'un dieu ?"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ticket",
+      "title": "Ticket de sortie",
+      "duration_min": {
+        "min": 2,
+        "max": 2
+      },
+      "questions": [
+        {
+          "code": "T1",
+          "kind": "ticket",
+          "prompt": "Selon Philolaos (B 6), quel rapport de longueurs donne la quinte ?",
+          "solution": "3 : 2, le rapport hémiole (la quarte est 4 : 3, l'octave 2 : 1, le ton 9 : 8).",
+          "response": {
+            "type": "choix",
+            "choices": [
+              "3 : 2",
+              "2 : 1",
+              "4 : 3",
+              "9 : 8"
+            ],
+            "expected": "3 : 2",
+            "explanation": "Quinte 3 : 2 ; quarte 4 : 3 ; octave 2 : 1 ; ton 9 : 8."
+          }
+        },
+        {
+          "code": "T2",
+          "kind": "ticket",
+          "prompt": "Pourquoi Xénophane, B 7, est-il un meilleur témoin sur Pythagore que les *Vies* de Porphyre et de Jamblique ? Une phrase.",
+          "solution": "Parce qu'il est son contemporain, et même un moqueur : il atteste ce qu'on savait de Pythagore de son vivant (la migration des âmes), alors que les *Vies* sont écrites huit siècles plus tard et embellissent.",
+          "response": {
+            "type": "court",
+            "hints": [
+              "Compare les dates."
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "retenir": [
+    "Pythagore (Samos, vers 570 ; Crotone, vers 530) n'a rien laissé d'écrit : ses témoins proches attestent surtout un enseignement sur la survie et la migration des âmes, et un genre de vie.",
+    "Aristote parle des « pythagoriciens » : pour eux, les principes des nombres sont ceux de tous les êtres, et le ciel entier est harmonie et nombre.",
+    "Le fait fondateur est musical : octave 2 : 1, quinte 3 : 2, quarte 4 : 3, ton 9 : 8 (Philolaos, B 6) ; mais la décade parfaite leur fait inventer l'anti-Terre, et la théorie commande alors les faits.",
+    "Xénophane montre que chaque peuple, et chaque espèce qui saurait peindre, fait les dieux à son image ; l'image humaine des dieux perd ainsi sa valeur de preuve.",
+    "Sa thèse positive, un dieu unique sans ressemblance avec les mortels, repose sur une idée de ce qui convient au divin ; et il distingue dire vrai, savoir avec clarté et chercher pour trouver mieux."
+  ],
+  "mot_du_jour": {
+    "code": "M",
+    "terme": "harmonie",
+    "texte": "Le grec *harmonía* vient du verbe *harmózein*, « ajuster, assembler ». Chez Homère, le mot désigne encore les chevilles et les joints d'une construction : Ulysse assemble son radeau « avec des chevilles et des joints » (γόμφοισιν... καὶ ἁρμονίῃσιν, *Odyssée* V, 248). Chez Philolaos, *harmonía* devient le nom de l'octave, puis l'ajustement qui tient ensemble des choses dissemblables. Le latin *harmonia* et le français *harmonie* gardent cette idée : un accord est un assemblage réussi."
+  },
+  "pour_aller_plus_loin": [
+    {
+      "type": "primaire",
+      "reference": "Aristote, Métaphysique, livre A, chapitre 5 (985b23 à 986b8), texte de W. D. Ross, Oxford, Clarendon Press, 1924 ; trad. française de J. Tricot, Aristote. La Métaphysique, Paris, Vrin, 1933.",
+      "note": "Le premier exposé suivi de la doctrine pythagoricienne, par un témoin critique qui la compare aux Milésiens et à Platon.",
+      "citation": "τὸν ὅλον οὐρανὸν ἁρμονίαν εἶναι καὶ ἀριθμόν",
+      "citation_source": "Métaphysique A 5, 986a2 et 3 (texte de Ross)",
+      "lien": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0051%3Abook%3D1%3Asection%3D985b"
+    },
+    {
+      "type": "primaire",
+      "reference": "J. H. Lesher, Xenophanes of Colophon. Fragments. A Text and Translation with a Commentary, Toronto, University of Toronto Press, 1992 (Phoenix, suppl. 32).",
+      "note": "Tous les fragments de Xénophane, en grec et en anglais, avec un commentaire qui lit B 34 comme une limite du savoir et non comme un scepticisme total.",
+      "citation": "οὔτοι ἀπ' ἀρχῆς πάντα θεοὶ θνητοῖσ' ὑπέδειξαν, ἀλλὰ χρόνωι ζητοῦντες ἐφευρίσκουσιν ἄμεινον.",
+      "citation_source": "Xénophane, DK 21 B 18 (texte de Diels, 1903)"
+    },
+    {
+      "type": "primaire",
+      "reference": "Platon, République, livre X, 595a à 608b, texte de J. Burnet, Platonis opera, t. IV, Oxford, Clarendon Press, 1902.",
+      "note": "Le seul passage des dialogues où Platon nomme Pythagore, en l'opposant à Homère comme maître d'une manière de vivre.",
+      "citation": "Πυθαγόρειον τρόπον ἐπονομάζοντες τοῦ βίου",
+      "citation_source": "République X, 600b (texte de Burnet)",
+      "lien": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0167%3Abook%3D10%3Apage%3D600"
+    },
+    {
+      "type": "secondaire",
+      "reference": "Walter Burkert, Lore and Science in Ancient Pythagoreanism, trad. Edwin L. Minar Jr., Cambridge (Mass.), Harvard University Press, 1972 (éd. originale : Weisheit und Wissenschaft, Nuremberg, Hans Carl, 1962).",
+      "note": "L'étude qui a trié les sources du pythagorisme : le maître religieux d'abord, la science des nombres surtout chez Philolaos."
+    },
+    {
+      "type": "secondaire",
+      "reference": "André Laks et Glenn W. Most (éd. et trad.), Les débuts de la philosophie. Des premiers penseurs grecs à Socrate, Paris, Fayard, 2016.",
+      "note": "L'édition bilingue française de référence des présocratiques, qui remplace avec profit le recueil de Diels et Kranz pour un lecteur français."
+    },
+    {
+      "type": "secondaire",
+      "reference": "G. S. Kirk, J. E. Raven et M. Schofield, The Presocratic Philosophers. A Critical History with a Selection of Texts, 2e éd., Cambridge, Cambridge University Press, 1983.",
+      "note": "Le manuel classique : chapitres sur Pythagore et sur Xénophane, textes grecs traduits et discutés pas à pas."
+    }
+  ]
+}

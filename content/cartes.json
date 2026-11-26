@@ -739,6 +739,69 @@
       "answer": "Il voit, entend, vient, rit, répond ; pourquoi ?, parce que, maintenant.",
       "created": "2026-11-25",
       "kind": "vocabulaire"
+    },
+    {
+      "id": "PHI-008",
+      "subject": "philosophie",
+      "subject_label": "Philosophie",
+      "prompt": "Que savons-nous de sûr sur Pythagore, et par quels témoins ? Pourquoi se méfier des Vies de Porphyre et de Jamblique ?",
+      "answer": "Samos vers 570, Crotone vers 530 ; rien d'écrit. Témoins proches : Xénophane (B 7, migration des âmes), Héraclite (B 40), Hérodote (IV, 95), Platon (République 600b, un genre de vie). Les Vies sont écrites huit siècles plus tard et embellissent.",
+      "created": "2026-11-26",
+      "kind": "notion"
+    },
+    {
+      "id": "PHI-009",
+      "subject": "philosophie",
+      "subject_label": "Philosophie",
+      "prompt": "Quelle est la thèse des pythagoriciens selon Aristote (Métaphysique A 5) ?",
+      "answer": "Les principes des mathématiques, les nombres, sont les principes de tous les êtres ; le ciel entier est harmonie et nombre. Aristote dit « ceux qu'on appelle les pythagoriciens », sans nommer Pythagore.",
+      "created": "2026-11-26",
+      "kind": "notion"
+    },
+    {
+      "id": "PHI-010",
+      "subject": "philosophie",
+      "subject_label": "Philosophie",
+      "prompt": "Donne les rapports de l'octave, de la quinte, de la quarte et du ton (Philolaos, B 6). Comment obtient-on le ton ?",
+      "answer": "Octave 2 : 1, quinte 3 : 2, quarte 4 : 3, ton 9 : 8. Le ton est la quinte divisée par la quarte : 3/2 ÷ 4/3 = 9/8. Quinte et quarte ensemble font l'octave : 3/2 × 4/3 = 2.",
+      "created": "2026-11-26",
+      "kind": "notion"
+    },
+    {
+      "id": "PHI-011",
+      "subject": "philosophie",
+      "subject_label": "Philosophie",
+      "prompt": "Qu'est-ce que l'anti-Terre des pythagoriciens, et quelle leçon de méthode Aristote en tire-t-il ?",
+      "answer": "Un dixième corps céleste invisible, ajouté aux neuf visibles parce que la décade passait pour parfaite. La théorie commande les faits au lieu de s'y régler.",
+      "created": "2026-11-26",
+      "kind": "notion"
+    },
+    {
+      "id": "PHI-012",
+      "subject": "philosophie",
+      "subject_label": "Philosophie",
+      "prompt": "Reconstitue l'argument de Xénophane contre les dieux à forme humaine (B 14 à B 16, avec B 11).",
+      "answer": "Chaque peuple fait les dieux à son image (Éthiopiens, Thraces) ; bœufs et chevaux feraient de même s'ils peignaient ; donc ces images révèlent celui qui les fait et ne prouvent rien sur les dieux. De plus, les poètes prêtent aux dieux des fautes que les hommes blâment (B 11).",
+      "created": "2026-11-26",
+      "kind": "notion"
+    },
+    {
+      "id": "PHI-013",
+      "subject": "philosophie",
+      "subject_label": "Philosophie",
+      "prompt": "Comment Xénophane décrit-il le dieu (B 23 à B 26), et sur quelle prémisse repose cette thèse ?",
+      "answer": "Un seul dieu, le plus grand, qui ne ressemble aux mortels ni par le corps ni par la pensée ; il voit, pense, entend tout entier, meut tout par la pensée, reste immobile. Prémisse : ce qui « convient » au divin (B 26), non la seule critique des images.",
+      "created": "2026-11-26",
+      "kind": "notion"
+    },
+    {
+      "id": "PHI-014",
+      "subject": "philosophie",
+      "subject_label": "Philosophie",
+      "prompt": "Que distingue Xénophane dans B 34 et B 18 ?",
+      "answer": "Dire vrai et savoir avec clarté : même qui dit vrai par chance ne sait pas ; sur tout, il n'y a que l'opinion (B 34). Mais en cherchant, avec le temps, les hommes trouvent mieux (B 18) : une limite du savoir, pas un scepticisme total.",
+      "created": "2026-11-26",
+      "kind": "notion"
     }
   ]
 }
